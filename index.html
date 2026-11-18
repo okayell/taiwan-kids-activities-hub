@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>台灣親子趣｜全台灣 12 歲以下兒童活動＆場館地圖</title>
+  <meta name="description" content="整合全台灣 22 縣市 368 鄉鎮區的兒童遊樂園、兒童館、親子館、特色公園，以及每週自動更新的親子活動、比賽、市集與課程。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-top">
+        <div class="brand">
+          <span class="brand-badge" aria-hidden="true">🧸</span>
+          <div>
+            <h1>台灣親子趣</h1>
+            <p class="subtitle">全台灣 12 歲以下兒童活動、遊樂園、親子館與特色公園一站搜</p>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <button id="btn-random" class="btn btn-soft-yellow" type="button" title="不知道週末去哪？隨機抽一個！">
+            🎲 週末靈感
+          </button>
+          <button id="btn-saved" class="btn btn-coral" type="button">
+            ❤️ 口袋名單 <span id="saved-count" class="pill-count">0</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="stats-bar" id="stats-bar" aria-live="polite">
+        <div class="stat-chip">📍 <strong id="stat-total">--</strong> 筆精選資訊</div>
+        <div class="stat-chip">🏛️ 常設場館 <strong id="stat-venues">--</strong></div>
+        <div class="stat-chip">🎪 限期活動 <strong id="stat-events">--</strong></div>
+        <div class="stat-chip">🔄 更新：<span id="stat-updated">載入中…</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <!-- 搜尋與地點聯動面板 -->
+    <section class="filter-card" aria-label="搜尋與條件篩選">
+      <div class="region-pills" id="region-pills" role="group" aria-label="區域快選">
+        <button type="button" class="region-pill active" data-region="">全台灣</button>
+        <button type="button" class="region-pill" data-region="北台灣">北台灣</button>
+        <button type="button" class="region-pill" data-region="中台灣">中台灣</button>
+        <button type="button" class="region-pill" data-region="南台灣">南台灣</button>
+        <button type="button" class="region-pill" data-region="東台灣">東台灣</button>
+        <button type="button" class="region-pill" data-region="離島">離島</button>
+      </div>
+
+      <div class="search-grid">
+        <div class="field">
+          <label for="select-city">縣市</label>
+          <select id="select-city">
+            <option value="">全台灣（22 縣市）</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="select-district">鄉鎮市區</label>
+          <select id="select-district" disabled>
+            <option value="">請先選擇縣市</option>
+          </select>
+        </div>
+        <div class="field field-search">
+          <label for="input-keyword">關鍵字搜尋</label>
+          <div class="search-input-wrap">
+            <input id="input-keyword" type="search" placeholder="搜名稱、公園、恐龍、DIY、繪畫比賽、沙坑…" autocomplete="off" />
+            <button id="btn-clear-search" class="clear-btn" type="button" aria-label="清除搜尋" hidden>✕</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 常設場館 vs 限期活動 雙分頁 -->
+      <div class="mode-row">
+        <div class="kind-tabs" role="tablist" aria-label="資料類型切換">
+          <button type="button" class="kind-tab active" data-kind="all" role="tab" aria-selected="true">✨ 全部</button>
+          <button type="button" class="kind-tab" data-kind="venue" role="tab" aria-selected="false">🏛️ 常設場館</button>
+          <button type="button" class="kind-tab" data-kind="event" role="tab" aria-selected="false">🎪 限期活動</button>
+        </div>
+
+        <div class="view-toggle" role="group" aria-label="檢視模式">
+          <button type="button" id="btn-view-list" class="view-btn active">🗂️ 卡片清單</button>
+          <button type="button" id="btn-view-map" class="view-btn">🗺️ 互動地圖</button>
+        </div>
+      </div>
+
+      <!-- 8 大分類膠囊 -->
+      <div class="category-pills" id="category-pills" aria-label="分類篩選"></div>
+
+      <!-- 親子實用標籤篩選 -->
+      <div class="quick-tags">
+        <span class="quick-label">親子篩選：</span>
+        <button type="button" class="tag-chip" data-age="0-3">👶 0–3 歲</button>
+        <button type="button" class="tag-chip" data-age="3-6">🧒 3–6 歲</button>
+        <button type="button" class="tag-chip" data-age="6-12">🎒 6–12 歲</button>
+        <span class="divider" aria-hidden="true"></span>
+        <button type="button" class="tag-chip" id="toggle-indoor">☔ 室內雨天備案</button>
+        <button type="button" class="tag-chip" id="toggle-free">🆓 免費入場</button>
+        <button type="button" class="tag-chip" id="toggle-weekend">📅 本週末可去</button>
+        <button type="button" class="btn-reset" id="btn-reset-filters">重設全部條件</button>
+      </div>
+    </section>
+
+    <!-- 結果列 -->
+    <div class="result-bar">
+      <p id="result-summary">正在載入全台親子資料…</p>
+      <div class="sort-wrap">
+        <label for="select-sort">排序：</label>
+        <select id="select-sort">
+          <option value="smart">綜合推薦</option>
+          <option value="date">活動日期由近到遠</option>
+          <option value="city">依縣市排序</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 地圖視圖 -->
+    <section id="map-section" class="map-section" hidden>
+      <div id="kids-map" class="kids-map" aria-label="台灣親子活動互動地圖"></div>
+      <p class="map-hint">💡 點選地圖標記可預覽資訊；切換上方縣市／鄉鎮區或分類時，地圖點位會即時同步更新。</p>
+    </section>
+
+    <!-- 卡片清單視圖 -->
+    <section id="cards-section" aria-label="搜尋結果清單">
+      <div id="cards-grid" class="cards-grid"></div>
+      <div id="empty-state" class="empty-state" hidden>
+        <div class="empty-icon">🌈</div>
+        <h3>這個條件下暫時沒有符合的項目</h3>
+        <p>試試放寬「鄉鎮區」或取消部分標籤篩選，探索附近更多好玩的親子去處！</p>
+        <button type="button" class="btn btn-coral" id="btn-empty-reset">顯示全部結果</button>
+      </div>
+      <div id="load-more-wrap" class="load-more-wrap" hidden>
+        <button type="button" id="btn-load-more" class="btn btn-mint">顯示更多項目</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>台灣親子趣</strong> — 專為台灣 12 歲以下兒童與家庭打造的免費公開資訊平台。每週一、週四凌晨自動透過 GitHub Actions 更新最新資料。</p>
+      <div id="source-badges" class="source-badges"></div>
+      <p class="footer-note">提醒：出發前建議點擊各卡片「官方網站」確認最新開館時間、預約名額與票價異動。</p>
+    </div>
+  </footer>
+
+  <!-- 詳情 Modal -->
+  <div id="detail-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button type="button" id="modal-close" class="modal-close" aria-label="關閉視窗">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- 我的口袋名單抽屜 -->
+  <div id="saved-drawer" class="drawer-backdrop" hidden role="dialog" aria-modal="true" aria-label="我的口袋名單">
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <h2>❤️ 我的口袋名單</h2>
+        <button type="button" id="drawer-close" class="modal-close" aria-label="關閉口袋名單">✕</button>
+      </div>
+      <p class="drawer-sub">收藏會儲存在您的瀏覽器中（免登入），方便週末快速查閱。</p>
+      <div id="saved-list" class="saved-list"></div>
+      <div class="drawer-footer">
+        <button type="button" id="btn-clear-saved" class="btn-reset">清空口袋名單</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="assets/tw_districts.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
