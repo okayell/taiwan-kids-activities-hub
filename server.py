@@ -51,17 +51,25 @@ class HubHandler(BaseHTTPRequestHandler):
 
         if raw_path == "/api/health":
             meta_path = ROOT / "data" / "sync_meta.json"
+            rel_path = ROOT / "releases.json"
             meta = {}
+            ver = "1.0.0"
             if meta_path.exists():
                 try:
                     meta = json.loads(meta_path.read_text(encoding="utf-8"))
                 except Exception:
                     meta = {}
+            if rel_path.exists():
+                try:
+                    ver = json.loads(rel_path.read_text(encoding="utf-8")).get("current_version", ver)
+                except Exception:
+                    pass
             self._send_json(
                 HTTPStatus.OK,
                 {
                     "ok": True,
                     "service": "taiwan-kids-hub",
+                    "version": ver,
                     "updated_date": meta.get("updated_date", ""),
                     "total": meta.get("total", 0),
                     "with_image_count": meta.get("with_image_count", 0),

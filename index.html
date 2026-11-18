@@ -66,6 +66,7 @@
           <div>
             <div class="brand-title-row">
               <h1>台灣親子趣</h1>
+              <button type="button" id="btn-version" class="ver-badge" title="查看版本資訊與更新紀錄">v1.1.0</button>
               <span id="local-mode-badge" class="local-badge" hidden>🖥️ Local 預覽版</span>
             </div>
             <p class="subtitle">全台灣 12 歲以下兒童活動、遊樂園、親子館與特色公園一站搜</p>
@@ -194,11 +195,21 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p><strong>台灣親子趣</strong> — 專為台灣 12 歲以下兒童與家庭打造的免費公開資訊平台。每週一、週四凌晨自動透過 GitHub Actions 更新最新資料。</p>
+      <p><strong>台灣親子趣</strong> <button type="button" id="footer-version" class="footer-ver" title="查看版本更新紀錄">v1.1.0</button> — 專為台灣 12 歲以下兒童與家庭打造的免費公開資訊平台。每週一、週四凌晨自動透過 GitHub Actions 更新最新資料。</p>
       <div id="source-badges" class="source-badges"></div>
       <p class="footer-note">提醒：出發前建議點擊各卡片「官方網站」確認最新開館時間、預約名額與票價異動。</p>
     </div>
   </footer>
+
+  <!-- 版本與更新紀錄 Modal -->
+  <div id="release-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="release-modal-title">
+    <div class="modal-card">
+      <button type="button" id="release-modal-close" class="modal-close" aria-label="關閉版本視窗">✕</button>
+      <h2 id="release-modal-title" style="margin:0 0 6px;font-size:1.3rem;">🏷️ 版本資訊與更新紀錄</h2>
+      <p style="margin:0 0 14px;font-size:0.86rem;color:#6b6673;">網站功能更新會記錄於此；每週一、週四自動同步最新活動資料不另進版號。</p>
+      <div id="release-list" class="release-list"></div>
+    </div>
+  </div>
 
   <!-- 詳情 Modal -->
   <div id="detail-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
@@ -225,6 +236,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="assets/tw_districts.js"></script>
+  <script src="assets/releases_data.js"></script>
   <script src="assets/app.js"></script>
 </body>
 </html>

@@ -65,6 +65,11 @@
     loadMoreWrap: document.getElementById("load-more-wrap"),
     btnLoadMore: document.getElementById("btn-load-more"),
     sourceBadges: document.getElementById("source-badges"),
+    btnVersion: document.getElementById("btn-version"),
+    footerVersion: document.getElementById("footer-version"),
+    releaseModal: document.getElementById("release-modal"),
+    releaseModalClose: document.getElementById("release-modal-close"),
+    releaseList: document.getElementById("release-list"),
     localBadge: document.getElementById("local-mode-badge"),
     btnLocalSync: document.getElementById("btn-local-sync"),
     btnRandom: document.getElementById("btn-random"),
@@ -693,8 +698,51 @@
       if (e.key === "Escape") {
         els.detailModal.hidden = true;
         els.savedDrawer.hidden = true;
+        if (els.releaseModal) els.releaseModal.hidden = true;
       }
     });
+
+    const openReleaseModal = () => {
+      if (!els.releaseModal) return;
+      const relData = window.TW_KIDS_RELEASES || { current_version: "1.1.0", releases: [] };
+      const list = relData.releases || [];
+      els.releaseList.innerHTML = list
+        .map((r, idx) => {
+          const items = (r.changes || []).map((c) => `<li>${esc(c)}</li>`).join("");
+          return `
+            <div class="release-item ${idx === 0 ? "latest" : ""}">
+              <div class="release-item-head">
+                <span class="release-ver-tag">v${esc(r.version)}${idx === 0 ? " · 最新版" : ""}</span>
+                <span class="release-date">${esc(r.date || "")}</span>
+              </div>
+              <h3 class="release-title">${esc(r.title || "")}</h3>
+              <ul class="release-changes">${items}</ul>
+            </div>
+          `;
+        })
+        .join("");
+      els.releaseModal.hidden = false;
+    };
+
+    if (els.btnVersion) els.btnVersion.addEventListener("click", openReleaseModal);
+    if (els.footerVersion) els.footerVersion.addEventListener("click", openReleaseModal);
+    if (els.releaseModalClose) {
+      els.releaseModalClose.addEventListener("click", () => {
+        els.releaseModal.hidden = true;
+      });
+    }
+    if (els.releaseModal) {
+      els.releaseModal.addEventListener("click", (e) => {
+        if (e.target === els.releaseModal) els.releaseModal.hidden = true;
+      });
+    }
+  }
+
+  function initVersionBadge() {
+    const ver = window.TW_KIDS_RELEASES?.current_version;
+    if (!ver) return;
+    if (els.btnVersion) els.btnVersion.textContent = `v${ver}`;
+    if (els.footerVersion) els.footerVersion.textContent = `v${ver}`;
   }
 
   async function loadActivitiesPayload() {
@@ -758,6 +806,7 @@
   }
 
   async function init() {
+    initVersionBadge();
     loadSaved();
     bindEvents();
     initLocalServerMode();

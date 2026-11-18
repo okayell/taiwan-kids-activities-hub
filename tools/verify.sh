@@ -8,11 +8,12 @@ if [[ "${1:-}" == "--apply" ]]; then
 fi
 
 echo "==> 1. Python 語法檢查"
-python3 -m py_compile "$ROOT/server.py" "$ROOT/scripts/update_data.py" "$ROOT/tools/check_data.py" "$ROOT/tools/git_deploy.py"
+python3 -m py_compile "$ROOT/server.py" "$ROOT/scripts/update_data.py" "$ROOT/tools/check_data.py" "$ROOT/tools/git_deploy.py" "$ROOT/tools/release_mgr.py"
 
 echo "==> 2. JavaScript 語法檢查"
 if command -v node >/dev/null 2>&1; then
   node --check "$ROOT/assets/tw_districts.js"
+  node --check "$ROOT/assets/releases_data.js"
   node --check "$ROOT/assets/app.js"
 else
   echo "   (略過：找不到 node)"
@@ -41,7 +42,7 @@ try:
         try:
             with urllib.request.urlopen(f"{base}/api/health", timeout=2) as r:
                 h = json.loads(r.read().decode("utf-8"))
-                assert h.get("ok") is True
+                assert h.get("ok") is True and bool(h.get("version")), f"bad health: {h}"
                 break
         except Exception:
             time.sleep(0.1)

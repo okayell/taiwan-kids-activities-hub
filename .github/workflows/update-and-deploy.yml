@@ -54,6 +54,7 @@ jobs:
           rm -rf _site
           mkdir -p _site
           cp -r index.html assets data _site/
+          [ -f releases.json ] && cp releases.json _site/ || true
           [ -f favicon.ico ] && cp favicon.ico _site/ || true
           [ -f site.webmanifest ] && cp site.webmanifest _site/ || true
 
