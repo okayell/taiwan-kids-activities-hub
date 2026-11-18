@@ -745,33 +745,411 @@ def scrape_tainan_venues(prev_img_cache: dict[str, str]) -> list[dict[str, Any]]
     return items
 
 
-def load_previous_state() -> tuple[dict[str, list[dict[str, Any]]], dict[str, str]]:
+def fetch_html(url: str, timeout: int = 12) -> str:
+    req = urllib.request.Request(url, headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX) as resp:
+        return resp.read().decode("utf-8", errors="ignore")
+
+
+def scrape_keelung_official() -> list[dict[str, Any]]:
+    """抓取基隆市政府兒少處官網：全市 7 區室內兒童樂園 + 各區公辦親子館（含實景附圖與地址）。"""
+    index_pages = [
+        ("amusement", "https://www.klcg.gov.tw/tw/children/4293.html", r"4293-\d+\.html"),
+        ("parent_center", "https://www.klcg.gov.tw/tw/children/4301.html", r"4301-\d+\.html"),
+    ]
+    sub_links: list[tuple[str, str, str]] = []
+    seen_hrefs: set[str] = set()
+
+    for cat, idx_url, pat in index_pages:
+        try:
+            h = fetch_html(idx_url, timeout=10)
+        except Exception as exc:
+            print(f"[WARN] Keelung official fetch failed ({idx_url}): {exc}", file=sys.stderr)
+            continue
+        for m in re.finditer(rf'<a[^>]+href=["\']([^"\']*?{pat})["\'][^>]*>(.*?)</a>', h, re.S | re.I):
+            href = urllib.parse.urljoin(idx_url, m.group(1).strip())
+            raw_title = strip_html(m.group(2))
+            if not raw_title or any(skip in raw_title for skip in ("須知", "Q&A", "QA", "服務項目", "集錦")):
+                continue
+            if href in seen_hrefs:
+                continue
+            seen_hrefs.add(href)
+            title = raw_title if raw_title.startswith("基隆") else f"基隆市{raw_title}"
+            sub_links.append((cat, title, href))
+
+    def _parse_detail(entry: tuple[str, str, str]) -> dict[str, Any] | None:
+        cat, title, url = entry
+        try:
+            dh = fetch_html(url, timeout=10)
+        except Exception:
+            return None
+        clean_txt = re.sub(r"<script[\s\S]*?</script>|<style[\s\S]*?</style>", "", dh, flags=re.I)
+        lines = [strip_html(x) for x in re.sub(r"<[^>]+>", "\n", clean_txt).splitlines() if strip_html(x)]
+        addr = ""
+        hours = "週三至週日分場次開放（週一、二休館，詳見官網預約）" if cat == "amusement" else "週二至週日 09:00–17:00（週一休館）"
+        for i, line in enumerate(lines):
+            if ("地址" in line) and i + 1 < len(lines) and ("基隆" in lines[i + 1] or "區" in lines[i + 1]):
+                addr = lines[i + 1].rstrip("\\/ ")
+                break
+            m_inline = re.search(r"地址[：:]\s*(基隆[^\s，。]+)", line)
+            if m_inline:
+                addr = m_inline.group(1).rstrip("\\/ ")
+                break
+        _, district = extract_city_district(f"{addr} {title}", default_city="基隆市")
+        imgs = re.findall(r'(/wSite/public/Attachment/[^\s"\'<>]+?\.(?:jpg|jpeg|png|webp))', dh, re.I)
+        img_url = clean_image_url(imgs[0], base_url="https://www.klcg.gov.tw") if imgs else ""
+        cc = TW_CITY_COORDS["基隆市"]
+        desc_label = "基隆市政府設置之免費室內兒童樂園（限身高128公分以下兒童，線上與現場預約並行）。" if cat == "amusement" else "基隆市政府公辦免費親子館，提供學齡前幼兒遊戲、繪本共讀與親子活動。"
+        return {
+            "id": make_id("klcg", url),
+            "title": title,
+            "kind": "venue",
+            "category": cat,
+            "city": "基隆市",
+            "district": district,
+            "address": addr or f"基隆市{district}",
+            "lat": cc[0],
+            "lng": cc[1],
+            "exact_coords": False,
+            "age_groups": ["0-3", "3-6", "6-12"] if cat == "amusement" else ["0-3", "3-6"],
+            "is_indoor": True,
+            "is_free": True,
+            "price_text": "免費入場（建議線上預約）",
+            "hours": hours,
+            "start_date": "",
+            "end_date": "",
+            "is_recurring_weekend": False,
+            "summary": desc_label,
+            "url": url,
+            "image_url": img_url,
+            "source": "基隆市政府兒少處",
+        }
+
+    out: list[dict[str, Any]] = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
+        for res in ex.map(_parse_detail, sub_links):
+            if res:
+                out.append(res)
+    return out
+
+
+def scrape_kaohsiung_official() -> list[dict[str, Any]]:
+    """抓取高雄市政府社會局兒福中心官網：全高雄市公辦親子館一覽表。"""
+    url = "https://cwsc.kcg.gov.tw/cp.aspx?n=FB81D67DDCEA0CF0"
+    h = fetch_html(url, timeout=12)
+    rows = re.findall(r"<tr[\s\S]*?</tr>", h, re.I)
+    items: list[dict[str, Any]] = []
+    cc = TW_CITY_COORDS["高雄市"]
+    for r in rows:
+        cells = [strip_html(c) for c in re.findall(r"<t[dh][^>]*>([\s\S]*?)</t[dh]>", r, re.I)]
+        if len(cells) < 2:
+            continue
+        name, addr = cells[0], cells[1]
+        if not name or "單位名稱" in name or "整備中" in addr or "暫不提供" in addr:
+            continue
+        if not any(k in name for k in ("親子", "婦幼", "兒福", "育兒")):
+            continue
+        title = name.split("(")[0].strip()
+        if not title.startswith("高雄"):
+            title = f"高雄市{title}"
+        full_addr = addr if addr.startswith("高雄") else f"高雄市{addr}"
+        _, district = extract_city_district(f"{full_addr} {title}", default_city="高雄市")
+        items.append({
+            "id": make_id("kcg-pc", title),
+            "title": title,
+            "kind": "venue",
+            "category": "parent_center",
+            "city": "高雄市",
+            "district": district,
+            "address": full_addr,
+            "lat": cc[0],
+            "lng": cc[1],
+            "exact_coords": False,
+            "age_groups": ["0-3", "3-6"],
+            "is_indoor": True,
+            "is_free": True,
+            "price_text": "免費入場",
+            "hours": "週二至週日分場次開放（週一休館）",
+            "start_date": "",
+            "end_date": "",
+            "is_recurring_weekend": False,
+            "summary": "高雄市政府社會局設置之免費育兒資源與親子遊戲空間，提供 0–6 歲分齡教具、繪本與親職活動。",
+            "url": url,
+            "image_url": "",
+            "source": "高雄市政府兒福中心",
+        })
+    return items
+
+
+ABIC_AREA_DEFAULT_CITY = {
+    "基隆": "基隆市",
+    "宜蘭": "宜蘭縣",
+    "桃園": "桃園市",
+    "苗栗": "苗栗縣",
+    "台中": "臺中市",
+    "彰化": "彰化縣",
+    "南投": "南投縣",
+    "雲林": "雲林縣",
+    "台南": "臺南市",
+    "高雄": "高雄市",
+    "澎湖": "澎湖縣",
+    "屏東": "屏東縣",
+    "台東": "臺東縣",
+    "花蓮": "花蓮縣",
+    "金門": "金門縣",
+    "馬祖": "連江縣",
+}
+
+ABIC_SKIP_TITLE_RE = re.compile(
+    r"(結束營業|暫停營業|停止營業|已歇業|已無親子設施|活動結束|活動已結束|"
+    r"飯店|酒店|行旅|民宿|旅店|會館|商旅|汽車旅館|露營|豪華帳|"
+    r"景觀餐廳|景觀咖啡|咖啡廳|貓餐廳|貓咖啡|火鍋|燒肉|牛排|餐酒|居酒屋|冰店|夜市|小吃)",
+    re.I,
+)
+
+ABIC_SCENIC_SKIP_RE = re.compile(
+    r"(砲台|步道|瀑布|燈塔|登島|隧道|老鷹岩|峽谷|千島湖|紀念碑|漁港|吊橋|古道|陵寢|商圈|老街)",
+    re.I,
+)
+
+
+def classify_abic_item(tag_kind: str, title: str, msg: str) -> tuple[str, str] | None:
+    """回傳 (kind, category)，若非兒童場館／親子活動則回傳 None。"""
+    if ABIC_SKIP_TITLE_RE.search(title) and not any(k in title for k in ("主題樂園", "遊樂世界", "兒童樂園", "親子館", "特色遊戲場")):
+        return None
+    text = f"{title} {msg}"
+    if any(bad in text for bad in ADULT_EXCLUDE):
+        return None
+
+    if tag_kind == "event":
+        return "event", classify_event_category(title, msg)
+
+    if any(k in title for k in ("親子館", "托育資源", "親子悠遊館", "公共親子中心", "育兒資源", "育兒+", "祖孫館", "婦幼福利", "兒童福利服務", "社會福利綜合館")):
+        return "venue", "parent_center"
+    if any(k in title for k in ("室內兒童樂園", "兒童新樂園", "兒童樂園", "主題樂園", "遊樂園", "遊樂世界", "海洋世界", "海洋公園", "水世界", "湯姆熊", "貝兒絲", "騎士堡", "遊戲愛樂園", "奇幻島", "卡丁車", "動物園", "頑皮世界", "綠世界")):
+        return "venue", "amusement"
+    if any(k in title for k in ("特色遊戲場", "共融", "親子公園", "兒童公園", "運動公園", "親水公園", "森林公園", "溜滑梯")) or ("公園" in title and any(k in text for k in ("遊戲", "溜滑梯", "沙坑", "鞦韆", "滑索", "玩水", "戲水", "滑步車", "兒童", "親子"))):
+        return "venue", "park"
+    if tag_kind in ("museum", "factory") or any(k in title for k in ("博物館", "美術館", "科學", "天文", "海科館", "海生館", "水族館", "探索館", "故事館", "文物館", "文化館", "文化藝術館", "教育館", "教育中心", "觀光工廠", "體驗館", "漫畫圖書館", "兒童圖書館", "牧場", "農場", "生態園區")):
+        if ABIC_SCENIC_SKIP_RE.search(title) and "遊戲場" not in title:
+            return None
+        return "venue", "kids_museum"
+    if tag_kind in ("under12", "under6", "amusement"):
+        if "公園" in title:
+            return "venue", "park"
+        return "venue", "amusement"
+
+    # tag/63 政府開辦：過濾掉純成人登山步道／古蹟砲台
+    if ABIC_SCENIC_SKIP_RE.search(title):
+        return None
+    if any(k in text for k in ("遊戲場", "溜滑梯", "沙坑", "共融", "兒童遊具")):
+        return "venue", "park"
+    if any(k in text for k in ("親子館", "托育", "0-6歲")):
+        return "venue", "parent_center"
+    return None
+
+
+def scrape_abic_nationwide(prev_item_cache: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+    """抓取全台公開親子景點目錄（涵蓋 22 縣市室內兒童樂園、親子館、特色遊戲場、博物館、遊樂園與展覽活動；不設硬上限）。"""
+    tag_sources = [
+        ("amusement", "/index/search/tag/64/filter/74"),  # 大型遊樂園
+        ("under12", "/index/search/tag/83/filter/74"),    # 限制12歲以下（室內兒童樂園等）
+        ("under6", "/index/search/tag/81/filter/74"),     # 限制6歲以下（親子館／幼兒樂園）
+        ("museum", "/index/search/tag/79/filter/74"),     # 博物館／兒童館
+        ("factory", "/index/search/tag/56/filter/74"),    # 觀光工廠／親子DIY
+        ("event", "/index/search/tag/59/filter/74"),      # 展覽演出／期間限定親子活動
+        ("gov", "/index/search/tag/63/filter/74"),        # 全國政府開辦親子館／室內樂園／特色公園
+    ]
+
+    page_jobs: list[tuple[str, str]] = []
+    for tkind, base_path in tag_sources:
+        try:
+            first_html = fetch_html("https://www.abic.com.tw" + base_path, timeout=12)
+        except Exception as exc:
+            print(f"[WARN] ABIC tag index failed ({base_path}): {exc}", file=sys.stderr)
+            continue
+        pages = [int(p) for p in re.findall(r"/page/(\d+)", first_html)]
+        max_p = max(pages) if pages else 1
+        for p in range(1, max_p + 1):
+            page_jobs.append((tkind, f"https://www.abic.com.tw{base_path}/page/{p}"))
+
+    card_re = re.compile(
+        r'<div class="post [^"]*">[\s\S]*?<div class="area"><a [^>]*>([^<]+)</a></div>'
+        r'[\s\S]*?<div class="title"><a href="/place/view/id/(\d+)">([^<]+)</a></div>'
+        r'[\s\S]*?<img src="([^"]+)"[\s\S]*?<div class="message"><a [^>]*>([\s\S]*?)</a></div>',
+        re.I,
+    )
+
+    candidates: dict[str, dict[str, str]] = {}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as ex:
+        futs = [ex.submit(fetch_html, u, 12) for _, u in page_jobs]
+        for (tkind, _), fut in zip(page_jobs, futs):
+            try:
+                h = fut.result()
+            except Exception:
+                continue
+            for m in card_re.finditer(h):
+                area, pid, raw_title, thumb, raw_msg = (
+                    strip_html(m.group(1)),
+                    m.group(2),
+                    strip_html(m.group(3)),
+                    m.group(4).strip(),
+                    strip_html(m.group(5)),
+                )
+                if pid in candidates:
+                    continue
+                cls = classify_abic_item(tkind, raw_title, raw_msg)
+                if not cls:
+                    continue
+                candidates[pid] = {
+                    "pid": pid,
+                    "tkind": tkind,
+                    "kind": cls[0],
+                    "category": cls[1],
+                    "area": area,
+                    "title": raw_title,
+                    "thumb": thumb,
+                    "msg": raw_msg,
+                }
+
+    items: list[dict[str, Any]] = []
+    to_enrich: list[dict[str, Any]] = []
+
+    for pid, cand in candidates.items():
+        item_id = f"abic-{pid}"
+        cached = prev_item_cache.get(item_id)
+        if cached and cached.get("city") in TW_DISTRICTS and cached.get("address"):
+            # 直接重用已快取之明細欄位，大幅加速每週排程更新
+            reused = dict(cached)
+            reused["title"] = cand["title"]
+            reused["kind"] = cand["kind"]
+            reused["category"] = cand["category"]
+            if not reused.get("image_url"):
+                reused["image_url"] = clean_image_url(cand["thumb"])
+            items.append(reused)
+        else:
+            to_enrich.append(cand)
+
+    def _enrich_one(cand: dict[str, str]) -> dict[str, Any] | None:
+        pid = cand["pid"]
+        detail_url = f"https://www.abic.com.tw/place/view/id/{pid}"
+        addr, hours, price_raw, og_img = "", "", "", ""
+        lat, lng, exact_coords = None, None, False
+        try:
+            dh = fetch_html(detail_url, timeout=9)
+            m_desc = re.search(r'<meta[^>]+property=["\']og:description["\'][^>]+content=["\']([^"\']+)["\']', dh, re.I)
+            if m_desc:
+                og_desc = html.unescape(m_desc.group(1))
+                m_a = re.search(r"★地址：(.*?)(?:\.{2,}|★|$)", og_desc)
+                m_h = re.search(r"★營業時間：(.*?)(?:\.{2,}|★|$)", og_desc)
+                m_p = re.search(r"★價位：(.*?)(?:\.{2,}|★|$)", og_desc)
+                if m_a:
+                    addr = strip_html(m_a.group(1))
+                if m_h:
+                    hours = strip_html(m_h.group(1))
+                if m_p:
+                    price_raw = strip_html(m_p.group(1))
+            m_img = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', dh, re.I)
+            if m_img and "abic_logo" not in m_img.group(1):
+                og_img = clean_image_url(m_img.group(1))
+            m_coord = re.search(r"(2[1-6]\.\d{4,8})\s*,\s*(1[12]\d\.\d{4,8})", dh)
+            if m_coord:
+                lf, gf = float(m_coord.group(1)), float(m_coord.group(2))
+                if 21.5 <= lf <= 26.5 and 118.0 <= gf <= 122.5:
+                    lat, lng, exact_coords = lf, gf, True
+        except Exception:
+            pass
+
+        default_city = ABIC_AREA_DEFAULT_CITY.get(cand["area"], "")
+        city, district = extract_city_district(f"{addr} {cand['title']} {cand['msg']}", default_city=default_city)
+        if not city:
+            return None
+        if lat is None or lng is None:
+            cc = TW_CITY_COORDS.get(city, [25.033, 121.565, 11])
+            lat, lng = cc[0], cc[1]
+
+        cat = cand["category"]
+        text_all = f"{cand['title']} {cand['msg']} {price_raw}"
+        is_free = (cat in ("park", "parent_center")) or infer_free(price_raw, text_all)
+        img_final = og_img or clean_image_url(cand["thumb"])
+
+        age_groups = infer_age_groups(text_all, cat)
+        if cand["tkind"] == "under6" and "0-3" not in age_groups:
+            age_groups = ["0-3", "3-6"]
+
+        return {
+            "id": f"abic-{pid}",
+            "title": cand["title"],
+            "kind": cand["kind"],
+            "category": cat,
+            "city": city,
+            "district": district,
+            "address": addr or f"{city}{district}",
+            "lat": round(lat, 5),
+            "lng": round(lng, 5),
+            "exact_coords": exact_coords,
+            "age_groups": age_groups,
+            "is_indoor": ("室內" in text_all) or infer_indoor(text_all, cat),
+            "is_free": is_free,
+            "price_text": (price_raw[:85] if price_raw else ("免費入場" if is_free else "依現場公告")),
+            "hours": (hours[:90] if hours else "依場館官網公告"),
+            "start_date": "",
+            "end_date": "",
+            "is_recurring_weekend": False,
+            "summary": cand["msg"] or f"{city}{district}推薦親子去處。",
+            "url": detail_url,
+            "image_url": img_final,
+            "source": "全台親子景點公開彙整",
+        }
+
+    if to_enrich:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=16) as ex:
+            for enriched in ex.map(_enrich_one, to_enrich):
+                if enriched:
+                    items.append(enriched)
+
+    return items
+
+
+def load_previous_state() -> tuple[dict[str, list[dict[str, Any]]], dict[str, str], dict[str, dict[str, Any]]]:
     if not OUT_PATH.exists():
-        return {}, {}
+        return {}, {}, {}
     try:
         prev = json.loads(OUT_PATH.read_text(encoding="utf-8"))
         by_src: dict[str, list[dict[str, Any]]] = {}
         img_cache: dict[str, str] = {}
+        item_cache: dict[str, dict[str, Any]] = {}
         for item in prev.get("items", []):
             by_src.setdefault(item.get("source", "unknown"), []).append(item)
-            if item.get("id") and item.get("image_url"):
-                cleaned = clean_image_url(item["image_url"])
-                if cleaned:
-                    img_cache[item["id"]] = cleaned
-        return by_src, img_cache
+            if item.get("id"):
+                item_cache[item["id"]] = item
+                if item.get("image_url"):
+                    cleaned = clean_image_url(item["image_url"])
+                    if cleaned:
+                        img_cache[item["id"]] = cleaned
+        return by_src, img_cache, item_cache
     except Exception:
-        return {}, {}
+        return {}, {}, {}
 
 
 def normalize_title_key(title: str, city: str) -> str:
-    clean = re.sub(r"[\s\-－—（）()【】\[\]・‧·]", "", title or "").lower()
-    clean = clean.replace("台", "臺")
+    t = (title or "").replace("台", "臺").strip()
+    # 移除括號附註（如「(基隆安樂親子館)」、「(特色遊戲場)」）以利跨來源同名場館自動合併補圖與座標
+    stripped = re.sub(r"[（(][^）)]*[）)]", "", t).strip()
+    if len(stripped) >= 3:
+        t = stripped
+    clean = re.sub(r"[\s\-－—（）()【】\[\]・‧·]", "", t).lower()
+    city_short = city.replace("市", "").replace("縣", "").lower()
+    for prefix in (city.lower(), city_short):
+        if prefix and clean.startswith(prefix) and len(clean) > len(prefix) + 1:
+            clean = clean[len(prefix):]
+            break
     return f"{city}:{clean}"
 
 
 def main() -> int:
     now_tw = dt.datetime.now(TZ_TW)
-    prev_by_src, prev_img_cache = load_previous_state()
+    prev_by_src, prev_img_cache, prev_item_cache = load_previous_state()
 
     # 1. 讀取全台 22 縣市常設精選場館基準庫
     curated: list[dict[str, Any]] = json.loads(CURATED_PATH.read_text(encoding="utf-8"))
@@ -788,12 +1166,15 @@ def main() -> int:
         "臺北旅遊網 Open API (活動)": (lambda: scrape_taipei_events(prev_img_cache), 1),
         "臺北旅遊網 Open API (場館)": (lambda: scrape_taipei_venues(prev_img_cache), 10),
         "臺南旅遊網 Open Data": (lambda: scrape_tainan_venues(prev_img_cache), 10),
+        "基隆市政府兒少處": (scrape_keelung_official, 10),
+        "高雄市政府兒福中心": (scrape_kaohsiung_official, 10),
+        "全台親子景點公開彙整": (lambda: scrape_abic_nationwide(prev_item_cache), 200),
     }
 
     source_results: dict[str, list[dict[str, Any]]] = {}
     source_health: list[dict[str, Any]] = []
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as ex:
         fut_map = {ex.submit(fn): (name, min_guard) for name, (fn, min_guard) in sources.items()}
         for fut in concurrent.futures.as_completed(fut_map):
             name, min_guard = fut_map[fut]
@@ -841,8 +1222,11 @@ def main() -> int:
 
     ordered_batches = [
         curated,
+        source_results.get("基隆市政府兒少處", []),
+        source_results.get("高雄市政府兒福中心", []),
         source_results.get("文化部全國藝文活動", []),
         source_results.get("臺北旅遊網 Open API (活動)", []),
+        source_results.get("全台親子景點公開彙整", []),
         source_results.get("臺北旅遊網 Open API (場館)", []),
         source_results.get("臺南旅遊網 Open Data", []),
     ]
@@ -860,6 +1244,12 @@ def main() -> int:
                 existing = merged_by_key[key]
                 if not existing.get("image_url") and item.get("image_url"):
                     existing["image_url"] = item["image_url"]
+                if not existing.get("exact_coords") and item.get("exact_coords"):
+                    existing["lat"] = item["lat"]
+                    existing["lng"] = item["lng"]
+                    existing["exact_coords"] = True
+                if not existing.get("district") and item.get("district"):
+                    existing["district"] = item["district"]
                 continue
             if cid in seen_ids:
                 continue

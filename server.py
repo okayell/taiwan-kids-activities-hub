@@ -153,7 +153,7 @@ class HubHandler(BaseHTTPRequestHandler):
                 cwd=str(ROOT),
                 text=True,
                 capture_output=True,
-                timeout=90,
+                timeout=240,
             )
             if proc.returncode != 0:
                 self._send_json(HTTPStatus.INTERNAL_SERVER_ERROR, {"ok": False, "error": proc.stderr[-300:] or "同步失敗"})

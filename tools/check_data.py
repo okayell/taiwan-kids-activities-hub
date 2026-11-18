@@ -48,8 +48,8 @@ def validate_payload(payload: dict, tw_districts: dict[str, list[str]]) -> list[
     if not isinstance(items, list):
         return ["activities.json 缺少 items 陣列"]
 
-    if len(items) < 100:
-        errors.append(f"總筆數過低：{len(items)} < 100")
+    if len(items) < 800:
+        errors.append(f"總筆數過低：{len(items)} < 800")
 
     # 新鮮度檢查
     updated_at = payload.get("updated_at", "")
@@ -111,8 +111,22 @@ def validate_payload(payload: dict, tw_districts: dict[str, list[str]]) -> list[
     if missing_cats:
         errors.append(f"以下分類筆數為 0：{sorted(missing_cats)}")
 
-    if with_img < 120:
-        errors.append(f"具真實照片之筆數過低：{with_img} < 120")
+    if with_img < 600:
+        errors.append(f"具真實照片之筆數過低：{with_img} < 600")
+
+    # 回歸防護：確保各區指標室內兒童樂園（例如基隆市中正室內兒童樂園等）必在清單中且具鄉鎮區與真圖
+    keelung_zz = [
+        it for it in items
+        if it.get("city") == "基隆市" and "中正室內兒童樂園" in it.get("title", "")
+    ]
+    if not keelung_zz:
+        errors.append("漏抓回歸失敗：缺少「基隆市中正室內兒童樂園」")
+    else:
+        z = keelung_zz[0]
+        if z.get("district") != "中正區":
+            errors.append(f"基隆市中正室內兒童樂園 鄉鎮區錯誤：{z.get('district')!r}")
+        if not z.get("image_url"):
+            errors.append("基隆市中正室內兒童樂園 缺少真實照片 image_url")
 
     return errors
 
