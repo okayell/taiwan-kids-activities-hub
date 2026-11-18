@@ -717,6 +717,7 @@ body {
 .cat-kids_museum { background: var(--sky-soft); color: #196ec0; }
 .cat-parent_center { background: var(--rose-soft); color: #c43668; }
 .cat-park { background: var(--mint-soft); color: #0f8061; }
+.cat-festival { background: #ffeaf1; color: #c81e51; }
 .cat-activity { background: var(--butter-soft); color: #9c6800; }
 .cat-contest { background: var(--lavender-soft); color: #6143c7; }
 .cat-market { background: #fff1e0; color: #b85b00; }
@@ -792,6 +793,7 @@ body {
 .mini-tag.indoor { background: #eaf4ff; color: #1b6dc1; }
 .mini-tag.free { background: #e9faf4; color: #0f8061; }
 .mini-tag.weekend { background: #fff4d6; color: #9c6800; }
+.mini-tag.all-ages { background: #f3efff; color: #5b3cc4; }
 
 .card-actions {
   display: flex;

@@ -108,6 +108,18 @@ KIDS_KEYWORDS = (
     "牧場", "觀光工廠", "市集", "嘉年華", "園遊會", "寶貝", "萌娃", "家庭日",
 )
 
+# 全齡大型節慶／燈會／煙火秀關鍵字（不限12歲以下，適合全家同遊的大型盛事）
+FESTIVAL_KEYWORDS = (
+    "耶誕城", "耶誕愛無限", "繽紛耶誕", "聖誕季", "聖誕生活節", "聖誕節", "聖誕月", "聖誕巷",
+    "燈會", "燈節", "元宵", "光影節", "光雕", "空山祭", "光節",
+    "煙火", "花火", "漁火節", "海之夏", "跨年", "新年城",
+    "花海", "花毯節", "菊展", "櫻花季", "櫻花祭", "花季", "芒花季",
+    "熱氣球", "風箏節", "沙雕", "童玩節", "藝術季", "國際管樂節",
+    "冬日遊樂園", "白晝之夜", "秋收祭", "暖冬派對",
+)
+
+STAGE_SHOW_EXCLUDE = ("劇場", "音樂劇", "故事劇", "室內管樂", "動物樂團", "交響樂團", "獨奏會")
+
 # 排除明顯成人取向活動
 ADULT_EXCLUDE = (
     "品酒", "微醺", "酒吧", "調酒", "威士忌", "紅酒", "聯誼", "單身", "相親",
@@ -328,8 +340,21 @@ def infer_free(price_text: str, text: str) -> bool:
     return False
 
 
+def is_mega_festival(title: str, desc: str = "") -> bool:
+    t = title or ""
+    if any(ex in t for ex in STAGE_SHOW_EXCLUDE):
+        return False
+    if any(bad in f"{t} {desc}" for bad in ADULT_EXCLUDE):
+        return False
+    return any(k in t for k in FESTIVAL_KEYWORDS) or any(
+        k in desc for k in ("跨年煙火", "高空煙火", "海上花火", "元宵燈會", "大型光雕", "聖誕及光影展活動")
+    )
+
+
 def classify_event_category(title: str, desc: str, src_cat: str = "") -> str:
     text = f"{title} {desc}"
+    if is_mega_festival(title, desc):
+        return "festival"
     if src_cat in ("11", "13", "14") or any(k in text for k in ("比賽", "競賽", "徵件", "徵選", "寫生", "錦標賽", "大賽", "徵畫")):
         return "contest"
     if any(k in text for k in ("市集", "園遊會", "嘉年華", "派對", "野餐日", "夜市", "文創市集")):
@@ -343,7 +368,7 @@ def is_kids_relevant(title: str, desc: str, force_kids: bool = False) -> bool:
     text = f"{title} {desc}"
     if any(bad in text for bad in ADULT_EXCLUDE):
         return False
-    if force_kids:
+    if force_kids or is_mega_festival(title, desc):
         return True
     return any(k in text for k in KIDS_KEYWORDS)
 
@@ -454,6 +479,7 @@ def scrape_iculture(prev_img_cache: dict[str, str]) -> list[dict[str, Any]]:
                     "title": title,
                     "kind": "event",
                     "category": cat,
+                    "all_ages": cat == "festival",
                     "city": city,
                     "district": district,
                     "address": address,
@@ -506,6 +532,7 @@ def scrape_taipei_events(prev_img_cache: dict[str, str]) -> list[dict[str, Any]]
     seen: set[str] = set()
 
     for url in urls:
+        is_calendar_ep = "Events/Calendar" in url
         try:
             payload = fetch_json(url, timeout=12)
         except Exception as exc:
@@ -516,8 +543,10 @@ def scrape_taipei_events(prev_img_cache: dict[str, str]) -> list[dict[str, Any]]
             title = strip_html(row.get("title") or "")
             if not title or title in seen:
                 continue
+            if "馬拉松" in title or "暗訪" in title:
+                continue
             desc = strip_html(row.get("description") or "")
-            if not is_kids_relevant(title, desc, force_kids=False):
+            if not is_calendar_ep and not is_kids_relevant(title, desc, force_kids=False):
                 continue
 
             start_d = parse_date(row.get("begin") or "")
@@ -551,15 +580,16 @@ def scrape_taipei_events(prev_img_cache: dict[str, str]) -> list[dict[str, Any]]
             if not img_url:
                 img_url = prev_img_cache.get(item_id, "") or fetch_og_image(row.get("url") or "", timeout=6)
 
-            cat = classify_event_category(title, desc)
+            cat = "festival" if is_calendar_ep else classify_event_category(title, desc)
             ticket = strip_html(row.get("ticket") or "")
-            is_free = infer_free(ticket, desc)
+            is_free = (cat == "festival") or infer_free(ticket, desc)
             seen.add(title)
             items.append({
                 "id": item_id,
                 "title": title,
                 "kind": "event",
                 "category": cat,
+                "all_ages": cat == "festival",
                 "city": city or "臺北市",
                 "district": district,
                 "address": addr or f"臺北市{district}",
@@ -881,6 +911,138 @@ def scrape_kaohsiung_official() -> list[dict[str, Any]]:
     return items
 
 
+def scrape_taiwan_tourism_calendar(prev_item_cache: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+    """抓取交通部觀光署「臺灣觀光雙年曆」全台國家級／國際級大型節慶、耶誕城、燈會、光影節與跨年煙火。"""
+    today = dt.datetime.now(TZ_TW).date().isoformat()
+    pages = [f"https://www.taiwan.net.tw/m1.aspx?sNo=0001019&page={p}" for p in range(1, 4)]
+    card_re = re.compile(r'<div class="columnBlock">([\s\S]*?)</div>\s*</div>\s*</li>', re.I)
+
+    raw_cards: list[dict[str, str]] = []
+    seen_lids: set[str] = set()
+    for purl in pages:
+        try:
+            h = fetch_html(purl, timeout=10)
+        except Exception as exc:
+            print(f"[WARN] Taiwan Tourism Calendar page failed ({purl}): {exc}", file=sys.stderr)
+            continue
+        for m in card_re.finditer(h):
+            b = m.group(1)
+            tm = re.search(r'href="m1\.aspx\?sNo=0001019&(?:amp;)?lid=(\d+)"[^>]*class="columnBlock-title"[^>]*>([\s\S]*?)</a>', b, re.I)
+            if not tm:
+                continue
+            lid, title = tm.group(1), strip_html(tm.group(2))
+            if not title or lid in seen_lids or "馬拉松" in title:
+                continue
+            dm = re.search(r'<span class="date">\s*([\d\-~～\s]*)\s*</span>', b, re.I)
+            dstr = strip_html(dm.group(1)) if dm else ""
+            dates = re.findall(r"\d{4}-\d{2}-\d{2}", dstr)
+            start_d = dates[0] if dates else ""
+            end_d = dates[-1] if dates else ""
+            if end_d and end_d < today:
+                continue
+            pm = re.search(r"<p>([\s\S]*?)</p>", b, re.I)
+            im = re.search(r'<noscript>\s*<img src="([^"]+)"', b, re.I)
+            seen_lids.add(lid)
+            raw_cards.append({
+                "lid": lid,
+                "title": title,
+                "start_date": start_d,
+                "end_date": end_d,
+                "summary": strip_html(pm.group(1)) if pm else "",
+                "img_file": im.group(1).strip() if im else "",
+            })
+
+    items: list[dict[str, Any]] = []
+    to_enrich: list[dict[str, str]] = []
+    for c in raw_cards:
+        iid = f"twcal-{c['lid']}"
+        cached = prev_item_cache.get(iid)
+        if cached and cached.get("city") in TW_DISTRICTS:
+            reused = dict(cached)
+            reused["title"] = c["title"]
+            reused["category"] = "festival"
+            reused["all_ages"] = True
+            reused["start_date"] = c["start_date"]
+            reused["end_date"] = c["end_date"]
+            if c["start_date"] or c["end_date"]:
+                reused["hours"] = f"{c['start_date'] or '近期'} ～ {c['end_date'] or '依官網公告'}"
+            items.append(reused)
+        else:
+            to_enrich.append(c)
+
+    def _enrich_cal(c: dict[str, str]) -> dict[str, Any] | None:
+        lid = c["lid"]
+        detail_url = f"https://www.taiwan.net.tw/m1.aspx?sNo=0001019&lid={lid}"
+        addr = ""
+        ext_url = detail_url
+        lat, lng, exact_coords = None, None, False
+        try:
+            dh = fetch_html(detail_url, timeout=10)
+            # 擷取活動專屬「地址：」（避開頁尾觀光署本署忠孝東路地址）
+            m_info = re.search(r"地址：\s*([\s\S]{4,260}?)(?:網站連結|電話|主辦單位|</dl>)", dh, re.I)
+            if m_info:
+                cand_addr = strip_html(m_info.group(1))
+                if "忠孝東路4段290號" not in cand_addr:
+                    addr = cand_addr
+            m_coord = re.search(r"(2[1-6]\.\d{4,8})\s*,\s*(1[12]\d\.\d{4,8})", dh)
+            if m_coord:
+                lf, gf = float(m_coord.group(1)), float(m_coord.group(2))
+                if 21.5 <= lf <= 26.5 and 118.0 <= gf <= 122.5:
+                    lat, lng, exact_coords = lf, gf, True
+            m_link = re.search(r'網站連結：[\s\S]{0,200}?href=["\'](https?://[^"\']+)["\']', dh, re.I)
+            if m_link:
+                ext_url = m_link.group(1).strip()
+        except Exception:
+            pass
+
+        city, district = extract_city_district(f"{addr} {c['title']} {c['summary']}")
+        if not city:
+            return None
+        if lat is None or lng is None:
+            cc = TW_CITY_COORDS.get(city, [25.033, 121.565, 11])
+            lat, lng = cc[0], cc[1]
+
+        img_url = (
+            f"https://www.taiwan.net.tw/pic.ashx?qp=event/{urllib.parse.quote(c['img_file'])}&sizetype=5"
+            if c["img_file"]
+            else ""
+        )
+        s_d, e_d = c["start_date"], c["end_date"]
+        hours_str = f"{s_d} ～ {e_d}" if (s_d and e_d and s_d != e_d) else (s_d or "詳見官方活動公告")
+        return {
+            "id": f"twcal-{lid}",
+            "title": c["title"],
+            "kind": "event",
+            "category": "festival",
+            "all_ages": True,
+            "city": city,
+            "district": district,
+            "address": addr[:90] if addr else f"{city}{district}",
+            "lat": round(lat, 5),
+            "lng": round(lng, 5),
+            "exact_coords": exact_coords,
+            "age_groups": ["0-3", "3-6", "6-12"],
+            "is_indoor": False,
+            "is_free": True,
+            "price_text": "免費參觀（部分體驗依現場公告）",
+            "hours": hours_str,
+            "start_date": s_d,
+            "end_date": e_d,
+            "is_recurring_weekend": True,
+            "summary": (c["summary"][:145] + ("…" if len(c["summary"]) > 145 else "")) if c["summary"] else f"{city}年度大型觀光節慶盛事，適合全家大小同遊。",
+            "url": ext_url,
+            "image_url": img_url,
+            "source": "交通部觀光署觀光雙年曆",
+        }
+
+    if to_enrich:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
+            for r in ex.map(_enrich_cal, to_enrich):
+                if r:
+                    items.append(r)
+    return items
+
+
 ABIC_AREA_DEFAULT_CITY = {
     "基隆": "基隆市",
     "宜蘭": "宜蘭縣",
@@ -921,8 +1083,13 @@ def classify_abic_item(tag_kind: str, title: str, msg: str) -> tuple[str, str] |
     if any(bad in text for bad in ADULT_EXCLUDE):
         return None
 
+    if is_mega_festival(title, msg):
+        return "event", "festival"
+
     if tag_kind == "event":
         return "event", classify_event_category(title, msg)
+    if tag_kind == "newest":
+        return None
 
     if any(k in title for k in ("親子館", "托育資源", "親子悠遊館", "公共親子中心", "育兒資源", "育兒+", "祖孫館", "婦幼福利", "兒童福利服務", "社會福利綜合館")):
         return "venue", "parent_center"
@@ -961,7 +1128,9 @@ def scrape_abic_nationwide(prev_item_cache: dict[str, dict[str, Any]]) -> list[d
         ("gov", "/index/search/tag/63/filter/74"),        # 全國政府開辦親子館／室內樂園／特色公園
     ]
 
-    page_jobs: list[tuple[str, str]] = []
+    page_jobs: list[tuple[str, str]] = [
+        ("newest", f"https://www.abic.com.tw/index/index/page/{p}") for p in range(1, 5)
+    ]
     for tkind, base_path in tag_sources:
         try:
             first_html = fetch_html("https://www.abic.com.tw" + base_path, timeout=12)
@@ -1024,6 +1193,7 @@ def scrape_abic_nationwide(prev_item_cache: dict[str, dict[str, Any]]) -> list[d
             reused["title"] = cand["title"]
             reused["kind"] = cand["kind"]
             reused["category"] = cand["category"]
+            reused["all_ages"] = cand["category"] == "festival"
             if not reused.get("image_url"):
                 reused["image_url"] = clean_image_url(cand["thumb"])
             items.append(reused)
@@ -1082,6 +1252,7 @@ def scrape_abic_nationwide(prev_item_cache: dict[str, dict[str, Any]]) -> list[d
             "title": cand["title"],
             "kind": cand["kind"],
             "category": cat,
+            "all_ages": cat == "festival",
             "city": city,
             "district": district,
             "address": addr or f"{city}{district}",
@@ -1158,10 +1329,12 @@ def main() -> int:
         item.setdefault("start_date", "")
         item.setdefault("end_date", "")
         item.setdefault("is_recurring_weekend", False)
+        item.setdefault("all_ages", item.get("category") == "festival")
         item["image_url"] = clean_image_url(item.get("image_url") or "")
 
     # 2. 平行執行所有即時公開資料爬蟲
     sources = {
+        "交通部觀光署觀光雙年曆": (lambda: scrape_taiwan_tourism_calendar(prev_item_cache), 5),
         "文化部全國藝文活動": (lambda: scrape_iculture(prev_img_cache), 15),
         "臺北旅遊網 Open API (活動)": (lambda: scrape_taipei_events(prev_img_cache), 1),
         "臺北旅遊網 Open API (場館)": (lambda: scrape_taipei_venues(prev_img_cache), 10),
@@ -1222,6 +1395,7 @@ def main() -> int:
 
     ordered_batches = [
         curated,
+        source_results.get("交通部觀光署觀光雙年曆", []),
         source_results.get("基隆市政府兒少處", []),
         source_results.get("高雄市政府兒福中心", []),
         source_results.get("文化部全國藝文活動", []),
@@ -1250,6 +1424,9 @@ def main() -> int:
                     existing["exact_coords"] = True
                 if not existing.get("district") and item.get("district"):
                     existing["district"] = item["district"]
+                if not existing.get("start_date") and item.get("start_date"):
+                    existing["start_date"] = item["start_date"]
+                    existing["end_date"] = item.get("end_date", "")
                 continue
             if cid in seen_ids:
                 continue

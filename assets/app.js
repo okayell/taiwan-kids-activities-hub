@@ -9,6 +9,7 @@
     kids_museum: { label: "兒童館／科博館", icon: "🏛️", kind: "venue", color: "#4aa3f5" },
     parent_center: { label: "親子館", icon: "🧸", kind: "venue", color: "#f2729a" },
     park: { label: "特色公園", icon: "🛝", kind: "venue", color: "#2ec49c" },
+    festival: { label: "大型節慶／燈會煙火", icon: "🎆", kind: "event", color: "#e62e6b" },
     activity: { label: "親子活動", icon: "🎪", kind: "event", color: "#e5a000" },
     contest: { label: "兒童比賽", icon: "🏆", kind: "event", color: "#9b82f3" },
     market: { label: "親子市集", icon: "🛍️", kind: "event", color: "#e87e22" },
@@ -263,10 +264,11 @@
       const order = Object.keys(window.TW_DISTRICTS || {});
       arr.sort((a, b) => order.indexOf(a.city) - order.indexOf(b.city));
     } else {
-      // 綜合推薦：精選場館庫 & 近期活動穿插，優先顯示有精準地址/座標與較新項目
+      // 綜合推薦：大型節慶與精選場館庫優先，再依近期週末可去與精準座標排序
       arr.sort((a, b) => {
         const score = (x) =>
-          (x.source === "全台精選親子場館庫" ? 2 : 0) +
+          (x.category === "festival" ? 2.4 : 0) +
+          (x.source === "全台精選親子場館庫" || x.source === "全台大型節慶精選" ? 2 : 0) +
           (x.kind === "event" && isWeekendAvailable(x) ? 1.5 : 0) +
           (x.exact_coords ? 0.5 : 0);
         return score(b) - score(a);
@@ -287,8 +289,12 @@
     if (item.kind === "event" && isWeekendAvailable(item)) {
       tags.push(`<span class="mini-tag weekend">📅 本週末</span>`);
     }
-    for (const a of (item.age_groups || []).slice(0, 3)) {
-      tags.push(`<span class="mini-tag">${esc(a)}歲</span>`);
+    if (item.category === "festival" || item.all_ages) {
+      tags.push(`<span class="mini-tag all-ages">👨‍👩‍👧 全齡皆宜</span>`);
+    } else {
+      for (const a of (item.age_groups || []).slice(0, 3)) {
+        tags.push(`<span class="mini-tag">${esc(a)}歲</span>`);
+      }
     }
 
     const coverHtml = item.image_url
@@ -327,7 +333,7 @@
     const locDesc = state.city
       ? `${state.city}${state.district ? " " + state.district : ""}`
       : (state.region || "全台灣");
-    els.resultSummary.textContent = `在「${locDesc}」找到 ${total} 筆適合 12 歲以下兒童的項目`;
+    els.resultSummary.textContent = `在「${locDesc}」找到 ${total} 筆親子場館、兒童活動與大型節慶`;
 
     if (total === 0) {
       els.cardsGrid.innerHTML = "";
@@ -437,7 +443,7 @@
         <div><strong>🏠 詳細地址：</strong>${esc(item.address || "依主辦單位公告")}</div>
         <div><strong>🕒 時間／檔期：</strong>${esc(item.hours || "依官網公告")}</div>
         <div><strong>🎟️ 費用資訊：</strong>${esc(item.price_text || "依現場公告")}</div>
-        <div><strong>👶 適合年齡：</strong>${esc((item.age_groups || []).map((a) => a + "歲").join("、") || "12歲以下")}</div>
+        <div><strong>👶 適合年齡：</strong>${item.category === "festival" || item.all_ages ? "全齡皆宜（不限年齡，適合全家大小同遊）" : esc((item.age_groups || []).map((a) => a + "歲").join("、") || "12歲以下")}</div>
         <div><strong>🌤️ 場地環境：</strong>${item.is_indoor ? "室內空間（雨天友善）" : "戶外／半戶外空間"}</div>
         <div><strong>📡 資料來源：</strong>${esc(item.source || "公開資料")}</div>
       </div>

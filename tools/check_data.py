@@ -26,6 +26,7 @@ REQUIRED_CATEGORIES = {
     "kids_museum",
     "parent_center",
     "park",
+    "festival",
     "activity",
     "contest",
     "market",
@@ -128,6 +129,13 @@ def validate_payload(payload: dict, tw_districts: dict[str, list[str]]) -> list[
         if not z.get("image_url"):
             errors.append("基隆市中正室內兒童樂園 缺少真實照片 image_url")
 
+    # 回歸防護：確保全齡大型節慶（如新北歡樂耶誕城、燈會、煙火秀等）正常收錄且數量充足
+    festivals = [it for it in items if it.get("category") == "festival"]
+    if len(festivals) < 20:
+        errors.append(f"大型節慶 (festival) 筆數過低：{len(festivals)} < 20")
+    if not any("新北歡樂耶誕城" in it.get("title", "") for it in festivals):
+        errors.append("漏抓回歸失敗：大型節慶缺少「新北歡樂耶誕城」")
+
     return errors
 
 
@@ -147,7 +155,7 @@ def main() -> int:
     with_img = sum(1 for it in payload["items"] if it.get("image_url"))
     print(
         f"✅ check_data.py PASS — {len(payload['items'])} 筆資料（含真實圖片 {with_img} 筆）、"
-        f"22/22 縣市全覆蓋、8/8 分類完整、更新時間 {payload.get('updated_date')}"
+        f"22/22 縣市全覆蓋、9/9 分類完整、更新時間 {payload.get('updated_date')}"
     )
     return 0
 
