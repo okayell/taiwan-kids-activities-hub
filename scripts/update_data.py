@@ -911,9 +911,111 @@ def scrape_kaohsiung_official() -> list[dict[str, Any]]:
     return items
 
 
+MAX_EVENT_HORIZON_DAYS = 92  # 只收錄進行中或未來三個月（92天）內開始之限期活動
+
+
+def infer_dates_from_text(title: str, desc: str, today: dt.date) -> tuple[str, str]:
+    """從標題或簡介文字解析明確活動起訖日（例如 2026/11/13、10/31-11/22、11/14-01/03、至2027/01/03）。"""
+    combined = f"{title} {desc}"
+    # 1. 明確 YYYY/MM/DD ~ YYYY/MM/DD
+    m_full = re.search(
+        r"(202[5-9])[/-](\d{1,2})[/-](\d{1,2})\s*(?:[-~～至到]\s*(202[5-9])[/-](\d{1,2})[/-](\d{1,2}))",
+        combined,
+    )
+    if m_full:
+        try:
+            s = dt.date(int(m_full.group(1)), int(m_full.group(2)), int(m_full.group(3)))
+            e = dt.date(int(m_full.group(4)), int(m_full.group(5)), int(m_full.group(6)))
+            if s.month in (11, 12) and e.month in (1, 2) and e.year <= s.year:
+                e = e.replace(year=s.year + 1)
+            return s.isoformat(), e.isoformat()
+        except ValueError:
+            pass
+
+    # 2. 內文有開跑日 YYYY/MM/DD + 標題有「至YYYY/MM/DD」
+    m_open = re.search(r"(202[5-9])[/-](\d{1,2})[/-](\d{1,2})\s*(?:歡樂開跑|盛大開跑|正式開跑|起|登場|開幕)", combined)
+    m_until = re.search(r"至\s*(202[5-9])[/-](\d{1,2})[/-](\d{1,2})", combined)
+    if m_open and m_until:
+        try:
+            s = dt.date(int(m_open.group(1)), int(m_open.group(2)), int(m_open.group(3)))
+            e = dt.date(int(m_until.group(1)), int(m_until.group(2)), int(m_until.group(3)))
+            if s.month in (11, 12) and e.month in (1, 2) and e.year <= s.year:
+                e = e.replace(year=s.year + 1)
+            return s.isoformat(), e.isoformat()
+        except ValueError:
+            pass
+    if m_until:
+        try:
+            e = dt.date(int(m_until.group(1)), int(m_until.group(2)), int(m_until.group(3)))
+            return e.isoformat(), e.isoformat()
+        except ValueError:
+            pass
+
+    # 3. 標題含年份（如 2026...）+ (MM/DD-MM/DD)
+    m_yr = re.search(r"(202[5-9])", title)
+    yr = int(m_yr.group(1)) if m_yr else today.year
+    m_rng = re.search(r"(?<!\d)(\d{1,2})/(\d{1,2})\s*[-~～]\s*(\d{1,2})/(\d{1,2})(?!\d)", title)
+    if m_rng:
+        sm, sd_num, em, ed_num = map(int, m_rng.groups())
+        eyr = yr + 1 if em < sm else yr
+        try:
+            s = dt.date(yr, sm, sd_num)
+            e = dt.date(eyr, em, ed_num)
+            return s.isoformat(), e.isoformat()
+        except ValueError:
+            pass
+    return "", ""
+
+
+def enforce_three_month_event_window(item: dict[str, Any], today: dt.date) -> bool:
+    """嚴格檢查限期活動 (kind=='event')：
+    1. 必須具備明確起訖日期（無日期之年度概略活動一律排除）
+    2. 不可已過期 (end_date >= today)
+    3. 必須在未來三個月內開始或進行中 (start_date <= today + 92天)
+    """
+    if item.get("kind") != "event":
+        return True
+
+    s_raw = parse_date(item.get("start_date") or "")
+    e_raw = parse_date(item.get("end_date") or "")
+    if not s_raw and not e_raw:
+        s_raw, e_raw = infer_dates_from_text(item.get("title", ""), item.get("summary", ""), today)
+    if not s_raw and not e_raw:
+        return False
+
+    s_str = s_raw or e_raw
+    e_str = e_raw or s_raw
+    try:
+        sd = dt.date.fromisoformat(s_str)
+        ed = dt.date.fromisoformat(e_str)
+        if sd.month in (11, 12) and ed.month in (1, 2) and ed.year <= sd.year:
+            ed = ed.replace(year=sd.year + 1)
+        if ed < sd:
+            sd, ed = ed, sd
+    except ValueError:
+        return False
+
+    horizon = today + dt.timedelta(days=MAX_EVENT_HORIZON_DAYS)
+    if ed < today or sd > horizon:
+        return False
+
+    item["start_date"] = sd.isoformat()
+    item["end_date"] = ed.isoformat()
+    item["is_recurring_weekend"] = False
+    date_label = f"{sd.isoformat()} ～ {ed.isoformat()}" if sd != ed else sd.isoformat()
+    cur_hours = item.get("hours") or ""
+    if not cur_hours or "每年" in cur_hours or cur_hours in ("依場館官網公告", "詳見官方活動公告"):
+        item["hours"] = date_label
+    elif str(sd.year) not in cur_hours:
+        item["hours"] = f"{date_label}（{cur_hours}）"[:95]
+    return True
+
+
 def scrape_taiwan_tourism_calendar(prev_item_cache: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
-    """抓取交通部觀光署「臺灣觀光雙年曆」全台國家級／國際級大型節慶、耶誕城、燈會、光影節與跨年煙火。"""
-    today = dt.datetime.now(TZ_TW).date().isoformat()
+    """抓取交通部觀光署「臺灣觀光雙年曆」全台國家級／國際級大型節慶（僅保留未過期且三個月內之明確日期活動）。"""
+    today_date = dt.datetime.now(TZ_TW).date()
+    today = today_date.isoformat()
+    horizon = (today_date + dt.timedelta(days=MAX_EVENT_HORIZON_DAYS)).isoformat()
     pages = [f"https://www.taiwan.net.tw/m1.aspx?sNo=0001019&page={p}" for p in range(1, 4)]
     card_re = re.compile(r'<div class="columnBlock">([\s\S]*?)</div>\s*</div>\s*</li>', re.I)
 
@@ -936,9 +1038,12 @@ def scrape_taiwan_tourism_calendar(prev_item_cache: dict[str, dict[str, Any]]) -
             dm = re.search(r'<span class="date">\s*([\d\-~～\s]*)\s*</span>', b, re.I)
             dstr = strip_html(dm.group(1)) if dm else ""
             dates = re.findall(r"\d{4}-\d{2}-\d{2}", dstr)
-            start_d = dates[0] if dates else ""
-            end_d = dates[-1] if dates else ""
-            if end_d and end_d < today:
+            if not dates:
+                # 無明確活動日期（如往年舊條目未填日期）一律略過
+                continue
+            start_d = dates[0]
+            end_d = dates[-1]
+            if end_d < today or start_d > horizon:
                 continue
             pm = re.search(r"<p>([\s\S]*?)</p>", b, re.I)
             im = re.search(r'<noscript>\s*<img src="([^"]+)"', b, re.I)
@@ -1075,32 +1180,37 @@ ABIC_SCENIC_SKIP_RE = re.compile(
 )
 
 
-def classify_abic_item(tag_kind: str, title: str, msg: str) -> tuple[str, str] | None:
-    """回傳 (kind, category)，若非兒童場館／親子活動則回傳 None。"""
+def classify_abic_item(tag_kind: str, title: str, msg: str, today: dt.date | None = None) -> tuple[str, str] | None:
+    """回傳 (kind, category)，若非兒童場館／三個月內親子活動則回傳 None。"""
     if ABIC_SKIP_TITLE_RE.search(title) and not any(k in title for k in ("主題樂園", "遊樂世界", "兒童樂園", "親子館", "特色遊戲場")):
         return None
     text = f"{title} {msg}"
     if any(bad in text for bad in ADULT_EXCLUDE):
         return None
 
-    if is_mega_festival(title, msg):
+    ref_day = today or dt.datetime.now(TZ_TW).date()
+    s_inferred, e_inferred = infer_dates_from_text(title, msg, ref_day)
+    has_dates = bool(s_inferred or e_inferred)
+
+    if has_dates and is_mega_festival(title, msg):
         return "event", "festival"
 
-    if tag_kind == "event":
-        return "event", classify_event_category(title, msg)
-    if tag_kind == "newest":
-        return None
-
-    if any(k in title for k in ("親子館", "托育資源", "親子悠遊館", "公共親子中心", "育兒資源", "育兒+", "祖孫館", "婦幼福利", "兒童福利服務", "社會福利綜合館")):
+    # 常設場館優先判定（避免把全年開放但附設演出的文化村／圖書館／玩具銀行誤歸為無日期限期活動）
+    if any(k in title for k in ("親子館", "托育資源", "親子悠遊館", "公共親子中心", "育兒資源", "育兒+", "祖孫館", "婦幼福利", "兒童福利服務", "社會福利綜合館", "玩具銀行")):
         return "venue", "parent_center"
     if any(k in title for k in ("室內兒童樂園", "兒童新樂園", "兒童樂園", "主題樂園", "遊樂園", "遊樂世界", "海洋世界", "海洋公園", "水世界", "湯姆熊", "貝兒絲", "騎士堡", "遊戲愛樂園", "奇幻島", "卡丁車", "動物園", "頑皮世界", "綠世界")):
         return "venue", "amusement"
     if any(k in title for k in ("特色遊戲場", "共融", "親子公園", "兒童公園", "運動公園", "親水公園", "森林公園", "溜滑梯")) or ("公園" in title and any(k in text for k in ("遊戲", "溜滑梯", "沙坑", "鞦韆", "滑索", "玩水", "戲水", "滑步車", "兒童", "親子"))):
         return "venue", "park"
-    if tag_kind in ("museum", "factory") or any(k in title for k in ("博物館", "美術館", "科學", "天文", "海科館", "海生館", "水族館", "探索館", "故事館", "文物館", "文化館", "文化藝術館", "教育館", "教育中心", "觀光工廠", "體驗館", "漫畫圖書館", "兒童圖書館", "牧場", "農場", "生態園區")):
+    if tag_kind in ("museum", "factory") or any(k in title for k in ("博物館", "美術館", "科學", "天文", "海科館", "海生館", "水族館", "探索館", "故事館", "故事園區", "文化村", "文化園區", "文學館", "文物館", "文化館", "文化藝術館", "教育館", "教育中心", "觀光工廠", "體驗館", "圖書館", "牧場", "農場", "生態園區")):
         if ABIC_SCENIC_SKIP_RE.search(title) and "遊戲場" not in title:
             return None
         return "venue", "kids_museum"
+
+    if tag_kind in ("event", "newest"):
+        if not has_dates:
+            return None
+        return "event", classify_event_category(title, msg)
     if tag_kind in ("under12", "under6", "amusement"):
         if "公園" in title:
             return "venue", "park"
@@ -1305,6 +1415,8 @@ def load_previous_state() -> tuple[dict[str, list[dict[str, Any]]], dict[str, st
 
 def normalize_title_key(title: str, city: str) -> str:
     t = (title or "").replace("台", "臺").strip()
+    # 移除年份前綴（如「2026新北歡樂耶誕城」與「新北歡樂耶誕城」合併為同一筆）
+    t = re.sub(r"^20\d{2}(?:\s*[-~～]\s*20\d{2})?\s*", "", t).strip()
     # 移除括號附註（如「(基隆安樂親子館)」、「(特色遊戲場)」）以利跨來源同名場館自動合併補圖與座標
     stripped = re.sub(r"[（(][^）)]*[）)]", "", t).strip()
     if len(stripped) >= 3:
@@ -1405,12 +1517,16 @@ def main() -> int:
         source_results.get("臺南旅遊網 Open Data", []),
     ]
 
+    today_tw = now_tw.date()
     for batch in ordered_batches:
         for item in batch:
             cid = item.get("id")
             city = item.get("city", "")
             title = item.get("title", "")
             if not cid or not city or city not in TW_DISTRICTS or not title:
+                continue
+            # 嚴格過濾：所有限期活動必須「尚未結束」且「在未來三個月內」
+            if not enforce_three_month_event_window(item, today_tw):
                 continue
             item["image_url"] = clean_image_url(item.get("image_url") or "")
             key = normalize_title_key(title, city)

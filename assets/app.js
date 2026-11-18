@@ -118,25 +118,42 @@
     els.savedCount.textContent = String(state.savedIds.size);
   }
 
-  function getUpcomingWeekendDates() {
-    const now = new Date();
-    const day = now.getDay(); // 0 Sun .. 6 Sat
-    const satOffset = day === 0 ? -1 : 6 - day;
-    const sat = new Date(now.getFullYear(), now.getMonth(), now.getDate() + satOffset);
-    const sun = new Date(sat.getFullYear(), sat.getMonth(), sat.getDate() + 1);
-    const fmt = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-    return [fmt(sat), fmt(sun)];
+  function fmtLocalDate(d) {
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
   }
 
-  const [WEEKEND_SAT, WEEKEND_SUN] = getUpcomingWeekendDates();
+  function getActiveWindowDates() {
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const horizon = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 92);
+    const day = today.getDay(); // 0 Sun .. 6 Sat
+    const satOffset = day === 0 ? -1 : 6 - day;
+    const sat = new Date(today.getFullYear(), today.getMonth(), today.getDate() + satOffset);
+    const sun = new Date(sat.getFullYear(), sat.getMonth(), sat.getDate() + 1);
+    return {
+      todayIso: fmtLocalDate(today),
+      horizonIso: fmtLocalDate(horizon),
+      satIso: fmtLocalDate(sat),
+      sunIso: fmtLocalDate(sun),
+    };
+  }
+
+  const DATE_WIN = getActiveWindowDates();
+
+  function isEventActiveWithinThreeMonths(item) {
+    if (item.kind !== "event") return true;
+    const s = item.start_date || item.end_date || "";
+    const e = item.end_date || item.start_date || "";
+    if (!s || !e) return false;
+    return e >= DATE_WIN.todayIso && s <= DATE_WIN.horizonIso;
+  }
 
   function isWeekendAvailable(item) {
     if (item.kind === "venue") return true;
-    if (item.is_recurring_weekend) return true;
     const s = item.start_date || "";
     const e = item.end_date || s;
-    if (!s && !e) return true;
-    return s <= WEEKEND_SUN && e >= WEEKEND_SAT;
+    if (!s || !e) return false;
+    return s <= DATE_WIN.sunIso && e >= DATE_WIN.satIso;
   }
 
   function populateCities() {
@@ -755,11 +772,15 @@
     const resp = await fetch(`data/activities.json?t=${Date.now()}`, { cache: "no-store" });
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const payload = await resp.json();
-    state.allItems = Array.isArray(payload.items) ? payload.items : [];
+    const rawItems = Array.isArray(payload.items) ? payload.items : [];
+    // 前端即時二次把關：只顯示未結束且未來 3 個月內開始之活動
+    state.allItems = rawItems.filter(isEventActiveWithinThreeMonths);
 
-    els.statTotal.textContent = String(payload.total || state.allItems.length);
-    els.statVenues.textContent = String(payload.kind_counts?.venue ?? 0);
-    els.statEvents.textContent = String(payload.kind_counts?.event ?? 0);
+    const venueCnt = state.allItems.filter((x) => x.kind === "venue").length;
+    const eventCnt = state.allItems.filter((x) => x.kind === "event").length;
+    els.statTotal.textContent = String(state.allItems.length);
+    els.statVenues.textContent = String(venueCnt);
+    els.statEvents.textContent = String(eventCnt);
     els.statUpdated.textContent = payload.updated_date || "剛剛";
 
     const srcList = payload.sources || [];

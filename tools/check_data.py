@@ -66,11 +66,31 @@ def validate_payload(payload: dict, tw_districts: dict[str, list[str]]) -> list[
     cities_seen: set[str] = set()
     cats_seen: set[str] = set()
     with_img = 0
+    tz_tw = dt.timezone(dt.timedelta(hours=8))
+    today_tw = dt.datetime.now(tz_tw).date()
+    horizon_tw = today_tw + dt.timedelta(days=92)
 
     for idx, it in enumerate(items):
         for field in REQUIRED_FIELDS:
             if field not in it or it[field] in (None, ""):
                 errors.append(f"item[{idx}] ({it.get('id')}) 缺少必要欄位 {field}")
+
+        # 嚴格把關所有限期活動 (kind=='event')：必須有明確日期、未過期、且在 3 個月（92 天）內
+        if it.get("kind") == "event":
+            s_str = it.get("start_date") or ""
+            e_str = it.get("end_date") or ""
+            if not s_str or not e_str:
+                errors.append(f"event[{idx}] ({it.get('title')}) 缺少明確起訖日期 start_date/end_date")
+            else:
+                try:
+                    sd = dt.date.fromisoformat(s_str)
+                    ed = dt.date.fromisoformat(e_str)
+                    if ed < today_tw:
+                        errors.append(f"event[{idx}] ({it.get('title')}) 已過期：end_date={e_str} < {today_tw}")
+                    if sd > horizon_tw:
+                        errors.append(f"event[{idx}] ({it.get('title')}) 超過三個月範圍：start_date={s_str} > {horizon_tw}")
+                except ValueError:
+                    errors.append(f"event[{idx}] ({it.get('title')}) 日期格式不合法：{s_str!r}~{e_str!r}")
 
         img = it.get("image_url") or ""
         if img:
@@ -129,12 +149,13 @@ def validate_payload(payload: dict, tw_districts: dict[str, list[str]]) -> list[
         if not z.get("image_url"):
             errors.append("基隆市中正室內兒童樂園 缺少真實照片 image_url")
 
-    # 回歸防護：確保全齡大型節慶（如新北歡樂耶誕城、燈會、煙火秀等）正常收錄且數量充足
+    # 回歸防護：確保當季三個月內之全齡大型節慶正常收錄，且無過期或無日期之年度舊活動混入
     festivals = [it for it in items if it.get("category") == "festival"]
-    if len(festivals) < 20:
-        errors.append(f"大型節慶 (festival) 筆數過低：{len(festivals)} < 20")
-    if not any("新北歡樂耶誕城" in it.get("title", "") for it in festivals):
-        errors.append("漏抓回歸失敗：大型節慶缺少「新北歡樂耶誕城」")
+    if len(festivals) < 5:
+        errors.append(f"大型節慶 (festival) 筆數過低：{len(festivals)} < 5")
+    for out_of_season in ("大稻埕夏日節", "澎湖國際海上花火節", "臺灣國際熱氣球嘉年華"):
+        if any(out_of_season in it.get("title", "") and (not it.get("start_date")) for it in items):
+            errors.append(f"回歸失敗：出現無明確近期檔期之過季活動「{out_of_season}」")
 
     return errors
 
