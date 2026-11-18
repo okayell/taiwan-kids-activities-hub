@@ -49,13 +49,21 @@ jobs:
             echo "No data changes to commit."
           fi
 
+      - name: Stage clean static site
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          cp -r index.html assets data _site/
+          [ -f favicon.ico ] && cp favicon.ico _site/ || true
+          [ -f site.webmanifest ] && cp site.webmanifest _site/ || true
+
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
       - name: Upload static site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."
+          path: "_site"
 
   deploy:
     environment:

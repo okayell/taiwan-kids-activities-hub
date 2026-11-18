@@ -65,6 +65,8 @@
     loadMoreWrap: document.getElementById("load-more-wrap"),
     btnLoadMore: document.getElementById("btn-load-more"),
     sourceBadges: document.getElementById("source-badges"),
+    localBadge: document.getElementById("local-mode-badge"),
+    btnLocalSync: document.getElementById("btn-local-sync"),
     btnRandom: document.getElementById("btn-random"),
     btnSaved: document.getElementById("btn-saved"),
     savedCount: document.getElementById("saved-count"),
@@ -695,31 +697,72 @@
     });
   }
 
+  async function loadActivitiesPayload() {
+    const resp = await fetch(`data/activities.json?t=${Date.now()}`, { cache: "no-store" });
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const payload = await resp.json();
+    state.allItems = Array.isArray(payload.items) ? payload.items : [];
+
+    els.statTotal.textContent = String(payload.total || state.allItems.length);
+    els.statVenues.textContent = String(payload.kind_counts?.venue ?? 0);
+    els.statEvents.textContent = String(payload.kind_counts?.event ?? 0);
+    els.statUpdated.textContent = payload.updated_date || "剛剛";
+
+    const srcList = payload.sources || [];
+    els.sourceBadges.innerHTML = [
+      `<span class="source-badge">🟢 全台精選親子場館庫（22 縣市）</span>`,
+      ...srcList.map((s) => {
+        const icon = s.status === "ok" ? "🟢" : "🟡";
+        return `<span class="source-badge">${icon} ${esc(s.source)}：${s.used ?? 0} 筆</span>`;
+      }),
+    ].join("");
+
+    populateCities();
+    applyFiltersAndRender({ resetPage: false });
+  }
+
+  async function initLocalServerMode() {
+    const host = window.location.hostname || "";
+    if (!window.location.protocol.startsWith("http") || host.endsWith(".github.io")) return;
+    try {
+      const r = await fetch("/api/health", { cache: "no-store" });
+      if (!r.ok) return;
+      const data = await r.json();
+      if (!data || !data.ok) return;
+      if (els.localBadge) els.localBadge.hidden = false;
+      if (els.btnLocalSync) {
+        els.btnLocalSync.hidden = false;
+        els.btnLocalSync.addEventListener("click", async () => {
+          if (els.btnLocalSync.disabled) return;
+          els.btnLocalSync.disabled = true;
+          const orig = els.btnLocalSync.textContent;
+          els.btnLocalSync.textContent = "⏳ 同步中…";
+          try {
+            const sr = await fetch("/api/sync", { method: "POST" });
+            const sj = await sr.json();
+            if (!sr.ok || !sj.ok) throw new Error(sj.error || `HTTP ${sr.status}`);
+            await loadActivitiesPayload();
+            els.btnLocalSync.textContent = "✅ 已更新";
+            setTimeout(() => { els.btnLocalSync.textContent = orig; }, 1800);
+          } catch (e) {
+            alert(`同步失敗：${e.message}`);
+            els.btnLocalSync.textContent = orig;
+          } finally {
+            els.btnLocalSync.disabled = false;
+          }
+        });
+      }
+    } catch {
+      // Static server without /api/health — keep Local controls hidden
+    }
+  }
+
   async function init() {
     loadSaved();
     bindEvents();
+    initLocalServerMode();
     try {
-      const resp = await fetch("data/activities.json", { cache: "no-cache" });
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-      const payload = await resp.json();
-      state.allItems = Array.isArray(payload.items) ? payload.items : [];
-
-      els.statTotal.textContent = String(payload.total || state.allItems.length);
-      els.statVenues.textContent = String(payload.kind_counts?.venue ?? 0);
-      els.statEvents.textContent = String(payload.kind_counts?.event ?? 0);
-      els.statUpdated.textContent = payload.updated_date || "剛剛";
-
-      const srcList = payload.sources || [];
-      els.sourceBadges.innerHTML = [
-        `<span class="source-badge">🟢 全台精選親子場館庫（22 縣市）</span>`,
-        ...srcList.map((s) => {
-          const icon = s.status === "ok" ? "🟢" : "🟡";
-          return `<span class="source-badge">${icon} ${esc(s.source)}：${s.used ?? 0} 筆</span>`;
-        }),
-      ].join("");
-
-      populateCities();
-      applyFiltersAndRender();
+      await loadActivitiesPayload();
     } catch (err) {
       els.resultSummary.textContent = `資料載入失敗：${err.message}（若以 file:// 直接開啟，請改用本機伺服器預覽）`;
     }

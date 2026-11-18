@@ -88,6 +88,30 @@ body {
   display: block;
 }
 
+.brand-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.local-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #e9faf4;
+  color: #0e7c5f;
+  border: 1.5px solid #2ec49c;
+  border-radius: var(--radius-pill);
+  padding: 2px 10px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.local-badge[hidden] {
+  display: none;
+}
+
 .brand h1 {
   margin: 0;
   font-size: clamp(1.45rem, 2.5vw, 1.95rem);
