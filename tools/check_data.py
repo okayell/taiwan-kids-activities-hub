@@ -64,11 +64,18 @@ def validate_payload(payload: dict, tw_districts: dict[str, list[str]]) -> list[
     seen_ids: set[str] = set()
     cities_seen: set[str] = set()
     cats_seen: set[str] = set()
+    with_img = 0
 
     for idx, it in enumerate(items):
         for field in REQUIRED_FIELDS:
             if field not in it or it[field] in (None, ""):
                 errors.append(f"item[{idx}] ({it.get('id')}) 缺少必要欄位 {field}")
+
+        img = it.get("image_url") or ""
+        if img:
+            with_img += 1
+            if not img.startswith(("http://", "https://")) or " " in img or "culture.twhttp" in img:
+                errors.append(f"item[{idx}] ({it.get('id')}) image_url 格式異常：{img[:80]!r}")
 
         iid = it.get("id")
         if iid in seen_ids:
@@ -104,6 +111,9 @@ def validate_payload(payload: dict, tw_districts: dict[str, list[str]]) -> list[
     if missing_cats:
         errors.append(f"以下分類筆數為 0：{sorted(missing_cats)}")
 
+    if with_img < 120:
+        errors.append(f"具真實照片之筆數過低：{with_img} < 120")
+
     return errors
 
 
@@ -120,8 +130,9 @@ def main() -> int:
             print(f"  - {e}", file=sys.stderr)
         return 1
 
+    with_img = sum(1 for it in payload["items"] if it.get("image_url"))
     print(
-        f"✅ check_data.py PASS — {len(payload['items'])} 筆資料、"
+        f"✅ check_data.py PASS — {len(payload['items'])} 筆資料（含真實圖片 {with_img} 筆）、"
         f"22/22 縣市全覆蓋、8/8 分類完整、更新時間 {payload.get('updated_date')}"
     )
     return 0

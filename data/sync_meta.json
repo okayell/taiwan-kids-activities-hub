@@ -1,10 +1,11 @@
 {
-  "updated_at": "2026-11-18T19:33:27+08:00",
-  "updated_date": "2026-11-18 19:33 (台灣時間)",
-  "total": 395,
+  "updated_at": "2026-11-18T23:26:03+08:00",
+  "updated_date": "2026-11-18 23:26 (台灣時間)",
+  "total": 396,
+  "with_image_count": 227,
   "kind_counts": {
     "venue": 189,
-    "event": 206
+    "event": 207
   },
   "category_counts": {
     "amusement": 25,
@@ -12,18 +13,12 @@
     "parent_center": 25,
     "park": 84,
     "market": 9,
-    "course": 38,
+    "course": 39,
     "contest": 9,
     "activity": 150
   },
   "cities_covered": 22,
   "sources": [
-    {
-      "source": "臺南旅遊網 Open Data",
-      "status": "ok",
-      "fetched": 70,
-      "used": 70
-    },
     {
       "source": "臺北旅遊網 Open API (場館)",
       "status": "ok",
@@ -39,8 +34,14 @@
     {
       "source": "文化部全國藝文活動",
       "status": "ok",
-      "fetched": 193,
-      "used": 193
+      "fetched": 194,
+      "used": 194
+    },
+    {
+      "source": "臺南旅遊網 Open Data",
+      "status": "ok",
+      "fetched": 70,
+      "used": 70
     }
   ]
 }

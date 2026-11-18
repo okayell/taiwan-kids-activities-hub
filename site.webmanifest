@@ -1,0 +1,22 @@
+{
+  "name": "台灣親子趣｜全台灣 12 歲以下兒童活動＆場館地圖",
+  "short_name": "台灣親子趣",
+  "description": "整合全台灣 22 縣市 368 鄉鎮區的兒童遊樂園、兒童館、親子館、特色公園，以及每週自動更新的親子活動、比賽、市集與課程。",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fffbf5",
+  "theme_color": "#ff7a59",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

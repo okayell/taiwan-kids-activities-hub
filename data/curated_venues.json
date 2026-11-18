@@ -8,15 +8,20 @@
     "district": "士林區",
     "address": "臺北市士林區承德路五段55號",
     "lat": 25.0973,
-    "lng": 121.5150,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "lng": 121.515,
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": false,
     "price_text": "入園門票 30 元，設施逐項收費或一日樂Fun券",
     "hours": "週二至週五 09:00–17:00，週六日 09:00–18:00（週一休園）",
     "summary": "台北最具代表性的平價大型兒童遊樂園，擁有摩天輪、旋轉木馬、雲霄飛車、樹蛙表演場及免費室內外遊戲區。",
     "url": "https://www.tcap.taipei/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Main_Entrance,_Taipei_Children's_Amusement_Park_20180722.jpg/330px-Main_Entrance,_Taipei_Children's_Amusement_Park_20180722.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-tpe-ntsec",
@@ -28,14 +33,18 @@
     "address": "臺北市士林區士商路189號",
     "lat": 25.0962,
     "lng": 121.5165,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "常設展全票 100 元、6歲以下免費；兒童益智探索館另計",
     "hours": "週二至週五 09:00–17:00，週六日 09:00–18:00（週一休館）",
     "summary": "雨天首選科學探索殿堂，含空中腳踏車、敲敲打打工作坊、兒童益智探索館及各式科普互動特展。",
     "url": "https://www.ntsec.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/National_Taiwan_Science_Education_Center_front.jpg/330px-National_Taiwan_Science_Education_Center_front.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-tpe-tam",
@@ -45,16 +54,20 @@
     "city": "臺北市",
     "district": "士林區",
     "address": "臺北市士林區基河路363號",
-    "lat": 25.0960,
+    "lat": 25.096,
     "lng": 121.5186,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "展示場 40 元，宇宙探險車 70 元，6歲以下免費",
     "hours": "週二至週日 09:00–17:00，週六延長至 20:00（週一休館）",
     "summary": "超人氣宇宙探險軌道車、立體劇場與互動天文展示區，緊鄰科教館與兒童新樂園，可排成士林科學親子一日遊。",
     "url": "https://tam.gov.taipei/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Ex-Yuanshan_Observatory_Ruin_Under_Construction.jpg/960px-Ex-Yuanshan_Observatory_Ruin_Under_Construction.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "venue-tpe-zoo",
@@ -65,15 +78,20 @@
     "district": "文山區",
     "address": "臺北市文山區新光路二段30號",
     "lat": 24.9984,
-    "lng": 121.5810,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "lng": 121.581,
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": false,
     "price_text": "全票 100 元、台北市民 60 元、6歲以下免費",
     "hours": "每日 09:00–17:00",
     "summary": "亞洲最大規模動物園之一，擁有大貓熊館、企鵝館、穿山甲館與兒童動物區，適合全齡兒童近距離認識生態。",
     "url": "https://www.zoo.gov.taipei/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Taipei_Zoo_Entrance_20220822.jpg/330px-Taipei_Zoo_Entrance_20220822.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-tpe-131fun",
@@ -85,14 +103,18 @@
     "address": "臺北市中正區三元街131號",
     "lat": 25.0268,
     "lng": 121.5101,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場（建議線上預約）",
     "hours": "週二至週日分場次開放（週一休館）",
     "summary": "臺北市公辦免費親子館，三層樓寬敞空間提供 0–6 歲分齡感統玩具、繪本閱讀與親子手作活動。",
     "url": "https://taipei.parent-child.org.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-tpe-daan-pc",
@@ -104,14 +126,18 @@
     "address": "臺北市大安區延吉街246巷10號1至3樓",
     "lat": 25.0345,
     "lng": 121.5553,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場（需網路或現場預約）",
     "hours": "週二至週日 09:30–17:00 分場次（週一休館）",
     "summary": "結合木質教具、角色扮演與嬰幼兒爬行區的臺北市人氣公辦親子館，定期舉辦親子律動與繪本說故事。",
     "url": "https://taipei.parent-child.org.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-tpe-shilin-pc",
@@ -123,14 +149,18 @@
     "address": "臺北市士林區基河路130號1樓",
     "lat": 25.0913,
     "lng": 121.5229,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週日分場次開放（週一休館）",
     "summary": "主打室內交通安全小小駕駛區與創意積木空間，鄰近劍潭捷運站，雨天放電好去處。",
     "url": "https://taipei.parent-child.org.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-tpe-beitou-pc",
@@ -142,14 +172,18 @@
     "address": "臺北市北投區光明路22號",
     "lat": 25.1319,
     "lng": 121.4989,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週日分場次開放（週一休館）",
     "summary": "結合北投溫泉文化意象打造的親子館，擁有豐富感官探索、美術創作區與0-2歲寶寶專區。",
     "url": "https://taipei.parent-child.org.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-tpe-tianmu-park",
@@ -161,14 +195,19 @@
     "address": "臺北市士林區忠誠路二段77號",
     "lat": 25.1135,
     "lng": 121.5335,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放",
     "summary": "全國首座棒球主題共融遊戲場，有 9 公尺高巨型棒球造型溜滑梯、共融沙坑、溜索與大面積草皮。",
     "url": "https://parks.gov.taipei/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-tpe-daan-park",
@@ -180,14 +219,19 @@
     "address": "臺北市大安區新生南路二段1號",
     "lat": 25.0305,
     "lng": 121.5357,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放",
     "summary": "台北市中心綠肺，擁有大型沙坑、磨石子溜滑梯、恐龍造型遊具、鳥巢鞦韆與生態池，搭捷運即可輕鬆到達。",
     "url": "https://parks.gov.taipei/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Daan_Park_20210817.jpg/330px-Daan_Park_20210817.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-ntpc-bear-monkey-park",
@@ -199,14 +243,19 @@
     "address": "新北市三重區疏洪東路一段（捷運三重站1A出口）",
     "lat": 25.0558,
     "lng": 121.4824,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "06:00–22:00",
     "summary": "全台最大堤坡滑梯樂園！超過 31 座特色溜滑梯與 100 組台灣動物造型遊具，夏天還有海世界水樂園免費戲水。",
     "url": "https://www.hrcm.ntpc.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Taipei_Metropolitan_Park.jpg/330px-Taipei_Metropolitan_Park.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-ntpc-yehliu-ocean",
@@ -218,14 +267,19 @@
     "address": "新北市萬里區港東路167-3號",
     "lat": 25.2063,
     "lng": 121.6908,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "全票 450 元、學童票 380 元、6歲以下免費",
     "hours": "每日 09:00–17:00",
     "summary": "北海岸老字號海洋主題樂園，有海豚海獅生態表演、100公尺海底隧道水族館及童樂趴室內遊戲區。",
     "url": "https://www.oceanworld.com.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/%E9%87%8E%E6%9F%B3%E6%B5%B7%E6%B4%8B%E4%B8%96%E7%95%8C%E8%A1%A8%E6%BC%94%E9%A4%A8%E5%A4%96%E8%A7%80.jpg/330px-%E9%87%8E%E6%9F%B3%E6%B5%B7%E6%B4%8B%E4%B8%96%E7%95%8C%E8%A1%A8%E6%BC%94%E9%A4%A8%E5%A4%96%E8%A7%80.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-ntpc-banqiao-pc",
@@ -237,14 +291,18 @@
     "address": "新北市板橋區漢生東路278號2樓",
     "lat": 25.0121,
     "lng": 121.4718,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週日 09:30–17:00（週一休館）",
     "summary": "新北市指標性公共親子中心，提供免費室內感覺統合遊具、繪本區與定期免費親子課程活動。",
     "url": "https://www.ntpc.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-ntpc-yingge-ceramics",
@@ -256,14 +314,18 @@
     "address": "新北市鶯歌區文化路200號",
     "lat": 24.9493,
     "lng": 121.3519,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "門票 80 元（新北市民及12歲以下兒童免費）；陶藝體驗另計",
     "hours": "週一至週五 09:30–17:00，週六日 09:30–18:00",
     "summary": "館內設有兒童體驗室可玩陶土 DIY，戶外藝術園區夏季開放免費戲水池與沙坑，動靜皆宜。",
     "url": "https://www.ceramics.ntpc.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Yingge_Ceramics_Museum_%2820250129131743%29.jpg/330px-Yingge_Ceramics_Museum_%2820250129131743%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-ntpc-yuanshan-park",
@@ -274,15 +336,19 @@
     "district": "中和區",
     "address": "新北市中和區員山路455巷",
     "lat": 25.0029,
-    "lng": 121.4810,
-    "age_groups": ["3-6", "6-12"],
+    "lng": 121.481,
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放",
     "summary": "超受歡迎的山坡地形特色公園，擁有 20 公尺彩繪磨石子溜滑梯、室外滑草坡、藤蔓溜索與挖土機沙坑。",
     "url": "https://www.ntpc.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-kee-nmmst",
@@ -294,14 +360,19 @@
     "address": "基隆市中正區北寧路367號",
     "lat": 25.1408,
     "lng": 121.7988,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "主題館全票 200 元、6歲以下免費；兒童廳憑票預約",
     "hours": "週二至週日 09:00–17:00（週一休館）",
     "summary": "基隆雨天最強室內親子景點！專屬「兒童廳」有海洋溜滑梯、小小漁船與魚市場扮家家酒，還能看8K海洋劇場。",
     "url": "https://www.nmmst.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/%E5%9F%BA%E9%9A%86%E6%B5%B7%E7%A7%91%E9%A4%A8_Keelung_Marine_Science_and_Technology_Museum_-_panoramio.jpg/330px-%E5%9F%BA%E9%9A%86%E6%B5%B7%E7%A7%91%E9%A4%A8_Keelung_Marine_Science_and_Technology_Museum_-_panoramio.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-kee-anle-pc",
@@ -313,14 +384,18 @@
     "address": "基隆市安樂區麥金路482號",
     "lat": 25.1211,
     "lng": 121.7192,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週日 09:30–17:00（週一休館）",
     "summary": "基隆公辦免費親子館，打造安全明亮的 0–6 歲遊戲空間與繪本角，下雨天也能安心放電。",
     "url": "https://www.klcg.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-tyn-woc",
@@ -332,14 +407,19 @@
     "address": "桃園市龍潭區高原路891號",
     "lat": 24.8322,
     "lng": 121.1869,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": false,
     "price_text": "依官方官網票價公告，未滿3歲免費",
     "hours": "每日 09:00–16:30（假日延長至 17:00）",
     "summary": "最適合學齡前與國小兒童的經典主題樂園，有世界迷你景觀、歐洲室內樂園、轟浪水樂園與遊園小火車。",
     "url": "https://www.wow.com.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Mini_models_of_buildings_in_WOW_%28cropped%29.jpg/330px-Mini_models_of_buildings_in_WOW_%28cropped%29.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-tyn-tmofa-kids",
@@ -351,14 +431,19 @@
     "address": "桃園市中壢區高鐵南路二段90號",
     "lat": 25.0024,
     "lng": 121.2029,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "全票 100 元、18歲以下免費入場",
     "hours": "週三至週一 09:30–17:00（週二休館）",
     "summary": "由普立茲克獎建築師打造的純白山丘美術館，專為兒童設計互動藝術展間、繪本圖書室與觀景步道。",
     "url": "https://tmofa.tycg.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Taoyuan_Children%27s_Art_center_2023.jpg/330px-Taoyuan_Children%27s_Art_center_2023.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-tyn-xpark",
@@ -369,15 +454,20 @@
     "district": "中壢區",
     "address": "桃園市中壢區春德路105號",
     "lat": 25.0166,
-    "lng": 121.2130,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "lng": 121.213,
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "成人 600 元、孩童（4-11歲）270 元、未滿4歲免費",
     "hours": "週日至週五 10:00–18:00，週六 10:00–20:00",
     "summary": "桃園高鐵站旁超人氣室內水族館，有夢幻水母萬花筒、企鵝咖啡廳與互動彩繪海洋區。",
     "url": "https://www.xpark.com.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://www.xpark.com.tw/xpark_static/img/ogimage.jpg"
   },
   {
     "id": "venue-tyn-fenghe-park",
@@ -389,14 +479,18 @@
     "address": "桃園市桃園區慈文路688號",
     "lat": 25.0044,
     "lng": 121.2899,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放（滾輪溜滑梯 08:00–22:00）",
     "summary": "擁有 50 公尺沖繩風超長滾輪溜滑梯、6 座大型磨石子滑梯、沙坑與大草皮，是桃園最具代表性的親子公園。",
     "url": "https://travel.tycg.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-tyn-taoyuan-pc",
@@ -408,14 +502,18 @@
     "address": "桃園市桃園區三民路一段200號",
     "lat": 24.9965,
     "lng": 121.3189,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週日 09:00–17:00（週一休館）",
     "summary": "桃園市公辦免費親子館，內含幼兒體能區、閱讀區與玩具借閱服務，並定期開辦免費親子 DIY 課程。",
     "url": "https://www.taoyuan-parent-child.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-hsz-zoo",
@@ -427,14 +525,19 @@
     "address": "新竹市東區食品路66號",
     "lat": 24.8005,
     "lng": 120.9794,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": false,
     "price_text": "全票 50 元，6歲以下兒童免費",
     "hours": "週二至週日 09:00–17:00（週一休園）",
     "summary": "全台最古老的無籠式美學動物園，步調悠閒好推嬰兒車，旁有昆蟲館、圖書館與沙坑遊戲場。",
     "url": "https://zoo-info.hccg.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-hsz-east-pc",
@@ -446,14 +549,19 @@
     "address": "新竹市東區中央路241號3樓（巨城旁）",
     "lat": 24.8099,
     "lng": 120.9746,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場（需預約）",
     "hours": "週二至週日分場次開放（週一休館）",
     "summary": "提供 0–12 歲多元遊戲與共讀空間，鄰近巨城購物中心，交通與停車皆相當便利。",
     "url": "https://wpcc.hccg.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-hsq-leofoo",
@@ -465,14 +573,18 @@
     "address": "新竹縣關西鎮仁安里拱子溝60號",
     "lat": 24.8203,
     "lng": 121.1816,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": false,
     "price_text": "依官方官網票價公告，未滿3歲免費",
     "hours": "每日 09:00–17:00",
     "summary": "結合野生動物園與四大主題遊樂區的大型樂園，可搭猛獸巴士與蒸汽火車看草食動物，適合學齡兒童全天暢玩。",
     "url": "https://www.leofoovillage.com.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/LeofooVillage_MainEntrance_Back.jpg/330px-LeofooVillage_MainEntrance_Back.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-hsq-dingdong",
@@ -484,14 +596,18 @@
     "address": "新竹縣新豐鄉康和路199號",
     "lat": 24.8686,
     "lng": 120.9809,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": false,
     "price_text": "依官方官網票價公告，未滿3歲免費",
     "hours": "每日 09:30–17:00",
     "summary": "以科學原理為主題的戶外與室內樂園，更擁有全台最大室內零下滑雪場，四季都能帶孩子玩雪盆。",
     "url": "https://www.ding-dong.com.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Little_Ding-Dong_Science_Theme_Park_entrance_sign_20140816.jpg/330px-Little_Ding-Dong_Science_Theme_Park_entrance_sign_20140816.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-hsq-ai-park",
@@ -502,15 +618,20 @@
     "district": "竹北市",
     "address": "新竹縣竹北市智慧二路與莊敬一路口",
     "lat": 24.8276,
-    "lng": 121.0230,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "lng": 121.023,
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放",
     "summary": "新竹縣超人氣共融特色公園，擁有七大遊戲區、雙滑道溜索、攀爬網、滑步車道與大沙坑。",
     "url": "https://www.hsinchu.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-hsq-zhubei-pc",
@@ -521,15 +642,19 @@
     "district": "竹北市",
     "address": "新竹縣竹北市縣政二路620號2樓",
     "lat": 24.8327,
-    "lng": 121.0110,
-    "age_groups": ["0-3", "3-6"],
+    "lng": 121.011,
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週六 09:00–17:00",
     "summary": "竹北公辦免費親子空間，規劃分齡遊戲區、繪本角落與育兒諮詢講座，適合學齡前幼童。",
     "url": "https://www.hsinchu.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-mia-shangshun",
@@ -541,14 +666,18 @@
     "address": "苗栗縣頭份市育樂街6-6號",
     "lat": 24.6901,
     "lng": 120.9052,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "遊園券約 450–699 元起，依官網公告",
     "hours": "每日 10:00–18:00",
     "summary": "全台灣最大全室內 5D 體感主題樂園！六層樓不怕日曬雨淋，包含魔法學校、飛行劇院與超大攀岩體能區。",
     "url": "https://www.ss-plaza.com.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://www.ss-plaza.com.tw/wp-content/uploads/2024/07/%E7%A9%BA%E6%A9%8B-2-scaled.jpg"
   },
   {
     "id": "venue-mia-maolimiao-park",
@@ -560,14 +689,19 @@
     "address": "苗栗縣苗栗市玉清路351號（苗栗縣議會後方）",
     "lat": 24.5681,
     "lng": 120.8257,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放",
     "summary": "以可愛 9 公尺巨型八爪章魚磨石子溜滑梯聞名，另有貝殼滑梯、方型攀爬架、共融沙坑與盪鞦韆。",
     "url": "https://miaolitravel.net/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-mia-parent-center",
@@ -578,15 +712,19 @@
     "district": "苗栗市",
     "address": "苗栗縣苗栗市建中街49號",
     "lat": 24.5579,
-    "lng": 120.8180,
-    "age_groups": ["0-3", "3-6"],
+    "lng": 120.818,
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週六 09:00–17:00",
     "summary": "提供 0–6 歲免費室內探索遊戲空間、圖書借閱與親子手作活動。",
     "url": "https://www.miaoli.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-txg-lihpao",
@@ -598,14 +736,19 @@
     "address": "臺中市后里區福容路8號",
     "lat": 24.3248,
     "lng": 120.6976,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": false,
     "price_text": "依官方官網票價公告，未滿3歲免費",
     "hours": "每日 09:30–17:00",
     "summary": "中台灣規模最大的水陸雙樂園，探索世界內有專為幼童設計的 POPA 歡樂王國，夏季可暢玩馬拉灣水樂園。",
     "url": "https://www.lihpaoresort.com/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://www.lihpaoresort.com/LihpaolandApp/lihpaolandUi/images/og_image.jpg"
   },
   {
     "id": "venue-txg-nmns",
@@ -616,15 +759,20 @@
     "district": "北區",
     "address": "臺中市北區館前路1號",
     "lat": 24.1573,
-    "lng": 120.6660,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "lng": 120.666,
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "展示場全票 100 元、6歲以下免費；週三上午特定時段免費",
     "hours": "週二至週日 09:00–17:00（週一休館）",
     "summary": "全台小朋友最愛的恐龍殿堂！會動的暴龍模型、科學中心幼兒科學園與熱帶雨林溫室，一整天玩不完。",
     "url": "https://www.nmns.edu.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://www.nmns.edu.tw/export/system/modules/com.thesys.project.nmns/resources/images/defaultImg.jpg"
   },
   {
     "id": "venue-txg-macaron-park",
@@ -636,14 +784,19 @@
     "address": "臺中市太平區環中東路四段19號",
     "lat": 24.1397,
     "lng": 120.7082,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放（高塔溜滑梯 08:00–20:00）",
     "summary": "擁有全台公園最高 11 公尺馬卡龍色系旋轉溜滑梯塔、大型攀爬網、滑步車場與大面積遮陽沙坑。",
     "url": "https://travel.taichung.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-txg-central-park",
@@ -654,15 +807,19 @@
     "district": "西屯區",
     "address": "臺中市西屯區中科路2966號",
     "lat": 24.1852,
-    "lng": 120.6540,
-    "age_groups": ["3-6", "6-12"],
+    "lng": 120.654,
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放",
     "summary": "水湳機場原址改建的飛行主題共融遊戲場，有 32 公尺雙軌滑索、大型主題滑梯與寬闊草坪適合野餐。",
     "url": "https://cpark.taichung.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-txg-nantun-pc",
@@ -674,14 +831,18 @@
     "address": "臺中市南屯區南屯路二段407號",
     "lat": 24.1404,
     "lng": 120.6401,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週日 09:00–17:00（週一休館）",
     "summary": "以「穿山甲」為吉祥物設計的溫馨親子館，提供免費室內教具探索、親子說故事與教具外借服務。",
     "url": "https://parent-child.taichung.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-cha-tumalu-park",
@@ -693,14 +854,19 @@
     "address": "彰化縣員林市員林大道五段與萬年路交叉口",
     "lat": 23.9631,
     "lng": 120.5784,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放",
     "summary": "彰化最受歡迎的大型共融公園，擁有 9.6 公尺高球形攀爬塔、雙軌道滑索、瓢蟲溜滑梯與寬敞大沙坑。",
     "url": "https://tourism.chcg.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-cha-kids-center",
@@ -712,14 +878,19 @@
     "address": "彰化縣溪湖鎮德華街17號",
     "lat": 23.9585,
     "lng": 120.4783,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週日 09:00–17:00（週一休館）",
     "summary": "全縣指標性兒少親子空間，擁有室內兒童遊戲館、繪本閱讀區、積木牆與每週末親子 DIY 課程。",
     "url": "https://www.chcg.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-nan-nine-tribes",
@@ -731,14 +902,18 @@
     "address": "南投縣魚池鄉金天巷45號",
     "lat": 23.8691,
     "lng": 120.9482,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": false,
     "price_text": "依官方官網票價公告，門票含日月潭纜車",
     "hours": "每日 09:30–17:00",
     "summary": "結合原住民族文化體驗、日月潭高空纜車與大型室內「阿拉丁廣場」遊樂設施，雨天也能暢玩旋轉木馬與海盜船。",
     "url": "https://www.nine.com.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://www.nine.com.tw/upload/admin/201908061646420.png"
   },
   {
     "id": "venue-nan-mingjian-park",
@@ -750,14 +925,19 @@
     "address": "南投縣名間鄉彰南路256號",
     "lat": 23.8404,
     "lng": 120.7019,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "08:30–16:30",
     "summary": "南投首座大型親子生態遊戲場，有超吸睛彩虹溜滑梯、愛心大草皮、生態池與戲水噴泉區。",
     "url": "https://travel.nantou.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-nan-pc",
@@ -769,14 +949,18 @@
     "address": "南投縣南投市三和二路8號",
     "lat": 23.9041,
     "lng": 120.6889,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週六 09:00–17:00",
     "summary": "提供 0–6 歲免費室內教具遊戲室、感覺統合設施與定期免費親子活動。",
     "url": "https://www.nantou.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-yun-janfusun",
@@ -788,14 +972,19 @@
     "address": "雲林縣古坑鄉永光村大湖口67號",
     "lat": 23.6186,
     "lng": 120.5767,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": false,
     "price_text": "依官方官網票價公告，未滿3歲免費",
     "hours": "每日 09:00–17:00",
     "summary": "除了經典摩天輪與刺激設施，更設有全室內「兒童玩國」百坪球池、皇家馬車與夏季水樂園，全齡小孩都愛。",
     "url": "https://www.janfusun.com.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://www.janfusun.com.tw/og_image.png"
   },
   {
     "id": "venue-yun-pengshu-park",
@@ -805,16 +994,21 @@
     "city": "雲林縣",
     "district": "斗六市",
     "address": "雲林縣斗六市大學路三段222-1號",
-    "lat": 23.6990,
+    "lat": 23.699,
     "lng": 120.5349,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放",
     "summary": "以可愛松鼠與橡果為主題的森林遊戲場，設有大型橡果攀爬滑梯、滑草坡、噴泉戲水區與週末假日市集。",
     "url": "https://tour.yunlin.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-yun-douliu-pc",
@@ -826,14 +1020,18 @@
     "address": "雲林縣斗六市府文路22號",
     "lat": 23.6997,
     "lng": 120.5263,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週六 09:00–17:00",
     "summary": "公辦免費室內親子遊戲空間，含寶寶爬行區、角色扮演區與繪本說故事時間。",
     "url": "https://www.yunlin.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-cyi-fanzi-park",
@@ -845,14 +1043,19 @@
     "address": "嘉義市西區信義路與友愛路口",
     "lat": 23.4812,
     "lng": 120.4357,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放",
     "summary": "以機器人為主題的趣味遊戲場，有機器人溜滑梯、沙坑、三人跳跳床與飛碟攀爬架，就在高架橋下免曬太陽。",
     "url": "https://travel.chiayi.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-cyi-west-pc",
@@ -864,14 +1067,18 @@
     "address": "嘉義市西區錦州二街28號",
     "lat": 23.4673,
     "lng": 120.4375,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週六 09:00–17:00",
     "summary": "嘉義市免費公辦親子空間，空間溫馨寬敞，提供多元益智玩具與親子共讀活動。",
     "url": "https://www.chiayi.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-cyq-npm-south",
@@ -883,14 +1090,18 @@
     "address": "嘉義縣太保市故宮大道888號",
     "lat": 23.4718,
     "lng": 120.2923,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "兒童創意中心免費入場（18歲以下全館免費）",
     "hours": "週二至週日 09:00–17:00（週一休館）",
     "summary": "免費超質感兒童創意中心，透過數位互動與亞洲文化體驗遊戲認識文物，戶外還有白螺沙灣大沙坑與紅魔毯溜滑梯！",
     "url": "https://south.npm.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/NPMSB_Moyun_Hall_and_Feibai_Hall.jpg/330px-NPMSB_Moyun_Hall_and_Feibai_Hall.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-cyq-pc",
@@ -902,14 +1113,18 @@
     "address": "嘉義縣民雄鄉文化路7號",
     "lat": 23.5553,
     "lng": 120.4309,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週六 09:00–17:00",
     "summary": "免費 0–6 歲室內親子遊憩與繪本共讀空間，定期舉辦親子律動與手作活動。",
     "url": "https://www.cyhg.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-tnn-zuozhen-fossil",
@@ -920,15 +1135,19 @@
     "district": "左鎮區",
     "address": "臺南市左鎮區榮和里61-23號",
     "lat": 23.0596,
-    "lng": 120.4090,
-    "age_groups": ["3-6", "6-12"],
+    "lng": 120.409,
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "全票 100 元、6歲以下免費",
     "hours": "週三至週一 09:00–17:00（週二休館）",
     "summary": "全台唯一結合自然史與化石的五星級親子博物館，有模擬考古沙坑、互動彩繪投影與超過 4,600 件珍貴化石。",
     "url": "https://fossil.tnc.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/%E8%87%BA%E5%8D%97%E5%B7%A6%E9%8E%AE%E5%8C%96%E7%9F%B3%E5%9C%92%E5%8D%80.jpg/330px-%E8%87%BA%E5%8D%97%E5%B7%A6%E9%8E%AE%E5%8C%96%E7%9F%B3%E5%9C%92%E5%8D%80.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-tnn-treevalley",
@@ -940,14 +1159,19 @@
     "address": "臺南市新市區中心東路12號",
     "lat": 23.1003,
     "lng": 120.2647,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "全票 60 元、未滿6歲免費",
     "hours": "週二至週日 09:00–17:00（週一休館）",
     "summary": "南台灣高 CP 值恐龍自然史博物館，可借平板玩互動解謎遊戲，館外還有樹谷農場可餵食小動物。",
     "url": "https://www.tvsm.com.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-tnn-wanpi",
@@ -959,14 +1183,19 @@
     "address": "臺南市學甲區三慶里頂洲75-25號",
     "lat": 23.2817,
     "lng": 120.2099,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": false,
     "price_text": "依官方官網票價公告，未滿3歲免費",
     "hours": "每日 09:00–17:00",
     "summary": "南台灣最大半開放式野生動物園兼親子樂園，可近距離互動水豚、長頸鹿，並附設室內機械遊樂館與夏季水樂園。",
     "url": "https://www.wanpiworldzoo.com.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://www.wanpiworldzoo.com.tw/archive/image/header_info/0831_layout_compressed_thumb_1444_831.jpg"
   },
   {
     "id": "venue-tnn-oasis-park",
@@ -978,14 +1207,19 @@
     "address": "臺南市南區健康路二段與健康路二段500巷口",
     "lat": 22.9818,
     "lng": 120.1843,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放",
     "summary": "以 1661 臺灣船為靈感打造的巨型帆船複合遊戲場，包含 8 公尺雙層攀爬船、溜索與大面積遮陽沙坑。",
     "url": "https://www.twtainan.net/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-tnn-anping-pc",
@@ -997,14 +1231,18 @@
     "address": "臺南市安平區華平路720號2樓",
     "lat": 22.9963,
     "lng": 120.1743,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週日 09:00–17:00（週一休館）",
     "summary": "臺南市公辦免費親子悠遊館，專為未滿 7 歲幼童規劃感官遊戲、體能區與親子說故事活動。",
     "url": "https://child.tainan.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-khh-eda",
@@ -1016,14 +1254,19 @@
     "address": "高雄市大樹區學城路一段10號",
     "lat": 22.7294,
     "lng": 120.4063,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "依官方官網票價公告，未滿3歲免費",
     "hours": "每日 09:00–17:30",
     "summary": "希臘愛琴海風格主題樂園，內有全台最大 15,000 坪全室內「特洛伊城堡」親子遊樂區，不怕南部豔陽與午後雷陣雨。",
     "url": "https://www.edathemepark.com.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://www.edathemepark.com.tw/Content/images/TPLogo.png"
   },
   {
     "id": "venue-khh-suzuka",
@@ -1035,14 +1278,18 @@
     "address": "高雄市前鎮區中安路1-1號（捷運草衙站）",
     "lat": 22.5829,
     "lng": 120.3291,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": false,
     "price_text": "免費入園，設施單項購票或暢遊券",
     "hours": "週一至週五 11:00–20:30，週六日 10:30–20:30",
     "summary": "日本鈴鹿賽車場海外唯一授權親子樂園，有兒童自主駕駛酷奇拉駕駛學校、摩天輪與卡丁車賽道。",
     "url": "https://www.suzukacircuitpark.com/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/%E9%88%B4%E9%B9%BF%E8%B3%BD%E9%81%93%E6%A8%82%E5%9C%92%E7%9A%84%E5%A4%A9%E7%A9%BA%E9%A3%9B%E8%A1%8C%E5%AE%B6.jpg/960px-%E9%88%B4%E9%B9%BF%E8%B3%BD%E9%81%93%E6%A8%82%E5%9C%92%E7%9A%84%E5%A4%A9%E7%A9%BA%E9%A3%9B%E8%A1%8C%E5%AE%B6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "venue-khh-nstm",
@@ -1054,14 +1301,19 @@
     "address": "高雄市三民區九如一路720號",
     "lat": 22.6407,
     "lng": 120.3227,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "常設展全票 120 元、6歲以下免費；熱雪天堂特展另計",
     "hours": "週二至週日 09:00–17:00（週一休館）",
     "summary": "南台灣室內科學放電天花板！有兒童科學園「夢想號」、亞洲最高立體螺旋溜滑梯與常設熱雪天堂雪地體驗。",
     "url": "https://www.nstm.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Kaohsiung_National_Science_and_Technology_Museum_01.jpg/330px-Kaohsiung_National_Science_and_Technology_Museum_01.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-khh-kids-museum",
@@ -1073,14 +1325,19 @@
     "address": "高雄市鼓山區馬卡道路330號",
     "lat": 22.6606,
     "lng": 120.2877,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週日 09:30–17:30（週一休館）",
     "summary": "全台第一座專為兒童設立的公立美術館！全館免費、高度互動的藝術探索展間，館外還有超大樹蔭沙坑。",
     "url": "https://kmfa.kcg.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-khh-weiwuying-park",
@@ -1092,14 +1349,19 @@
     "address": "高雄市鳳山區輜汽路281號",
     "lat": 22.6208,
     "lng": 120.3422,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放",
     "summary": "坐擁大片綠地與樹蔭的特色公園，有巨型樹冠攀爬網、共融沙坑與多組盪鞦韆，旁鄰衛武營藝術文化中心。",
     "url": "https://khh.travel/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Geese_at_Weiwuying_Metropolitan_Park%2C_Kaohsiung_2023-02-26.jpg/960px-Geese_at_Weiwuying_Metropolitan_Park%2C_Kaohsiung_2023-02-26.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "venue-khh-fengshan-pc",
@@ -1110,15 +1372,19 @@
     "district": "鳳山區",
     "address": "高雄市鳳山區光復路二段120號",
     "lat": 22.6305,
-    "lng": 120.3470,
-    "age_groups": ["0-3", "3-6"],
+    "lng": 120.347,
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週日 09:00–17:00（週一休館）",
     "summary": "高雄大型免費育兒資源中心與兒童科學遊戲室，提供豐富分齡玩具、繪本借閱與親子手作課程。",
     "url": "https://play.kcg.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-pif-nmmba",
@@ -1130,14 +1396,19 @@
     "address": "屏東縣車城鄉後灣路2號",
     "lat": 22.0465,
     "lng": 120.6986,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "全票 450 元、優待票 250 元、未滿6歲免費",
     "hours": "每日 09:00–17:30",
     "summary": "全台最大海洋生物博物館，擁有 81 公尺海底隧道、小白鯨、企鵝館、觸摸池及超人氣夜宿海生館活動。",
     "url": "https://www.nmmba.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Entrance_to_the_National_Museum_of_Marine_Biology_and_Aquarium.jpg/960px-Entrance_to_the_National_Museum_of_Marine_Biology_and_Aquarium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "venue-pif-county-park",
@@ -1149,14 +1420,19 @@
     "address": "屏東縣屏東市台糖街2號",
     "lat": 22.6584,
     "lng": 120.4956,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放",
     "summary": "屢獲國際設計大獎的工業遺址轉型公園，內有超大沙坑、72 公尺跳躍彈跳床與地景溜滑梯，夜晚點燈超美。",
     "url": "https://www.i-pingtung.com/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/%E5%B1%8F%E6%9D%B1%E7%B8%A3%E6%B0%91%E5%85%AC%E5%9C%9204.jpg/960px-%E5%B1%8F%E6%9D%B1%E7%B8%A3%E6%B0%91%E5%85%AC%E5%9C%9204.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "venue-pif-victory-park",
@@ -1168,14 +1444,19 @@
     "address": "屏東縣屏東市蘭州街4-1號",
     "lat": 22.6776,
     "lng": 120.4848,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放",
     "summary": "10 座超萌巨型動物造型溜滑梯（鯨魚、大象、恐龍、鱷魚、伯勞鳥等），專為不同年齡層分齡設計。",
     "url": "https://www.i-pingtung.com/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-pif-pc",
@@ -1187,14 +1468,18 @@
     "address": "屏東縣屏東市華正路95號",
     "lat": 22.6708,
     "lng": 120.4981,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週日 09:00–17:00（週一休館）",
     "summary": "屏東市免費室內親子空間，提供安全舒適的學齡前感統遊具與定期繪本故事活動。",
     "url": "https://www.pthg.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-ila-lym",
@@ -1206,14 +1491,18 @@
     "address": "宜蘭縣頭城鎮青雲路三段750號",
     "lat": 24.8689,
     "lng": 121.8323,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "兒童考古探索廳門票 50 元（未滿6歲免費）",
     "hours": "週四至週二 09:00–17:00（週三休館）",
     "summary": "宜蘭超值雨天備案！孩子可化身小小考古學家，在室內考古坑親手挖掘史前文物並體驗史前生活。",
     "url": "https://www.lym.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Lanyang_Museum_20220809.jpg/960px-Lanyang_Museum_20220809.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   {
     "id": "venue-ila-ecoark",
@@ -1225,14 +1514,19 @@
     "address": "宜蘭縣冬山鄉冬山路二段172號",
     "lat": 24.6336,
     "lng": 121.7972,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": false,
     "price_text": "清潔費 30 元（宜蘭縣民及未滿6歲免費）",
     "hours": "每日 08:00–18:00",
     "summary": "結合河岸生態、火車鐵道景觀、神秘水道遊船與大片草地的森林園區，適合親子散步與自然觀察。",
     "url": "https://ecoark.tnc.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Dongshan_River_Water_Park_%28Yilan%2C_Taiwan%29.JPG/330px-Dongshan_River_Water_Park_%28Yilan%2C_Taiwan%29.JPG?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-ila-pc",
@@ -1242,16 +1536,20 @@
     "city": "宜蘭縣",
     "district": "宜蘭市",
     "address": "宜蘭縣宜蘭市同慶街95號4樓",
-    "lat": 24.7570,
+    "lat": 24.757,
     "lng": 121.7514,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週日 09:00–17:00（週一休館）",
     "summary": "宜蘭縣公辦免費室內親子館，規劃嬰幼兒爬行、角色扮演與木製玩具區，雨天也能輕鬆溜小孩。",
     "url": "https://www.e-land.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-hua-farglory",
@@ -1263,14 +1561,19 @@
     "address": "花蓮縣壽豐鄉鹽寮村福德189號",
     "lat": 23.9001,
     "lng": 121.6041,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": false,
     "price_text": "依官方官網票價公告，未滿3歲免費",
     "hours": "每日 09:30–17:00",
     "summary": "東台灣唯一大型海洋主題樂園，坐擁太平洋無敵海景、美人魚實境秀、探險島水族館與海底王國親子設施。",
     "url": "https://www.farglory-oceanpark.com.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://www.farglory-oceanpark.com.tw/files/images/static/W190.png"
   },
   {
     "id": "venue-hua-cikasuan-park",
@@ -1281,15 +1584,20 @@
     "district": "吉安鄉",
     "address": "花蓮縣吉安鄉中正路二段299號",
     "lat": 23.9589,
-    "lng": 121.5880,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "lng": 121.588,
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "公園免費開放（夏季親水設施酌收清潔費）",
     "hours": "08:00–17:30",
     "summary": "佔地 18 公頃的親子森林樂園，有五大共融遊戲區、種子圖書館與超受歡迎的夏季滑水道戲水區。",
     "url": "https://tour-hualien.hl.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-hua-pc",
@@ -1301,14 +1609,18 @@
     "address": "花蓮縣花蓮市文苑路12號",
     "lat": 23.9885,
     "lng": 121.6223,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週六 09:00–17:00",
     "summary": "花蓮免費室內親子遊戲與繪本閱讀空間，定期辦理幼兒感統與親子手作活動。",
     "url": "https://www.hl.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-ttt-nmp",
@@ -1318,16 +1630,20 @@
     "city": "臺東縣",
     "district": "臺東市",
     "address": "臺東縣臺東市博物館路1號",
-    "lat": 22.7610,
+    "lat": 22.761,
     "lng": 121.0933,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "全票 100 元、6歲以下免費",
     "hours": "週二至週日 09:00–17:00（週一休館）",
     "summary": "全新改裝的「探索館」專為兒童設計互動迷宮、史前體驗與親子共學空間，戶外還有水舞廣場與綠地。",
     "url": "https://www.nmp.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/ROC_National_Museum_of_Prehistory_Seal.svg/langzh-330px-ROC_National_Museum_of_Prehistory_Seal.svg.png?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "venue-ttt-cake-park",
@@ -1339,14 +1655,19 @@
     "address": "臺東縣臺東市博愛路與更生路口",
     "lat": 22.7554,
     "lng": 121.1489,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放",
     "summary": "臺東市中心最具人氣的特色公園，擁有大型樹屋攀爬溜滑梯、沙坑、滑索與寬敞草皮。",
     "url": "https://tour.taitung.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-ttt-pc",
@@ -1358,14 +1679,18 @@
     "address": "臺東縣臺東市桂林北路201號",
     "lat": 22.7525,
     "lng": 121.1462,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週六 09:00–17:00",
     "summary": "提供 0–6 歲免費室內感統探索遊戲空間與親子說故事活動。",
     "url": "https://www.taitung.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-pen-aquarium",
@@ -1377,14 +1702,19 @@
     "address": "澎湖縣白沙鄉岐頭村58號",
     "lat": 23.6478,
     "lng": 119.6054,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "全票 300 元、優待票 210 元、未滿6歲免費",
     "hours": "每日 09:00–17:00",
     "summary": "離島必訪室內親子景點！有 14 公尺拱形海底隧道、大洋池餵食秀與礁岩觸摸池，避暑躲風好去處。",
     "url": "https://www.penghu-aquarium.com/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/%E6%BE%8E%E6%B9%96%E6%B0%B4%E6%97%8F%E9%A4%A8.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
   },
   {
     "id": "venue-pen-pc",
@@ -1396,14 +1726,18 @@
     "address": "澎湖縣馬公市治平路15之1號",
     "lat": 23.5681,
     "lng": 119.5668,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週六 09:00–17:00",
     "summary": "馬公市免費公辦親子館，提供舒適安全的室內遊具與親子互動活動。",
     "url": "https://www.penghu.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-kin-xibian-park",
@@ -1415,14 +1749,19 @@
     "address": "金門縣金城鎮賢城路1號（莒光湖畔）",
     "lat": 24.4267,
     "lng": 118.3168,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費開放",
     "hours": "24 小時開放",
     "summary": "金門最具規模的湖畔共融遊戲場，有大型長頸鹿滑梯、共融鳥巢鞦韆、沙坑與草坪野餐區。",
     "url": "https://kinmen.travel/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-kin-pc",
@@ -1434,14 +1773,18 @@
     "address": "金門縣金城鎮民生路7號",
     "lat": 24.4342,
     "lng": 118.3198,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週六 09:00–17:00",
     "summary": "提供金門在地與旅遊家庭 0–6 歲免費室內親子共玩與繪本閱讀服務。",
     "url": "https://www.kinmen.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-lie-pc",
@@ -1453,14 +1796,18 @@
     "address": "連江縣南竿鄉介壽村156號",
     "lat": 26.1583,
     "lng": 119.9519,
-    "age_groups": ["0-3", "3-6"],
+    "age_groups": [
+      "0-3",
+      "3-6"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費入場",
     "hours": "週二至週六 09:00–17:00",
     "summary": "馬祖地區溫馨的室內親子遊戲與繪本閱讀基地，定期舉辦親子手作與育兒交流活動。",
     "url": "https://www.matsu.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "venue-lie-park",
@@ -1472,14 +1819,18 @@
     "address": "連江縣南竿鄉清水村135號",
     "lat": 26.1506,
     "lng": 119.9416,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "全票 40 元、學生 20 元、未滿6歲免費",
     "hours": "週二至週日 09:00–17:00（週一休館）",
     "summary": "認識閩東文化與馬祖海洋生態的室內展館，鄰近南竿海濱公園與休憩草坪。",
     "url": "https://www.matsu-nsa.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/M%C4%81-c%C5%AB_M%C3%ACng-s%E1%B9%B3%CC%86k_%C3%99ng-%C5%ADk-gu%C4%81ng_20190424.jpg/330px-M%C4%81-c%C5%AB_M%C3%ACng-s%E1%B9%B3%CC%86k_%C3%99ng-%C5%ADk-gu%C4%81ng_20190424.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": "event-curated-market-tpe",
@@ -1491,7 +1842,11 @@
     "address": "臺北市中山區玉門街1號（花博公園長廊廣場）",
     "lat": 25.0706,
     "lng": 121.5222,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費逛市集，手作體驗依現場攤位計費",
@@ -1501,7 +1856,8 @@
     "is_recurring_weekend": true,
     "summary": "台北週末最受親子歡迎的戶外市集，集結小農蔬果、童書手作、氣球街頭藝人與草地野餐空間，旁鄰舞蝶共融遊戲場。",
     "url": "https://www.expopark.taipei/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "event-curated-market-txg",
@@ -1513,7 +1869,10 @@
     "address": "臺中市西區民生路368巷",
     "lat": 24.1449,
     "lng": 120.6625,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費入場",
@@ -1523,7 +1882,8 @@
     "is_recurring_weekend": true,
     "summary": "台中老宿舍改造的特色市集，週末常見親子繪本、甜點小食與兒童手作體驗攤位，步行可達草悟道。",
     "url": "https://travel.taichung.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "event-curated-market-khh",
@@ -1533,9 +1893,13 @@
     "city": "高雄市",
     "district": "鹽埕區",
     "address": "高雄市鹽埕區大勇路1號",
-    "lat": 22.6200,
+    "lat": 22.62,
     "lng": 120.2816,
-    "age_groups": ["0-3", "3-6", "6-12"],
+    "age_groups": [
+      "0-3",
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": false,
     "is_free": true,
     "price_text": "免費逛市集，哈瑪星駁二線小火車另購票",
@@ -1545,7 +1909,8 @@
     "is_recurring_weekend": true,
     "summary": "高雄海港旁最熱鬧的週末文創市集，結合大義倉庫草皮、哈瑪星小火車與親子互動街頭表演。",
     "url": "https://pier2.org/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": "https://pier2.org/upload/setting/MUBCURCS810049.jpg"
   },
   {
     "id": "event-curated-course-ntsec",
@@ -1557,7 +1922,10 @@
     "address": "臺北市士林區士商路189號（B1 敲敲打打工作坊）",
     "lat": 25.0962,
     "lng": 121.5165,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "依課程主題約 150–450 元，線上預約報名",
@@ -1567,7 +1935,8 @@
     "is_recurring_weekend": true,
     "summary": "由科教館專業講師帶領孩子動手做機械裝置、電路實驗與木工小車，培養國小與幼兒 STEAM 動手能力。",
     "url": "https://www.ntsec.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "event-curated-course-nstm",
@@ -1579,7 +1948,10 @@
     "address": "高雄市三民區九如一路720號",
     "lat": 22.6407,
     "lng": 120.3227,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": false,
     "price_text": "依課程收費約 100–350 元",
@@ -1589,7 +1961,8 @@
     "is_recurring_weekend": true,
     "summary": "包含動力小車、天文觀測手作、機器人程式體驗等假日親子科學工作坊，適合 4–12 歲兒童參加。",
     "url": "https://www.nstm.gov.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   },
   {
     "id": "event-curated-contest-national",
@@ -1599,9 +1972,12 @@
     "city": "臺北市",
     "district": "中正區",
     "address": "全台灣各縣市（依各場次簡章）",
-    "lat": 25.0330,
+    "lat": 25.033,
     "lng": 121.5654,
-    "age_groups": ["3-6", "6-12"],
+    "age_groups": [
+      "3-6",
+      "6-12"
+    ],
     "is_indoor": true,
     "is_free": true,
     "price_text": "免費報名參加",
@@ -1611,6 +1987,7 @@
     "is_recurring_weekend": false,
     "summary": "彙整全台灣適合幼兒園與國小學童（12歲以下）參與的繪畫比賽、寫生比賽、說故事競賽與科學創意徵件。",
     "url": "https://cloud.culture.tw/",
-    "source": "全台精選親子場館庫"
+    "source": "全台精選親子場館庫",
+    "image_url": ""
   }
 ]

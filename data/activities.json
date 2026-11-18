@@ -1,10 +1,11 @@
 {
-  "updated_at": "2026-11-18T19:33:27+08:00",
-  "updated_date": "2026-11-18 19:33 (台灣時間)",
-  "total": 395,
+  "updated_at": "2026-11-18T23:26:03+08:00",
+  "updated_date": "2026-11-18 23:26 (台灣時間)",
+  "total": 396,
+  "with_image_count": 227,
   "kind_counts": {
     "venue": 189,
-    "event": 206
+    "event": 207
   },
   "category_counts": {
     "amusement": 25,
@@ -12,12 +13,12 @@
     "parent_center": 25,
     "park": 84,
     "market": 9,
-    "course": 38,
+    "course": 39,
     "contest": 9,
     "activity": 150
   },
   "city_counts": {
-    "臺北市": 99,
+    "臺北市": 100,
     "新北市": 15,
     "基隆市": 4,
     "桃園市": 17,
@@ -42,12 +43,6 @@
   },
   "sources": [
     {
-      "source": "臺南旅遊網 Open Data",
-      "status": "ok",
-      "fetched": 70,
-      "used": 70
-    },
-    {
       "source": "臺北旅遊網 Open API (場館)",
       "status": "ok",
       "fetched": 45,
@@ -62,8 +57,14 @@
     {
       "source": "文化部全國藝文活動",
       "status": "ok",
-      "fetched": 193,
-      "used": 193
+      "fetched": 194,
+      "used": 194
+    },
+    {
+      "source": "臺南旅遊網 Open Data",
+      "status": "ok",
+      "fetched": 70,
+      "used": 70
     }
   ],
   "items": [
@@ -89,6 +90,7 @@
       "summary": "台北最具代表性的平價大型兒童遊樂園，擁有摩天輪、旋轉木馬、雲霄飛車、樹蛙表演場及免費室內外遊戲區。",
       "url": "https://www.tcap.taipei/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Main_Entrance,_Taipei_Children's_Amusement_Park_20180722.jpg/330px-Main_Entrance,_Taipei_Children's_Amusement_Park_20180722.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -115,6 +117,7 @@
       "summary": "雨天首選科學探索殿堂，含空中腳踏車、敲敲打打工作坊、兒童益智探索館及各式科普互動特展。",
       "url": "https://www.ntsec.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/National_Taiwan_Science_Education_Center_front.jpg/330px-National_Taiwan_Science_Education_Center_front.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -141,6 +144,7 @@
       "summary": "超人氣宇宙探險軌道車、立體劇場與互動天文展示區，緊鄰科教館與兒童新樂園，可排成士林科學親子一日遊。",
       "url": "https://tam.gov.taipei/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Ex-Yuanshan_Observatory_Ruin_Under_Construction.jpg/960px-Ex-Yuanshan_Observatory_Ruin_Under_Construction.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -168,6 +172,7 @@
       "summary": "亞洲最大規模動物園之一，擁有大貓熊館、企鵝館、穿山甲館與兒童動物區，適合全齡兒童近距離認識生態。",
       "url": "https://www.zoo.gov.taipei/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Taipei_Zoo_Entrance_20220822.jpg/330px-Taipei_Zoo_Entrance_20220822.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -194,6 +199,7 @@
       "summary": "臺北市公辦免費親子館，三層樓寬敞空間提供 0–6 歲分齡感統玩具、繪本閱讀與親子手作活動。",
       "url": "https://taipei.parent-child.org.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -220,6 +226,7 @@
       "summary": "結合木質教具、角色扮演與嬰幼兒爬行區的臺北市人氣公辦親子館，定期舉辦親子律動與繪本說故事。",
       "url": "https://taipei.parent-child.org.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -246,6 +253,7 @@
       "summary": "主打室內交通安全小小駕駛區與創意積木空間，鄰近劍潭捷運站，雨天放電好去處。",
       "url": "https://taipei.parent-child.org.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -272,6 +280,7 @@
       "summary": "結合北投溫泉文化意象打造的親子館，擁有豐富感官探索、美術創作區與0-2歲寶寶專區。",
       "url": "https://taipei.parent-child.org.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -299,6 +308,7 @@
       "summary": "全國首座棒球主題共融遊戲場，有 9 公尺高巨型棒球造型溜滑梯、共融沙坑、溜索與大面積草皮。",
       "url": "https://parks.gov.taipei/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -326,6 +336,7 @@
       "summary": "台北市中心綠肺，擁有大型沙坑、磨石子溜滑梯、恐龍造型遊具、鳥巢鞦韆與生態池，搭捷運即可輕鬆到達。",
       "url": "https://parks.gov.taipei/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Daan_Park_20210817.jpg/330px-Daan_Park_20210817.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -353,6 +364,7 @@
       "summary": "全台最大堤坡滑梯樂園！超過 31 座特色溜滑梯與 100 組台灣動物造型遊具，夏天還有海世界水樂園免費戲水。",
       "url": "https://www.hrcm.ntpc.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Taipei_Metropolitan_Park.jpg/330px-Taipei_Metropolitan_Park.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -380,6 +392,7 @@
       "summary": "北海岸老字號海洋主題樂園，有海豚海獅生態表演、100公尺海底隧道水族館及童樂趴室內遊戲區。",
       "url": "https://www.oceanworld.com.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/%E9%87%8E%E6%9F%B3%E6%B5%B7%E6%B4%8B%E4%B8%96%E7%95%8C%E8%A1%A8%E6%BC%94%E9%A4%A8%E5%A4%96%E8%A7%80.jpg/330px-%E9%87%8E%E6%9F%B3%E6%B5%B7%E6%B4%8B%E4%B8%96%E7%95%8C%E8%A1%A8%E6%BC%94%E9%A4%A8%E5%A4%96%E8%A7%80.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -406,6 +419,7 @@
       "summary": "新北市指標性公共親子中心，提供免費室內感覺統合遊具、繪本區與定期免費親子課程活動。",
       "url": "https://www.ntpc.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -432,6 +446,7 @@
       "summary": "館內設有兒童體驗室可玩陶土 DIY，戶外藝術園區夏季開放免費戲水池與沙坑，動靜皆宜。",
       "url": "https://www.ceramics.ntpc.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Yingge_Ceramics_Museum_(20250129131743).jpg/330px-Yingge_Ceramics_Museum_(20250129131743).jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -458,6 +473,7 @@
       "summary": "超受歡迎的山坡地形特色公園，擁有 20 公尺彩繪磨石子溜滑梯、室外滑草坡、藤蔓溜索與挖土機沙坑。",
       "url": "https://www.ntpc.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -485,6 +501,7 @@
       "summary": "基隆雨天最強室內親子景點！專屬「兒童廳」有海洋溜滑梯、小小漁船與魚市場扮家家酒，還能看8K海洋劇場。",
       "url": "https://www.nmmst.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/%E5%9F%BA%E9%9A%86%E6%B5%B7%E7%A7%91%E9%A4%A8_Keelung_Marine_Science_and_Technology_Museum_-_panoramio.jpg/330px-%E5%9F%BA%E9%9A%86%E6%B5%B7%E7%A7%91%E9%A4%A8_Keelung_Marine_Science_and_Technology_Museum_-_panoramio.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -511,6 +528,7 @@
       "summary": "基隆公辦免費親子館，打造安全明亮的 0–6 歲遊戲空間與繪本角，下雨天也能安心放電。",
       "url": "https://www.klcg.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -538,6 +556,7 @@
       "summary": "最適合學齡前與國小兒童的經典主題樂園，有世界迷你景觀、歐洲室內樂園、轟浪水樂園與遊園小火車。",
       "url": "https://www.wow.com.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Mini_models_of_buildings_in_WOW_(cropped).jpg/330px-Mini_models_of_buildings_in_WOW_(cropped).jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -565,6 +584,7 @@
       "summary": "由普立茲克獎建築師打造的純白山丘美術館，專為兒童設計互動藝術展間、繪本圖書室與觀景步道。",
       "url": "https://tmofa.tycg.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Taoyuan_Children's_Art_center_2023.jpg/330px-Taoyuan_Children's_Art_center_2023.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -592,6 +612,7 @@
       "summary": "桃園高鐵站旁超人氣室內水族館，有夢幻水母萬花筒、企鵝咖啡廳與互動彩繪海洋區。",
       "url": "https://www.xpark.com.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://www.xpark.com.tw/xpark_static/img/ogimage.jpg",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -618,6 +639,7 @@
       "summary": "擁有 50 公尺沖繩風超長滾輪溜滑梯、6 座大型磨石子滑梯、沙坑與大草皮，是桃園最具代表性的親子公園。",
       "url": "https://travel.tycg.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -644,6 +666,7 @@
       "summary": "桃園市公辦免費親子館，內含幼兒體能區、閱讀區與玩具借閱服務，並定期開辦免費親子 DIY 課程。",
       "url": "https://www.taoyuan-parent-child.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -671,6 +694,7 @@
       "summary": "全台最古老的無籠式美學動物園，步調悠閒好推嬰兒車，旁有昆蟲館、圖書館與沙坑遊戲場。",
       "url": "https://zoo-info.hccg.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -698,6 +722,7 @@
       "summary": "提供 0–12 歲多元遊戲與共讀空間，鄰近巨城購物中心，交通與停車皆相當便利。",
       "url": "https://wpcc.hccg.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -724,6 +749,7 @@
       "summary": "結合野生動物園與四大主題遊樂區的大型樂園，可搭猛獸巴士與蒸汽火車看草食動物，適合學齡兒童全天暢玩。",
       "url": "https://www.leofoovillage.com.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/LeofooVillage_MainEntrance_Back.jpg/330px-LeofooVillage_MainEntrance_Back.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -750,6 +776,7 @@
       "summary": "以科學原理為主題的戶外與室內樂園，更擁有全台最大室內零下滑雪場，四季都能帶孩子玩雪盆。",
       "url": "https://www.ding-dong.com.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Little_Ding-Dong_Science_Theme_Park_entrance_sign_20140816.jpg/330px-Little_Ding-Dong_Science_Theme_Park_entrance_sign_20140816.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -777,6 +804,7 @@
       "summary": "新竹縣超人氣共融特色公園，擁有七大遊戲區、雙滑道溜索、攀爬網、滑步車道與大沙坑。",
       "url": "https://www.hsinchu.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -803,6 +831,7 @@
       "summary": "竹北公辦免費親子空間，規劃分齡遊戲區、繪本角落與育兒諮詢講座，適合學齡前幼童。",
       "url": "https://www.hsinchu.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -829,6 +858,7 @@
       "summary": "全台灣最大全室內 5D 體感主題樂園！六層樓不怕日曬雨淋，包含魔法學校、飛行劇院與超大攀岩體能區。",
       "url": "https://www.ss-plaza.com.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://www.ss-plaza.com.tw/wp-content/uploads/2024/07/%E7%A9%BA%E6%A9%8B-2-scaled.jpg",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -856,6 +886,7 @@
       "summary": "以可愛 9 公尺巨型八爪章魚磨石子溜滑梯聞名，另有貝殼滑梯、方型攀爬架、共融沙坑與盪鞦韆。",
       "url": "https://miaolitravel.net/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -882,6 +913,7 @@
       "summary": "提供 0–6 歲免費室內探索遊戲空間、圖書借閱與親子手作活動。",
       "url": "https://www.miaoli.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -909,6 +941,7 @@
       "summary": "中台灣規模最大的水陸雙樂園，探索世界內有專為幼童設計的 POPA 歡樂王國，夏季可暢玩馬拉灣水樂園。",
       "url": "https://www.lihpaoresort.com/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://www.lihpaoresort.com/LihpaolandApp/lihpaolandUi/images/og_image.jpg",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -936,6 +969,7 @@
       "summary": "全台小朋友最愛的恐龍殿堂！會動的暴龍模型、科學中心幼兒科學園與熱帶雨林溫室，一整天玩不完。",
       "url": "https://www.nmns.edu.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -963,6 +997,7 @@
       "summary": "擁有全台公園最高 11 公尺馬卡龍色系旋轉溜滑梯塔、大型攀爬網、滑步車場與大面積遮陽沙坑。",
       "url": "https://travel.taichung.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -989,6 +1024,7 @@
       "summary": "水湳機場原址改建的飛行主題共融遊戲場，有 32 公尺雙軌滑索、大型主題滑梯與寬闊草坪適合野餐。",
       "url": "https://cpark.taichung.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1015,6 +1051,7 @@
       "summary": "以「穿山甲」為吉祥物設計的溫馨親子館，提供免費室內教具探索、親子說故事與教具外借服務。",
       "url": "https://parent-child.taichung.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1042,6 +1079,7 @@
       "summary": "彰化最受歡迎的大型共融公園，擁有 9.6 公尺高球形攀爬塔、雙軌道滑索、瓢蟲溜滑梯與寬敞大沙坑。",
       "url": "https://tourism.chcg.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1069,6 +1107,7 @@
       "summary": "全縣指標性兒少親子空間，擁有室內兒童遊戲館、繪本閱讀區、積木牆與每週末親子 DIY 課程。",
       "url": "https://www.chcg.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1095,6 +1134,7 @@
       "summary": "結合原住民族文化體驗、日月潭高空纜車與大型室內「阿拉丁廣場」遊樂設施，雨天也能暢玩旋轉木馬與海盜船。",
       "url": "https://www.nine.com.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://www.nine.com.tw/upload/admin/201908061646420.png",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1122,6 +1162,7 @@
       "summary": "南投首座大型親子生態遊戲場，有超吸睛彩虹溜滑梯、愛心大草皮、生態池與戲水噴泉區。",
       "url": "https://travel.nantou.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1148,6 +1189,7 @@
       "summary": "提供 0–6 歲免費室內教具遊戲室、感覺統合設施與定期免費親子活動。",
       "url": "https://www.nantou.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1175,6 +1217,7 @@
       "summary": "除了經典摩天輪與刺激設施，更設有全室內「兒童玩國」百坪球池、皇家馬車與夏季水樂園，全齡小孩都愛。",
       "url": "https://www.janfusun.com.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://www.janfusun.com.tw/og_image.png",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1202,6 +1245,7 @@
       "summary": "以可愛松鼠與橡果為主題的森林遊戲場，設有大型橡果攀爬滑梯、滑草坡、噴泉戲水區與週末假日市集。",
       "url": "https://tour.yunlin.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1228,6 +1272,7 @@
       "summary": "公辦免費室內親子遊戲空間，含寶寶爬行區、角色扮演區與繪本說故事時間。",
       "url": "https://www.yunlin.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1255,6 +1300,7 @@
       "summary": "以機器人為主題的趣味遊戲場，有機器人溜滑梯、沙坑、三人跳跳床與飛碟攀爬架，就在高架橋下免曬太陽。",
       "url": "https://travel.chiayi.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1281,6 +1327,7 @@
       "summary": "嘉義市免費公辦親子空間，空間溫馨寬敞，提供多元益智玩具與親子共讀活動。",
       "url": "https://www.chiayi.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1307,6 +1354,7 @@
       "summary": "免費超質感兒童創意中心，透過數位互動與亞洲文化體驗遊戲認識文物，戶外還有白螺沙灣大沙坑與紅魔毯溜滑梯！",
       "url": "https://south.npm.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/NPMSB_Moyun_Hall_and_Feibai_Hall.jpg/330px-NPMSB_Moyun_Hall_and_Feibai_Hall.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1333,6 +1381,7 @@
       "summary": "免費 0–6 歲室內親子遊憩與繪本共讀空間，定期舉辦親子律動與手作活動。",
       "url": "https://www.cyhg.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1359,6 +1408,7 @@
       "summary": "全台唯一結合自然史與化石的五星級親子博物館，有模擬考古沙坑、互動彩繪投影與超過 4,600 件珍貴化石。",
       "url": "https://fossil.tnc.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/%E8%87%BA%E5%8D%97%E5%B7%A6%E9%8E%AE%E5%8C%96%E7%9F%B3%E5%9C%92%E5%8D%80.jpg/330px-%E8%87%BA%E5%8D%97%E5%B7%A6%E9%8E%AE%E5%8C%96%E7%9F%B3%E5%9C%92%E5%8D%80.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1386,6 +1436,7 @@
       "summary": "南台灣高 CP 值恐龍自然史博物館，可借平板玩互動解謎遊戲，館外還有樹谷農場可餵食小動物。",
       "url": "https://www.tvsm.com.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://www.twtainan.net/content/images/attractions/33259/480x360_Filedata635658131734466673.jpg",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1413,6 +1464,7 @@
       "summary": "南台灣最大半開放式野生動物園兼親子樂園，可近距離互動水豚、長頸鹿，並附設室內機械遊樂館與夏季水樂園。",
       "url": "https://www.wanpiworldzoo.com.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://www.wanpiworldzoo.com.tw/archive/image/header_info/0831_layout_compressed_thumb_1444_831.jpg",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1440,6 +1492,7 @@
       "summary": "以 1661 臺灣船為靈感打造的巨型帆船複合遊戲場，包含 8 公尺雙層攀爬船、溜索與大面積遮陽沙坑。",
       "url": "https://www.twtainan.net/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1466,6 +1519,7 @@
       "summary": "臺南市公辦免費親子悠遊館，專為未滿 7 歲幼童規劃感官遊戲、體能區與親子說故事活動。",
       "url": "https://child.tainan.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1493,6 +1547,7 @@
       "summary": "希臘愛琴海風格主題樂園，內有全台最大 15,000 坪全室內「特洛伊城堡」親子遊樂區，不怕南部豔陽與午後雷陣雨。",
       "url": "https://www.edathemepark.com.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://www.edathemepark.com.tw/Content/images/TPLogo.png",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1519,6 +1574,7 @@
       "summary": "日本鈴鹿賽車場海外唯一授權親子樂園，有兒童自主駕駛酷奇拉駕駛學校、摩天輪與卡丁車賽道。",
       "url": "https://www.suzukacircuitpark.com/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/%E9%88%B4%E9%B9%BF%E8%B3%BD%E9%81%93%E6%A8%82%E5%9C%92%E7%9A%84%E5%A4%A9%E7%A9%BA%E9%A3%9B%E8%A1%8C%E5%AE%B6.jpg/960px-%E9%88%B4%E9%B9%BF%E8%B3%BD%E9%81%93%E6%A8%82%E5%9C%92%E7%9A%84%E5%A4%A9%E7%A9%BA%E9%A3%9B%E8%A1%8C%E5%AE%B6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1546,6 +1602,7 @@
       "summary": "南台灣室內科學放電天花板！有兒童科學園「夢想號」、亞洲最高立體螺旋溜滑梯與常設熱雪天堂雪地體驗。",
       "url": "https://www.nstm.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Kaohsiung_National_Science_and_Technology_Museum_01.jpg/330px-Kaohsiung_National_Science_and_Technology_Museum_01.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1573,6 +1630,7 @@
       "summary": "全台第一座專為兒童設立的公立美術館！全館免費、高度互動的藝術探索展間，館外還有超大樹蔭沙坑。",
       "url": "https://kmfa.kcg.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1600,6 +1658,7 @@
       "summary": "坐擁大片綠地與樹蔭的特色公園，有巨型樹冠攀爬網、共融沙坑與多組盪鞦韆，旁鄰衛武營藝術文化中心。",
       "url": "https://khh.travel/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Geese_at_Weiwuying_Metropolitan_Park,_Kaohsiung_2023-02-26.jpg/960px-Geese_at_Weiwuying_Metropolitan_Park,_Kaohsiung_2023-02-26.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1626,6 +1685,7 @@
       "summary": "高雄大型免費育兒資源中心與兒童科學遊戲室，提供豐富分齡玩具、繪本借閱與親子手作課程。",
       "url": "https://play.kcg.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1653,6 +1713,7 @@
       "summary": "全台最大海洋生物博物館，擁有 81 公尺海底隧道、小白鯨、企鵝館、觸摸池及超人氣夜宿海生館活動。",
       "url": "https://www.nmmba.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Entrance_to_the_National_Museum_of_Marine_Biology_and_Aquarium.jpg/960px-Entrance_to_the_National_Museum_of_Marine_Biology_and_Aquarium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1680,6 +1741,7 @@
       "summary": "屢獲國際設計大獎的工業遺址轉型公園，內有超大沙坑、72 公尺跳躍彈跳床與地景溜滑梯，夜晚點燈超美。",
       "url": "https://www.i-pingtung.com/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/%E5%B1%8F%E6%9D%B1%E7%B8%A3%E6%B0%91%E5%85%AC%E5%9C%9204.jpg/960px-%E5%B1%8F%E6%9D%B1%E7%B8%A3%E6%B0%91%E5%85%AC%E5%9C%9204.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1707,6 +1769,7 @@
       "summary": "10 座超萌巨型動物造型溜滑梯（鯨魚、大象、恐龍、鱷魚、伯勞鳥等），專為不同年齡層分齡設計。",
       "url": "https://www.i-pingtung.com/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1733,6 +1796,7 @@
       "summary": "屏東市免費室內親子空間，提供安全舒適的學齡前感統遊具與定期繪本故事活動。",
       "url": "https://www.pthg.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1759,6 +1823,7 @@
       "summary": "宜蘭超值雨天備案！孩子可化身小小考古學家，在室內考古坑親手挖掘史前文物並體驗史前生活。",
       "url": "https://www.lym.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Lanyang_Museum_20220809.jpg/960px-Lanyang_Museum_20220809.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1786,6 +1851,7 @@
       "summary": "結合河岸生態、火車鐵道景觀、神秘水道遊船與大片草地的森林園區，適合親子散步與自然觀察。",
       "url": "https://ecoark.tnc.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Dongshan_River_Water_Park_(Yilan,_Taiwan).JPG/330px-Dongshan_River_Water_Park_(Yilan,_Taiwan).JPG?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1812,6 +1878,7 @@
       "summary": "宜蘭縣公辦免費室內親子館，規劃嬰幼兒爬行、角色扮演與木製玩具區，雨天也能輕鬆溜小孩。",
       "url": "https://www.e-land.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1839,6 +1906,7 @@
       "summary": "東台灣唯一大型海洋主題樂園，坐擁太平洋無敵海景、美人魚實境秀、探險島水族館與海底王國親子設施。",
       "url": "https://www.farglory-oceanpark.com.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://www.farglory-oceanpark.com.tw/files/images/static/W190.png",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1866,6 +1934,7 @@
       "summary": "佔地 18 公頃的親子森林樂園，有五大共融遊戲區、種子圖書館與超受歡迎的夏季滑水道戲水區。",
       "url": "https://tour-hualien.hl.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1892,6 +1961,7 @@
       "summary": "花蓮免費室內親子遊戲與繪本閱讀空間，定期辦理幼兒感統與親子手作活動。",
       "url": "https://www.hl.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1918,6 +1988,7 @@
       "summary": "全新改裝的「探索館」專為兒童設計互動迷宮、史前體驗與親子共學空間，戶外還有水舞廣場與綠地。",
       "url": "https://www.nmp.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/ROC_National_Museum_of_Prehistory_Seal.svg/langzh-330px-ROC_National_Museum_of_Prehistory_Seal.svg.png?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1945,6 +2016,7 @@
       "summary": "臺東市中心最具人氣的特色公園，擁有大型樹屋攀爬溜滑梯、沙坑、滑索與寬敞草皮。",
       "url": "https://tour.taitung.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1971,6 +2043,7 @@
       "summary": "提供 0–6 歲免費室內感統探索遊戲空間與親子說故事活動。",
       "url": "https://www.taitung.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -1998,6 +2071,7 @@
       "summary": "離島必訪室內親子景點！有 14 公尺拱形海底隧道、大洋池餵食秀與礁岩觸摸池，避暑躲風好去處。",
       "url": "https://www.penghu-aquarium.com/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/%E6%BE%8E%E6%B9%96%E6%B0%B4%E6%97%8F%E9%A4%A8.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -2024,6 +2098,7 @@
       "summary": "馬公市免費公辦親子館，提供舒適安全的室內遊具與親子互動活動。",
       "url": "https://www.penghu.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -2051,6 +2126,7 @@
       "summary": "金門最具規模的湖畔共融遊戲場，有大型長頸鹿滑梯、共融鳥巢鞦韆、沙坑與草坪野餐區。",
       "url": "https://kinmen.travel/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -2077,6 +2153,7 @@
       "summary": "提供金門在地與旅遊家庭 0–6 歲免費室內親子共玩與繪本閱讀服務。",
       "url": "https://www.kinmen.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -2103,6 +2180,7 @@
       "summary": "馬祖地區溫馨的室內親子遊戲與繪本閱讀基地，定期舉辦親子手作與育兒交流活動。",
       "url": "https://www.matsu.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -2129,6 +2207,7 @@
       "summary": "認識閩東文化與馬祖海洋生態的室內展館，鄰近南竿海濱公園與休憩草坪。",
       "url": "https://www.matsu-nsa.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/M%C4%81-c%C5%AB_M%C3%ACng-s%E1%B9%B3%CC%86k_%C3%99ng-%C5%ADk-gu%C4%81ng_20190424.jpg/330px-M%C4%81-c%C5%AB_M%C3%ACng-s%E1%B9%B3%CC%86k_%C3%99ng-%C5%ADk-gu%C4%81ng_20190424.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "exact_coords": true,
       "start_date": "",
       "end_date": "",
@@ -2159,6 +2238,7 @@
       "summary": "台北週末最受親子歡迎的戶外市集，集結小農蔬果、童書手作、氣球街頭藝人與草地野餐空間，旁鄰舞蝶共融遊戲場。",
       "url": "https://www.expopark.taipei/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true
     },
     {
@@ -2185,6 +2265,7 @@
       "summary": "台中老宿舍改造的特色市集，週末常見親子繪本、甜點小食與兒童手作體驗攤位，步行可達草悟道。",
       "url": "https://travel.taichung.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true
     },
     {
@@ -2212,6 +2293,7 @@
       "summary": "高雄海港旁最熱鬧的週末文創市集，結合大義倉庫草皮、哈瑪星小火車與親子互動街頭表演。",
       "url": "https://pier2.org/",
       "source": "全台精選親子場館庫",
+      "image_url": "https://pier2.org/upload/setting/MUBCURCS810049.jpg",
       "exact_coords": true
     },
     {
@@ -2238,6 +2320,7 @@
       "summary": "由科教館專業講師帶領孩子動手做機械裝置、電路實驗與木工小車，培養國小與幼兒 STEAM 動手能力。",
       "url": "https://www.ntsec.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true
     },
     {
@@ -2264,6 +2347,7 @@
       "summary": "包含動力小車、天文觀測手作、機器人程式體驗等假日親子科學工作坊，適合 4–12 歲兒童參加。",
       "url": "https://www.nstm.gov.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true
     },
     {
@@ -2290,32 +2374,8 @@
       "summary": "彙整全台灣適合幼兒園與國小學童（12歲以下）參與的繪畫比賽、寫生比賽、說故事競賽與科學創意徵件。",
       "url": "https://cloud.culture.tw/",
       "source": "全台精選親子場館庫",
+      "image_url": "",
       "exact_coords": true
-    },
-    {
-      "id": "iculture-8883bddb1986",
-      "title": "漫畫臺中・神秘路徑：與漫畫家一起閱讀城市",
-      "kind": "event",
-      "category": "activity",
-      "city": "臺中市",
-      "district": "東區",
-      "address": "東區復興路四段219號6樓（怪獸AI實驗室）",
-      "lat": 24.1477,
-      "lng": 120.6736,
-      "exact_coords": false,
-      "age_groups": [
-        "3-6"
-      ],
-      "is_indoor": true,
-      "is_free": true,
-      "price_text": "免費參加，限額200人，不限繪畫經驗；贈A3畫板1份及A3素描紙5張。活動12:30開始，預計約4小時、16:30結束，實際結束時間依當日行程與現場安排調整。",
-      "hours": "2027-01-02 ～ 2027-01-02",
-      "start_date": "2027-01-02",
-      "end_date": "2027-01-02",
-      "is_recurring_weekend": false,
-      "summary": "把臺中，走成你的漫畫！ 「漫畫臺中・神秘路徑・生命的軌跡」邀請民眾與漫畫家一起，從展場走進車站、市場、老酒廠與舊鐵道，以速寫、攝影或文字閱讀街景與地方記憶，留下自己的城市故事。 活動串聯6樓怪獸AI實驗室專業漫畫家作品展、臺中驛、第三市場、臺中舊酒廠／文化資產園區、綠空鐵道190…",
-      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7sOlb-qjvyLajOjESbmbVE5GLMdRJDTJC8rpS3RM0DNPQ8w/viewform",
-      "source": "文化部全國藝文活動"
     },
     {
       "id": "iculture-9ba1d9889230",
@@ -2340,6 +2400,7 @@
       "is_recurring_weekend": false,
       "summary": "活動內容介紹： 宗旨：為推廣生活美學運動，倡導健康休閒活動，充實民眾美學涵養，展現美學創意，提昇人文意涵，增進生活情趣，創造美好人生。 文化研習班： 編織班、中華花藝節慶插花班、打擊樂進階班、二胡班、編結首飾設計班、土風舞班、氧身瑜珈B班、小原流插花及歐美花藝初級班、青少年兒童武…",
       "url": "https://event.culture.tw/mocweb/reg/CHCSEC/Query.init.ctr?actKind=",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -2365,6 +2426,639 @@
       "is_recurring_weekend": false,
       "summary": "好評加映！應觀眾熱烈要求，特別加開線上場 紀錄片《關鍵的一刻》線上特別放映暨製作人映後對談 報名網頁＞＞https://docs.google.com/forms/d/e/1FAIpQLSd9NbpSLBHo_edVpL5jrsFcCRfCVtE9DVfhihIGtHYD36eU…",
       "url": "https://www.plus.emba.com.tw/%E7%B4%80%E9%8C%84%E7%89%87%E7%89%B9%E5%88%A5%E6%94%BE%E6%98%A0",
+      "image_url": "https://cloud.culture.tw/e_new_upload/signinImage/2026-11-12/135416a8-2aa5-4245-9520-1f4c186bbbc0/%E6%94%BE%E6%98%A0%E6%9C%83-1200.jpg",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-8883bddb1986",
+      "title": "漫畫臺中・神秘路徑：與漫畫家一起閱讀城市",
+      "kind": "event",
+      "category": "activity",
+      "city": "臺中市",
+      "district": "東區",
+      "address": "東區復興路四段219號6樓（怪獸AI實驗室）",
+      "lat": 24.1477,
+      "lng": 120.6736,
+      "exact_coords": false,
+      "age_groups": [
+        "3-6"
+      ],
+      "is_indoor": true,
+      "is_free": true,
+      "price_text": "免費參加，限額200人，不限繪畫經驗；贈A3畫板1份及A3素描紙5張。活動12:30開始，預計約4小時、16:30結束，實際結束時間依當日行程與現場安排調整。",
+      "hours": "2027-01-02 ～ 2027-01-02",
+      "start_date": "2027-01-02",
+      "end_date": "2027-01-02",
+      "is_recurring_weekend": false,
+      "summary": "把臺中，走成你的漫畫！ 「漫畫臺中・神秘路徑・生命的軌跡」邀請民眾與漫畫家一起，從展場走進車站、市場、老酒廠與舊鐵道，以速寫、攝影或文字閱讀街景與地方記憶，留下自己的城市故事。 活動串聯6樓怪獸AI實驗室專業漫畫家作品展、臺中驛、第三市場、臺中舊酒廠／文化資產園區、綠空鐵道190…",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSe7sOlb-qjvyLajOjESbmbVE5GLMdRJDTJC8rpS3RM0DNPQ8w/viewform",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-fd1df8e16eee",
+      "title": "生活工藝館-陶藝DIY手作體驗",
+      "kind": "event",
+      "category": "course",
+      "city": "南投縣",
+      "district": "草屯鎮",
+      "address": "南投縣草屯鎮中正路573號（國立臺灣工藝研究發展中心（臺灣工藝文化園區））",
+      "lat": 23.98077,
+      "lng": 120.69186,
+      "exact_coords": true,
+      "age_groups": [
+        "0-3",
+        "6-12"
+      ],
+      "is_indoor": true,
+      "is_free": false,
+      "price_text": "手捏動物小盆栽+400;手捏毛小孩陶盤+500;植物油彩系列課程+1200;小幽靈線香座+500;瓷盤彩繪+500;〔燒製〕手拉坯-杯子成型+500;〔不燒製〕手拉坯-杯子成型+2",
+      "hours": "2026-01-01 ～ 2026-12-31",
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "is_recurring_weekend": false,
+      "summary": "生活工藝館2、3F提供給有志投入工藝產業者進行教學、品牌經營與創作，以體驗式教學工坊為經營主軸，販售、創作為輔，由進駐藝師規劃工藝體驗、研習等課程，藉由相關教育推廣活動，鼓勵民眾從手動實作當中體驗工藝之美。 陶藝DIY手作體驗 陶藝，是一門古老的工藝，源於人類對泥土的利用和塑造。…",
+      "url": "https://www.ntcri.gov.tw/home/zh-tw/activitysoonlist/7490912",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-cf3a37992c60",
+      "title": "生活工藝館-漆藝DIY手作體驗",
+      "kind": "event",
+      "category": "course",
+      "city": "南投縣",
+      "district": "草屯鎮",
+      "address": "南投縣草屯鎮中正路573號（國立臺灣工藝研究發展中心（臺灣工藝文化園區））",
+      "lat": 23.98077,
+      "lng": 120.69186,
+      "exact_coords": true,
+      "age_groups": [
+        "6-12"
+      ],
+      "is_indoor": true,
+      "is_free": false,
+      "price_text": "韶光拂葉－4吋點心盤+200;一生愉筷－天然漆筷+300;赤誠相守－根來塗項鍊+300;漆溜溜球+600;妙染華彩－美扇+250;古琴紙鎮+300;妙染華彩－漂流漆環保袋+250;",
+      "hours": "2026-01-01 ～ 2026-12-31",
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "is_recurring_weekend": false,
+      "summary": "生活工藝館2、3F提供給有志投入工藝產業者進行教學、品牌經營與創作，以體驗式教學工坊為經營主軸，販售、創作為輔，由進駐藝師規劃工藝體驗、研習等課程，藉由相關教育推廣活動，鼓勵民眾從手動實作當中體驗工藝之美。 漆藝DIY手作體驗 漆的歷史悠久，最早可追溯到新石器時代，是古老久遠的工…",
+      "url": "https://event.culture.tw/mocweb/reg/NTCRI/Index.init.ctr?openExternalBrowser=1",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-dd1736361253",
+      "title": "生活工藝館-竹藝DIY手作體驗",
+      "kind": "event",
+      "category": "course",
+      "city": "南投縣",
+      "district": "草屯鎮",
+      "address": "南投縣草屯鎮中正路573號（國立臺灣工藝研究發展中心（臺灣工藝文化園區））",
+      "lat": 23.98077,
+      "lng": 120.69186,
+      "exact_coords": true,
+      "age_groups": [
+        "0-3",
+        "6-12"
+      ],
+      "is_indoor": true,
+      "is_free": false,
+      "price_text": "竹青蛙+60;花風車+200;鑰匙圈+150;花形圓缽+150;小竹扇+200;魚兒+150;四角杯墊+200;花器+150;筆記本-單面+650;筆記本-雙面+900",
+      "hours": "2026-01-01 ～ 2026-12-31",
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "is_recurring_weekend": false,
+      "summary": "生活工藝館2、3F提供給有志投入工藝產業者進行教學、品牌經營與創作，以體驗式教學工坊為經營主軸，販售、創作為輔，由進駐藝師規劃工藝體驗、研習等課程，藉由相關教育推廣活動，鼓勵民眾從手動實作當中體驗工藝之美。 竹藝DIY手作體驗 竹編，是一種用竹篾以經緯交錯方式編織成各種器物的傳統…",
+      "url": "https://www.ntcri.gov.tw/home/zh-tw/activitysoonlist/7490939",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-4ab6f0d84a60",
+      "title": "生活工藝館-植物染DIY手作體驗",
+      "kind": "event",
+      "category": "course",
+      "city": "南投縣",
+      "district": "草屯鎮",
+      "address": "南投縣草屯鎮中正路573號（國立臺灣工藝研究發展中心（臺灣工藝文化園區））",
+      "lat": 23.98077,
+      "lng": 120.69186,
+      "exact_coords": true,
+      "age_groups": [
+        "6-12"
+      ],
+      "is_indoor": true,
+      "is_free": false,
+      "price_text": "柿汁刷染小手帕29*28公分+150;柿汁刷染收納小袋19*23公分+200;植物染收納小袋19*23公分+250;植物染棉襪+250;植物染43*43公分手帕+250;植物染60",
+      "hours": "2026-01-01 ～ 2026-12-31",
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "is_recurring_weekend": false,
+      "summary": "生活工藝館2、3F提供給有志投入工藝產業者進行教學、品牌經營與創作，以體驗式教學工坊為經營主軸，販售、創作為輔，由進駐藝師規劃工藝體驗、研習等課程，藉由相關教育推廣活動，鼓勵民眾從手動實作當中體驗工藝之美。 植物染DIY手作體驗 植物染，又稱「天然染」和「草木染」，取自生活周邊取…",
+      "url": "https://event.culture.tw/mocweb/reg/NTCRI/Index.init.ctr?openExternalBrowser=1",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-ed56f6623103",
+      "title": "生活工藝館-樹藝DIY手作體驗",
+      "kind": "event",
+      "category": "course",
+      "city": "南投縣",
+      "district": "草屯鎮",
+      "address": "南投縣草屯鎮中正路573號（國立臺灣工藝研究發展中心（臺灣工藝文化園區））",
+      "lat": 23.98077,
+      "lng": 120.69186,
+      "exact_coords": true,
+      "age_groups": [
+        "0-3",
+        "6-12"
+      ],
+      "is_indoor": true,
+      "is_free": false,
+      "price_text": "〔樹皮〕蝴蝶萬用夾+200;〔果實〕五色鳥+100;〔果實〕早安+200;〔果實〕鴨子+150;〔果實〕開心果串+200;〔果實〕歡樂兔+200;〔竹、果實〕存錢筒+500;〔果實",
+      "hours": "2026-01-01 ～ 2026-12-31",
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "is_recurring_weekend": false,
+      "summary": "生活工藝館2、3F提供給有志投入工藝產業者進行教學、品牌經營與創作，以體驗式教學工坊為經營主軸，販售、創作為輔，由進駐藝師規劃工藝體驗、研習等課程，藉由相關教育推廣活動，鼓勵民眾從手動實作當中體驗工藝之美。 樹藝DIY手作體驗 樹藝創作，是一種利用樹木材料進行藝術創作的方式，使用…",
+      "url": "https://event.culture.tw/mocweb/reg/NTCRI/Index.init.ctr?openExternalBrowser=1",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-a46c90261796",
+      "title": "兒童讀書會-愛地球〝寫作〞小學堂",
+      "kind": "event",
+      "category": "activity",
+      "city": "高雄市",
+      "district": "鼓山區",
+      "address": "高雄市鼓山區4鄰鼓山三路19-3號（高雄市立圖書館鼓山分館）",
+      "lat": 22.65447,
+      "lng": 120.27539,
+      "exact_coords": true,
+      "age_groups": [
+        "3-6",
+        "6-12"
+      ],
+      "is_indoor": true,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-01-11 ～ 2026-12-13",
+      "start_date": "2026-01-11",
+      "end_date": "2026-12-13",
+      "is_recurring_weekend": false,
+      "summary": "寫作小學堂- 鼓山每月一堂課的方式，星期日下午2點鐘【寫作小學堂】增強你的華文力，寫作從「閱讀」開始，歡迎國小一至六年級小朋友，請自備鉛筆、橡皮擦、國語字典，與熱愛大自然及愛幻想、充滿創意的腦袋。本節課將實際完成一篇作文。 1/11 打敗宇宙魔王的無敵武器 2/8 藏在手機裡的祕…",
+      "url": "https://cloud.culture.tw/",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-b7773406ef45",
+      "title": "花語風車拼布手作讀書會",
+      "kind": "event",
+      "category": "course",
+      "city": "高雄市",
+      "district": "鹽埕區",
+      "address": "高雄市鹽埕區1鄰大仁路179號5樓、6樓（高雄市立圖書館鹽埕分館）",
+      "lat": 22.62672,
+      "lng": 120.28187,
+      "exact_coords": true,
+      "age_groups": [
+        "6-12"
+      ],
+      "is_indoor": true,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-01-08 ～ 2026-12-31",
+      "start_date": "2026-01-08",
+      "end_date": "2026-12-31",
+      "is_recurring_weekend": false,
+      "summary": "花語風車拼布手作讀書會由拼布老師盧一伊帶領學員利用館藏圖書資源，共讀拼布手作書籍，進行作品設計討論製作及個人經驗交流分享。並透過實作以精煉對拼布作品縫製能力，完成舒壓及達成個人成就目標。",
+      "url": "https://cloud.culture.tw/",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-489e693e7dd6",
+      "title": "多元文化讀書會： 共讀環保再利用-針ㄉ好棒。手作創藝",
+      "kind": "event",
+      "category": "course",
+      "city": "高雄市",
+      "district": "鼓山區",
+      "address": "高雄市鼓山區4鄰鼓山三路19-3號（高雄市立圖書館鼓山分館）",
+      "lat": 22.65447,
+      "lng": 120.27539,
+      "exact_coords": true,
+      "age_groups": [
+        "6-12"
+      ],
+      "is_indoor": true,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-01-02 ～ 2026-12-18",
+      "start_date": "2026-01-02",
+      "end_date": "2026-12-18",
+      "is_recurring_weekend": false,
+      "summary": "每週五上午辦理「針ㄉ好棒。手作創藝」研習，本活動特邀社區手工藝達人葉子奶奶(葉惠喜)來到本分館教授社區媽媽們回收舊衣服或舊毛線解構再利用的各種私房技法，運用鉤針、棒針、手縫針、車針等不同織縫工具，完成獨一無二的創藝新作品。",
+      "url": "https://cloud.culture.tw/",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-fbff5b6b1871",
+      "title": "與文字共遊─〝寫作〞小學堂(有寫作基礎的國小4-6年級學童)(1月~12月)",
+      "kind": "event",
+      "category": "activity",
+      "city": "高雄市",
+      "district": "左營區",
+      "address": "高雄市左營區2鄰啟文路12號（高雄市立圖書館左營分館）",
+      "lat": 22.67353,
+      "lng": 120.28434,
+      "exact_coords": true,
+      "age_groups": [
+        "3-6",
+        "6-12"
+      ],
+      "is_indoor": true,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-01-11 ～ 2026-12-13",
+      "start_date": "2026-01-11",
+      "end_date": "2026-12-13",
+      "is_recurring_weekend": false,
+      "summary": "參加方式：自助借書機借書滿20本即可免費參加。 參加對象：國小四至六年級小朋友(有寫作基礎)，請自備鉛筆、橡皮擦、國語字典與熱愛大自然及愛幻想，充滿創意的腦袋。本節課將實際完成一篇作文。 想跟著小光一同尋找夢想中的故事書嗎？ 快來加入這趟旅程吧！",
+      "url": "https://cloud.culture.tw/",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-71b9b8a45bb6",
+      "title": "東東漫畫親子讀書會遊山玩水尬漫畫(1月~12月)",
+      "kind": "event",
+      "category": "activity",
+      "city": "高雄市",
+      "district": "左營區",
+      "address": "高雄市左營區2鄰啟文路12號（高雄市立圖書館左營分館）",
+      "lat": 22.67353,
+      "lng": 120.28434,
+      "exact_coords": true,
+      "age_groups": [
+        "3-6"
+      ],
+      "is_indoor": true,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-01-18 ～ 2026-12-20",
+      "start_date": "2026-01-18",
+      "end_date": "2026-12-20",
+      "is_recurring_weekend": false,
+      "summary": "老師：東東老師(高雄知名漫畫家)。自助借書機借書滿20本即可免費參加。 提昇社區民眾藝文水平，建立居民參與書香建設的機制，活化本分館設施機能，藉由多元活動的舉辦，吸引社區居民到館利用各項資源。",
+      "url": "https://cloud.culture.tw/",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-daacfc01740f",
+      "title": "英文小學堂",
+      "kind": "event",
+      "category": "course",
+      "city": "南投縣",
+      "district": "竹山鎮",
+      "address": "南投縣竹山鎮大勇路 26 號（欣榮紀念圖書館暨玉蘭文化會館）",
+      "lat": 23.75697,
+      "lng": 120.67494,
+      "exact_coords": true,
+      "age_groups": [
+        "6-12"
+      ],
+      "is_indoor": true,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-03-01 ～ 2026-12-20",
+      "start_date": "2026-03-01",
+      "end_date": "2026-12-20",
+      "is_recurring_weekend": false,
+      "summary": "授課講師：汪宥穎 本活動開設主題式英文學習課程，讓學童從遊戲過程中學習日常的英文對話。 對象：國小一至六年級學童15人。 報名地點：圖書館服務台 活動洽詢：049-2637666欣榮圖書館。",
+      "url": "http://www.hsinrong.org",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-cec7ed0528c6",
+      "title": "2026☼朗朗故事樹/朗朗小書房x朗朗愛閱基地",
+      "kind": "event",
+      "category": "activity",
+      "city": "新竹市",
+      "district": "東區",
+      "address": "新竹市東區（東區（新竹市）=）",
+      "lat": 24.8138,
+      "lng": 120.9675,
+      "exact_coords": false,
+      "age_groups": [
+        "3-6"
+      ],
+      "is_indoor": false,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-01-24 ～ 2026-12-26",
+      "start_date": "2026-01-24",
+      "end_date": "2026-12-26",
+      "is_recurring_weekend": false,
+      "summary": "一起來朗朗故事樹下聽故事 在這棵故事大樹下，每個聽故事的人都變成了孩子，一起進入神奇的故事世界，一起笑，一起哭！ 我們希望讓大人看到一個不一樣的親子共讀可能❤️在這棵故事大樹下，大人們將學會終生受用的共讀方法，找到與孩子心靈相通的最佳途徑。 【極簡共讀】帶領著我們感受～ ​ ✨ …",
+      "url": "https://www.facebook.com/sunnybookshouse/",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-bf1e3e71fef6",
+      "title": "115年度快樂魚池-兒童美語研習",
+      "kind": "event",
+      "category": "course",
+      "city": "南投縣",
+      "district": "魚池鄉",
+      "address": "南投縣魚池鄉秀水路233號（南投縣魚池鄉立圖書館）",
+      "lat": 23.89659,
+      "lng": 120.93667,
+      "exact_coords": true,
+      "age_groups": [
+        "3-6"
+      ],
+      "is_indoor": true,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-03-07 ～ 2026-11-28",
+      "start_date": "2026-03-07",
+      "end_date": "2026-11-28",
+      "is_recurring_weekend": false,
+      "summary": "參加對象：小一至小六 報名方式：即日起至請逕洽圖書館櫃台報名 洽詢電話：049-2897450",
+      "url": "https://www.facebook.com/yuchihlibrary",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-47f015d4b417",
+      "title": "2026年12月【和美鎮立圖書館-親子英閱繪】",
+      "kind": "event",
+      "category": "activity",
+      "city": "彰化縣",
+      "district": "和美鎮",
+      "address": "彰化縣和美鎮道周路346號（彰化縣和美鎮立圖書館）",
+      "lat": 24.0518,
+      "lng": 120.5161,
+      "exact_coords": false,
+      "age_groups": [
+        "0-3",
+        "3-6"
+      ],
+      "is_indoor": true,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-12-13 ～ 2026-12-13",
+      "start_date": "2026-12-13",
+      "end_date": "2026-12-13",
+      "is_recurring_weekend": false,
+      "summary": "【親子英閱繪】 時間：115年12月13日（日） 上午10:30 地點：本館 一樓嬰幼兒區 老師（分享者）：Gina老師",
+      "url": "https://www.facebook.com/profile.php?id=100064506377025",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-1fc5f259b503",
+      "title": "2026年12月【和美鎮立圖書館-歡樂溫馨說故事活動】",
+      "kind": "event",
+      "category": "course",
+      "city": "彰化縣",
+      "district": "和美鎮",
+      "address": "彰化縣和美鎮道周路346號（彰化縣和美鎮立圖書館）",
+      "lat": 24.0518,
+      "lng": 120.5161,
+      "exact_coords": false,
+      "age_groups": [
+        "3-6"
+      ],
+      "is_indoor": true,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-12-05 ～ 2026-12-05",
+      "start_date": "2026-12-05",
+      "end_date": "2026-12-05",
+      "is_recurring_weekend": false,
+      "summary": "2026年12月【和美鎮立圖書館-歡樂溫馨說故事活動】 12月5日(六)上午10：30歡樂溫馨說故事活動 歡迎大朋友小朋友一起到館聆聽繪本故事喔",
+      "url": "https://www.facebook.com/profile.php?id=100064506377025",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-463b2ba1f85c",
+      "title": "新瓦屋【Mr. One Cajon】親子共創 X 木箱鼓講座",
+      "kind": "event",
+      "category": "course",
+      "city": "新竹縣",
+      "district": "竹北市",
+      "address": "新竹縣竹北市文興路一段123號（新瓦屋客家文化保存區）",
+      "lat": 24.8387,
+      "lng": 121.0177,
+      "exact_coords": false,
+      "age_groups": [
+        "3-6",
+        "6-12"
+      ],
+      "is_indoor": true,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-01-01 ～ 2026-12-31",
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "is_recurring_weekend": false,
+      "summary": "專業老師帶著你一起玩藝術！ 激發出你內心狂野的靈魂吧！ Mr.One X 單堂體驗課✨熱情招募音樂新血 Mr.One X 馬賽克杯墊✨歡迎預約手作體驗 ----- ｜招生班別｜ 木箱鼓、非洲鼓、金盃鼓、爵士鼓 木吉他、電吉他、電貝斯、烏克麗麗 客家二胡、客家鑼鼓 ❶ 個人班 一期…",
+      "url": "https://cloud.culture.tw/",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-aff3c2c89b29",
+      "title": "2026玉山國家公園6-12月漫遊東埔生態講座（30場次）",
+      "kind": "event",
+      "category": "activity",
+      "city": "南投縣",
+      "district": "信義鄉",
+      "address": "南投縣信義鄉（信義鄉（南投縣）=）",
+      "lat": 23.9609,
+      "lng": 120.9719,
+      "exact_coords": false,
+      "age_groups": [
+        "6-12"
+      ],
+      "is_indoor": false,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-06-06 ～ 2026-12-13",
+      "start_date": "2026-06-06",
+      "end_date": "2026-12-13",
+      "is_recurring_weekend": false,
+      "summary": "隨著時序變遷已進入冬末春初時分，天氣冷暖交替，行走於山林間將驚奇地發現，山櫻花綻放著深粉紅、粉白的小小花朵點綴了這個季節的美好。初春的花蜜吸引了冠羽畫眉 、白耳畫眉、 綠繡眼 … 等許多鳥類，成群在枝頭上嬉戲及吱吱喳喳地跳躍著、甚或表演著倒吊吸花蜜的絕妙技巧，讓人同時在賞花之際，…",
+      "url": "https://www.facebook.com/YuShanNationalPark",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-a30537f3cf95",
+      "title": "2026故事聯合國：每個國家都來講故事-11月",
+      "kind": "event",
+      "category": "activity",
+      "city": "臺南市",
+      "district": "中西區",
+      "address": "臺南市中西區中正路1號（國立臺灣文學館）",
+      "lat": 22.99206,
+      "lng": 120.20395,
+      "exact_coords": true,
+      "age_groups": [
+        "3-6"
+      ],
+      "is_indoor": false,
+      "is_free": true,
+      "price_text": "名額:35 線上報名 活動免費，每場次限35人，對象以3~12歲孩童為主。 報名採線上方式，每場次於活動前10日開放報名，額滿為止",
+      "hours": "2026-11-14 ～ 2026-11-21",
+      "start_date": "2026-11-14",
+      "end_date": "2026-11-21",
+      "is_recurring_weekend": false,
+      "summary": "為推廣孩童閱讀世界各國故事繪本並拓展國際視野，2026年「故事聯合國」以「反著來，顛倒所有事物—故事裡的顛倒世界！」主題，精選臺灣、美國、日本、澳洲、比利時、西班牙、以色列等國特色繪本，內容涵蓋「圖像顛倒」、 「翻轉角色設定」、「雙向翻閱」與「挑戰既有觀點」的繪本，透過圖文交織的…",
+      "url": "https://event.culture.tw/mocweb/reg/NMTL/Detail.init.ctr;jsessionid=94BDCD61C7BDFFB6D13CDFC2E45BD5D8?actId=60091&utm_source=NMTL&utm_medium=index&utm_campaign=60091",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-737ea5b63d46",
+      "title": "115年秋季藝文研習班",
+      "kind": "event",
+      "category": "course",
+      "city": "臺中市",
+      "district": "清水區",
+      "address": "臺中市清水區忠貞路21號（臺中市港區藝術中心）",
+      "lat": 24.1477,
+      "lng": 120.6736,
+      "exact_coords": false,
+      "age_groups": [
+        "3-6"
+      ],
+      "is_indoor": true,
+      "is_free": false,
+      "price_text": "依主辦單位公告",
+      "hours": "2026-07-24 ～ 2026-12-20",
+      "start_date": "2026-07-24",
+      "end_date": "2026-12-20",
+      "is_recurring_weekend": false,
+      "summary": "【研習時間】 115年7月24日起陸續開課 (依實際上課時間為準，中秋節、國慶日、光復節連假停課一次)。遇天然災害如颱風等，依行政院人事行政總處或臺中市政府所發布之公告為停復課依據，不另通知。停課則課程順延。 【報名及繳費方式】 《第1階段網路報名》115年6月23日(星期二)9…",
+      "url": "https://tcsac.taichung.gov.tw/Activity/Activity_More?id=81bc2ff98bd4407aa40d1aeaca3be0b3",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-65955ad62083",
+      "title": "2026年11月【員林市立圖書館-說故事活動】共3場",
+      "kind": "event",
+      "category": "course",
+      "city": "彰化縣",
+      "district": "員林市",
+      "address": "彰化縣員林市三民街2之1號（彰化縣員林市立圖書館）",
+      "lat": 24.0518,
+      "lng": 120.5161,
+      "exact_coords": false,
+      "age_groups": [
+        "3-6"
+      ],
+      "is_indoor": true,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-11-01 ～ 2026-11-29",
+      "start_date": "2026-11-01",
+      "end_date": "2026-11-29",
+      "is_recurring_weekend": false,
+      "summary": "第一個星期日上午10:00，大哥哥大姊姊說故事-本館志工 第三個星期日上午10:00，動態故事閱讀-彰化縣故事閱讀協會 第五個星期日上午10:00，說故事活動 歡迎大朋友、小朋友一起來喔!!",
+      "url": "https://www.facebook.com/yuanlinlibrary",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-fd205d70a803",
+      "title": "2026年12月【員林市立圖書館-說故事活動】共2場",
+      "kind": "event",
+      "category": "course",
+      "city": "彰化縣",
+      "district": "員林市",
+      "address": "彰化縣員林市三民街2之1號（彰化縣員林市立圖書館）",
+      "lat": 24.0518,
+      "lng": 120.5161,
+      "exact_coords": false,
+      "age_groups": [
+        "3-6"
+      ],
+      "is_indoor": true,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-12-06 ～ 2026-12-20",
+      "start_date": "2026-12-06",
+      "end_date": "2026-12-20",
+      "is_recurring_weekend": false,
+      "summary": "第一個星期日上午10:00，大哥哥大姊姊說故事-本館志工 第三個星期日上午10:00，動態故事閱讀-彰化縣故事閱讀協會 第五個星期日上午10:00，說故事活動 歡迎大朋友、小朋友一起來喔!!",
+      "url": "https://www.facebook.com/yuanlinlibrary",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-359f073e8bbe",
+      "title": "2026年12月【員林市立圖書館-英文繪本快樂遊】",
+      "kind": "event",
+      "category": "course",
+      "city": "彰化縣",
+      "district": "員林市",
+      "address": "彰化縣員林市三民街2之1號（彰化縣員林市立圖書館）",
+      "lat": 24.0518,
+      "lng": 120.5161,
+      "exact_coords": false,
+      "age_groups": [
+        "3-6",
+        "6-12"
+      ],
+      "is_indoor": true,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-12-13 ～ 2026-12-13",
+      "start_date": "2026-12-13",
+      "end_date": "2026-12-13",
+      "is_recurring_weekend": false,
+      "summary": "每月第二個星期日下午03:00 英文繪本快樂遊 「英文繪本快樂遊」：由老師進行生動活潑的說故事活動，伴隨著音樂律動，讓小孩在玩中學，在學中玩，激發學習興趣並愛上閱讀，最後帶領親子一起進行有趣的DIY活動，除了瞭解藝術創作之美與樂趣，也能增進親子互動關係並拓展社交功能！",
+      "url": "https://www.facebook.com/yuanlinlibrary",
+      "image_url": "",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-b1f601aa9f1a",
+      "title": "青銀好時光工作坊：獻給成人的親子課",
+      "kind": "event",
+      "category": "course",
+      "city": "臺北市",
+      "district": "士林區",
+      "address": "臺北市士林區劍潭路1號（臺北表演藝術中心）",
+      "lat": 25.08471,
+      "lng": 121.5244,
+      "exact_coords": true,
+      "age_groups": [
+        "3-6"
+      ],
+      "is_indoor": true,
+      "is_free": false,
+      "price_text": "依主辦單位公告",
+      "hours": "2026-11-22 ～ 2026-11-29",
+      "start_date": "2026-11-22",
+      "end_date": "2026-11-29",
+      "is_recurring_weekend": false,
+      "summary": "臺北表演藝術中心 舉辦之親子藝文活動。",
+      "url": "https://www.opentix.life/program/2084888889219198976",
+      "image_url": "https://s3.resource.opentix.life/upload/program/17865903981436aYW1UukFG.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -2392,6 +3086,7 @@
       "is_recurring_weekend": false,
       "summary": "大稻埕戲苑曲藝場 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2036018024078086145",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1774259469432AdytW148WN.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -2417,6 +3112,7 @@
       "is_recurring_weekend": false,
       "summary": "衛武營國家藝術文化中心歌劇院 舉辦之親子藝文活動。",
       "url": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P19I4966",
+      "image_url": "https://imgs2.utiki.com.tw/Data/ERA/Images/UTK2401/P19I4966_Other.JPG?v=202607131638",
       "source": "文化部全國藝文活動"
     },
     {
@@ -2442,6 +3138,7 @@
       "is_recurring_weekend": false,
       "summary": "新竹縣政府文化局實驗劇場 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2081990762330185729",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1785220068469U6aoTQ6Wpw.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -2469,6 +3166,7 @@
       "is_recurring_weekend": false,
       "summary": "台江文化中心台江劇場 舉辦之親子藝文活動。",
       "url": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1F5VMT1",
+      "image_url": "https://imgs2.utiki.com.tw/Data/ERA/Images/UTK2401/P1F5VMT1_Other.JPG?v=202609151117",
       "source": "文化部全國藝文活動"
     },
     {
@@ -2494,6 +3192,7 @@
       "is_recurring_weekend": false,
       "summary": "臺北市政大樓親子劇場 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2097267213329641473",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1789524894941JTLpG4buGd.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -2521,6 +3220,7 @@
       "is_recurring_weekend": false,
       "summary": "臺中市葫蘆墩文化中心演奏廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2112035354878472193",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1792382983540auw8WW6ebe.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -2546,6 +3246,7 @@
       "is_recurring_weekend": false,
       "summary": "臺南市立圖書館新總館6F哇劇場 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2110552275221823489",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1792029683473BYd9K5uQbE.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -2571,291 +3272,7 @@
       "is_recurring_weekend": false,
       "summary": "臺中國家歌劇院中劇院 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2099712528911405057",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-f706961e77ff",
-      "title": "卡通大冒險-親子音樂會",
-      "kind": "event",
-      "category": "activity",
-      "city": "南投縣",
-      "district": "南投市",
-      "address": "南投縣南投市建國路135號（南投縣政府文化局演藝廳）",
-      "lat": 23.90827,
-      "lng": 120.68172,
-      "exact_coords": true,
-      "age_groups": [
-        "3-6"
-      ],
-      "is_indoor": true,
-      "is_free": false,
-      "price_text": "依主辦單位公告",
-      "hours": "2026-11-21 ～ 2026-11-21",
-      "start_date": "2026-11-21",
-      "end_date": "2026-11-21",
-      "is_recurring_weekend": false,
-      "summary": "南投縣政府文化局演藝廳 舉辦之親子藝文活動。",
-      "url": "https://www.opentix.life/program/1993239082164842497",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-5573dd333678",
-      "title": "金喇叭銅管樂團《卡通大冒險》親子音樂會",
-      "kind": "event",
-      "category": "activity",
-      "city": "南投縣",
-      "district": "南投市",
-      "address": "南投縣南投市建國路135號（南投縣政府文化局）",
-      "lat": 23.90823,
-      "lng": 120.68156,
-      "exact_coords": true,
-      "age_groups": [
-        "3-6"
-      ],
-      "is_indoor": true,
-      "is_free": false,
-      "price_text": "票價+300;票價+400;票價+600;票價+800;票價+1000;票價+1200",
-      "hours": "2026-11-21 ～ 2026-11-21",
-      "start_date": "2026-11-21",
-      "end_date": "2026-11-21",
-      "is_recurring_weekend": false,
-      "summary": "金喇叭銅管樂團《卡通大冒險》親子音樂會 當熟悉的卡通旋律響起，音樂不再只是坐著聆聽，而是一場全家都能一起參與的冒險旅程！ 金喇叭銅管樂團《卡通大冒險》親子音樂會，以孩子耳熟能詳、家長也充滿回憶的卡通與動畫音樂為主軸，透過銅管五重奏與打擊樂的活潑編制，帶來明亮、熱鬧又充滿感染力的現…",
-      "url": "https://www.opentix.life/event/1993239082164842497",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-fc83d95d6150",
-      "title": "《縱貫線嘉年華》ABO Fusion弦樂四重奏的黑白狂想",
-      "kind": "event",
-      "category": "market",
-      "city": "臺北市",
-      "district": "中正區",
-      "address": "臺北市中正區中山南路21-1號（國家兩廳院演奏廳）",
-      "lat": 25.03676,
-      "lng": 121.51905,
-      "exact_coords": true,
-      "age_groups": [
-        "0-3",
-        "3-6",
-        "6-12"
-      ],
-      "is_indoor": false,
-      "is_free": false,
-      "price_text": "依主辦單位公告",
-      "hours": "2026-12-06 ～ 2026-12-11",
-      "start_date": "2026-12-06",
-      "end_date": "2026-12-11",
-      "is_recurring_weekend": false,
-      "summary": "國家兩廳院演奏廳 舉辦之親子藝文活動。",
-      "url": "https://www.opentix.life/program/2092148722984304640",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-bd7afa53fa4d",
-      "title": "蔡宇歆鋼琴演奏會",
-      "kind": "event",
-      "category": "activity",
-      "city": "新竹市",
-      "district": "",
-      "address": "陽明交大演藝廳 / 學生活動中心二樓 (新竹市大學路1001號)（國立陽明交通大學演藝廳）",
-      "lat": 24.8138,
-      "lng": 120.9675,
-      "exact_coords": false,
-      "age_groups": [
-        "3-6"
-      ],
-      "is_indoor": true,
-      "is_free": true,
-      "price_text": "免費參加（詳見官網）",
-      "hours": "2026-12-10 ～ 2026-12-10",
-      "start_date": "2026-12-10",
-      "end_date": "2026-12-10",
-      "is_recurring_weekend": false,
-      "summary": "本場音樂會匯集不同時代與風格的鋼琴作品，展現多元而豐富的音樂語言。從貝多芬晚期作品深刻的內心對話，到拉赫曼尼諾夫充滿畫面感的音樂描寫，以及臺灣當代作曲家對時間、記憶與生命經驗的思考，每首作品都訴說著獨特的故事。透過與作曲家的交流，也讓我更深入理解其創作理念，並在演奏中分享這些珍貴…",
-      "url": "https://arts.nycu.edu.tw/yu-hsin-tsai-piano-recital/",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-68ede6805df6",
-      "title": "《意識與表象的遊樂園》薩克斯風、笙與電聲的聲響幻域",
-      "kind": "event",
-      "category": "activity",
-      "city": "臺中市",
-      "district": "西屯區",
-      "address": "臺中市西屯區惠來路二段101號（臺中國家歌劇院小劇場）",
-      "lat": 24.16265,
-      "lng": 120.6403,
-      "exact_coords": true,
-      "age_groups": [
-        "0-3",
-        "3-6",
-        "6-12"
-      ],
-      "is_indoor": true,
-      "is_free": false,
-      "price_text": "依主辦單位公告",
-      "hours": "2026-12-19 ～ 2027-01-03",
-      "start_date": "2026-12-19",
-      "end_date": "2027-01-03",
-      "is_recurring_weekend": false,
-      "summary": "臺中國家歌劇院小劇場 舉辦之親子藝文活動。",
-      "url": "https://www.opentix.life/program/2064954960502607873",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-8530d0166b71",
-      "title": "狂美親子音樂劇場《聖誕危機》",
-      "kind": "event",
-      "category": "activity",
-      "city": "桃園市",
-      "district": "中壢區",
-      "address": "桃園市中壢區中美路16號（中壢藝術館音樂廳）",
-      "lat": 24.95822,
-      "lng": 121.22757,
-      "exact_coords": true,
-      "age_groups": [
-        "3-6"
-      ],
-      "is_indoor": true,
-      "is_free": false,
-      "price_text": "依主辦單位公告",
-      "hours": "2026-12-05 ～ 2026-12-13",
-      "start_date": "2026-12-05",
-      "end_date": "2026-12-13",
-      "is_recurring_weekend": false,
-      "summary": "中壢藝術館音樂廳 舉辦之親子藝文活動。",
-      "url": "https://www.opentix.life/program/2088199390794928129",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-3a3dfef55e32",
-      "title": "2026 世界冥想日｜共振之聲療癒節",
-      "kind": "event",
-      "category": "market",
-      "city": "新北市",
-      "district": "新店區",
-      "address": "新店區湖子內路100號（文山農場）",
-      "lat": 25.012,
-      "lng": 121.4657,
-      "exact_coords": false,
-      "age_groups": [
-        "0-3",
-        "3-6",
-        "6-12"
-      ],
-      "is_indoor": false,
-      "is_free": false,
-      "price_text": "詳細購票資訊請至 https://aiya-event.web.flashfalcon.info/?referrer=26470",
-      "hours": "2026-12-19 ～ 2026-12-21",
-      "start_date": "2026-12-19",
-      "end_date": "2026-12-21",
-      "is_recurring_weekend": false,
-      "summary": "【2026 世界冥想日｜共振之聲療癒節】 12月19日至21日，在新北文山農場，讓人聲、旋律與節奏，陪你走進森林深處。🌿 聽葉穎以創作唱出細膩感受，遇見 Jot Taj 燦爛之光的音樂世界，感受留聲樂團交織的純人聲和聲；再跟著手碟、Didgeridoo與非洲鼓的聲響，探索不同的聆…",
-      "url": "https://aiya-event.web.flashfalcon.info/?referrer=26470",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-22e40497838f",
-      "title": "欣響室內管樂團『聖誕音樂嘉年華II』",
-      "kind": "event",
-      "category": "market",
-      "city": "新北市",
-      "district": "新莊區",
-      "address": "新北市新莊區中平路133號（新莊文化藝術中心演藝廳）",
-      "lat": 25.04726,
-      "lng": 121.44398,
-      "exact_coords": true,
-      "age_groups": [
-        "0-3",
-        "3-6",
-        "6-12"
-      ],
-      "is_indoor": true,
-      "is_free": false,
-      "price_text": "依主辦單位公告",
-      "hours": "2026-12-20 ～ 2026-12-20",
-      "start_date": "2026-12-20",
-      "end_date": "2026-12-20",
-      "is_recurring_weekend": false,
-      "summary": "新莊文化藝術中心演藝廳 舉辦之親子藝文活動。",
-      "url": "https://www.opentix.life/program/2111029306841710593",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-7ec19ec08944",
-      "title": "《這一頁，寫下我們》2026 台中少年兒童合唱團音樂會",
-      "kind": "event",
-      "category": "activity",
-      "city": "臺中市",
-      "district": "西屯區",
-      "address": "臺中市西屯區惠來路二段101號（臺中國家歌劇院小劇場）",
-      "lat": 24.16265,
-      "lng": 120.6403,
-      "exact_coords": true,
-      "age_groups": [
-        "3-6"
-      ],
-      "is_indoor": true,
-      "is_free": false,
-      "price_text": "依主辦單位公告",
-      "hours": "2026-12-11 ～ 2026-12-11",
-      "start_date": "2026-12-11",
-      "end_date": "2026-12-11",
-      "is_recurring_weekend": false,
-      "summary": "臺中國家歌劇院小劇場 舉辦之親子藝文活動。",
-      "url": "https://www.opentix.life/program/2114958761601798144",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-573fda13466a",
-      "title": "合唱．音樂劇—金牌指揮徐惠君與台北愛樂少年及兒童合唱團音樂會",
-      "kind": "event",
-      "category": "activity",
-      "city": "臺北市",
-      "district": "中正區",
-      "address": "臺北市中正區中山南路21-1號，信義路側（國家音樂廳）",
-      "lat": 25.03676,
-      "lng": 121.51905,
-      "exact_coords": true,
-      "age_groups": [
-        "3-6"
-      ],
-      "is_indoor": true,
-      "is_free": false,
-      "price_text": "依主辦單位公告",
-      "hours": "2026-12-27 ～ 2026-12-27",
-      "start_date": "2026-12-27",
-      "end_date": "2026-12-27",
-      "is_recurring_weekend": false,
-      "summary": "國家音樂廳 舉辦之親子藝文活動。",
-      "url": "https://www.opentix.life/program/2108044209413971969",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-20690d74f223",
-      "title": "【2027衛武營小時光】恐龍的皮《恐龍木乃伊之復活の小時光》",
-      "kind": "event",
-      "category": "activity",
-      "city": "高雄市",
-      "district": "鳳山區",
-      "address": "高雄市鳳山區三多一路1號（衛武營國家藝術文化中心表演廳）",
-      "lat": 22.62302,
-      "lng": 120.34243,
-      "exact_coords": true,
-      "age_groups": [
-        "0-3",
-        "3-6",
-        "6-12"
-      ],
-      "is_indoor": true,
-      "is_free": false,
-      "price_text": "依主辦單位公告",
-      "hours": "2027-02-17 ～ 2027-02-17",
-      "start_date": "2027-02-17",
-      "end_date": "2027-02-17",
-      "is_recurring_weekend": false,
-      "summary": "衛武營國家藝術文化中心表演廳 舉辦之親子藝文活動。",
-      "url": "https://www.opentix.life/program/2115613410584772608",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1793147970017w7Aa4IBwWF.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -2883,6 +3300,7 @@
       "is_recurring_weekend": false,
       "summary": "國家音樂廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2076992709305442305",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1786083063671aL3x8mF1Cl.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -2908,6 +3326,7 @@
       "is_recurring_weekend": false,
       "summary": "國家兩廳院表演藝術圖書館 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2084178428940558336",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1788232562323yxiFoKnZby.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -2935,6 +3354,7 @@
       "is_recurring_weekend": false,
       "summary": "衛武營國家藝術文化中心1182排練室2 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2079846062269460481",
+      "image_url": "https://s3.resource.opentix.life/upload/program/178470870919303aKjPeC6g.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -2960,6 +3380,7 @@
       "is_recurring_weekend": false,
       "summary": "誠品表演廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2064992985067073537",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1790158744763dCBshkNpdm.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -2985,6 +3406,7 @@
       "is_recurring_weekend": false,
       "summary": "內惟藝術中心 Reel one 1廳 舉辦之親子藝文活動。",
       "url": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1GX6I3T",
+      "image_url": "https://imgs2.utiki.com.tw/Data/ERA/Images/UTK2401/P1GX6I3T_Other.JPG?v=202610081447",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3012,6 +3434,7 @@
       "is_recurring_weekend": false,
       "summary": "身聲淡水小劇場 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/event/2107662022920929280",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1792386944429EDuiw4QB8h.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3037,6 +3460,7 @@
       "is_recurring_weekend": false,
       "summary": "新北市藝文中心演藝廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2029816885442543616",
+      "image_url": "https://s3.resource.opentix.life/upload/program/17736200701549Uw8RA7T1P.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3064,6 +3488,7 @@
       "is_recurring_weekend": false,
       "summary": "1980室內樂集 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2079825690656772097",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1784703875618pDmJbuPTmk.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3091,6 +3516,7 @@
       "is_recurring_weekend": false,
       "summary": "臺中國家歌劇院排練室3 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2079838758878900225",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1784706930687aJFUWnvXnp.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3116,6 +3542,7 @@
       "is_recurring_weekend": false,
       "summary": "讓藝術家成為主角、讓城市成為展場、讓藝術成為生活 「居然」是翻轉詞。 您以為已經知道藝術長什麼樣子，走進紅磚倉庫，在光影與轉角之間，遇見一件不知道自己一直在等的作品。 邁入第十六年，這一屆的主題是——嚴選台灣主場。 藝術家直接參展，經評審嚴選認證。中間沒有畫廊，您買到的是藝術家本…",
       "url": "https://www.arts.org.tw/",
+      "image_url": "https://cloud.culture.tw/e_new_upload/signinImage/2026-09-08/889cd05a-a2d7-4e79-9eaf-59ee184c3205/%E5%B1%85%E7%84%B6%20(6)-%E6%96%87%E5%8C%96%E9%83%A8.jpg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3141,6 +3568,7 @@
       "is_recurring_weekend": false,
       "summary": "內惟藝術中心 Reel two 2廳 舉辦之親子藝文活動。",
       "url": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1GX6I3L",
+      "image_url": "https://imgs2.utiki.com.tw/Data/ERA/Images/UTK2401/P1GX6I3L_Other.JPG?v=202610081440",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3168,6 +3596,7 @@
       "is_recurring_weekend": false,
       "summary": "文山劇場 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2117892817499021312",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1793779158800ud2qZ7Ag8e.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3193,6 +3622,7 @@
       "is_recurring_weekend": false,
       "summary": "臺北市政大樓親子劇場 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2091776562129170433",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1787553114703rapV9MjMwX.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3220,6 +3650,7 @@
       "is_recurring_weekend": false,
       "summary": "國立清華大學合勤演藝廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2099762516779573249",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1789457246043IAjataH83E.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3247,6 +3678,7 @@
       "is_recurring_weekend": false,
       "summary": "文山劇場 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2088104133013299200",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1786677485867Q5HqZ5qr89.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3274,6 +3706,7 @@
       "is_recurring_weekend": false,
       "summary": "臺北基督學院 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2110988649820495873",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1792549914236xtZndTGO3v.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3301,6 +3734,7 @@
       "is_recurring_weekend": false,
       "summary": "台北市議會B1禮堂 舉辦之親子藝文活動。",
       "url": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IEMZGO",
+      "image_url": "https://imgs2.utiki.com.tw/Data/ERA/Images/UTK2401/P1IEMZGO_Other.JPG?v=202611181203",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3326,6 +3760,7 @@
       "is_recurring_weekend": false,
       "summary": "文山劇場 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/1986704187991719937",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1762502076551M6xYD3WOHy.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3353,6 +3788,7 @@
       "is_recurring_weekend": false,
       "summary": "臺南歸仁文化中心演藝廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2105134533009416192",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1790737789699hzOEOhrv1t.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3380,6 +3816,7 @@
       "is_recurring_weekend": false,
       "summary": "中壢藝術館音樂廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2082732279325532161",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1785395868374yA4ArCdKOK.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3407,6 +3844,7 @@
       "is_recurring_weekend": false,
       "summary": "桃園展演中心展演廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2028634382323146752",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1787904781557raA1j1l4go.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3434,6 +3872,7 @@
       "is_recurring_weekend": false,
       "summary": "臺中市中山堂 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/1956171631240474625",
+      "image_url": "https://s3.resource.opentix.life/upload/program/17593781809424tN0QxJDQB.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3461,6 +3900,7 @@
       "is_recurring_weekend": false,
       "summary": "內惟藝術中心 Reel two 2廳 舉辦之親子藝文活動。",
       "url": "https://ticket.com.tw/Application/UTK02/UTK0201_.aspx?PRODUCT_ID=P1IL6U83",
+      "image_url": "https://imgs2.utiki.com.tw/Data/ERA/Images/UTK2401/P1IL6U83_Other.JPG?v=202611161103",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3488,6 +3928,7 @@
       "is_recurring_weekend": false,
       "summary": "國家音樂廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2076992921786507264",
+      "image_url": "https://s3.resource.opentix.life/upload/program/178580724176261INsOF8ho.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3513,6 +3954,7 @@
       "is_recurring_weekend": false,
       "summary": "誠品表演廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2064993947364380673",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1781336018398RIyv3bHAxB.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3538,6 +3980,7 @@
       "is_recurring_weekend": false,
       "summary": "新竹縣政府文化局演藝廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2117888168421023745",
+      "image_url": "https://s3.resource.opentix.life/upload/program/179385154437685ugosqJgG.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3563,6 +4006,7 @@
       "is_recurring_weekend": false,
       "summary": "誠品表演廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2099745935440596992",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1789453389579aVkygvfi1N.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3590,6 +4034,7 @@
       "is_recurring_weekend": false,
       "summary": "文山劇場 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2032017897215483905",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1773305666573HMPHk2x1Ym.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3617,6 +4062,7 @@
       "is_recurring_weekend": false,
       "summary": "臺中市中山堂 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2032303556119486465",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1773373817347qVFMATLJ3L.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3642,6 +4088,7 @@
       "is_recurring_weekend": false,
       "summary": "臺南虹韻文創中心綜合演藝廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2094994026796392449",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1788875550471NU1kZnNM6p.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3669,6 +4116,7 @@
       "is_recurring_weekend": false,
       "summary": "水源劇場 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2042154718167330817",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1789641157124JSAmaVLMiR.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3696,6 +4144,7 @@
       "is_recurring_weekend": false,
       "summary": "草圖是藝術創作的初步描繪或前期研究。它是一份尚未定案的草稿，具有不確定、未完成且有待轉變的特質。 展覽《草圖》精選了藝術家林明弘橫跨 30 多年藝術生涯中不同類型的作品。並非一場以時間為軸的回顧展，而是藉由精心挑選的二十餘件展品，為其 1990 年代中期至今的藝術實踐勾勒出一幅輪…",
       "url": "https://www.miaobeiac.org/mod/course/index.php?REQUEST_ID=SAJTHC1UVXxKWXA2XS9BWQ1TBUo",
+      "image_url": "https://cloud.culture.tw/e_new_upload/signinImage/2026-10-14/7ff32ee5-9028-41d9-9b3a-dee291952e65/1024768.jpg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3721,6 +4170,7 @@
       "is_recurring_weekend": false,
       "summary": "「那些微小卻讓人停下的瞬間，是我們一起創造的光景；當快門按下，也留下了被觸動的證據。」 【展覽資訊】 • 展出時間｜2025年10月15日 起（無期限展出） • 展出連結｜https://yuju869728.wixsite.com/waker 讓我們一起走進光影裡的故事，感受那…",
       "url": "https://www.waker.org.tw/",
+      "image_url": "https://cloud.culture.tw/e_new_upload/cms/image/A0/B0/C0/D15/E175/F640/00feea06-fee1-4303-abe0-ddb79c8956d8.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3747,6 +4197,7 @@
       "is_recurring_weekend": false,
       "summary": "想要了解東海岸舊石器時代八仙洞，新石器時代的卑南、麒麟文化及中部大坌坑、牛罵頭、大馬璘、營埔及番仔園文化嗎?科博館更新常設展區，推出《古代人說故事》，展覽內容生動活潑，並以動畫影像剪輯及多媒體互動方式呈現，除了認識歷史課本寫的考古學是什麼外，更能讓您親身體驗臺灣古代人的生活方式!…",
       "url": "http://www.nmns.edu.tw/ch/visit/price.htm",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3773,6 +4224,7 @@
       "is_recurring_weekend": false,
       "summary": "琺瑯工藝/Enamel Process 琺瑯器即金屬胎琺瑯器，是一種集金屬製作與琺瑯釉料加工處理為一體的複合性工藝製品。它既具備金屬貴重、堅固的特點，又具備琺瑯釉料晶瑩、光滑及適用於裝飾的特點。 依據金屬胎琺瑯器在金屬加工工藝和琺瑯釉料具體處理方法上的不同，一般可將金屬胎琺瑯器分…",
       "url": "https://www.facebook.com/pg/juhauwanyi/events/",
+      "image_url": "https://cloud.culture.tw/e_new_upload/cms/image/A0/B0/C0/D8/E120/F482/d534ef80-bd64-4d22-8f8a-8d864d70748d.jpg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3800,6 +4252,7 @@
       "is_recurring_weekend": false,
       "summary": "國立自然科學博物館迎來生命科學廳的華麗轉身，全新常設展《奇幻自然》即日起開幕，展區規劃5大主題，由科博館內近20名研究人員共同策劃，深入淺出呈現自然界的規則與奧祕。踏進展場首先映入眼簾是一件逾400歲的巨大臺灣雲杉標本，觀眾可在體驗區用嗅覺、觸覺感受它的氣味及紋理，還有身長近4公…",
       "url": "https://www.nmns.edu.tw/ch/exhibitions/galleries/life-science-hall/fantastic/",
+      "image_url": "https://cloud.culture.tw/e_new_upload/cms/image/A0/B0/C0/D8/E141/F39/2ee62220-83d2-488c-b5d7-4e4093164674.jpg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3827,6 +4280,7 @@
       "is_recurring_weekend": false,
       "summary": "臺中市葫蘆墩文化中心演奏廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2070323539426664449",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1782869302423oGAUR9FA9J.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3854,6 +4308,7 @@
       "is_recurring_weekend": false,
       "summary": "衛武營國家藝術文化中心戲劇院 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2083124898860347393",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1785490212148EJCbNYNoCa.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3881,6 +4336,7 @@
       "is_recurring_weekend": false,
       "summary": "臺中市中山堂 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2086734015886159873",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1786526651295vsgYDdOUaY.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3908,6 +4364,7 @@
       "is_recurring_weekend": false,
       "summary": "臺北市政大樓親子劇場 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2092172422094131201",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1788429252304UaytUHE7j9.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3935,6 +4392,7 @@
       "is_recurring_weekend": false,
       "summary": "高雄市文化中心至德堂 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2092199503986237440",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1787654087685FbB4BLmWkY.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3962,6 +4420,7 @@
       "is_recurring_weekend": false,
       "summary": "桃園展演中心展演廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2092433205804978177",
+      "image_url": "https://s3.resource.opentix.life/upload/program/17877099071172WE4wuaPnX.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -3987,6 +4446,7 @@
       "is_recurring_weekend": false,
       "summary": "衛武營國家藝術文化中心戲劇院 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2087017782302437377",
+      "image_url": "https://s3.resource.opentix.life/upload/program/17884942207654flqd6LLDd.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4012,6 +4472,7 @@
       "is_recurring_weekend": false,
       "summary": "臺中國家歌劇院中劇院 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2107720856465080321",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1791354728508aKSEJsd1li.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4039,6 +4500,7 @@
       "is_recurring_weekend": false,
       "summary": "1980室內樂集 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2115611996166938625",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1793235472051GK9xrEnXFL.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4066,6 +4528,7 @@
       "is_recurring_weekend": false,
       "summary": "臺中國家歌劇院排練室3 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2115710740029333504",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1793259052655fQoi6NWH6c.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4093,6 +4556,7 @@
       "is_recurring_weekend": false,
       "summary": "衛武營國家藝術文化中心1184排練室3 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2116064054735835137",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1793343477435rlUsZbqbO3.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4118,6 +4582,7 @@
       "is_recurring_weekend": false,
       "summary": "樹林藝文中心演藝廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2117818490726178816",
+      "image_url": "https://s3.resource.opentix.life/upload/program/17938404639504CGRTHzwGX.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4145,6 +4610,7 @@
       "is_recurring_weekend": false,
       "summary": "臺中國家歌劇院小劇場 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2118628850600804353",
+      "image_url": "https://s3.resource.opentix.life/upload/program/17939552023403GFyExuCJn.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4170,6 +4636,7 @@
       "is_recurring_weekend": false,
       "summary": "文山劇場 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2120402465031839745",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1794381736048cARIgX8QlG.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4195,6 +4662,7 @@
       "is_recurring_weekend": false,
       "summary": "國家音樂廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2118157069073866753",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1794538149044RO1gibQOfO.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4220,6 +4688,7 @@
       "is_recurring_weekend": false,
       "summary": "屏東演藝廳音樂廳 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/2117856354799542273",
+      "image_url": "https://s3.resource.opentix.life/default/programInfoDefault.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4245,576 +4714,235 @@
       "is_recurring_weekend": false,
       "summary": "《療癒停靠站》松山機場登場 在AI時代找回藝術的手感溫度 在AI科技快速發展、資訊大量流動的時代，人們享受著科技帶來的便利，卻也更加渴望真實的情感連結。於臺北松山機場展出的《療癒停靠站》藝術展，以「AI時代裡的手感溫度」為核心，透過藝術創作，為來往旅人打造一處溫柔而富有情感的心靈…",
       "url": "https://www.facebook.com/share/p/19j2Kb7B6u/",
+      "image_url": "https://cloud.culture.tw/e_new_upload/signinImage/2026-11-17/75ffef40-3af8-4866-b346-d2cb27566848/IMG_0068.JPG",
       "source": "文化部全國藝文活動"
     },
     {
-      "id": "iculture-fd1df8e16eee",
-      "title": "生活工藝館-陶藝DIY手作體驗",
-      "kind": "event",
-      "category": "course",
-      "city": "南投縣",
-      "district": "草屯鎮",
-      "address": "南投縣草屯鎮中正路573號（國立臺灣工藝研究發展中心（臺灣工藝文化園區））",
-      "lat": 23.98077,
-      "lng": 120.69186,
-      "exact_coords": true,
-      "age_groups": [
-        "0-3",
-        "6-12"
-      ],
-      "is_indoor": true,
-      "is_free": false,
-      "price_text": "手捏動物小盆栽+400;手捏毛小孩陶盤+500;植物油彩系列課程+1200;小幽靈線香座+500;瓷盤彩繪+500;〔燒製〕手拉坯-杯子成型+500;〔不燒製〕手拉坯-杯子成型+2",
-      "hours": "2026-01-01 ～ 2026-12-31",
-      "start_date": "2026-01-01",
-      "end_date": "2026-12-31",
-      "is_recurring_weekend": false,
-      "summary": "生活工藝館2、3F提供給有志投入工藝產業者進行教學、品牌經營與創作，以體驗式教學工坊為經營主軸，販售、創作為輔，由進駐藝師規劃工藝體驗、研習等課程，藉由相關教育推廣活動，鼓勵民眾從手動實作當中體驗工藝之美。 陶藝DIY手作體驗 陶藝，是一門古老的工藝，源於人類對泥土的利用和塑造。…",
-      "url": "https://www.ntcri.gov.tw/home/zh-tw/activitysoonlist/7490912",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-cf3a37992c60",
-      "title": "生活工藝館-漆藝DIY手作體驗",
-      "kind": "event",
-      "category": "course",
-      "city": "南投縣",
-      "district": "草屯鎮",
-      "address": "南投縣草屯鎮中正路573號（國立臺灣工藝研究發展中心（臺灣工藝文化園區））",
-      "lat": 23.98077,
-      "lng": 120.69186,
-      "exact_coords": true,
-      "age_groups": [
-        "6-12"
-      ],
-      "is_indoor": true,
-      "is_free": false,
-      "price_text": "韶光拂葉－4吋點心盤+200;一生愉筷－天然漆筷+300;赤誠相守－根來塗項鍊+300;漆溜溜球+600;妙染華彩－美扇+250;古琴紙鎮+300;妙染華彩－漂流漆環保袋+250;",
-      "hours": "2026-01-01 ～ 2026-12-31",
-      "start_date": "2026-01-01",
-      "end_date": "2026-12-31",
-      "is_recurring_weekend": false,
-      "summary": "生活工藝館2、3F提供給有志投入工藝產業者進行教學、品牌經營與創作，以體驗式教學工坊為經營主軸，販售、創作為輔，由進駐藝師規劃工藝體驗、研習等課程，藉由相關教育推廣活動，鼓勵民眾從手動實作當中體驗工藝之美。 漆藝DIY手作體驗 漆的歷史悠久，最早可追溯到新石器時代，是古老久遠的工…",
-      "url": "https://event.culture.tw/mocweb/reg/NTCRI/Index.init.ctr?openExternalBrowser=1",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-dd1736361253",
-      "title": "生活工藝館-竹藝DIY手作體驗",
-      "kind": "event",
-      "category": "course",
-      "city": "南投縣",
-      "district": "草屯鎮",
-      "address": "南投縣草屯鎮中正路573號（國立臺灣工藝研究發展中心（臺灣工藝文化園區））",
-      "lat": 23.98077,
-      "lng": 120.69186,
-      "exact_coords": true,
-      "age_groups": [
-        "0-3",
-        "6-12"
-      ],
-      "is_indoor": true,
-      "is_free": false,
-      "price_text": "竹青蛙+60;花風車+200;鑰匙圈+150;花形圓缽+150;小竹扇+200;魚兒+150;四角杯墊+200;花器+150;筆記本-單面+650;筆記本-雙面+900",
-      "hours": "2026-01-01 ～ 2026-12-31",
-      "start_date": "2026-01-01",
-      "end_date": "2026-12-31",
-      "is_recurring_weekend": false,
-      "summary": "生活工藝館2、3F提供給有志投入工藝產業者進行教學、品牌經營與創作，以體驗式教學工坊為經營主軸，販售、創作為輔，由進駐藝師規劃工藝體驗、研習等課程，藉由相關教育推廣活動，鼓勵民眾從手動實作當中體驗工藝之美。 竹藝DIY手作體驗 竹編，是一種用竹篾以經緯交錯方式編織成各種器物的傳統…",
-      "url": "https://www.ntcri.gov.tw/home/zh-tw/activitysoonlist/7490939",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-4ab6f0d84a60",
-      "title": "生活工藝館-植物染DIY手作體驗",
-      "kind": "event",
-      "category": "course",
-      "city": "南投縣",
-      "district": "草屯鎮",
-      "address": "南投縣草屯鎮中正路573號（國立臺灣工藝研究發展中心（臺灣工藝文化園區））",
-      "lat": 23.98077,
-      "lng": 120.69186,
-      "exact_coords": true,
-      "age_groups": [
-        "6-12"
-      ],
-      "is_indoor": true,
-      "is_free": false,
-      "price_text": "柿汁刷染小手帕29*28公分+150;柿汁刷染收納小袋19*23公分+200;植物染收納小袋19*23公分+250;植物染棉襪+250;植物染43*43公分手帕+250;植物染60",
-      "hours": "2026-01-01 ～ 2026-12-31",
-      "start_date": "2026-01-01",
-      "end_date": "2026-12-31",
-      "is_recurring_weekend": false,
-      "summary": "生活工藝館2、3F提供給有志投入工藝產業者進行教學、品牌經營與創作，以體驗式教學工坊為經營主軸，販售、創作為輔，由進駐藝師規劃工藝體驗、研習等課程，藉由相關教育推廣活動，鼓勵民眾從手動實作當中體驗工藝之美。 植物染DIY手作體驗 植物染，又稱「天然染」和「草木染」，取自生活周邊取…",
-      "url": "https://event.culture.tw/mocweb/reg/NTCRI/Index.init.ctr?openExternalBrowser=1",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-ed56f6623103",
-      "title": "生活工藝館-樹藝DIY手作體驗",
-      "kind": "event",
-      "category": "course",
-      "city": "南投縣",
-      "district": "草屯鎮",
-      "address": "南投縣草屯鎮中正路573號（國立臺灣工藝研究發展中心（臺灣工藝文化園區））",
-      "lat": 23.98077,
-      "lng": 120.69186,
-      "exact_coords": true,
-      "age_groups": [
-        "0-3",
-        "6-12"
-      ],
-      "is_indoor": true,
-      "is_free": false,
-      "price_text": "〔樹皮〕蝴蝶萬用夾+200;〔果實〕五色鳥+100;〔果實〕早安+200;〔果實〕鴨子+150;〔果實〕開心果串+200;〔果實〕歡樂兔+200;〔竹、果實〕存錢筒+500;〔果實",
-      "hours": "2026-01-01 ～ 2026-12-31",
-      "start_date": "2026-01-01",
-      "end_date": "2026-12-31",
-      "is_recurring_weekend": false,
-      "summary": "生活工藝館2、3F提供給有志投入工藝產業者進行教學、品牌經營與創作，以體驗式教學工坊為經營主軸，販售、創作為輔，由進駐藝師規劃工藝體驗、研習等課程，藉由相關教育推廣活動，鼓勵民眾從手動實作當中體驗工藝之美。 樹藝DIY手作體驗 樹藝創作，是一種利用樹木材料進行藝術創作的方式，使用…",
-      "url": "https://event.culture.tw/mocweb/reg/NTCRI/Index.init.ctr?openExternalBrowser=1",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-a46c90261796",
-      "title": "兒童讀書會-愛地球〝寫作〞小學堂",
+      "id": "iculture-f706961e77ff",
+      "title": "卡通大冒險-親子音樂會",
       "kind": "event",
       "category": "activity",
-      "city": "高雄市",
-      "district": "鼓山區",
-      "address": "高雄市鼓山區4鄰鼓山三路19-3號（高雄市立圖書館鼓山分館）",
-      "lat": 22.65447,
-      "lng": 120.27539,
-      "exact_coords": true,
-      "age_groups": [
-        "3-6",
-        "6-12"
-      ],
-      "is_indoor": true,
-      "is_free": true,
-      "price_text": "免費參加（詳見官網）",
-      "hours": "2026-01-11 ～ 2026-12-13",
-      "start_date": "2026-01-11",
-      "end_date": "2026-12-13",
-      "is_recurring_weekend": false,
-      "summary": "寫作小學堂- 鼓山每月一堂課的方式，星期日下午2點鐘【寫作小學堂】增強你的華文力，寫作從「閱讀」開始，歡迎國小一至六年級小朋友，請自備鉛筆、橡皮擦、國語字典，與熱愛大自然及愛幻想、充滿創意的腦袋。本節課將實際完成一篇作文。 1/11 打敗宇宙魔王的無敵武器 2/8 藏在手機裡的祕…",
-      "url": "https://cloud.culture.tw/",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-b7773406ef45",
-      "title": "花語風車拼布手作讀書會",
-      "kind": "event",
-      "category": "course",
-      "city": "高雄市",
-      "district": "鹽埕區",
-      "address": "高雄市鹽埕區1鄰大仁路179號5樓、6樓（高雄市立圖書館鹽埕分館）",
-      "lat": 22.62672,
-      "lng": 120.28187,
-      "exact_coords": true,
-      "age_groups": [
-        "6-12"
-      ],
-      "is_indoor": true,
-      "is_free": true,
-      "price_text": "免費參加（詳見官網）",
-      "hours": "2026-01-08 ～ 2026-12-31",
-      "start_date": "2026-01-08",
-      "end_date": "2026-12-31",
-      "is_recurring_weekend": false,
-      "summary": "花語風車拼布手作讀書會由拼布老師盧一伊帶領學員利用館藏圖書資源，共讀拼布手作書籍，進行作品設計討論製作及個人經驗交流分享。並透過實作以精煉對拼布作品縫製能力，完成舒壓及達成個人成就目標。",
-      "url": "https://cloud.culture.tw/",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-489e693e7dd6",
-      "title": "多元文化讀書會： 共讀環保再利用-針ㄉ好棒。手作創藝",
-      "kind": "event",
-      "category": "course",
-      "city": "高雄市",
-      "district": "鼓山區",
-      "address": "高雄市鼓山區4鄰鼓山三路19-3號（高雄市立圖書館鼓山分館）",
-      "lat": 22.65447,
-      "lng": 120.27539,
-      "exact_coords": true,
-      "age_groups": [
-        "6-12"
-      ],
-      "is_indoor": true,
-      "is_free": true,
-      "price_text": "免費參加（詳見官網）",
-      "hours": "2026-01-02 ～ 2026-12-18",
-      "start_date": "2026-01-02",
-      "end_date": "2026-12-18",
-      "is_recurring_weekend": false,
-      "summary": "每週五上午辦理「針ㄉ好棒。手作創藝」研習，本活動特邀社區手工藝達人葉子奶奶(葉惠喜)來到本分館教授社區媽媽們回收舊衣服或舊毛線解構再利用的各種私房技法，運用鉤針、棒針、手縫針、車針等不同織縫工具，完成獨一無二的創藝新作品。",
-      "url": "https://cloud.culture.tw/",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-fbff5b6b1871",
-      "title": "與文字共遊─〝寫作〞小學堂(有寫作基礎的國小4-6年級學童)(1月~12月)",
-      "kind": "event",
-      "category": "activity",
-      "city": "高雄市",
-      "district": "左營區",
-      "address": "高雄市左營區2鄰啟文路12號（高雄市立圖書館左營分館）",
-      "lat": 22.67353,
-      "lng": 120.28434,
-      "exact_coords": true,
-      "age_groups": [
-        "3-6",
-        "6-12"
-      ],
-      "is_indoor": true,
-      "is_free": true,
-      "price_text": "免費參加（詳見官網）",
-      "hours": "2026-01-11 ～ 2026-12-13",
-      "start_date": "2026-01-11",
-      "end_date": "2026-12-13",
-      "is_recurring_weekend": false,
-      "summary": "參加方式：自助借書機借書滿20本即可免費參加。 參加對象：國小四至六年級小朋友(有寫作基礎)，請自備鉛筆、橡皮擦、國語字典與熱愛大自然及愛幻想，充滿創意的腦袋。本節課將實際完成一篇作文。 想跟著小光一同尋找夢想中的故事書嗎？ 快來加入這趟旅程吧！",
-      "url": "https://cloud.culture.tw/",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-71b9b8a45bb6",
-      "title": "東東漫畫親子讀書會遊山玩水尬漫畫(1月~12月)",
-      "kind": "event",
-      "category": "activity",
-      "city": "高雄市",
-      "district": "左營區",
-      "address": "高雄市左營區2鄰啟文路12號（高雄市立圖書館左營分館）",
-      "lat": 22.67353,
-      "lng": 120.28434,
+      "city": "南投縣",
+      "district": "南投市",
+      "address": "南投縣南投市建國路135號（南投縣政府文化局演藝廳）",
+      "lat": 23.90827,
+      "lng": 120.68172,
       "exact_coords": true,
       "age_groups": [
         "3-6"
       ],
       "is_indoor": true,
-      "is_free": true,
-      "price_text": "免費參加（詳見官網）",
-      "hours": "2026-01-18 ～ 2026-12-20",
-      "start_date": "2026-01-18",
-      "end_date": "2026-12-20",
+      "is_free": false,
+      "price_text": "依主辦單位公告",
+      "hours": "2026-11-21 ～ 2026-11-21",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-21",
       "is_recurring_weekend": false,
-      "summary": "老師：東東老師(高雄知名漫畫家)。自助借書機借書滿20本即可免費參加。 提昇社區民眾藝文水平，建立居民參與書香建設的機制，活化本分館設施機能，藉由多元活動的舉辦，吸引社區居民到館利用各項資源。",
-      "url": "https://cloud.culture.tw/",
+      "summary": "南投縣政府文化局演藝廳 舉辦之親子藝文活動。",
+      "url": "https://www.opentix.life/program/1993239082164842497",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1766733429902uUfDRngF8i.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
-      "id": "iculture-daacfc01740f",
-      "title": "英文小學堂",
+      "id": "iculture-5573dd333678",
+      "title": "金喇叭銅管樂團《卡通大冒險》親子音樂會",
       "kind": "event",
-      "category": "course",
+      "category": "activity",
       "city": "南投縣",
-      "district": "竹山鎮",
-      "address": "南投縣竹山鎮大勇路 26 號（欣榮紀念圖書館暨玉蘭文化會館）",
-      "lat": 23.75697,
-      "lng": 120.67494,
+      "district": "南投市",
+      "address": "南投縣南投市建國路135號（南投縣政府文化局）",
+      "lat": 23.90823,
+      "lng": 120.68156,
       "exact_coords": true,
       "age_groups": [
-        "6-12"
+        "3-6"
       ],
       "is_indoor": true,
-      "is_free": true,
-      "price_text": "免費參加（詳見官網）",
-      "hours": "2026-03-01 ～ 2026-12-20",
-      "start_date": "2026-03-01",
-      "end_date": "2026-12-20",
+      "is_free": false,
+      "price_text": "票價+300;票價+400;票價+600;票價+800;票價+1000;票價+1200",
+      "hours": "2026-11-21 ～ 2026-11-21",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-21",
       "is_recurring_weekend": false,
-      "summary": "授課講師：汪宥穎 本活動開設主題式英文學習課程，讓學童從遊戲過程中學習日常的英文對話。 對象：國小一至六年級學童15人。 報名地點：圖書館服務台 活動洽詢：049-2637666欣榮圖書館。",
-      "url": "http://www.hsinrong.org",
+      "summary": "金喇叭銅管樂團《卡通大冒險》親子音樂會 當熟悉的卡通旋律響起，音樂不再只是坐著聆聽，而是一場全家都能一起參與的冒險旅程！ 金喇叭銅管樂團《卡通大冒險》親子音樂會，以孩子耳熟能詳、家長也充滿回憶的卡通與動畫音樂為主軸，透過銅管五重奏與打擊樂的活潑編制，帶來明亮、熱鬧又充滿感染力的現…",
+      "url": "https://www.opentix.life/event/1993239082164842497",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1766733429902uUfDRngF8i.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
-      "id": "iculture-cec7ed0528c6",
-      "title": "2026☼朗朗故事樹/朗朗小書房x朗朗愛閱基地",
+      "id": "iculture-fc83d95d6150",
+      "title": "《縱貫線嘉年華》ABO Fusion弦樂四重奏的黑白狂想",
+      "kind": "event",
+      "category": "market",
+      "city": "臺北市",
+      "district": "中正區",
+      "address": "臺北市中正區中山南路21-1號（國家兩廳院演奏廳）",
+      "lat": 25.03676,
+      "lng": 121.51905,
+      "exact_coords": true,
+      "age_groups": [
+        "0-3",
+        "3-6",
+        "6-12"
+      ],
+      "is_indoor": false,
+      "is_free": false,
+      "price_text": "依主辦單位公告",
+      "hours": "2026-12-06 ～ 2026-12-11",
+      "start_date": "2026-12-06",
+      "end_date": "2026-12-11",
+      "is_recurring_weekend": false,
+      "summary": "國家兩廳院演奏廳 舉辦之親子藝文活動。",
+      "url": "https://www.opentix.life/program/2092148722984304640",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1787641995571YPjsaDR8MR.jpeg",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-bd7afa53fa4d",
+      "title": "蔡宇歆鋼琴演奏會",
       "kind": "event",
       "category": "activity",
       "city": "新竹市",
-      "district": "東區",
-      "address": "新竹市東區（東區（新竹市）=）",
+      "district": "",
+      "address": "陽明交大演藝廳 / 學生活動中心二樓 (新竹市大學路1001號)（國立陽明交通大學演藝廳）",
       "lat": 24.8138,
       "lng": 120.9675,
       "exact_coords": false,
       "age_groups": [
         "3-6"
       ],
-      "is_indoor": false,
+      "is_indoor": true,
       "is_free": true,
       "price_text": "免費參加（詳見官網）",
-      "hours": "2026-01-24 ～ 2026-12-26",
-      "start_date": "2026-01-24",
-      "end_date": "2026-12-26",
+      "hours": "2026-12-10 ～ 2026-12-10",
+      "start_date": "2026-12-10",
+      "end_date": "2026-12-10",
       "is_recurring_weekend": false,
-      "summary": "一起來朗朗故事樹下聽故事 在這棵故事大樹下，每個聽故事的人都變成了孩子，一起進入神奇的故事世界，一起笑，一起哭！ 我們希望讓大人看到一個不一樣的親子共讀可能❤️在這棵故事大樹下，大人們將學會終生受用的共讀方法，找到與孩子心靈相通的最佳途徑。 【極簡共讀】帶領著我們感受～ ​ ✨ …",
-      "url": "https://www.facebook.com/sunnybookshouse/",
+      "summary": "本場音樂會匯集不同時代與風格的鋼琴作品，展現多元而豐富的音樂語言。從貝多芬晚期作品深刻的內心對話，到拉赫曼尼諾夫充滿畫面感的音樂描寫，以及臺灣當代作曲家對時間、記憶與生命經驗的思考，每首作品都訴說著獨特的故事。透過與作曲家的交流，也讓我更深入理解其創作理念，並在演奏中分享這些珍貴…",
+      "url": "https://arts.nycu.edu.tw/yu-hsin-tsai-piano-recital/",
+      "image_url": "https://cloud.culture.tw/e_new_upload/signinImage/2026-09-02/ee8abf4c-7659-4c20-a0d0-c18bdd7de7ac/20261210.png",
       "source": "文化部全國藝文活動"
     },
     {
-      "id": "iculture-bf1e3e71fef6",
-      "title": "115年度快樂魚池-兒童美語研習",
+      "id": "iculture-68ede6805df6",
+      "title": "《意識與表象的遊樂園》薩克斯風、笙與電聲的聲響幻域",
       "kind": "event",
-      "category": "course",
-      "city": "南投縣",
-      "district": "魚池鄉",
-      "address": "南投縣魚池鄉秀水路233號（南投縣魚池鄉立圖書館）",
-      "lat": 23.89659,
-      "lng": 120.93667,
+      "category": "activity",
+      "city": "臺中市",
+      "district": "西屯區",
+      "address": "臺中市西屯區惠來路二段101號（臺中國家歌劇院小劇場）",
+      "lat": 24.16265,
+      "lng": 120.6403,
+      "exact_coords": true,
+      "age_groups": [
+        "0-3",
+        "3-6",
+        "6-12"
+      ],
+      "is_indoor": true,
+      "is_free": false,
+      "price_text": "依主辦單位公告",
+      "hours": "2026-12-19 ～ 2027-01-03",
+      "start_date": "2026-12-19",
+      "end_date": "2027-01-03",
+      "is_recurring_weekend": false,
+      "summary": "臺中國家歌劇院小劇場 舉辦之親子藝文活動。",
+      "url": "https://www.opentix.life/program/2064954960502607873",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1785986144402eE7BwqSC5k.jpeg",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-8530d0166b71",
+      "title": "狂美親子音樂劇場《聖誕危機》",
+      "kind": "event",
+      "category": "activity",
+      "city": "桃園市",
+      "district": "中壢區",
+      "address": "桃園市中壢區中美路16號（中壢藝術館音樂廳）",
+      "lat": 24.95822,
+      "lng": 121.22757,
       "exact_coords": true,
       "age_groups": [
         "3-6"
       ],
       "is_indoor": true,
-      "is_free": true,
-      "price_text": "免費參加（詳見官網）",
-      "hours": "2026-03-07 ～ 2026-11-28",
-      "start_date": "2026-03-07",
-      "end_date": "2026-11-28",
+      "is_free": false,
+      "price_text": "依主辦單位公告",
+      "hours": "2026-12-05 ～ 2026-12-13",
+      "start_date": "2026-12-05",
+      "end_date": "2026-12-13",
       "is_recurring_weekend": false,
-      "summary": "參加對象：小一至小六 報名方式：即日起至請逕洽圖書館櫃台報名 洽詢電話：049-2897450",
-      "url": "https://www.facebook.com/yuchihlibrary",
+      "summary": "中壢藝術館音樂廳 舉辦之親子藝文活動。",
+      "url": "https://www.opentix.life/program/2088199390794928129",
+      "image_url": "https://s3.resource.opentix.life/upload/program/17883200157078ssn0ZeRAW.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
-      "id": "iculture-47f015d4b417",
-      "title": "2026年12月【和美鎮立圖書館-親子英閱繪】",
+      "id": "iculture-3a3dfef55e32",
+      "title": "2026 世界冥想日｜共振之聲療癒節",
       "kind": "event",
-      "category": "activity",
-      "city": "彰化縣",
-      "district": "和美鎮",
-      "address": "彰化縣和美鎮道周路346號（彰化縣和美鎮立圖書館）",
-      "lat": 24.0518,
-      "lng": 120.5161,
+      "category": "market",
+      "city": "新北市",
+      "district": "新店區",
+      "address": "新店區湖子內路100號（文山農場）",
+      "lat": 25.012,
+      "lng": 121.4657,
       "exact_coords": false,
       "age_groups": [
         "0-3",
-        "3-6"
+        "3-6",
+        "6-12"
       ],
-      "is_indoor": true,
-      "is_free": true,
-      "price_text": "免費參加（詳見官網）",
-      "hours": "2026-12-13 ～ 2026-12-13",
-      "start_date": "2026-12-13",
-      "end_date": "2026-12-13",
+      "is_indoor": false,
+      "is_free": false,
+      "price_text": "詳細購票資訊請至 https://aiya-event.web.flashfalcon.info/?referrer=26470",
+      "hours": "2026-12-19 ～ 2026-12-21",
+      "start_date": "2026-12-19",
+      "end_date": "2026-12-21",
       "is_recurring_weekend": false,
-      "summary": "【親子英閱繪】 時間：115年12月13日（日） 上午10:30 地點：本館 一樓嬰幼兒區 老師（分享者）：Gina老師",
-      "url": "https://www.facebook.com/profile.php?id=100064506377025",
+      "summary": "【2026 世界冥想日｜共振之聲療癒節】 12月19日至21日，在新北文山農場，讓人聲、旋律與節奏，陪你走進森林深處。🌿 聽葉穎以創作唱出細膩感受，遇見 Jot Taj 燦爛之光的音樂世界，感受留聲樂團交織的純人聲和聲；再跟著手碟、Didgeridoo與非洲鼓的聲響，探索不同的聆…",
+      "url": "https://aiya-event.web.flashfalcon.info/?referrer=26470",
+      "image_url": "https://cloud.culture.tw/e_new_upload/signinImage/2026-10-23/1acd713e-d18e-4689-95ed-68552a089e19/%E6%9C%AA%E5%91%BD%E5%90%8D%E8%A8%AD%E8%A8%88.jpg",
       "source": "文化部全國藝文活動"
     },
     {
-      "id": "iculture-1fc5f259b503",
-      "title": "2026年12月【和美鎮立圖書館-歡樂溫馨說故事活動】",
+      "id": "iculture-22e40497838f",
+      "title": "欣響室內管樂團『聖誕音樂嘉年華II』",
       "kind": "event",
-      "category": "course",
-      "city": "彰化縣",
-      "district": "和美鎮",
-      "address": "彰化縣和美鎮道周路346號（彰化縣和美鎮立圖書館）",
-      "lat": 24.0518,
-      "lng": 120.5161,
-      "exact_coords": false,
+      "category": "market",
+      "city": "新北市",
+      "district": "新莊區",
+      "address": "新北市新莊區中平路133號（新莊文化藝術中心演藝廳）",
+      "lat": 25.04726,
+      "lng": 121.44398,
+      "exact_coords": true,
       "age_groups": [
-        "3-6"
-      ],
-      "is_indoor": true,
-      "is_free": true,
-      "price_text": "免費參加（詳見官網）",
-      "hours": "2026-12-05 ～ 2026-12-05",
-      "start_date": "2026-12-05",
-      "end_date": "2026-12-05",
-      "is_recurring_weekend": false,
-      "summary": "2026年12月【和美鎮立圖書館-歡樂溫馨說故事活動】 12月5日(六)上午10：30歡樂溫馨說故事活動 歡迎大朋友小朋友一起到館聆聽繪本故事喔",
-      "url": "https://www.facebook.com/profile.php?id=100064506377025",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-463b2ba1f85c",
-      "title": "新瓦屋【Mr. One Cajon】親子共創 X 木箱鼓講座",
-      "kind": "event",
-      "category": "course",
-      "city": "新竹縣",
-      "district": "竹北市",
-      "address": "新竹縣竹北市文興路一段123號（新瓦屋客家文化保存區）",
-      "lat": 24.8387,
-      "lng": 121.0177,
-      "exact_coords": false,
-      "age_groups": [
+        "0-3",
         "3-6",
         "6-12"
       ],
       "is_indoor": true,
-      "is_free": true,
-      "price_text": "免費參加（詳見官網）",
-      "hours": "2026-01-01 ～ 2026-12-31",
-      "start_date": "2026-01-01",
-      "end_date": "2026-12-31",
+      "is_free": false,
+      "price_text": "依主辦單位公告",
+      "hours": "2026-12-20 ～ 2026-12-20",
+      "start_date": "2026-12-20",
+      "end_date": "2026-12-20",
       "is_recurring_weekend": false,
-      "summary": "專業老師帶著你一起玩藝術！ 激發出你內心狂野的靈魂吧！ Mr.One X 單堂體驗課✨熱情招募音樂新血 Mr.One X 馬賽克杯墊✨歡迎預約手作體驗 ----- ｜招生班別｜ 木箱鼓、非洲鼓、金盃鼓、爵士鼓 木吉他、電吉他、電貝斯、烏克麗麗 客家二胡、客家鑼鼓 ❶ 個人班 一期…",
-      "url": "https://cloud.culture.tw/",
+      "summary": "新莊文化藝術中心演藝廳 舉辦之親子藝文活動。",
+      "url": "https://www.opentix.life/program/2111029306841710593",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1792143467871mLbGDgH6sW.jpeg",
       "source": "文化部全國藝文活動"
     },
     {
-      "id": "iculture-aff3c2c89b29",
-      "title": "2026玉山國家公園6-12月漫遊東埔生態講座（30場次）",
+      "id": "iculture-7ec19ec08944",
+      "title": "《這一頁，寫下我們》2026 台中少年兒童合唱團音樂會",
       "kind": "event",
       "category": "activity",
-      "city": "南投縣",
-      "district": "信義鄉",
-      "address": "南投縣信義鄉（信義鄉（南投縣）=）",
-      "lat": 23.9609,
-      "lng": 120.9719,
-      "exact_coords": false,
-      "age_groups": [
-        "6-12"
-      ],
-      "is_indoor": false,
-      "is_free": true,
-      "price_text": "免費參加（詳見官網）",
-      "hours": "2026-06-06 ～ 2026-12-13",
-      "start_date": "2026-06-06",
-      "end_date": "2026-12-13",
-      "is_recurring_weekend": false,
-      "summary": "隨著時序變遷已進入冬末春初時分，天氣冷暖交替，行走於山林間將驚奇地發現，山櫻花綻放著深粉紅、粉白的小小花朵點綴了這個季節的美好。初春的花蜜吸引了冠羽畫眉 、白耳畫眉、 綠繡眼 … 等許多鳥類，成群在枝頭上嬉戲及吱吱喳喳地跳躍著、甚或表演著倒吊吸花蜜的絕妙技巧，讓人同時在賞花之際，…",
-      "url": "https://www.facebook.com/YuShanNationalPark",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-a30537f3cf95",
-      "title": "2026故事聯合國：每個國家都來講故事-11月",
-      "kind": "event",
-      "category": "activity",
-      "city": "臺南市",
-      "district": "中西區",
-      "address": "臺南市中西區中正路1號（國立臺灣文學館）",
-      "lat": 22.99206,
-      "lng": 120.20395,
-      "exact_coords": true,
-      "age_groups": [
-        "3-6"
-      ],
-      "is_indoor": false,
-      "is_free": true,
-      "price_text": "名額:35 線上報名 活動免費，每場次限35人，對象以3~12歲孩童為主。 報名採線上方式，每場次於活動前10日開放報名，額滿為止",
-      "hours": "2026-11-14 ～ 2026-11-21",
-      "start_date": "2026-11-14",
-      "end_date": "2026-11-21",
-      "is_recurring_weekend": false,
-      "summary": "為推廣孩童閱讀世界各國故事繪本並拓展國際視野，2026年「故事聯合國」以「反著來，顛倒所有事物—故事裡的顛倒世界！」主題，精選臺灣、美國、日本、澳洲、比利時、西班牙、以色列等國特色繪本，內容涵蓋「圖像顛倒」、 「翻轉角色設定」、「雙向翻閱」與「挑戰既有觀點」的繪本，透過圖文交織的…",
-      "url": "https://event.culture.tw/mocweb/reg/NMTL/Detail.init.ctr;jsessionid=94BDCD61C7BDFFB6D13CDFC2E45BD5D8?actId=60091&utm_source=NMTL&utm_medium=index&utm_campaign=60091",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-737ea5b63d46",
-      "title": "115年秋季藝文研習班",
-      "kind": "event",
-      "category": "course",
       "city": "臺中市",
-      "district": "清水區",
-      "address": "臺中市清水區忠貞路21號（臺中市港區藝術中心）",
-      "lat": 24.1477,
-      "lng": 120.6736,
-      "exact_coords": false,
-      "age_groups": [
-        "3-6"
-      ],
-      "is_indoor": true,
-      "is_free": false,
-      "price_text": "依主辦單位公告",
-      "hours": "2026-07-24 ～ 2026-12-20",
-      "start_date": "2026-07-24",
-      "end_date": "2026-12-20",
-      "is_recurring_weekend": false,
-      "summary": "【研習時間】 115年7月24日起陸續開課 (依實際上課時間為準，中秋節、國慶日、光復節連假停課一次)。遇天然災害如颱風等，依行政院人事行政總處或臺中市政府所發布之公告為停復課依據，不另通知。停課則課程順延。 【報名及繳費方式】 《第1階段網路報名》115年6月23日(星期二)9…",
-      "url": "https://tcsac.taichung.gov.tw/Activity/Activity_More?id=81bc2ff98bd4407aa40d1aeaca3be0b3",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-65955ad62083",
-      "title": "2026年11月【員林市立圖書館-說故事活動】共3場",
-      "kind": "event",
-      "category": "course",
-      "city": "彰化縣",
-      "district": "員林市",
-      "address": "彰化縣員林市三民街2之1號（彰化縣員林市立圖書館）",
-      "lat": 24.0518,
-      "lng": 120.5161,
-      "exact_coords": false,
-      "age_groups": [
-        "3-6"
-      ],
-      "is_indoor": true,
-      "is_free": true,
-      "price_text": "免費參加（詳見官網）",
-      "hours": "2026-11-01 ～ 2026-11-29",
-      "start_date": "2026-11-01",
-      "end_date": "2026-11-29",
-      "is_recurring_weekend": false,
-      "summary": "第一個星期日上午10:00，大哥哥大姊姊說故事-本館志工 第三個星期日上午10:00，動態故事閱讀-彰化縣故事閱讀協會 第五個星期日上午10:00，說故事活動 歡迎大朋友、小朋友一起來喔!!",
-      "url": "https://www.facebook.com/yuanlinlibrary",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-fd205d70a803",
-      "title": "2026年12月【員林市立圖書館-說故事活動】共2場",
-      "kind": "event",
-      "category": "course",
-      "city": "彰化縣",
-      "district": "員林市",
-      "address": "彰化縣員林市三民街2之1號（彰化縣員林市立圖書館）",
-      "lat": 24.0518,
-      "lng": 120.5161,
-      "exact_coords": false,
-      "age_groups": [
-        "3-6"
-      ],
-      "is_indoor": true,
-      "is_free": true,
-      "price_text": "免費參加（詳見官網）",
-      "hours": "2026-12-06 ～ 2026-12-20",
-      "start_date": "2026-12-06",
-      "end_date": "2026-12-20",
-      "is_recurring_weekend": false,
-      "summary": "第一個星期日上午10:00，大哥哥大姊姊說故事-本館志工 第三個星期日上午10:00，動態故事閱讀-彰化縣故事閱讀協會 第五個星期日上午10:00，說故事活動 歡迎大朋友、小朋友一起來喔!!",
-      "url": "https://www.facebook.com/yuanlinlibrary",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-359f073e8bbe",
-      "title": "2026年12月【員林市立圖書館-英文繪本快樂遊】",
-      "kind": "event",
-      "category": "course",
-      "city": "彰化縣",
-      "district": "員林市",
-      "address": "彰化縣員林市三民街2之1號（彰化縣員林市立圖書館）",
-      "lat": 24.0518,
-      "lng": 120.5161,
-      "exact_coords": false,
-      "age_groups": [
-        "3-6",
-        "6-12"
-      ],
-      "is_indoor": true,
-      "is_free": true,
-      "price_text": "免費參加（詳見官網）",
-      "hours": "2026-12-13 ～ 2026-12-13",
-      "start_date": "2026-12-13",
-      "end_date": "2026-12-13",
-      "is_recurring_weekend": false,
-      "summary": "每月第二個星期日下午03:00 英文繪本快樂遊 「英文繪本快樂遊」：由老師進行生動活潑的說故事活動，伴隨著音樂律動，讓小孩在玩中學，在學中玩，激發學習興趣並愛上閱讀，最後帶領親子一起進行有趣的DIY活動，除了瞭解藝術創作之美與樂趣，也能增進親子互動關係並拓展社交功能！",
-      "url": "https://www.facebook.com/yuanlinlibrary",
-      "source": "文化部全國藝文活動"
-    },
-    {
-      "id": "iculture-b1f601aa9f1a",
-      "title": "青銀好時光工作坊：獻給成人的親子課",
-      "kind": "event",
-      "category": "course",
-      "city": "臺北市",
-      "district": "士林區",
-      "address": "臺北市士林區劍潭路1號（臺北表演藝術中心）",
-      "lat": 25.08471,
-      "lng": 121.5244,
+      "district": "西屯區",
+      "address": "臺中市西屯區惠來路二段101號（臺中國家歌劇院小劇場）",
+      "lat": 24.16265,
+      "lng": 120.6403,
       "exact_coords": true,
       "age_groups": [
         "3-6"
@@ -4822,12 +4950,67 @@
       "is_indoor": true,
       "is_free": false,
       "price_text": "依主辦單位公告",
-      "hours": "2026-11-22 ～ 2026-11-29",
-      "start_date": "2026-11-22",
-      "end_date": "2026-11-29",
+      "hours": "2026-12-11 ～ 2026-12-11",
+      "start_date": "2026-12-11",
+      "end_date": "2026-12-11",
       "is_recurring_weekend": false,
-      "summary": "臺北表演藝術中心 舉辦之親子藝文活動。",
-      "url": "https://www.opentix.life/program/2084888889219198976",
+      "summary": "臺中國家歌劇院小劇場 舉辦之親子藝文活動。",
+      "url": "https://www.opentix.life/program/2114958761601798144",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1793086861353fvsgooAjH8.png",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-573fda13466a",
+      "title": "合唱．音樂劇—金牌指揮徐惠君與台北愛樂少年及兒童合唱團音樂會",
+      "kind": "event",
+      "category": "activity",
+      "city": "臺北市",
+      "district": "中正區",
+      "address": "臺北市中正區中山南路21-1號，信義路側（國家音樂廳）",
+      "lat": 25.03676,
+      "lng": 121.51905,
+      "exact_coords": true,
+      "age_groups": [
+        "3-6"
+      ],
+      "is_indoor": true,
+      "is_free": false,
+      "price_text": "依主辦單位公告",
+      "hours": "2026-12-27 ～ 2026-12-27",
+      "start_date": "2026-12-27",
+      "end_date": "2026-12-27",
+      "is_recurring_weekend": false,
+      "summary": "國家音樂廳 舉辦之親子藝文活動。",
+      "url": "https://www.opentix.life/program/2108044209413971969",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1793786754559kt1TFAhvfq.jpeg",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-20690d74f223",
+      "title": "【2027衛武營小時光】恐龍的皮《恐龍木乃伊之復活の小時光》",
+      "kind": "event",
+      "category": "activity",
+      "city": "高雄市",
+      "district": "鳳山區",
+      "address": "高雄市鳳山區三多一路1號（衛武營國家藝術文化中心表演廳）",
+      "lat": 22.62302,
+      "lng": 120.34243,
+      "exact_coords": true,
+      "age_groups": [
+        "0-3",
+        "3-6",
+        "6-12"
+      ],
+      "is_indoor": true,
+      "is_free": false,
+      "price_text": "依主辦單位公告",
+      "hours": "2027-02-17 ～ 2027-02-17",
+      "start_date": "2027-02-17",
+      "end_date": "2027-02-17",
+      "is_recurring_weekend": false,
+      "summary": "衛武營國家藝術文化中心表演廳 舉辦之親子藝文活動。",
+      "url": "https://www.opentix.life/program/2115613410584772608",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1794383151890rd3ZzhjZ1M.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4853,6 +5036,7 @@
       "is_recurring_weekend": false,
       "summary": "基隆故事館，作為訴說基隆故事的場所，以新的面貌重新開幕，此次常設展主題為「見證百年基隆」，以「基隆港」為核心主軸，帶領觀眾穿越百年歷史，一同探索基隆從「雞籠」到「基隆」的轉變，見證這座城市的興衰與繁榮。 本次展覽分為三大展區「漁撈港灣到海港市街」、「戰後復甦到繁華盛世」、「國際觀…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4879,6 +5063,7 @@
       "is_recurring_weekend": false,
       "summary": "歷時5年籌劃，國立自然科學博物館即日起隆重推出臺灣首座大型礦物常設展《大地瑰寶》，展區分為3廳、近600坪，匯聚本館30餘年珍稀礦物蒐藏，現場精選1700餘件礦物標本，包括巨大鐘乳石群、隨紫外線不同波段綻放絢麗光彩的螢光礦物、巨大心型的紫水晶洞、臺灣獨有寶藏北投石，以及曾為臺灣創…",
       "url": "https://web3.nmns.edu.tw/Exhibits/114/2025earths-treasures/",
+      "image_url": "https://cloud.culture.tw/e_new_upload/cms/image/A0/B0/C0/D4/E105/F89/a76243aa-b678-4a53-a229-98aa18e48248.jpg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4904,6 +5089,7 @@
       "is_recurring_weekend": false,
       "summary": "史蹟大樓一樓／ 1.臺灣地形圖模型 2.史前遺址、平埔族、原住民族展示室 臺灣自明朝末年，開始有大量文獻記載，在此之前都屬史前時期，據考古學家研究，在距今約5萬年至1萬年的舊石器時代晚期，就開始有了人類活動的跡象。史前遺址從舊石器、新石器到金屬器時代，處處有先民活動遺址，為讓觀眾…",
       "url": "http://www.th.gov.tw/new_index/index.php",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4931,6 +5117,7 @@
       "is_recurring_weekend": false,
       "summary": "一樓／館史室(採預約開放) 呈現本館各項重要業務興革之梗概以及組織與功能之遞嬗變異。展區分為：1.館史室總說明、2.組織沿革與辦公室搬遷新建、3.採集文獻、4.整理文獻、5.編纂文獻、6.推廣文獻、7.文獻人、8.文獻事、9.未來展望。 二樓／第二展示室－臺灣的民俗特色 呈現漢民…",
       "url": "https://www.th.gov.tw/",
+      "image_url": "https://ws.th.gov.tw/002/TH/6/sites/pagebackimage/index_toplogo.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4957,6 +5144,7 @@
       "is_recurring_weekend": false,
       "summary": "臺灣客家文化館兒童館以「客庄遊樂去」為主軸，探索客庄生活智慧及節慶文化，將展區規劃分為「客家美食擂台」、「擂茶DIY」、「好客龍VR體驗館」、「土地生活區」、「晴耕雨讀區」及「童話秘密基地」六個分區。 其中「客家美食擂台」與「擂茶DIY」開放體驗，歡迎大小朋友共下來挑戰。 「客家…",
       "url": "https://thcdc.hakka.gov.tw/1241/1258/7372/8011/post",
+      "image_url": "https://thcdc.hakka.gov.tw/media/btzjazv2/%E7%AC%AC%E4%B8%89%E7%89%B9%E5%B1%95%E5%AE%A4-%E5%AE%A2%E5%BA%84%E9%81%8A%E6%A8%82%E5%8E%BB.jpg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -4983,6 +5171,7 @@
       "is_recurring_weekend": false,
       "summary": "主題特展-旗津海洋舢舨系列特展 藉由傳統工藝工法，運用木材縮小比例，手作手划舢舨船作品；一樓兒童閱讀區展出集結的作品，歡迎大家參觀作品展。",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5010,6 +5199,7 @@
       "is_recurring_weekend": false,
       "summary": "展區介紹： 一、經典作品區，陳列竹編吳聖宗先生、黃塗山先生、李榮烈先生的竹編作品。還有結合竹材與其他媒材的創作，如黃麗淑女士的竹、漆結合；竹雕方面則有陳銘堂的「四勿」，葉基祥的「步步高升」，葉大川的「惜福」，林裕允的「蝴蝶蘭」等，都有很高的藝術造詣。 二、農漁獵用具區，我國向來以…",
       "url": "https://www.nthcc.gov.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5035,6 +5225,7 @@
       "is_recurring_weekend": false,
       "summary": "本展由伊誕創藝視界策劃執行，以排灣族珍貴的傳統樂器「口笛」與「鼻笛」為核心，透過聲音、故事與工藝，帶領觀眾以耳朵「看」見文化的形貌。 ． 展覽以單一動線設計，分為「主題說明」、「文化內涵」、「製作工藝」及「世界鼻笛比較」四大展區。觀眾可從排灣族達瓦蘭與比悠瑪部落的兄弟山與百步蛇傳…",
       "url": "https://www.facebook.com/tipcp.tw",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5060,6 +5251,7 @@
       "is_recurring_weekend": false,
       "summary": "地質科學廳為常設展區，利用3個展示區呈現地質科學教育的各種主題。第一區域以921地震為主軸，介紹斷層活動及研究過程，再透過互動教具演示，了解臺灣誕生的原因。第二區域介紹板塊構造學說的發展及砂箱實驗，臺灣原是海底的沉積物，受到板塊運動的影響，逐步抬升成擁有許多高山的海島，學者們想了…",
       "url": "https://www.nmns.edu.tw/park_cfpp/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5085,6 +5277,7 @@
       "is_recurring_weekend": false,
       "summary": "1970年代對世界來說是一個各種潮流元素爭相出頭的年代，戰後嬰兒潮為1945-1965年出生者是目前人數最多的一個世代，全球總數超過2億人。因此70年代，美國嬰兒潮人口帶動玩具、卡通、流行音樂成長，玩具產業的榮景，當然也帶動裝飾陶瓷產業。從早期透過日本人接單設廠，台灣人學習製作瓷…",
       "url": "https://event.culture.tw/mocweb/reg/NTCRI/Index.init.ctr?openExternalBrowser=1",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5112,6 +5305,7 @@
       "is_recurring_weekend": false,
       "summary": "展覽王品集團創辦人戴勝益董事長長期學畫的作品。本次展覽主題：十二生肖。看看這些色彩繽紛、充滿童趣的生肖畫作，哪一幅是屬於你的生肖呢？不論是充滿力量的飛馬，還是笑容滿滿的粉紅小豬，每一幅畫都散發獨特的魅力，象徵對新年的美好祝福！歡迎大家前來美術館拍照打卡，和屬於你的生肖合影，留下與…",
       "url": "https://epbooks.com.tw/ep-museum",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5137,6 +5331,7 @@
       "is_recurring_weekend": false,
       "summary": "將在地的蚵殼，加上泥塑土，轉化成人身的姿態，鳥類的羽身，結合漂流木、石頭、貝類等，不同素材，變化多端的作品，將平凡的蚵殼蛻變成動人的藝品，在館內展售。並有蚵殼DIY教學，在實際操作中可認識雕塑原理。",
       "url": "http://www.ork.org.tw/",
+      "image_url": "http://www.ork.org.tw/storage/seo",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5162,6 +5357,7 @@
       "is_recurring_weekend": false,
       "summary": "1896年11月29日，英國籍的蘭大衛醫師和梅監霧牧師，相偕到彰化來，他們選定中部地區，為醫療與宣教的工作據點。自此，彰化基督教醫院即成為中臺灣西方醫療的濫觴，他們帶來了西方的醫學與技術，也帶來了西方的教育、文明和人文思想。 彰基院史文物館是一部活的資料記錄館，透過我們設計的歷史…",
       "url": "http://www.cchhmuseum.org/archive/index.php",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5189,6 +5385,7 @@
       "is_recurring_weekend": false,
       "summary": "彰化縣是稻米栽種面積與產量的雙冠王，是台灣的糧倉，走在素樸的鄉間，稻田是充滿療癒的美景，自詡「米界模飯生」中興米，設立於埤頭鄉間的稻米博物館「台灣穀堡」，2010年開館以來成為稻田間的亮點，是體驗台灣稻米文化必訪的知性與感性場域。 文化 創意的年代，為讓遊客更深刻體驗從一粒米如何…",
       "url": "https://www.ricecastle.com.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5214,6 +5411,7 @@
       "is_recurring_weekend": false,
       "summary": "為了帶動地方觀光發展，由員林鎮公所編列經費整修員林郡役場舊警察宿舍，與縣警局將舊警察宿舍規劃成警察故事館，陳列從日據時期至80年代的珍貴文物，包括二二八事件時源泉派出所提報的「奸徒名冊」和大村村長自清報告，還有40年代溪湖派出所員警到酒家查訪的珍貴照片，及早期警察使用的手搖式警報…",
       "url": "http://viablog.okmall.tw/blogview.php?blogid=1667",
+      "image_url": "https://viablog.okmall.tw/images/product/1667_20140905.jpg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5239,6 +5437,7 @@
       "is_recurring_weekend": false,
       "summary": "自稱「英籍台灣人」「我是台灣囝仔」的蘭大弼醫師曾說：「每一個人都有根，有根長入土地；我在台灣有根，人們記得我的家庭的好，很多人都記得我的父母….」，讓我們透過各種生活物品、藝術珍藏、生活展示、故事光廊、影像紀錄，一同感受深耕鄉土、關懷同仁、憐愛家人的蘭醫師。",
       "url": "https://cchhmuseum.org/archive/index.php",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5264,6 +5463,7 @@
       "is_recurring_weekend": false,
       "summary": "館室入口一幕幕看板揭示清廷甲午戰爭失利，簽訂馬關條約割讓台灣，啟動台灣人民一連串抗日保台戰爭；1895乙未戰爭抗日義勇軍 一路打到八卦山，浴血奮戰寫下慘烈的一頁，可惜電影資金不足，沒在這一部分多著墨，但台灣人民乃至彰化人民愛台保國的勇敢無法從歷史上抹滅。 導覽員為參觀抗日保台史蹟…",
       "url": "https://www.changhua.gov.tw/RowContent/19",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5289,6 +5489,7 @@
       "is_recurring_weekend": false,
       "summary": "臺北流行音樂中心文化館 舉辦之親子藝文活動。",
       "url": "https://www.opentix.life/program/1997861121855938561",
+      "image_url": "https://s3.resource.opentix.life/upload/program/1794539423842sNNBWtjtIf.png",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5314,6 +5515,7 @@
       "is_recurring_weekend": false,
       "summary": "「回家—小林村的故事」常設展，展覽內容包括記憶中的家、消失的家園、組合屋的日子、新家生活等四單元，透過口述記憶影像、文物、模型，搭配互動遊戲，以尋根探索型態呈現早期文獻記錄為「四社平埔」的大武壠族人如何來到這片土地建立家園、延續傳統；並刻劃經歷殤災的大武壠後裔如何展現堅韌意志聯手…",
       "url": "https://xiaolin.khcc.gov.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5339,6 +5541,7 @@
       "is_recurring_weekend": false,
       "summary": "吳肇勳書法館位於鹿港老街區樞紐上，連結南北兩大景區為老街延伸區。成立於民國110年，提供一個專業書法展示空間，期許能作為推廣鹿港書法藝文的基地。 空間內展示各式書體，並藉由結合不同媒材展示出多樣性的書法生活藝術，並不定期的提供DIY活動讓遊客能夠體驗書法的樂趣。",
       "url": "https://culture.bocach.gov.tw/portfolio/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5364,6 +5567,7 @@
       "is_recurring_weekend": false,
       "summary": "彰化縣二二八暨人權紀念館所在位置為歷史建築「北斗郡守官舍」，座落於彰化縣北斗鎮地政2巷18號。希冀藉由藝術的表現，傳遞二二八事件發生前後，關於彰化的在地故事。",
       "url": "https://culture.bocach.gov.tw/portfolio/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5391,6 +5595,7 @@
       "is_recurring_weekend": false,
       "summary": "展示內容主要規劃有七大展示主題： （一）海洋的澎湖： 1.發現澎湖（2.大航海時代3.唐山過澎湖（二）歷史風華： 1.軍事與生活2.探訪媽宮城）（三）天佑吾土： 1.信仰與崇拜2.與天同功-媽祖3.代天巡狩-王爺4.民俗紀事四）澎湖人的民俗與生活： 1.咱的年，咱的月（介紹澎湖每…",
       "url": "http://www.phlm.nat.gov.tw",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5416,6 +5621,7 @@
       "is_recurring_weekend": false,
       "summary": "「內惟藝術中心」，一座由內惟向城市開放的新型態藝術中心。透過與多元藝術體驗之互動，啟動「生活藝術‧藝術生活」城市文化新樣態。在這個場域中，透過社區導向的對話式藝術、當代影像與經典電影、藝術修復與診療等機能，開展出一個親子互動共學的公共生活與生活美學空間。以跨域、跨世代、跨族群「跨…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5443,6 +5649,7 @@
       "is_recurring_weekend": false,
       "summary": "展示館透過充滿創意的展示手法與體驗設計，讓來到紅毛港園區參訪的鄉親和遊客能夠在此緬懷先民胼手胝足的開創精神，並穿梭時空體會從純樸年代發展到現今的海洋生活各類風貌。",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5469,6 +5676,7 @@
       "is_recurring_weekend": false,
       "summary": "文資局自2021年起與 #科工館 合辦「藏水覓趣」、「潛行探索臺灣」特展，今年再度攜手推出第三檔合辦「烽火船說－水下文化資產特展」。本次特展已分別於 國立科學工藝博物館、金門歷史民俗博物館 巡迴展出，吸引6萬人次觀展。第三站回到 文化部文化資產園區，將帶給臺中民眾更深入扎實的水下…",
       "url": "https://reurl.cc/aMgGzG",
+      "image_url": "https://scontent-tpe1-1.xx.fbcdn.net/v/t39.30808-6/601529716_1200194408907891_6894733443938375148_n....",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5494,6 +5702,7 @@
       "is_recurring_weekend": false,
       "summary": "洪醒夫文學紀念公園積1.7公頃，設有公共藝術區、水塘、溜滑梯、溜冰場、籃球場和幾處藝術形象。 公共藝術區有四件藝術作品，都是青銅雕像，有人說是洪醒夫少年塑像、牛的塑像，以及清水伯的耕鋤、灌蟋蟀的男孩。都是取材於洪醒夫文學作品的小人物與農村生活。是唯一稍有「文學具象」的畫面。 青銅…",
       "url": "https://tcmb.culture.tw/zh-tw/detail?indexCode=Culture_Place&id=553372",
+      "image_url": "http://data-service/api/collection/image/Culture_Place?uid=553372",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5519,6 +5728,7 @@
       "is_recurring_weekend": false,
       "summary": "王振瑋 擅長公共藝術計畫及大型雕塑，其創作中常見對生命本質的關懷，並思索藝術豐沛土地和人文的力量， 透過日常媒材的運用與轉化，用創意、造型、材料、工法，帶給觀眾一場深具啟發性的獨特體驗。 策展人陳一凡指出，「流變」指向時間與物質在移動中的生成；「之境」則是一段可被身體踏入、可被感…",
       "url": "https://tcsac.taichung.gov.tw/Activity/Activity_More?id=eb3f40469c1b4122b5f25dc09b3ae6f2",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5544,6 +5754,7 @@
       "is_recurring_weekend": false,
       "summary": "《層疊的空間》唐藝庭(曾獲 111年臺灣美術新貌獎 評審團獎) 房屋在人的居住後才成為家，每棟房屋都有不同的結構與故事。 眷村的住宅會隨著居民的變化而生長，慢慢成為每一戶人家的樣子。 作者透過不同時期的建材，推衍曾經的生活軌跡：磚牆、水泥、馬賽克與波浪板，象徵不同時期的添加與變化…",
       "url": "https://tcsac.taichung.gov.tw/Activity/Activity_More?id=b5177e51ea2a4f389854d4f3361ae78d",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5570,6 +5781,7 @@
       "is_recurring_weekend": false,
       "summary": "主題特展-環保派對創藝綜合媒材特展，集結小孩勇敢大膽的創作出專屬自己的創意作品在鼓山圖書館展出，本分館特別邀請Sandy老師及開心老師，一同推出「自然生活 創〝藝〞動動腦 兒童繪畫&手作課程」系列研習，以每月一堂課的方式，透過課程學習讓小孩增進生活中的美學涵養，並激發出孩子們更多…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5595,6 +5807,7 @@
       "is_recurring_weekend": false,
       "summary": "「旗山車站-糖鐵故事館」漫步在旗山老街，一座青藍色的八角式屋頂的童話屋矗立在街道的底部。旗山車站，糖業鐵路-旗尾線最重要的站點，高雄內山九區的門戶，日治時代擔負起糖、甘蔗、香蕉等產業的運輸重任，支撐起屬於旗山最黃金的風華年代，2005年登錄為歷史建築，2016年以糖鐵故事館的面貌…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5622,6 +5835,7 @@
       "is_recurring_weekend": false,
       "summary": "英國領事館與登山古道，是全台唯一完整保存官邸及辦公室之領事館園區，引領民眾認識打狗開港及其在世界海洋經貿歷史發展的特殊文化意義。打狗英國領事館有得天獨厚遠眺西子灣海景夕照的迷人景致，歷年在博物館與地方文化館計畫補助下，完成修復及活化再利用，已成為全台最熱門的古蹟文化館之一，園區內…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5648,6 +5862,7 @@
       "is_recurring_weekend": false,
       "summary": "市定古蹟「舊鼓山國小」前身為日治時期蕃薯藔尋常高等小學校，戰後改制為鼓山國民小學。民國90年鼓山國小遷移至新校區，舊校區日治建物禮堂、辦公廳及北棟教室指定為古蹟。105年園區因地震閉園修復，109年分階段開放園區，園區設有「一日小學生．時光蕉囊」主題展，透過Q版小學生公仔及巨大擬…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5673,6 +5888,7 @@
       "is_recurring_weekend": false,
       "summary": "原頂林仔邊警察官吏派出所展示林園歷史、產業及生活等樣貌，呈現林園文化內涵及特色，讓參訪民眾瞭解林園的各個面貌，達文化教育效益。展示內容說明如下： A區：本歷史建築發展歷程：包含老屋故事、日治時期警察制度及老照片展示。 B區：林園區導覽：以林園區大地圖介紹文化景點、重要信仰中心、產…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5698,6 +5914,7 @@
       "is_recurring_weekend": false,
       "summary": "111年3月1日「POP! POP! POP!流行音樂互動展」於高流中心音浪塔開展，透過「全民策展」與「南方在地」2大概念出發，共設7大展區，分別為從後台出發、好歌共鳴、樂音流域、走入發聲現場、走入流行影像、在地音樂能量、及美麗島旋律，更與知名鐵三角合作，提供最好的聲音品質。 展…",
       "url": "https://kktix.com/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5723,6 +5940,7 @@
       "is_recurring_weekend": false,
       "summary": "— ❋ 藍寶石大歌廳《秀場傳奇》故事展 ❋ — —— 𝘿𝘼𝙉𝘾𝙀 𝙁𝙊𝙍 𝙔𝙊𝙐 𝄪 𝙎𝙄𝙉𝙂 𝙁𝙊𝙍 𝙔𝙊𝙐 —— ⊹ 展覽亮點 ⊹ 2 大展區：回到一個群星匯聚，五光十色的藍寶石大歌廳。 8 組深度訪談：從台前藝人、幕後工作者，再到文史工作者，一窺歌舞廳風華。 11 套經典秀…",
       "url": "https://kktix.com/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5748,6 +5966,7 @@
       "is_recurring_weekend": false,
       "summary": "基隆市文化觀光局與雞籠文史協進會共同推動的「仁愛區庶民記憶採集計畫」歷經數月口述訪談、資料彙整與內容研究後，以成果特展《一店一時代》呈現給市民。邀請市民一同走進仁愛區的生活史場景，感受城市記憶的深厚底蘊與情感溫度。 仁愛區作為基隆最早發展的商業與生活重心，街區內老店林立、世代傳承…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5774,6 +5993,7 @@
       "is_recurring_weekend": false,
       "summary": "密函、陰謀、寶藏 一段跨越百年的糾葛，你是否能全身而退？ 遊戲中，你將化身為寶藏獵人《六奇士團》的成員，接受鑑定師委託前去奇美博物館調查名畫《音樂的寓意》，沒想到竟發現背後有著驚人的秘密！ 為了找出真相，你必須在各展廳中找尋線索，利用手機、道具和展品互相搭配，才能拼湊出百年前先人…",
       "url": "https://www.chimeimuseum.org/event/62b9622897e39",
+      "image_url": "https://www.chimeimuseum.org/uploads/612f3e9d11eeb.jpg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5800,6 +6020,7 @@
       "is_recurring_weekend": false,
       "summary": "奇美博物館的三座雕像在半夜憑空消失，現場沒有破壞痕跡也找不到監控影像，只剩一封神祕信函，看似與希臘神話暗藏關係？！ 當警方全力追查失竊藏品時，寶藏獵人團「六奇士」現身博物館，指出竊盜者的目的並不是為了嘲笑警方，而是一個狂妄的犯罪預告！ 希臘神話貫穿主題館藏 | 穿梭展廳解謎任務 …",
       "url": "https://www.chimeimuseum.org/event/62b96425d5e25",
+      "image_url": "https://www.chimeimuseum.org/uploads/612f3e9d11eeb.jpg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5826,6 +6047,7 @@
       "is_recurring_weekend": false,
       "summary": "在上次盜竊藏品功虧一簣後，隱藏版的第七位成員奧德修斯再次對六奇士提出挑戰。他將過去盜竊的十二件希臘文物寄送至奇美博物館，同時宣稱將啟動偉大的「末日慶典」計畫，讓世界陷入狂喜之中。身為六奇士的你們，手上的線索只有一張奧德修斯掉落的照片，以及四位沒有不在場證明的嫌疑人。 你們的任務是…",
       "url": "https://www.chimeimuseum.org/event/62b964cb3ff31",
+      "image_url": "https://www.chimeimuseum.org/uploads/612f3e9d11eeb.jpg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5852,6 +6074,7 @@
       "is_recurring_weekend": false,
       "summary": "全新AR實境遊戲 與你一同揭開那跨越400年的秘密！ 《穿越時空的航海家》有別於《穹頂計畫》系列，是奇美博物館首款具AR擴增實境功能的實境遊戲。 玩家將會扮演博物館館員，與穿越時空至當代的航海家漢斯相遇。 遊戲過程中必須根據漢斯口述到常設展尋找線索，再使用手機與道具解謎，才能一步…",
       "url": "https://www.chimeimuseum.org/event/65a5df4f29d3c",
+      "image_url": "https://www.chimeimuseum.org/uploads/612f3e9d11eeb.jpg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5879,6 +6102,7 @@
       "is_recurring_weekend": false,
       "summary": "【常設展】動物廳 走入動物廳，躍然眼前的是大象家族，牠們引領大批動物們列隊歡迎前來參觀的民眾，展現出來自非洲草原的生命力！本展廳依不同洲別將動物標本分類展示，中島型開放式的設計，拉近遊客與動物標本的距離，讓人彷彿參與一場動物大遊行；另有模擬自然生態、動物習性的情境展櫃，幫助民眾輕…",
       "url": "https://www.chimeimuseum.org/",
+      "image_url": "https://www.chimeimuseum.org/uploads/612f3e9d11eeb.jpg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5904,6 +6128,7 @@
       "is_recurring_weekend": false,
       "summary": "201兒童互動空間以親子互動遊戲為主題，透過多媒體小遊戲、主題繪本閱讀、文創商品多樣選擇，讓小朋友動手操作學習，從遊戲中了解土地公及祭祀的小知識。",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5929,6 +6154,7 @@
       "is_recurring_weekend": false,
       "summary": "關於現代性的理想，不論是在法國或臺灣，都正因受到氣候變遷的猛烈衝擊而逐漸崩解。過去 人類相信資源無限、發展永恆，可以馴服並主宰大自然，但這種想法如今已不再成立。我們站在這 個逐漸瓦解的現代世界邊緣，試圖尋找新的平衡。這正是攝影家們本次所講述的故事。 「虛空畫」（vanités）原…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5954,6 +6180,7 @@
       "is_recurring_weekend": false,
       "summary": "黃纘緒——宜蘭歷史上第一位舉人，他用一生寫下「成就他人」的故事。 走進黃舉人宅，不只是踏入一座百年古厝，更是走入一段深植人心的生命軌跡。這裡，是他的故居，也是宜蘭唯一現存的舉人宅第。展覽從他寒門苦讀、金榜題名，到返鄉投身地方建設的歷程娓娓道來。黃纘緒經營水圳、倡議建廟、推廣北管文…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -5979,6 +6206,7 @@
       "is_recurring_weekend": false,
       "summary": "卸下一天的疲憊，推開家門，迎面而來的是什麼呢？ˎˊ˗ 是舒適溫馨的生活感、還是每一天寫下的故事？ 是書香、還是流動中的空氣，所記錄下來的情感記憶。 ▪ 展覽介紹｜ 本次細膩溫潤的設計概念及展區布置，以作家陳千武客廳及書房為主體，輔以AI新科技，將珍貴的文史內容，如作家陳千武的手稿…",
       "url": "https://www.facebook.com/share/p/1CAKRmn7MY/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6004,6 +6232,7 @@
       "is_recurring_weekend": false,
       "summary": "本年度策展以科技兼具環保的方式呈現人文歷史記憶，利用圖像加強觀眾的印象，進入展場，走入時光隧道帶領大家穿越時空來到古早的大埔城探險，跟著年代的時間軸來認識各個主題，展區中充滿科技與人文藝術的結合，例如《蓽路藍縷 大埔城故事多》紀念專書的裝置藝術、故事導覽語音燈箱、竹林布幔與鏡面貼…",
       "url": "https://www.lib.ncnu.edu.tw/index.php/tw/?fbclid=IwAR31wf7246eQMyBN4erTdYwfb4mC-0Trdib-kfTXSmN1kUqjxyLXIVAmfr0",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6030,6 +6259,7 @@
       "is_recurring_weekend": false,
       "summary": "兒童廳以臺灣南島語族的神話故事，融合奇幻想像和傳承智慧。 「海洋劇場」帶領大家乘風破浪航向新世界 「火的傳說」動手體驗鑽木取火及燧石取火 「森林迷宮」透過聽聲辨位來尋找獵物進行團隊競賽 「太陽與樹精靈」史前意境的遊具 另外還有互動教具盒打造創意無限的考古遊戲體驗。 「沉浸式互動劇…",
       "url": "https://stsp.nmp.gov.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6055,6 +6285,7 @@
       "is_recurring_weekend": false,
       "summary": "傳說，在群山與大漢溪環抱、雲霧繚繞的城鎮裡，隱藏著一群奇能藝士。他們不喧囂，不張揚，卻以手作銘刻歲月，讓技藝流傳不息，這座城，名為大溪。 《大溪藝能事務所》以一群隱身山城裡的工藝藝能者為題，烈焰火中的打鐵師、神龕神桌旁的俠女、天衣無縫的榫卯師...而現在有更多人承襲了不可思議的能…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6080,6 +6311,7 @@
       "is_recurring_weekend": false,
       "summary": "認識大溪人、參與大溪人、成為大溪人 ——歡迎登入「大溪知己」展！ 「知己」一詞，可以指「了解自己的好友」，也可以是「認知自己」：建立對事物、環境⋯⋯等的認同、並發展自我的過程。 展覽名為「大溪知己」，希望透過更多元、更鮮活的方式，讓每個到來的訪客，都能看見不同樣貌與視角的大溪。透…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6105,6 +6337,7 @@
       "is_recurring_weekend": false,
       "summary": "「開箱大溪」，看見大溪如何發展、大溪人如何經營地方的故事，從個人、家族或不同組織百年來發展及經營地方的角度切入，帶領大家逐步認識大溪土地與人的故事。大溪是在現地環境中展演生活的博物館，走進大溪就是走進博物館。 大溪自清代起，基於大漢溪河運重要內陸河港的地理優勢，成為重要貨物集散地…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6130,6 +6363,7 @@
       "is_recurring_weekend": false,
       "summary": "「大溪老厝邊-警察宿舍生活故事展」是一個充滿「家」與「人」元素的展覽。展覽位於保有生活氛圍的警察宿舍群中，透過警察、宿舍原住戶以及大溪鄰居的觀點，去看待大溪警察任務的多元性以及特殊性，以及與常民生活的鏈結，將口述回憶用活潑的插畫、影音以及裝置藝術等手法，帶領觀眾進入歷史建築宿舍群…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6155,6 +6389,7 @@
       "is_recurring_weekend": false,
       "summary": "2021年，歷史建築「大溪農會倉庫」定位並命名為「六廿四故事館」，加入大溪木藝生態博物館的館舍群，未來作為推動「迎六月廿四」慶典以及傳承、教育與體驗的共學空間。",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6180,6 +6415,7 @@
       "is_recurring_weekend": false,
       "summary": "本艘竹筏設計與製作概念係出自「享和三年癸亥-漂流臺灣チョプラン島之記」內容。 該書紀錄日本人文助於享和三年（約西元1803年）因船難，漂流至臺灣東部的チョプラン（約今東部秀姑巒溪出海口出處），定居於阿美族聚落，見聞阿美族的竹船，後回至日本，再口述給畫師所繪出的竹船樣態。 該內容敘…",
       "url": "https://stsp.nmp.gov.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6205,6 +6441,7 @@
       "is_recurring_weekend": false,
       "summary": "「光影魔幻樂園」展覽在高雄市電影館夢幻開展！ 從現在開始，爸爸媽媽可以牽起孩子的手，來到電影館一樓，包覆在電影館專為孩子創造的友善空間，我們邀請大家徜徉在魔幻動物園，體會如森林萬花筒繽紛視覺的展場，探索一個又一個以「視覺暫留」產出的驚奇玩具，運用各種藝術形式啟發孩子對電影的興趣與…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6230,6 +6467,7 @@
       "is_recurring_weekend": false,
       "summary": "在數位娛樂尚未普及的年代，電影曾是大眾最重要的娛樂形式。戲院林立，百家爭鳴，觀眾絡繹不絕。為了吸引群眾進場，片商與戲院特別聘請專業畫師創作各式各樣的海報與手繪看板。這些作品色彩鮮明、構圖誇張，往往在觀眾尚未踏入戲院之前，就已經引發對電影劇情的無限想像。 當時街頭的廣告看板不只是宣…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6255,6 +6493,7 @@
       "is_recurring_weekend": false,
       "summary": "歷史與文化交融的五樓特展區~大河東去：從滬尾到淡水 時間：1/2(五)-12/30(日) 08:30-17:00 地點：淡水分館5樓展覽區（淡水區文化路65號） 電話：02-2622-4664分機224 簡介： 匯集了百年來的珍貴史料，包括首任淡水區長蔡葉偉授權的蔡坤煌醫師攝影作…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6282,6 +6521,7 @@
       "is_recurring_weekend": false,
       "summary": "展區中介紹多位六堆作家，作品題材橫跨童趣、情感抒發與真實記錄，交織出那個時代的生活風景，也悄悄牽起我們與土地的情感連結。",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6308,6 +6548,7 @@
       "is_recurring_weekend": false,
       "summary": "【工藝未來式—在山海間的冒險】 本展以五感體驗為起點，展開一場屬於孩子的工藝冒險。4樓與5樓展間設計以一山一海為想像，營造如同走進臺灣島嶼自然風景中的探索旅程。 孩子們可以在「工藝尋覓密」裡，循著線索一步步探索工藝技法與製作工序的奧秘；也能在「工藝玩玩聚」中，透過遊戲化的體驗方式…",
       "url": "https://event.culture.tw/mocweb/reg/NTCRI/Index.init.ctr?openExternalBrowser=1",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6333,6 +6574,7 @@
       "is_recurring_weekend": false,
       "summary": "1.〈形形色色（一）〉 創作理念：一對男女的對談，用鮮豔的色彩電纜線製作。表現出城市中的光明面，並充滿了朝氣，城市是由形形色色的人、事、物，我們的生活即是如此。 材質:電線、鐵 2.〈形形色色（二）〉 創作理念：爬樓梯的人用黑色的電線製作。表示城市中黑暗的角落及人心的提防。 材質…",
       "url": "https://tcsac.taichung.gov.tw/Exhibition/Exhibition_More?id=dea331196992437eb9b4577094aefe43",
+      "image_url": "https://tcsac.taichung.gov.tw/ReadFile/?p=Exhibition&n=ccbe38b66db143e28e7c9276c763a0cc.jpg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6358,6 +6600,7 @@
       "is_recurring_weekend": false,
       "summary": "花與茶的結合，是一場古老而續寫的圓舞曲。 在這場旋律中，花的香氣與茶的味道編織出一段段難忘的故事，故事中充滿了文化、歷史和工藝的深沉。近年來，由於眾多茶品牌的持續推廣，東方窨製花茶再次贏得了大眾的喜愛，但它與西方花茶有著怎樣的區別呢？ 此次花與茶圓舞曲特展，除了介紹富含深厚文化背…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6385,6 +6628,7 @@
       "is_recurring_weekend": false,
       "summary": "介紹古今船艦及武器，重現自明清時期至二戰橫跨300年的重大海戰事件，包括金門料羅灣、安平、澎湖、基隆、淡水、台中與高雄等地戰役。特展透過互動投影裝置，重現明清到二戰重大海戰事件，讓民眾在沉浸式互動中，理解各戰役時代背景與歷史意義。",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6410,6 +6654,7 @@
       "is_recurring_weekend": false,
       "summary": "打狗鐵道故事館為台鐵高雄港車站轉變而來，目前館內保留了許多珍貴的鐵道文化資產，並將1960-70年代鐵道貨運全盛時期的氛圍，原汁原味保存展示，提供參觀者豐富的時空體驗。2017年9月輕軌哈瑪星站通車，10月1日起本館更名為舊打狗驛故事館。",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6435,6 +6680,7 @@
       "is_recurring_weekend": false,
       "summary": "「哈瑪星台灣鐵道館」位於駁二藝術特區蓬萊倉庫，規劃主題從打狗哈瑪星出發，延伸至臺灣百年鐵道歷史，特別以HO規（1:87）鐵道場景、軌道與火車模型，結合劇場聲光效果共同展演臺灣鐵道百年文明發展軌跡。藉由不同時代經典客貨列車模型，帶領民眾跨越時空，環島遊歷全臺大城小鎮，透過時間和空間…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6460,6 +6706,7 @@
       "is_recurring_weekend": false,
       "summary": "本館為5歲以上的小朋友打造一個適合親子同樂的體驗空間，以擬人化的比喻手法，將「高雄」化身為一位名叫「高小雄」的男孩，搭配妹妹「高小美」及魔法師「高史伯」的角色，拉近與兒童觀眾的距離，並透過多元的展示媒介與互動參與方式來引導學習，希望小朋友玩得很開心，也可以學到關於高雄的知識。",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6485,6 +6732,7 @@
       "is_recurring_weekend": false,
       "summary": "館內常設展覽亦重新規劃，不僅展示皮影戲偶、樂器、燈光、影窗等文物，更強調互動體驗與視覺效果的變化，像是設計早期皮影戲演出的暗室，搭設原始牛車戲台，享受最真實的古早味光、影演出實境。創新的親子劇場則設計可移動式舞台及親子座位，除讓偶戲演出有無限的可能，更拉近民眾之間的距離。難到來到…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6510,6 +6758,7 @@
       "is_recurring_weekend": false,
       "summary": "關鍵的1949年，中華民國政府辭廟撤退，百萬軍民桴海離岸，靠岸臺灣，一段以歷史為經，軍民為緯，交織成屬於眷村的獨特故事正在展開。眷村，不只是人居住之所，更是盛裝無數故事的載體，孕育文化的場域。本館將原有眷舍打造成「文化沙龍空間」，透過展覽歷史文物、眷村老物件，以及閱讀書香與多媒體…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6535,6 +6784,7 @@
       "is_recurring_weekend": false,
       "summary": "【11月份主題書展】 主題： 1F- 國語文圖書館 特展 2F- 與自己對話 特展 展書期間：115/11/01-115/11/30 展書地點：本館1F嬰幼兒區、本館2F展區",
       "url": "https://www.facebook.com/profile.php?id=100064506377025",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6560,6 +6810,7 @@
       "is_recurring_weekend": false,
       "summary": "【12月份主題書展】 主題： 1F- 國語文圖書館 特展 2F- 與自己對話 特展 展書期間：115/12/01-115/12/31 展書地點：本館1F嬰幼兒區、本館2F展區",
       "url": "https://www.facebook.com/profile.php?id=100064506377025",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6587,6 +6838,7 @@
       "is_recurring_weekend": false,
       "summary": "臺灣首座以迎王祭典為主題設立之地方文化館，並典藏一艘由在地國寶級師傅親手打造的王船，透過沉浸式體驗，近距離認識王船的歷史脈絡與技藝傳承。 ◼️ 1F 海洋信仰｜以沉浸式劇場「生命的長河」，為迎王平安祭典與王船的歷史起源揭開序幕。 ◼️ 2F 千歲巡狩｜透過五大國家及民俗無形文化資…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6612,6 +6864,7 @@
       "is_recurring_weekend": false,
       "summary": "苗栗陶瓷博物館即日起於一樓常態展區，推出全新展覽，嘗試打破博物館觀展以視覺為主的限制，應用3D掃描與列印技術，打造可觸摸的陶藝模型，展示多件以館藏陶瓷作品為基礎製作的3D列印模型，觀眾可以透過觸摸感受作品造型與表面肌理，同時搭配點字與說明文字，提供多元閱讀方式。 苗栗陶瓷博物館藏…",
       "url": "https://www.facebook.com/miaoliceramics",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6637,6 +6890,7 @@
       "is_recurring_weekend": false,
       "summary": "新瓦屋客家文化保存區是臺灣第一個客家文化保存區，新瓦屋故事館「花開四季‧新瓦紅」常設展結合「新瓦屋」與「鄧雨賢」兩大主題，介紹新瓦屋聚落起源與林姓家族故事，回顧在本縣作育英才的臺灣歌謠之父鄧雨賢生活篇章。 【定時導覽】 每週六、日10：00、15：00 (遇國定假日及教育訓練日除…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6662,6 +6916,7 @@
       "is_recurring_weekend": false,
       "summary": "從桃園早期田地原野到城鄉交錯，再到現代都市的繁華，土地，記錄著屬於這座城市的故事。 從基礎資料的建置與維護，到土地開發、智慧便民服務，甚至是兼顧歷史脈絡，持續精進的服務理念，地政人員的腳色，早已超越土地管理的天職，更與市民的生活、城市的發展緊密相連。 75年來，眾人默默耕耘，就像…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6687,6 +6942,7 @@
       "is_recurring_weekend": false,
       "summary": "看看郵票裡的線條、形狀和色彩；找找那些熟悉的數字、規律和圖形；猜猜這些圖案背後藏著什麼數學故事?讓我們藉由一枚枚小小的郵票，踏上一場充滿數字、圖形和邏輯的冒險之旅。數學不只是計算，它也可以很美、很有趣，還能帶你去旅行，認識來自世界各地的文化。別擔心，這裡的數學一點也不難！只要用心…",
       "url": "https://museum.post.gov.tw/post/Postal_Museum/museum/index.jsp?ID=1525402172794&control_type=page&ne",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6712,6 +6968,7 @@
       "is_recurring_weekend": false,
       "summary": "本展目標以新北市豐富的海洋生態與多樣人文地景為底蘊，結合考古研究，串連當代生活，深入探討臺灣與韓國海洋文化的人文內涵與生態永續。透過歷史與現代的交織，彰顯新北市的海洋文化資產及其傳承意義，並促進跨時代的文化理解與在地認同。",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6737,6 +6994,7 @@
       "is_recurring_weekend": false,
       "summary": "高屏溪，古稱下淡水溪，是臺灣第二長河，自古以來滋養著無數族群的生活，也孕育出豐富的信仰文化。在這片流域之上，山林與平原交織，族群遷徙築起聚落，留下了一道道歷史的軌跡。溪流如絲，牽引著人與神、族群與土地。從上游原住民族的自然崇拜，到中游客庄的民俗祭典，再到下游福佬聚落的代代相傳，這…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6762,6 +7020,7 @@
       "is_recurring_weekend": false,
       "summary": "隨著時序變遷已進入冬末春初時分，天氣冷暖交替，行走於山林間將驚奇地發現，山櫻花綻放著深粉紅、粉白的小小花朵點綴了這個季節的美好。初春的花蜜吸引了冠羽畫眉 、白耳畫眉、 綠繡眼 … 等許多鳥類，成群在枝頭上嬉戲及吱吱喳喳地跳躍著、甚或表演著倒吊吸花蜜的絕妙技巧，讓人同時在賞花之際，…",
       "url": "https://www.facebook.com/YuShanNationalPark",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6787,6 +7046,7 @@
       "is_recurring_weekend": false,
       "summary": "「2026–2027工藝遶境」以「不只是 工藝」作為策展核心，希望重新開啟工藝與當代生活之間的對話關係。工藝不再只是單一領域中的展示，而是轉化為一種媒介，與文化觀光、藝術、音樂、科技交織共振，讓工藝跨越既有邊界，順著生活的肌理，自然地回流到大眾的日常之中。 南投境：不只是 工藝｜…",
       "url": "https://event.culture.tw/mocweb/reg/NTCRI/Index.init.ctr?openExternalBrowser=1",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6813,6 +7073,7 @@
       "is_recurring_weekend": false,
       "summary": "本展覽在文山劇場兒童戲劇及親子藝文活動的定位下，以趣味、創意、互動的展覽設計為前提，帶領學童由後臺出發，進入後臺各部門到前臺表演區的各項劇場體驗，歷經一趟從劇場製作到舞臺演出的神秘之旅！一窺支撐舞臺表演的各專業領域是如何創作及執行。",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6838,6 +7099,7 @@
       "is_recurring_weekend": false,
       "summary": "國立臺灣工藝研究發展中心於114年度典藏新增顏水龍珍貴原作40件，涵蓋工藝設計手稿、陶藝創作與竹工藝家具等多元類型，並以「漫工活藝 Craft Flow」為策展主題，重新回望臺灣近代工藝在文化啟蒙、生活實踐與美學轉譯中的發展軌跡。工藝從非靜態的物件存在，而是一種根植於日常、回應時…",
       "url": "https://www.ntcri.gov.tw/home/zh-tw",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6863,6 +7125,7 @@
       "is_recurring_weekend": false,
       "summary": "傳統的日式建築木屋，沿著上坪溪畔搭建，與外部僅一條窄路相通，更顯得將軍被迫與世隔絕之悲哀，從此時開始了將軍長達十三年于清泉部落失去自由的幽禁生活。張學良將軍慷慨悲壯之一生，影響後世至深且巨。新竹縣政府為此，原地重建當時將軍幽禁於此地之故居，更幸能得到將軍侄女的支援，提供許多文史資…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6888,6 +7151,7 @@
       "is_recurring_weekend": false,
       "summary": "推廣藝術之森之獨特魅力，透過深入挖掘地方歷史、人文故事與族群文化，呈現文化的根源與發展脈絡，打造具故事性與互動性的旅遊體驗， 同時 期望透過文化的再現與創新詮釋，促進在地文化的傳承與延續，讓文化如脈絡般流動，從根出發，持續延伸至未來。 藉由平台，鼓勵孩子以藝術表達自我，培養其創造…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6913,6 +7177,7 @@
       "is_recurring_weekend": false,
       "summary": "參展藝術家︰BALLBOSS、李瑾倫、吳欣芷、吳紹華、季榆汝、張梓鈞 給小朋友的話 你去過英國嗎？你知道大笨鐘在哪裡？ 也許你看過電視裡的英國女王、紅色的雙層巴士，或是戴著高帽子的皇家衛兵。不然，你也一定聽過《愛麗絲夢遊仙境》、《小彼得兔》、《小熊維尼》，或是《哈利波特》的故事，…",
       "url": "https://www.kmfa.gov.tw/ExhibitionDetailC001100.aspx?Cond=d9e7d79d-4754-406c-b899-94fe5ad04419",
+      "image_url": "https://www.kmfa.gov.tw//ckfinder/userfiles/Images/20260519_HELLO%E5%A4%A7%E7%AC%A8%E9%90%98_ok_ok(1).jpg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6940,6 +7205,7 @@
       "is_recurring_weekend": false,
       "summary": "O-Ha-Yō! 這是來自海洋的問候。 在廣闊浩瀚的海洋中，孕育著豐富多樣的生命。邀請您循著方寸，展開一場兼具知性及趣味的海郵之旅吧! 愛護海洋、保育生態，一起郵向永續的海洋未來。",
       "url": "https://museum.post.gov.tw/post/Postal_Museum/museum/index.jsp?ID=1525402172794&control_type=page&ne",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6965,6 +7231,7 @@
       "is_recurring_weekend": false,
       "summary": "「Re見」，是再一次開始回想2013 年《看見台灣》紀錄片的感動。 「Re」代表再次、重新啟動之意。本年度特展內容融合歷年「山、河、海、城」經典主題精神，打造4大單元、3個維度、4個開啟可能性，從山脈到海岸、河流到城市，並首度結合齊柏林衛星視角與空拍影像、跨界影像及音樂創作合作，…",
       "url": "https://www.chipolin.org",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -6990,6 +7257,7 @@
       "is_recurring_weekend": false,
       "summary": "童話故事文字雖簡潔、寓意卻深遠，廣泛多元的內容題材，深受各年齡層民眾喜愛。為推廣郵票之美及歷久彌新之童話寓言，本館特規劃「從前從前－繪說童話郵票特展」，期透過童趣的郵票、生動故事情節的繪本童書，讓大、小朋友一起擁抱童心，進入童話世界的奇幻想像，享受親子共讀的快樂時光。",
       "url": "https://museum.post.gov.tw/post/Postal_Museum/museum/index.jsp?ID=1525402172794&control_type=page&ne",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -7015,6 +7283,7 @@
       "is_recurring_weekend": false,
       "summary": "首屆新瓦屋寫生比賽迎來超過300位小小藝術家共襄盛舉 孩子們用最純真的筆觸，勾勒出自己心中獨一無二的新瓦屋，在評審老師熱烈討論下，最終決選出39件優秀作品！願這場活動種下的小小藝術種子，未來持續在每個孩子心中發芽茁壯，相約家人朋友來合影打卡，看看孩子們眼中的奇幻世界吧",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -7040,6 +7309,7 @@
       "is_recurring_weekend": false,
       "summary": "僑信國小美術班畢業展 115/11/10～115/11/29",
       "url": "https://www.facebook.com/yuanlinlibrary",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -7066,6 +7336,7 @@
       "is_recurring_weekend": false,
       "summary": "2026年11月【大城鄉立圖書館-主題書展】 展期：11/1-11/30 展區： 1樓-兒童閱讀區、嬰幼兒閱讀區 2樓-主題書展示區 3樓-開架閱覽區",
       "url": "https://www.facebook.com/profile.php?id=100067193526955",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -7092,6 +7363,7 @@
       "is_recurring_weekend": false,
       "summary": "2026年12月【大城鄉立圖書館-主題書展】 展期：12/1-12/31 展區： 1樓-兒童閱讀區、嬰幼兒閱讀區 2樓-主題書展示區 3樓-開架閱覽區",
       "url": "https://www.facebook.com/profile.php?id=100067193526955",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -7118,6 +7390,7 @@
       "is_recurring_weekend": false,
       "summary": "本館特別規劃「喜閱網專區書展」，各類優良讀物，包含童話故事、科學知識、歷史文化、冒險小說及生活教育等豐富內容，讓大家在閱讀中發現樂趣、增廣見聞。 歡迎大家挑選自己喜愛的書籍閱讀，透過喜閱網閱讀認證活動，完成認證測驗後，不僅能檢視自己的閱讀成果，更能累積知識與提升閱讀理解能力喔!",
       "url": "https://cloud.culture.tw/",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -7143,6 +7416,7 @@
       "is_recurring_weekend": false,
       "summary": "國立歷史博物館自2018年啟動了百年建築的修復與再利用工程，並於2024年初順利完成。這是自1955年建館以來，首次進行大規模的館舍全面改造及常設展更新，象徵著博物館邁向全新時代，並為觀眾呈現了更加豐富多元的文化體驗。 本次常設展以「多元」、「交流」與「自我實現」為主題，精心挑選…",
       "url": "https://event.culture.tw/mocweb/reg/NMH/ExhibitionDetail.init.ctr?actId=40015&utm_source=moc&utm_med",
+      "image_url": "",
       "source": "文化部全國藝文活動"
     },
     {
@@ -7168,6 +7442,34 @@
       "is_recurring_weekend": false,
       "summary": "「逐」光而行，我們用創作回應世界 「幀」幀成篇，我們用作品留下觀察 四年來，我們用鏡頭記錄生活 用聲音傳遞情感，用文字留下思考 那些值得被記住的瞬間 在一次次觀察與創作中被保存下來 當無數個獨立的畫面彼此交會 便拼湊出屬於第23屆傳播人的《逐幀》 今年秋天，邀請你一同走入這些故事…",
       "url": "https://cloud.culture.tw/",
+      "image_url": "https://cloud.culture.tw/e_new_upload/signinImage/2026-10-07/670d47c6-618b-435e-98c1-2e5f9266ffc4/20261120_%E5%82%B3%E6%92%AD%E5%AD%B8%E7%B3%BBC112%E7%B4%9A.jpg",
+      "source": "文化部全國藝文活動"
+    },
+    {
+      "id": "iculture-6eb7c3535bb5",
+      "title": "115年度高級中等學校「飛越海洋、創藝臺灣」海洋美學夏令營作品巡迴展",
+      "kind": "event",
+      "category": "course",
+      "city": "臺北市",
+      "district": "",
+      "address": "臺北市南海路四十七號（美學空間）",
+      "lat": 25.03232,
+      "lng": 121.51206,
+      "exact_coords": true,
+      "age_groups": [
+        "3-6",
+        "6-12"
+      ],
+      "is_indoor": true,
+      "is_free": true,
+      "price_text": "免費參加（詳見官網）",
+      "hours": "2026-11-26 ～ 2026-12-09",
+      "start_date": "2026-11-26",
+      "end_date": "2026-12-09",
+      "is_recurring_weekend": false,
+      "summary": "指導單位：教育部 展出作品融入海洋議題與美感教育，結合「海洋文化、海洋資源、海洋教育」主題，承接海洋與美學之永續意志，與外界建立關係，造就多樣性，依循「海洋」之跨域脈絡，引領孩子們面向海洋，發掘海洋與人文的交互關係。 The works on display integrate …",
+      "url": "https://www.arte.gov.tw/pro1_exh_now.asp?KeyID=4608",
+      "image_url": "https://cloud.culture.tw/e_new_upload/task/97b68b43-4653-4595-b7a0-a816818be7c5/6bfff00406636f1f775050c4a604842a61fc31c3b86926959da5f1b2df1fc3b541fe4144f940f1ea18d9205095177e5a1b85a2aa27036ffdd2a5b804ce3f3f92/50d1002557995af0ee27ed6065276f48400aa955.jpg",
       "source": "文化部全國藝文活動"
     },
     {
@@ -7193,6 +7495,7 @@
       "is_recurring_weekend": false,
       "summary": "國泰人壽《原來，這就是陪伴》展將於11月14日至22日於華山1914文化創意產業園區中2館免費展出，結合八大互動體驗展區、三大舞台主題活動，邀請 HahaTai 哈哈台、香蕉哥哥、巧虎等陣容接力登場 ，展期每日安排台灣狗醫生在指定時段駐點互動，更攜手藝術家「臺灣印事」推出本次展覽…",
       "url": "https://www.travel.taipei/zh-tw/activity/details/68361",
+      "image_url": "",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7218,6 +7521,7 @@
       "is_recurring_weekend": false,
       "summary": "你的 BTS入坑曲是哪一首？是每次聽見前奏就想跟著唱的〈Spring Day〉，還是至今仍在歌單裡的〈Yet To Come〉？臺北市立圖書館東湖分館推出《BTS書展：在花樣年華裡與你相遇》，以兩大主題回顧七位成員從出道到走上國際舞臺的歷程，並展出成員曾推薦、或為音樂創作帶來靈感…",
       "url": "https://www.travel.taipei/zh-tw/activity/details/68353",
+      "image_url": "",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7243,6 +7547,7 @@
       "is_recurring_weekend": false,
       "summary": "她們曾經改變臺灣！百年民主故事，邀請你一起走進百年女性行動者的故事，探索民主如何從歷史走進我們的日常。 你知道嗎？從日治時期的文化啟蒙，到戒嚴年代的民主抗爭，再到今日多元的公民行動，臺灣民主的每一步，都有著女性堅定前行的身影。 們曾經勇敢發聲、積極參與，也曾在歷史的浪潮中，為自由…",
       "url": "https://www.travel.taipei/zh-tw/activity/details/68309",
+      "image_url": "",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7269,6 +7574,7 @@
       "is_recurring_weekend": false,
       "summary": "【展覽資訊】 展覽名稱｜《如果我們不再說If We No Longer Speak》國立臺北藝術大學原住民社群聯展 展覽日期｜2026/10/03（日）-12/22（二） 開放時間｜09:00-17：00（每週一休館） 展覽地點｜凱達格蘭文化館一B1藝文特展區 所有資訊連結： h…",
       "url": "https://www.travel.taipei/zh-tw/activity/details/68251",
+      "image_url": "",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7295,6 +7601,7 @@
       "is_recurring_weekend": false,
       "summary": "臺北市政府原住民族事務委員會於凱達格蘭文化館推出年度藝文特展《把風織成歌：原住民族聲景特展》，以「風」為觀展線索，邀請觀眾循著聲音的生成、交織、傳遞、失落與重返，從歌謠、語言、器物與生活聲響出發，重新認識原住民族如何以聲音感知自然、連結土地，並傳承一代又一代的文化記憶。 本展所談…",
       "url": "https://www.travel.taipei/zh-tw/activity/details/67991",
+      "image_url": "",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7322,6 +7629,7 @@
       "is_recurring_weekend": false,
       "summary": "谷公館很高興地宣布張凱鈞於畫廊的首次個展《埋藏與浮現》（L’Enfoui et L’Émergé）。展覽將由「遙遠的光重複著」以及「光景」兩個繪畫系列相映而成。前者發展自2017年，以壓克力顏料在中型以上的尺幅描繪光影飄忽中稍縱即逝的痕跡。後者發展自2024年，以油畫顏料帶著筆觸…",
       "url": "https://www.travel.taipei/zh-tw/activity/details/67973",
+      "image_url": "",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7348,6 +7656,7 @@
       "is_recurring_weekend": false,
       "summary": "O-Ha-Yō! 這是來自海洋的問候。 在廣闊浩瀚的海洋中，孕育著豐富多樣的生命。邀請您循著方寸，展開一場兼具知性及趣味的海郵之旅吧! 愛護海洋、保育生態，一起郵向永續的海洋未來。 主辦單位：郵政博物館 協辦單位：國立海洋生物博物館、中華民國貝類學會 展覽期間：2026.6.17…",
       "url": "https://www.travel.taipei/zh-tw/activity/details/67378",
+      "image_url": "",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7373,6 +7682,7 @@
       "is_recurring_weekend": false,
       "summary": "隨著 2026 年農曆歲次丙午生肖馬年將近，臺北市立動物園跳脫以往在室內辦理靜態生肖主題特展的框架，將展區直接延伸擴大到園區各「奇蹄目」動物的活動場。透過「馬偵探『霍斯』」的偵查視角，讓遊客能深入探索馬科動物所面臨的生存危機，了解動物園在國際野生動物保育中扮演的關鍵角色，同時在動…",
       "url": "https://www.travel.taipei/zh-tw/activity/details/66551",
+      "image_url": "",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7398,6 +7708,7 @@
       "is_recurring_weekend": false,
       "summary": "本所將於114年12月19日起至115年底辦理「印象內湖．鑑往知來」印鑑檔案特展，以全新視角呈現百年印鑑文化的不同面貌與歷史軌跡。特展於內湖區行政大樓3樓的戶所文化藝廊展出。開展日(12月19日)下午同步辦理 「印來印去、字由字在」體驗研習活動 ，與參展的市民一同探索印鑑文化所承…",
       "url": "https://www.travel.taipei/zh-tw/activity/details/66411",
+      "image_url": "",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7423,6 +7734,7 @@
       "is_recurring_weekend": false,
       "summary": "你以為昆蟲只是小小的生物嗎？牠們的頭部可是集結了感知世界和進行各種行為的核心！臺北市立動物園繼2023年「你是什麼咖？昆蟲腳下功夫」特展後，再度於今（2025）年推出昆蟲身體構造主題特展「看你什麼嘴臉！昆蟲的頭等大事」，2025年10月18日正式在昆蟲館開展，國立臺灣大學昆蟲系、…",
       "url": "https://www.travel.taipei/zh-tw/activity/details/66146",
+      "image_url": "",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7447,6 +7759,7 @@
       "hours": "周一至周日10:00-22:00",
       "summary": "臺北市電影主題公園位於於武昌街行人徒步街區底，為西門町繁華地區內少有腹地廣大的開放空間，由台北市文化基金會接管十餘年來，持續提供平台與空件作為藝術創作與青年街頭流行文化的發聲平台，除了以西門町最大的公園綠地為基礎提供休憩空間以外，也持續推出塗鴉、街舞、滑板等文化推廣輔導課程，提供…",
       "url": "https://www.cinemapark.taipei/",
+      "image_url": "",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7469,6 +7782,7 @@
       "hours": "依場館官網公告",
       "summary": "順益台灣原住民博物館－美術分館(以下簡稱順益台灣美術館)於2020年6月10日正式開館。這座位處於城市中央的美術館，可說是林迺翁文教基金會推廣台灣藝術文化之路上又一重要里程碑。 位於台北市北門廣場周邊，現址為延平南路5號的順益台灣美術館，其前身曾為順益關係企業的「起家厝」－《順益…",
       "url": "https://shungye-art.org/?fbclid=IwAR0JfFuAuEHpSrZqa2DM3HGUPj1ztfvBbk6a7CUnBLqpudMvLLvqnssZHNs",
+      "image_url": "https://www.travel.taipei/image/215415",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7493,6 +7807,7 @@
       "hours": "週二至週日每日上午9:30起至下午5:00止 ＊每週一、除夕及春節初一休館。 ＊逢國定假日及連續假期均照常開館",
       "summary": "此建築於1933年落成，座落二二八公園對面，為臺北市市定古蹟，是日據時期遺留下來的勸業銀行古蹟再利用。1991年內政部指定為三級古蹟，2005年臺灣博物館系統計畫成案，土地銀行與臺灣博物館合作，由臺灣博物館負責古蹟修復及後續營運管理，定位為自然史及金融史博物館，並於2012年獲頒…",
       "url": "https://www.ntm.gov.tw/",
+      "image_url": "https://www.travel.taipei/image/65317",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7515,6 +7830,7 @@
       "hours": "週二至週日9:00 - 18:00，週一休館(其他休館日請參照館方公告)",
       "summary": "臺北市客家文化主題公園占地約4.03公頃，公園座落於汀州路與師大路的精華地段，蘊藏豐富自然生態及人文內涵，為市民認識客家文化的據點與休憩場所，並提供臺北都會客家群聚交流、展現生活記憶之處。 園區內有「客家文化中心」、「音樂戲劇中心」、「客庄生活館」等3棟館舍。室內提供藝術創作空間…",
       "url": "https://ssl.thcp.org.tw/",
+      "image_url": "",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7539,6 +7855,7 @@
       "hours": "【園區步道】 平日 9:00 - 17:00 假日 8:30 - 17:00 16:00停止入園 【動物展示】 09:00-16:30 【教育中心】 09:00-17:00 每週一",
       "summary": "翻轉物種瀕危趨勢行動從你我開始！ 經常有遊客詢問：為什麼臺北市立動物園的園徽是梅花鹿呢？原來梅花鹿的復育不僅是相當成功的保育範例，更是臺灣首次透過動物園的保育繁殖、「再引入」野生動物的復育實例，透過了解梅花鹿復育的路程，可以從中探究動物園存在的價值、及對野生動物保育的重要性。於是…",
       "url": "https://www.zoo.gov.taipei/",
+      "image_url": "https://www.travel.taipei/image/361246",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7562,6 +7879,7 @@
       "hours": "夏令時間（4 - 9月） 中心 09:00-17:00 (假日到18:00) 戶外 09:00-17:30 (假日到18:30) 冬令時間 ( 10-3月 ) 非假日：9:00-1",
       "summary": "關渡自然公園位處淡水河及基隆河的交會口，自古以來，即是重要的候鳥棲地。經過各界保育人士十餘年的努力，在民國85年成立關渡自然公園，民國90年12月1日起，此公園由臺北市政府委由《社團法人臺北市野鳥學會》來經營管理。 關渡自然公園最主要的目的在於保育關渡的濕地環境、復育關渡濕地風貌…",
       "url": "https://gd-park.org.tw/",
+      "image_url": "",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7586,6 +7904,7 @@
       "hours": "●士林官邸正館 週二至周日09:30~12:00 (售票至11:50，最後入場時間為11:50)、 13:30~17:00 (售票至16:50，最後入場時間為16:50)。 休館日",
       "summary": "士林官邸公園約佔地12.9公頃，因所在地緊鄰中山北路，可快速直達總統府，並被福山山系所環抱，優越的地勢、絕佳的地理位置，故自民國三十九年起成為先總統蔣公日常起居之官邸使用。也因官邸設立於此的緣故，鄰近區域嚴禁改建及新建，使得官邸公園能維持原有的自然景觀，蟲鳴鳥叫、景色秀麗，是近郊…",
       "url": "https://www.mbcksslr.taipei/home/zh-tw",
+      "image_url": "https://www.travel.taipei/image/221280",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7610,6 +7929,7 @@
       "hours": "星期二至星期日，上午 9 時至下午 5 時(下午 4 時 30 分停止入場) 休館時間： 1.星期一 2.除夕暨春節初一至初二、民族掃墓節、端午節、中秋節",
       "summary": "郵政博物館創設於民國54年12月1日，翌年3月20日即中華郵政70週年紀念日正式對外開放。當時係利用郵政總局前在新店舊辦公房舍略事整修成立建館，由於地處偏僻，房屋狹小，且有計畫道路貫穿其中不能擴建，館務發展備受限制。為配合國家文化建設及郵政事業發展需要，乃在台北市興建10層大廈1…",
       "url": "http://museum.post.gov.tw/post/Postal_Museum/museum/default.jsp",
+      "image_url": "https://www.travel.taipei/image/89380",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7634,6 +7954,7 @@
       "hours": "依場館官網公告",
       "summary": "國定古蹟臺灣總督府鐵道部位於忠孝西路、塔城街、鄭州路、延平北路間，屬國營臺灣鐵路股份有限公司管轄。1885年臺灣巡撫劉銘傳聘請英國與德國顧問，於淡水河碼頭內建造機器局，組裝槍砲彈藥及鑄造貨幣，內有鎔鐵所、鍛工場等。1895年日本軍方接收機器局，改為臺北兵器修理所，製造並修理陸軍所…",
       "url": "https://www.ntm.gov.tw/",
+      "image_url": "https://www.travel.taipei/image/207889",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7656,6 +7977,7 @@
       "hours": "週二～週日 10：00～18：00 (售票至17：00止) 週一休館 大年初一起正常開館 (除夕及小年夜休館) 特殊開、休館日以最新公告為準",
       "summary": "成立於1997年3月28日的袖珍博物館是亞洲第一座專門收藏當代袖珍藝術品的主題博物館。 袖珍博物館尋訪世界各地網羅一流袖珍藝術大師作品，擁有排名世界級的收藏規模，包羅萬象的袖珍精品經過組合佈置後，主題作品目前展出約兩百餘件，主要有呈現整座建築內外佈置的娃娃屋（Dollhouse）…",
       "url": "http://www.mmot.com.tw/",
+      "image_url": "https://www.travel.taipei/image/192688",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7680,6 +8002,7 @@
       "hours": "依場館官網公告",
       "summary": "福安河濱公園鄰近社子島福安碼頭，公園內的社子島堤壁「福安漫遊組曲」，透過幾何化的視覺元素交織堆疊，將社子島在地動植物生態特色提取出來，轉化為具備特色的風格插畫，讓來往的民眾不僅能放慢腳步欣賞，亦能與畫面產生共鳴互動，讓每一段畫面與穿梭於前的人們，成為社子島的共同記憶。",
       "url": "https://www.travel.taipei/zh-tw/attraction/details/2668",
+      "image_url": "https://www.travel.taipei/image/373597",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7704,6 +8027,7 @@
       "hours": "依場館官網公告",
       "summary": "中正河濱公園位於台北市萬華區南隅，中正橋下西端，是新店溪河畔的一處河濱公園。公園的天橋可供民眾俯瞰快速道路上的來往車流，亦可遠瞰地標台北101；公園內的遊戲場-「哈囉公園」設置有全台首創環形滑軌盪鞦韆及溜索滑軌，受到眾多家長及孩童喜愛。",
       "url": "https://heo.gov.taipei/News_Content.aspx?n=E65DBD99C91AEAC4&sms=3A0FD6D3764BFBA7&s=D8E7ECC3EF182651",
+      "image_url": "https://www.travel.taipei/image/373604",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7728,6 +8052,7 @@
       "hours": "依場館官網公告",
       "summary": "「天狗庵史蹟公園」位在日勝生加賀屋國際溫泉飯店旁，前身為北投第一間民營的日式溫泉旅館「天狗庵」，為北投溫泉業的發展奠下了基礎，並見證北投溫泉發展史。如今已改造為擁有天然日式庭園景觀的「天狗庵史蹟公園」。",
       "url": "https://www.travel.taipei/zh-tw/attraction/details/2663",
+      "image_url": "https://www.travel.taipei/image/373632",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7752,6 +8077,7 @@
       "hours": "開放空間",
       "summary": "大稻埕公園位於歸綏街216號對面，鄰近為迪化街年貨大街，逢年過節時，有著濃厚之過節氣氛，平日也有豐富之南北雜貨飄香氣味；係因鄰近李臨秋先生故居，故文化局於園內設置李臨秋先生生平簡介播放機組，提供來往民眾觀看。 (資料來源：公園走透透臺北新花漾)",
       "url": "https://parks.taipei/parks/m2/pkl_parks_m2C.php?sid=478",
+      "image_url": "https://www.travel.taipei/image/213874",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7775,6 +8101,7 @@
       "hours": "開放空間",
       "summary": "來到南港的麗山農民廣場，可見廣場地板鑲嵌著北宋文豪─蘇軾「定風波」詞句，充滿文學的氣息，原來這裡在日治時代曾經是個書院，附近學童在此唸書學習，後因發生崩塌災害，荒廢多年已不復原景，大地處配合農業社區環境改善治理舊有崩塌地，融合日式涼亭、落羽松及景觀石等元素，營造早年書院的意象，塑…",
       "url": "https://www.travel.taipei/zh-tw/attraction/details/2637",
+      "image_url": "https://www.travel.taipei/image/211655",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7799,6 +8126,7 @@
       "hours": "依場館官網公告",
       "summary": "松錦公園分為松錦一號公園與松錦二號公園，同樣位於民生東路二段與吉林路交界，且鄰近捷運行天宮站，坐落於住宅區內，提供當地居民一個散步休憩的場所。公園內的植栽造景維持得乾淨整潔，園區內的涼亭舒適寬廣成為民眾交流談天的社交空間，此外松錦公園鄰近松江市場，可以順道至松江市場買些生鮮、日用…",
       "url": "https://www.travel.taipei/zh-tw/attraction/details/2375",
+      "image_url": "https://www.travel.taipei/image/192862",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7821,6 +8149,7 @@
       "hours": "依場館官網公告",
       "summary": "鄰近大湖公園的湖山6號公園，是座以自行車為主題的共融式遊戲場，距離捷運站非常近，也有收費停車場可開車前往，湖山6號公園裡除了有自行車造型的兒童遊樂設施外，亦有戲沙區及平衡木區讓孩童能夠玩耍放電，此時父母可至湖山6號公園內的三行亭內休憩，乘涼休息的同時亦可遠觀在遊樂區遊玩的小朋友，…",
       "url": "https://parks.gov.taipei/parks/m2/pkl_parks_m2C.php?sid=466#otherpic",
+      "image_url": "https://www.travel.taipei/image/192206",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7845,6 +8174,7 @@
       "hours": "依場館官網公告",
       "summary": "華岡博物館之創議，發軔於華岡學府創校之時。創辦人張其昀先生於民國 51 年(1962) 3 月 1 日訂「創校旨趣書」，揭以「高等教育(大學)學術研究(研究院)服務推廣(企業)三者一體」，為興學創業之方針，採取「圖書館與博物館」並重的原則，而有創設博物館之議。 華岡博物館籌備時期…",
       "url": "https://hkm.pccu.edu.tw/",
+      "image_url": "https://www.travel.taipei/image/192007",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7869,6 +8199,7 @@
       "hours": "依場館官網公告",
       "summary": "永春陂公園原為軍方使用之永春陂營區，民國89年部隊移防至新店後閒置多年，並於民國105年變更為公園用地，後由臺北市政府工務局大地工程處規劃設計成為現在的永春陂生態濕地公園。 永春陂生態濕地公園位在信義區四獸山下，占地約4公頃，兼具環境教育、生態復育及歷史價值的第一座都會型濕地生態…",
       "url": "https://www.travel.taipei/zh-tw/attraction/details/2262",
+      "image_url": "https://www.travel.taipei/image/182257",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7893,6 +8224,7 @@
       "hours": "依場館官網公告",
       "summary": "成美右岸河濱公園位於基隆河成功橋至麥帥一橋間(內湖側)，每到假日隔幾公尺就有一群各自聚精會神調弄手裡器具的人，仔細看看有電動遙控車、數位單眼相機…等，而且是大人玩得比小孩還起勁！公園裡有許多的運動設施，包含網球場、籃球場、壘球練習場、溜冰場、單槓、體健設施…等，提供給臺北市民有更…",
       "url": "https://www.travel.taipei/zh-tw/attraction/details/2259",
+      "image_url": "https://www.travel.taipei/image/181498",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7917,6 +8249,7 @@
       "hours": "依場館官網公告",
       "summary": "※目前正在整修中。 花之隧道位於花博公園內，分為「光影森活」、「綠築小徑」兩個部分，自行車及行人皆可通過，樹狀架構的花之隧道除了獨特的造型外，還有藤蔓植披包裹著四周，陽光灑落穿透花之隧道的景象十分美麗，吸引不少遊客到此拍照，沿著隧道往後走可到達太陽能板發電的太陽橋及迷宮花園等景點…",
       "url": "https://www.travel.taipei/zh-tw/attraction/details/2257",
+      "image_url": "https://www.travel.taipei/image/181495",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7939,6 +8272,7 @@
       "hours": "依場館官網公告",
       "summary": "花博美術園區為臺北市首座「大型共融兒童遊戲場」，以「與蝶共舞」為主題，設計蝴蝶及毛蟲造型為設施亮點，遊戲場內分為7區，含沙坑區、滑梯區、攀爬網區、蟲蟲遊戲牆區、音樂遊戲區、休憩區、鞦韆區及扭扭區等，並且設置全國首座供輪椅使用者使用之鞦韆、會發出美妙音樂的音樂球、歡樂鼓及叮噹管、方…",
       "url": "https://play4u.gov.taipei/News_Content.aspx?n=4773608F226124D4&sms=7B56BA5392EB632C&s=D8DDB67A9F2724C3",
+      "image_url": "https://www.travel.taipei/image/182290",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7961,6 +8295,7 @@
       "hours": "開放空間",
       "summary": "華山大草原遊戲場從入口處的火車造型牆作為開端，遊戲場以鐵軌和火車隧道等意象串連而成。其中，火車隧道的2個牆面，一面為舉辦工作坊時孩童留下的夢想泡泡，一面為華山車站歷史的展現。遊戲場中最具代表性的是結合山坡地景綠樹中的「煙囪遊戲塔」，其煙囪外型與華山酒廠大煙囪呼應，利用高低層次的遊…",
       "url": "https://play4u.gov.taipei/News_Content.aspx?n=4773608F226124D4&sms=7B56BA5392EB632C&s=6A692C83A2717DA3",
+      "image_url": "https://www.travel.taipei/image/182869",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -7983,6 +8318,7 @@
       "hours": "依場館官網公告",
       "summary": "「天母夢想樂園」位於天母運動公園裏，透過參與式預算提案，開啟了臺北市政府與民間、專業者共同攜手一系列「公園遊樂場的特色多元化行動」。因此融合在地特色、創意且兼具共融性的兒童遊戲場，在臺北市政府「Play for All，讓玩變成所有人的權利」政策推動下，希冀天母運動公園兒童遊戲場…",
       "url": "https://play4u.gov.taipei/News_Content.aspx?n=4773608F226124D4&sms=7B56BA5392EB632C&s=CE9DDFC3318FCC70",
+      "image_url": "https://www.travel.taipei/image/191148",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8005,6 +8341,7 @@
       "hours": "開放空間",
       "summary": "北投社三層崎公園坐落於北投區市郊，為108年開闢之坡地公園，過去曾是臺灣的陶瓷產業原料供給區，具有豐富人文歷史價值，後來臺北市政府工務局公園處利用了公園內的特殊山坡地形交錯種植了一片又一片由一串紅、四季海棠及銀葉菊組成的多層次花海景觀。仿照北海道富良野視覺感的花海，使不少喜歡拍照…",
       "url": "https://www.travel.taipei/zh-tw/attraction/details/2197",
+      "image_url": "https://www.travel.taipei/image/207827",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8027,6 +8364,7 @@
       "hours": "依場館官網公告",
       "summary": "圓山自然景觀公園原為兒童育樂中心，於2014年關閉後經整建改名圓山自然景觀公園，目前該公園仍保留摩天輪及旋轉木馬，讓兒童育樂中心的回憶永遠存在民眾心中。 (資料來源:公園走透透 臺北新花漾)",
       "url": "https://www.travel.taipei/zh-tw/attraction/details/2194",
+      "image_url": "https://www.travel.taipei/image/182777",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8049,6 +8387,7 @@
       "hours": "週二至週日 上午10:00 至 下午6:00 週一休館，逢國定假日或特別活動等照常開放",
       "summary": "國立歷史博物館（下稱史博館）成立於1955年，其由來為時任教育部部長張其昀先生有感於社會教育的重要，故比照美國華盛頓特區具有公園概念的史密森尼博物館，於臺北植物園內建置第一座國家博物館群，因文化園區緊鄰南海路而取名「南海學園」。史博館（時稱「國立歷史文物美術館」）首先於12月4日…",
       "url": "https://www.nmh.gov.tw/Default.aspx",
+      "image_url": "https://www.travel.taipei/image/562210",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8073,6 +8412,7 @@
       "hours": "依場館官網公告",
       "summary": "林森、康樂公園位於中山區林森北路、南京東路口，日據時代原為一片老舊平房，一群老兵長年居住於此，市府為改善市容，透過公民參與，成為臺北市首座都會花園，園區花團錦簇，美不勝收，帶給繁忙都市人綠意盎然的全新感官享受，更值得您一遊。 位置：林森北路口兩側，康樂公園位於中山北路二段側，林森…",
       "url": "https://www.travel.taipei/zh-tw/attraction/details/2176",
+      "image_url": "",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8097,6 +8437,7 @@
       "hours": "依場館官網公告",
       "summary": "位於基隆河大直橋至中山高速公路間，面積約42.3公頃。 公園是基隆河截彎取直、闢建之後規劃的。公園裡提供完備的運動設施：網球場、羽球場、排球場、籃球場、直排輪練習場…等，提供給附近居民運動休閒的功能。在這裡，白天可以遠眺大直橋及圓山飯店，不時還可以感受飛機的震撼，晚上大直橋及河岸…",
       "url": "https://heo.gov.taipei/News_Content.aspx?n=E65DBD99C91AEAC4&sms=3A0FD6D3764BFBA7&s=DE6220D07C54A5FA",
+      "image_url": "https://www.travel.taipei/image/180567",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8119,6 +8460,7 @@
       "hours": "開放空間",
       "summary": "新新公園面積2萬5,408平方公尺，位於南港路3段149巷，土地由國營臺灣鐵路股份有限公司捐贈，屬東區門戶計畫範圍，公園以「生態濕地公園」為規劃方向。 栽植原生與誘蝶、誘鳥植物，提供生物棲地，提升環境生物多樣性，同時也提供環境教育機會。因應全球暖化、氣候爆烈化，考量滯洪功能，打造…",
       "url": "https://play4u.gov.taipei/News_Content.aspx?n=4773608F226124D4&sms=7B56BA5392EB632C&s=E5D8BCD9895C9B61",
+      "image_url": "https://www.travel.taipei/image/180478",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8142,6 +8484,7 @@
       "hours": "依場館官網公告",
       "summary": "東湖樂活公園位於康樂街及康樂街61巷旁，內溝溪北岸，民國92年養工處開闢為停車場，於民國99年開闢為現今之公園用地，並於民國100年3月完工啟用，公園面積約1公頃，屬於充滿綠意景觀，適合闔家大小於週末或午後前往放鬆心情之都會型公園。 東湖樂活公園相鄰住宅區，附近有東湖國中、東湖國…",
       "url": "https://play4u.gov.taipei/News_Content.aspx?n=4773608F226124D4&sms=7B56BA5392EB632C&s=C12602D96E42F3A7",
+      "image_url": "https://www.travel.taipei/image/180445",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8166,6 +8509,7 @@
       "hours": "依場館官網公告",
       "summary": "四○砲陣地，陽明山前空軍防空砲兵部隊-駐守陣地組之一；現為除役M1-40mm高射砲展示園區，是戒嚴時期保護草山行館的軍事重地，經大地處整修後，以3D立體彩繪展現過往官兵戍衛情境，讓許多退伍袍澤懷舊憶往。",
       "url": "https://www.travel.taipei/zh-tw/attraction/details/1812",
+      "image_url": "https://www.travel.taipei/image/373844",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8190,6 +8534,7 @@
       "hours": "依場館官網公告",
       "summary": "承德路與福國路延伸段10米綠帶交叉處，亦即十字軸綠廊交會之重要位置，是一座兼顧滯洪、休憩與生態的濕地公園—洲美蜆仔港公園面積約30,818平方公尺。 公園內原有舊雙溪河道除保留河岸護坡，做為抽水站前池，洪泛期提供園區滯洪空間外，平日則為社區休閒濕地公園。沿河道東側規劃一淺灘為草澤…",
       "url": "https://parks.taipei/parks/m2/pkl_parks_m2C.php?sid=572",
+      "image_url": "https://www.travel.taipei/image/67883",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8212,6 +8557,7 @@
       "hours": "依場館官網公告",
       "summary": "日本時代臺灣總督府於1897年規定鴉片專賣，並陸續將樟腦（1899年）、食鹽（1899年）、菸草（1906年）、酒（1922年）等納入專賣事業。「臺灣總督府專賣局臺北南門工場」創建於1899年，為製造及試驗樟腦、鴉片等兩大專賣品的重要生產基地，1901年改稱南門工場，1931年再…",
       "url": "https://www.ntm.gov.tw/cl.aspx?n=5457",
+      "image_url": "https://www.travel.taipei/image/89006",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8236,6 +8582,7 @@
       "hours": "依場館官網公告",
       "summary": "彩虹河濱公園位於基隆河中山高速公路至麥帥一橋之間，彩虹橋橫跨於成美左、右岸河濱公園，紅色悠美的S型橋體是許多攝影者愛好的拍攝地點。 在彩虹橋下的河濱廣場有情人們設計一系列的愛情主題造景，包括標示12種「我愛你」語文的情人步道、情人座椅、LOVE立體文字雕塑、愛情鎖等，歡迎情人們前…",
       "url": "https://heo.gov.taipei/News_Content.aspx?n=E65DBD99C91AEAC4&sms=3A0FD6D3764BFBA7&s=760F3D330117800D",
+      "image_url": "https://www.travel.taipei/image/89016",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8260,6 +8607,7 @@
       "hours": "依場館官網公告",
       "summary": "逸仙公園位於臺北車站附近，又名國父史蹟紀念館。該公園為紀念孫中山的小巧公園。中華民國選擇此處作為紀念國父的公園之一，主要原因是該地為孫逸仙於1913年來臺時下榻的料亭。 該料亭亦為當年臺灣總督佐久間左馬太與孫逸仙會談政情的場所。現址為臺北市中正區中山北路一段46號，北靠市民大道一…",
       "url": "https://parks.taipei/parks/m2/pkl_parks_m2C.php?sid=645",
+      "image_url": "https://www.travel.taipei/image/181448",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8284,6 +8632,7 @@
       "hours": "依場館官網公告",
       "summary": "雙溪公園因外雙溪與內雙溪從北向南延流，並在士林匯流而得名，地處於福林路與至善路的交叉口，是士林往陽明山、故宮及內、外雙溪的必經之地，民國63年闢建完成，開放區域約2公頃，是一座自然山水景觀的園林。 園內地形平坦，呈三角形，仿照中國庭園格局佈置，呈現自然風貌，園內迴廊與池中心之涼亭…",
       "url": "https://parks.taipei/parks/m2/pkl_parks_m2C.php?sid=469",
+      "image_url": "https://www.travel.taipei/image/105598",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8308,6 +8657,7 @@
       "hours": "依場館官網公告",
       "summary": "福林公園位於士林區中山北路與福林路交叉口，於民國80年闢建完成，面積約2.6公頃，呈三角形形狀，為一開放式綜合公園。 園中最大特色，係邀請國立藝術學院美術系黎主任志文先生以大自然的景象為主體，設計創作之優雅藝術雕塑。計有太陽、雲、山、瀑布、水、井等六組，係以抽象表現手法，將大自然…",
       "url": "https://parks.taipei/parks/m2/pkl_parks_m2C.php?sid=221",
+      "image_url": "https://www.travel.taipei/image/163101",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8330,6 +8680,7 @@
       "hours": "依場館官網公告",
       "summary": "位於臺北市中山區核心地帶、由捷運中山站串接至雙連站，心中山線形公園 構築了一條穿梭都市與綠意之間的綠色廊道。沿線不僅包括地上綠化步道，也整合地下公共空間與商街，打造出集合休憩、藝文、商業、街區生活於一體的都市漫遊場域。 公園設計融入現代建築美學，動線清楚，植栽、草坪與座椅分布於步…",
       "url": "https://www.travel.taipei/zh-tw/attraction/details/1588",
+      "image_url": "https://www.travel.taipei/image/573449",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8352,6 +8703,7 @@
       "hours": "依場館官網公告",
       "summary": "關渡地名來自於西班牙語的「Casidor」，只因日本人發音省去「S」所以變成今日的「關渡」。關渡在古老的時代中曾經是硫磺產地和出口中心，1895年時曾為軍事要塞，設有砲台，也曾遭受過隕石的攻擊，至今仍遺留疑似殞石的殘骸在關渡國小自強分校內。 關渡水岸公園佔地遼闊，有人行步道、自行…",
       "url": "https://www.travel.taipei/zh-tw/attraction/details/1531",
+      "image_url": "https://www.travel.taipei/image/91783",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8376,6 +8728,7 @@
       "hours": "依場館官網公告",
       "summary": "為提供市民更多的停車空間，停管處新建南港區世貿公園地下停車場，並於民國100年簡易綠美化，公園面積約1.2公頃，位於南港區經貿二路106巷，東側為南港展覽館、西側為南港軟體園區 (第一、二期園區)、南側為南港軟體園區(第三期園區)、北側為中國信託企業總部大樓。 為了提供更優質之休…",
       "url": "https://parks.taipei/parks/m2/pkl_parks_m2C.php?sid=539",
+      "image_url": "https://www.travel.taipei/image/66046",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8400,6 +8753,7 @@
       "hours": "全天開放",
       "summary": "陽明公園位在臺北市的北邊，距離市區大概17公里；日據時代這裡遍地茅草，因此叫做草山。臺灣光復後，為了紀念王陽明先生，1950年時，將「草山」改為「陽明山」，並設立陽明山管理局來開闢陽明公園。 只是公園都市計畫面積約107公頃，陽明山管理局在1977年改制後，就把公園業務，交給公園…",
       "url": "https://parks.gov.taipei/parks/m2/pkl_parks_m2C.php?sid=497",
+      "image_url": "https://www.travel.taipei/image/182979",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8424,6 +8778,7 @@
       "hours": "百貨/超市：週一至週日 11:00 ~ 22:00 餐廳：週一至週日 11:00 ~ 22:00 (依各餐廳公告為準) 摩天輪： 週一至週日 13:00 ~ 22:00 (售票結束",
       "summary": "位於臺北市在基隆河截彎取直的大彎段新生地上，近臨內湖科技園區、明水路、故宮博物院、基隆河，周圍環境豐富，有好山好水。購物中心分本館與漾館，為一座國際級娛樂休閒購物設施，各樓層規劃特色專櫃、餐廳。全臺首創的百米摩天輪，是情侶約會的好所在，坐上五光十色的摩天輪，有如日本偶像劇的浪漫場…",
       "url": "https://www.miramar.com.tw",
+      "image_url": "https://www.travel.taipei/image/182754",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8446,6 +8801,7 @@
       "hours": "全天開放",
       "summary": "遼寧公園四周為筆直高大的蒲葵，為公園增添些許南洋的風情；其內以花台來做地形變化，柔緩的小丘斜坡增添空間垂直韻律感。公園內設置兒童遊戲區，設有遊具、搖搖樂，提供幼童遊戲、四肢活動之遊戲場。園內主要植栽以歷史悠久生長茂密的榕樹為主，提供遮蔭之功能；另外觀葉之紫薇也圍繞園區，葉色之變化…",
       "url": "https://parks.taipei/parks/m2/pkl_parks_m2C.php?sid=464",
+      "image_url": "https://www.travel.taipei/image/89274",
       "source": "臺北旅遊網 Open API"
     },
     {
@@ -8470,6 +8826,7 @@
       "hours": "9:00-18:00 (17:00後不售票，博物館開放參觀至17:30，販賣部開放至18:00)",
       "summary": "一望無際的鹽田中，有兩座白色金字塔並肩聳立，與七股鹽山遙遙相望，這裡是台灣鹽博物館",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/489",
+      "image_url": "https://www.twtainan.net/content/images/attractions/80536/480x360_attractions-image-psi9mtpra0kaeukhityqgw.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8492,6 +8849,7 @@
       "hours": "全年開放",
       "summary": "天鵝湖原名埤寮埤，為附近農田灌溉的水源。近年成為新營的新地標，沿著環湖木棧道走可欣賞湖上拱橋風光，湖畔的荷花點綴著湖面，讓許多人忍不住準備好餐點，帶上一張野餐墊找個自己喜歡的地方就這樣坐下來享用美食賞景，擁有綠意的豐富水景，是一個全家人休閒散步的好地方。 最熱鬧的親子戲水區更是有…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/495",
+      "image_url": "https://www.twtainan.net/content/images/attractions/73744/480x360_attractions-image-sxwczhiiqky1o69rgo-ubg.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8516,6 +8874,7 @@
       "hours": "全年開放",
       "summary": "老新營人一定都對民治市政中心前的5號公園有著深厚的感情，80多年的時間以來，有許多新營周邊的重要活動都在此處舉辦，與當地有著密不可分的聯繫。 隨著時間過去，公園內的設施也逐漸老舊，直到「南瀛綠都心」計畫開始，也為老公園注入新生命，現在經過南瀛綠都心一定會被裡面的玻璃屋給吸引，走在…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/496",
+      "image_url": "",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8540,6 +8899,7 @@
       "hours": "全天開放",
       "summary": "白河的蓮花田散佈在白河區域各處，如果想一次看好看滿，首推蓮花公園，公園內步道等設施完善，停車場、化妝室都有，對遊客來說非常方便。廣大的蓮花田更像是一大片蓮海般壯觀，每當風吹起，整片蓮花田隨之起伏飄逸，真的有如海浪般一波一波柔和的律動著，最佳的賞蓮海處就是蓮池中央的涼亭，坐在裡面享…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/508",
+      "image_url": "https://www.twtainan.net/content/images/attractions/98276/480x360_attractions-image-2rmw11tn3kk9kdwncd2ltw.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8564,6 +8924,7 @@
       "hours": "全年開放",
       "summary": "自紅蜥蜴牌樓拾階而上，沿途飛舞的蝴蝶裝飾，引人入勝。紅葉公園是全台紫斑蝶生態最豐富的地點之一，透過西拉雅國家風景區管理處與保育團體透過生態教育活動進行誘蝶植物栽種，打造適合蝴蝶群聚的友善環境，吸引紫斑蝶及其他各式蝶種在此處棲息，因此紅葉公園為台南市重要的環境教育場所。 因台南氣候…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/513",
+      "image_url": "",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8586,6 +8947,7 @@
       "hours": "▴一日遊 週一至週五 9:00~16:00 週六、週日 9:00~18:00 ▴住宿櫃檯服務 9:00～21:00",
       "summary": "仙湖農場坐落於嘉南平原，海拔為300公尺，農場涵蓋生態區、休閒區與農業區，是一個極適合親子活動的場所，可以享受幽靜的田園之樂",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/517",
+      "image_url": "https://www.twtainan.net/content/images/attractions/12063/480x360_78635283969523750000.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8610,6 +8972,7 @@
       "hours": "全天開放",
       "summary": "顏水龍先生是台南非常有名的畫家，出身於下營的紅毛厝，早年曾受日人澤田武雄先生鼓勵至日本學畫，後又到法國巴黎深造，是台灣早期本土油畫藝術的先驅。顏水龍先生於西元1997年病逝，為紀念顏水龍先生畢生對公共藝術及美術的貢獻，特設置了顏水龍紀念公園，走進園區就會看見顏水龍先生的銅像矗立在…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/525",
+      "image_url": "",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8632,6 +8995,7 @@
       "hours": "全天開放",
       "summary": "面積2公頃的武承恩公園設有玄武台、玄武亭、武德亭、武承橋、觀湖樓等觀光設施，園內小橋流水，亭台樓閣，風景秀麗，是下營區居民休閒的最佳去處。公園入口旁有1955年設置的「下營北極玄天上帝廟沿革誌」，記載玄天上帝神奇的故事，「龍飛鳳舞」舊石堵和入口處的一對石鼓，則是上帝廟重建時拆卸下…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/528",
+      "image_url": "",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8656,6 +9020,7 @@
       "hours": "全天開放",
       "summary": "位於柳營與六甲的交界處，是當地非常受歡迎的農場，也是寵物友善農場，多樣化的設施及景觀，湖上木屋是南元農場最具代表性的一景",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/531",
+      "image_url": "https://www.twtainan.net/content/images/attractions/12115/480x360_94633275616820625000.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8678,6 +9043,7 @@
       "hours": "週一~週五09:00~17:00、週六~週日08:00~17:00(全年無休)",
       "summary": "走馬瀨農場是由台南市農會全心經營的休閒農場，園區遊憩面積廣達120公頃，其中40公頃的紐西蘭牧野草原風情，浩瀚壯麗，獨步全台灣。近期農場最大的特色是2018年在園區中心點的大草原區，打造高達16米的巨型彩虹馬觀景高台及台灣燈會主燈忠義天成兩個新地標，登上觀景台放眼望去盡是碧綠的草…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/542",
+      "image_url": "https://www.twtainan.net/content/images/attractions/90182/480x360_attractions-image-n-duggn9oequlnxveuyljq.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8702,6 +9068,7 @@
       "hours": "週二~週日 9:00~17:00、週六 星象館9:00~20:00 、天文觀測館9:00~21:00、天文展示館9:00~21:00。週一休館",
       "summary": "座落於大內區二重溪段之山坡地上，由四個獨立丘陵相連而成，丘陵間形成兩道南北向帶狀的谷地，具有天文觀測及生態豐富的優勢",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/543",
+      "image_url": "https://www.twtainan.net/content/images/attractions/43421/480x360_Filedata635926422732477374.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8726,6 +9093,7 @@
       "hours": "全天開放",
       "summary": "噍吧哖紀念公園位於台20與台84交會點，為玉井區門戶，立碑之地為日本屠殺抗日志士之殺戮戰場，玉井區公所結合芒果特產，以巨大的愛文芒果造形作為紀念公園之地標，也成為了進入玉井之最佳識別座標。",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/548",
+      "image_url": "",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8750,6 +9118,7 @@
       "hours": "週一~週日09:00~1７:00",
       "summary": "「什麼尚青?」「咱ㄟ台灣、咱的啤酒」，吸一口空氣中瀰漫的麥芽發酵氣味，知道善化成功啤酒廠已經到了！這裡專門生產遠近馳名的台灣啤酒，熟、生啤酒都是這裡的暢銷產品，廣受好評的金牌台灣啤酒，不要懷疑，就是這裡沒錯，來到這邊可以滿足啤酒暢快痛飲的感覺外，還有各式拌手禮酒類禮盒、啤酒香腸、…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/556",
+      "image_url": "https://www.twtainan.net/content/images/attractions/102356/480x360_attractions-image-a_g6banakkspm7ajinqbog.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8774,6 +9143,7 @@
       "hours": "08:00~22:00",
       "summary": "由傳統農畜轉變成休閒型態的農場，進到農場就可感受到群山環抱，佔地非常廣大，是前往觀看二寮日出雲海時不可錯過的地點",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/564",
+      "image_url": "https://www.twtainan.net/content/images/attractions/40367/480x360_Filedata635839840248265872.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8798,6 +9168,7 @@
       "hours": "▴周三休館 ▴戶外園區 9:00－18:30（免費自由參觀） ▴奇美博物館 9:30－17:30（售票截止 16:30 / 最後入場 17:00）",
       "summary": "位在台南市的奇美博物館為全國西洋美術館館藏最豐富多樣，館內由西洋繪畫雕塑、樂器、古兵器、自然史、古文物等五個部門組成",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/572",
+      "image_url": "https://www.twtainan.net/content/images/attractions/17368/480x360_Filedata635593365562299095.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8822,6 +9193,7 @@
       "hours": "▴週二至週日10:00~17:00 ▴【週一休館】連續假日另公告於官網及粉絲專頁 ▴【平日】開放自由參觀區；導覽參觀區僅接受預約導覽，請前一天進行預約（僅接受5人以上預約 / 含5",
       "summary": "台1線省道往南經過86號快速道路後，有一座高約5米的大椅王，像是巨人坐的椅子一樣立在路邊，為台南家具產業博物館知名地標",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/573",
+      "image_url": "https://www.twtainan.net/content/images/attractions/49515/480x360_image636638899884362199.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8846,6 +9218,7 @@
       "hours": "全年開放",
       "summary": "虎形山位於台南市龍崎區市區，因山勢有如猛虎雄踞，故得其名，海拔雖僅113公尺，卻藏有豐富的自然生態，宛如一座生態教室。",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/584",
+      "image_url": "https://www.twtainan.net/content/images/attractions/17719/480x360_Filedata635593567376889564.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8870,6 +9243,7 @@
       "hours": "全天開放",
       "summary": "由三重溪、六重溪及九重溪匯集而成的六溪親水公園，經由白河區公所的全力整頓，是目前白河地區，保持最為完整的自然親水公園。到六重溪親水公園，必須進入當地的六重溪部落，這是一個保存了相當多平埔族文化的部落，因此，村中所保存的古文物為數也就不少，有漢人文物亦有平埔族古物。六重溪原本是條水…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/592",
+      "image_url": "https://www.twtainan.net/content/images/attractions/41964/480x360_Filedata635882836163687416.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8893,6 +9267,7 @@
       "hours": "09:00~17:00",
       "summary": "農埸成立於1998年是一個以農村生態教學為主的教育農園。總面積約8公頃，座落於嘉南平原之中心地帶。原是由一片傳統荔枝果園和草莓果園所組合而成的傳統式觀光農場，1996年轉型規劃，以植物生態為主體做為戶外教學。 整個園區提供了專業的生態教材課程，隨著四季氣候時令不同而變更其解說服務…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/612",
+      "image_url": "https://www.twtainan.net/content/images/attractions/41895/480x360_Filedata635882809329768285.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8917,6 +9292,7 @@
       "hours": "全天開放",
       "summary": "左鎮本部落牛稠內附近的地質屬於崎頂層，主要岩石有砂岩、頁岩和泥岩的互層。崎頂層下段以泥岩為主，中段則為泥岩夾數層厚層砂岩，上段以砂岩與頁岩的互層為主。在此地帶岩層找到的扇貝和牡蠣數量居多。 牛稠內附近多數是半面山，一邊是斜坡(向西傾斜)，另一邊是接近垂直的山崖(在斜坡東邊)。因為…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/625",
+      "image_url": "https://www.twtainan.net/content/images/attractions/72739/480x360_attractions-image-sp-63vzzouy49abk5a4wug.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8941,6 +9317,7 @@
       "hours": "電話預約",
       "summary": "麻豆區是文旦的重鎮，每當3~4月柚花開時，沿著柚花香的巷子進去會就見到一座非常樸實的農場，吉園休閒農場是柚子園也是麵包店，座落在廣闊的麻豆柚園中有如秘境般，窯烤麵包是農場主人的拿手技藝，可以在農場裡面來杯咖啡配著麵包，吃飽後坐在農舍外的廊上曬著太陽，聞著傳來的陣陣柚花香，還有麻豆…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/642",
+      "image_url": "https://www.twtainan.net/content/images/attractions/74514/480x360_attractions-image-j-vhxa54akyuzmyy3nzbvw.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8963,6 +9340,7 @@
       "hours": "▴週六、週日及國定假日 9:00~17:00 ▴平常日不開放參觀，僅提供團體預約",
       "summary": "台南鴨莊休閒農場是一處結合所有小朋友喜好元素的遊憩場地，傳承三代的養鴨人家轉型經營休閒農場，帶領著來訪的遊客體驗著鄉村養鴨人家的生活，農場最有趣的是在稻田裡露營的活動，是台南鴨莊的一大特色，農場內飼養了許多可愛的小動物，成為小孩的最佳玩伴，撿拾鴨蛋、皮蛋DIY、焢窯等農事體驗也讓…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/643",
+      "image_url": "https://www.twtainan.net/content/images/attractions/40672/480x360_Filedata635852812596875531.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -8987,6 +9365,7 @@
       "hours": "全年開放",
       "summary": "全台灣第三大的都會公園，也是唯一一座擁有博物館的都會公園，園內綠草如茵的景觀池開闊優美，成為許多鳥類與小動物的棲息地",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/651",
+      "image_url": "https://www.twtainan.net/content/images/attractions/12413/480x360_attractions-image-h72mfvzbj0catr4e_zealg.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9009,6 +9388,7 @@
       "hours": "全年開放",
       "summary": "走進永康公園看見兩側高聳的椰子樹讓人有種來到南洋國度的想像，茂盛的蓮花池更是公園裡不可錯過的景致，永康公園原名雲山農場，前身為蔣經國總統的行館，1960年代蔣經國先生南下巡視時，就住在雲山農場農舍內，後來改建為公園，但仍保留行館成為經國紀念文化館，公園內生態豐富，沿著生態步道可以…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/655",
+      "image_url": "https://www.twtainan.net/content/images/attractions/33140/480x360_Filedata635654880367190988.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9033,6 +9413,7 @@
       "hours": "▴週二至週日 09:00~17:00 ▴週一及農曆除夕前三天休館",
       "summary": "臺南市歷史館位於臺南市中西區，鄰近延平郡王祠，是認識臺南歷史與城市文化的重要場館。館內透過珍貴文物、歷史資料及多元展示，呈現臺南從不同時代一路發展至今的城市軌跡，也帶領遊客從常民生活、地方文化等不同角度，認識這座古都豐富而深厚的歷史底蘊。",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/667",
+      "image_url": "https://www.twtainan.net/content/images/attractions/17705/480x360_Filedata635593555042571900.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9057,6 +9438,7 @@
       "hours": "▴週二至週日：09:00~17:00 (週一、國定假日休館) ▴每日參觀人數以1500人為原則 ▴景點資訊僅供參考，詳細參觀資訊請洽官方網站",
       "summary": "2016年11月是原台南地方法院修復後開放參觀的大日子，也是台南市當年的一大盛事，建於1912年的原台南地方法院，外觀有著壯觀的圓柱以及圓形的巴洛克式屋頂，進到內部之後就可見到美麗且採光極佳有如奇美博物館大廳一般的壯觀圓頂，圓頂邊的大圓柱雕刻非常精美，地板維持著日治時期原始的維多…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/680",
+      "image_url": "https://www.twtainan.net/content/images/attractions/72397/480x360_attractions-image-qefjelbrpeoniddv2yhw3g.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9079,6 +9461,7 @@
       "hours": "全年開放",
       "summary": "已有百年歷史的台南公園最為人津津樂道的就是流傳已久的燕潭曉月，形容月亮高掛天空時，猶如明月落在燕潭的倒映美景。每天從早到晚都有不少遊客在潭邊散步運動或是約會談情，假日時潭邊更是許多親子嬉戲的場所，也是攝影留念的最佳取景點，是許多台南人與遊客對台南的共同印象。",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/715",
+      "image_url": "https://www.twtainan.net/content/images/attractions/100247/480x360_attractions-image-n7shns_050umovhdbqwmhg.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9101,6 +9484,7 @@
       "hours": "10:30-18:00 (週一公休)",
       "summary": "市定古蹟原臺南運河安平海關，前身為日治時期1926年臺南新運河開通時所設置之「稅關安平支署安平船溜派出所」，現為台南運河博物館，不僅有展示運河相關文史、日治時期的辦公廳舍，也有一間結合古蹟、咖啡與圖書的河岸咖啡館，讓來訪的旅人能在典雅的古蹟中，享受一杯香醇的咖啡，度過悠閒的午後時…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/730",
+      "image_url": "https://www.twtainan.net/content/images/attractions/100145/480x360_attractions-image-xhdxptl0u0u5t0krjeyutg.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9125,6 +9509,7 @@
       "hours": "全年開放",
       "summary": "日治時期因為受到歐式建築風格影響，都市計畫及開闢道路多採用圓環設計，湯德章紀念公園採圓環設計，是當時台南市政中心，台南州廳、合同廳舍等重要官方建築也都集中在此。 日治時期因中央曾放置日總督兒玉源太郎的銅像，故稱為「兒玉公園」，二戰後改放置國父孫中山先生銅像，也改稱為「民生綠園」，…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/737",
+      "image_url": "https://www.twtainan.net/content/images/attractions/74545/480x360_attractions-image-xlz7hmnkfkskcdwellftbq.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9149,6 +9534,7 @@
       "hours": "博物館：週二至~週日09:00~17:00（入館時間至16:30）。每週一（逢國定假日照常開放，翌日休館）、農曆除夕及年初一、政府公告之天然災害停止上班日、本館另行公告之必要休館日",
       "summary": "國立臺灣歷史博物館基地位於臺南市安南區，展示內容著重在臺灣歷史，包括多民族長時間與臺灣自然環境互動的歷史",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/852",
+      "image_url": "https://www.twtainan.net/content/images/attractions/12863/480x360_490635055857258662500.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9173,6 +9559,7 @@
       "hours": "全年開放",
       "summary": "1661年是台灣史上重要的一年，也就是鄭成功登陸台灣開始經營這片土地的開始，相傳當時鄭成功就是由鹿耳門進入踏上台灣的土地，此處便是鄭成功的第一步登陸處，為了紀念鄭成功的事蹟，正統鹿耳門聖母廟捐地在此興建了鄭成功紀念公園，來到公園門口就可見到氣勢非凡莊嚴的紅色牌樓，以及英姿煥發的鄭…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/857",
+      "image_url": "https://www.twtainan.net/content/images/attractions/14278/480x360_Filedata635549393917455253.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9197,6 +9584,7 @@
       "hours": "全年無休",
       "summary": "臺南市推薦親子場館。",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/874",
+      "image_url": "https://www.twtainan.net/content/images/attractions/17794/480x360_Filedata635593592766870159.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9221,6 +9609,7 @@
       "hours": "週二~週日10:00~18:00、週一公休",
       "summary": "八翁里在柳營人口中俗稱八老爺，一直都是台灣相當重要的牛乳產地，隨著第一代酪農的凋零，也因為產業的轉變讓位於八老爺內的酪農戶逐漸減少，其中有些變化轉型成了觀光牧場，八老爺牧場就是其中之一，牧場已不再以生產為主，取而代之的是餐廳及乳製品的販售，戶外綠草如茵的牧場中乳牛並不多，少數幾隻…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/880",
+      "image_url": "https://www.twtainan.net/content/images/attractions/33300/480x360_Filedata635658318293946347.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9245,6 +9634,7 @@
       "hours": "週二至週日9:30-17:30(每週一休館，如遇連續假期不休館，延至翌日休館一天)",
       "summary": "1957年，黑橋牌食品創辦人陳文輝先生，在台南運河旁俗稱「烏橋」之處(現為新南橋)成立家庭式肉品工廠，即為「黑橋」品牌的起源。1973年正式登記為滋味珍食品股份有限公司，註冊商標『黑橋牌』，1979年自臺南市富強路1000坪工廠擴大建廠至台南安平工業區之現址，面積約3000坪，為…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/916",
+      "image_url": "https://www.twtainan.net/content/images/attractions/17252/480x360_Filedata635592629020557427.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9269,6 +9659,7 @@
       "hours": "週二~週日09:00~11:00、14:00~16:00",
       "summary": "大地化石礦石博物館成立於1993年，是一座私人的小型博物館，館內收藏包括化石和礦石兩大專題，來源除了台灣本土化石及礦石外，也廣收世界各地出土的珍貴化石及礦石標本，分類展示，解說清楚，展場空間寬敞明亮，環境幽雅，停車方便。 館長陳濟堂先生為傳播化石及礦石有關的知識，推廣古生物學及礦…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/953",
+      "image_url": "https://www.twtainan.net/content/images/attractions/16737/480x360_Filedata635586650107022840.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9293,6 +9684,7 @@
       "hours": "全年開放",
       "summary": "因湖畔有著供奉著南海觀世音菩薩的普陀禪寺，讓這片碧波湖水有了小南海的稱呼。橫亙的小南海吊橋，銜接了禪寺與生態公園，形成全長約5公里兼具散步與單車的環湖賞景步道，兩側林木綠鬱，即使是夏季前來，在步道中因為樹蔭還是會感覺陰涼舒爽，樹與水的自然循環也讓此處空氣純淨有如南海仙境，蓮花季時…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/1330",
+      "image_url": "https://www.twtainan.net/content/images/attractions/17626/480x360_Filedata635593531542066623.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9317,6 +9709,7 @@
       "hours": "全年開放",
       "summary": "探索教育公園佔地約6公頃，整個探索教育園區為全台最大的專業探索場地，也是台灣目前最大的探索教育公園，與鄰近的社教中心相佐，形成永康文化教育特區。公園內擁有大片的翠綠草皮，以及豐富的林蔭，完善的設施吸引許多附近的居民帶著小孩來玩，不管是常見的公園遊樂器材，或是較具挑戰性的攀岩場，及…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/1337",
+      "image_url": "https://www.twtainan.net/content/images/attractions/72442/480x360_attractions-image-ip6d0mdky02iodnjsmhtcw.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9341,6 +9734,7 @@
       "hours": "全天開放",
       "summary": "又稱巴克禮公園，為紀念英籍巴克禮牧師而命名。位於台南市東區崇明里，與台南市立台南文化中心隔中華東路相望",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/1350",
+      "image_url": "https://www.twtainan.net/content/images/attractions/18128/480x360_Filedata635594285837575474.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9363,6 +9757,7 @@
       "hours": "週一至週五 09：00~16：00、假日及特定假日09：00~17：00。",
       "summary": "瓜瓜園數十年一步一腳印的努力，建立獨樹一格的地瓜品牌，秉持著創新與傳統，研發自然美味、安全的產品。所有優良的產品，皆來自嚴格與絕不妥協的品質管控。瓜瓜園地瓜生態故事館，結合產業主題、教育性及觀光服務，展示了多元有趣的內容和互動體驗，我們期待成為具生態、文化、教育的觀光工廠，期待大…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/1431",
+      "image_url": "https://www.twtainan.net/content/images/attractions/79974/480x360_attractions-image-spo7hswrleiaa2owi1xbaq.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9386,6 +9781,7 @@
       "hours": "週二~週日10:00~17:00、週一休館",
       "summary": "推廣食品安全及營養教育，故事館開放製程參觀，還有豐富多元的DIY課程活動，讓參加民眾更能體會食物與健康的重要性",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/1433",
+      "image_url": "https://www.twtainan.net/content/images/attractions/16810/480x360_Filedata635587446458937558.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9410,6 +9806,7 @@
       "hours": "▴週二至週五 9:00~12:00、13:00~17:00 ▴週六、週日 9:00~17:00 ▴週一休館",
       "summary": "順傑生技自創業以來，專注於從事保健食品的製造及包裝業務，本著誠信的原則，始終堅持『專業至上，品質第一』的經營理念，除獲得經濟部食品GMP認證外，亦通過多項國際品保認證。 隨著時代的進步，體認到消費者對產品的生產過程有更多『知』的權益，為迎接未來更多的挑戰，以「新百祿」的品牌為再出…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/1435",
+      "image_url": "https://www.twtainan.net/content/images/attractions/33216/480x360_Filedata635654944407049470.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9434,6 +9831,7 @@
       "hours": "依場館官網公告",
       "summary": "落成於1933年，前身為總督府台南高等工業學校之行政中心，目前則是國立成功大學成功校區內的成大博物館，也是台灣第一座大學自籌博物館，是大學路上的除了K館以外另一個重要地標，博物館前的大廣場也在2014年正式命名為南榕廣場，紀念著台灣民主史上的重要人物鄭南榕先生。 博物館內目前館藏…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/4263",
+      "image_url": "https://www.twtainan.net/content/images/attractions/32962/480x360_Filedata635646215824098951.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9457,6 +9855,7 @@
       "hours": "--針對散客(不需預約)-- 平日開放時間: 週二～五:10:00~16:00 週六.日(含例假日):10:00~17:00 --戶外教學20人以上團體-- 週一:固定公休 平日(",
       "summary": "樹谷農場(前身為奇美善化農場園)就位在樹谷生活科學館旁，農場內規劃有小太陽廣場讓遊客可在廣大草皮上體驗推牧草捲的樂趣；小動物餵食區是親子的最愛，讓孩子近距離接觸可愛小動物，落實生命教育；農業區可讓遊客體驗一日農夫的樂趣；烤肉區跟烘焙坊則成為享受親子相處時光的最佳場域。此外，農場也…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/4277",
+      "image_url": "https://www.twtainan.net/content/images/attractions/72457/480x360_attractions-image-iswbv-agv0mopfzucmn1qg.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9481,6 +9880,7 @@
       "hours": "全日開放",
       "summary": "每年的月津港燈節以創新藝術結合在地人文風情，展現有如夜之美術館的夢幻浪漫氛圍，形成獨樹一格的藝術燈節品牌",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/4282",
+      "image_url": "https://www.twtainan.net/content/images/attractions/33049/480x360_Filedata635648660218148278.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9504,6 +9904,7 @@
       "hours": "9:30~17:30 週三公休",
       "summary": "位於東山的東和蜂文化觀光工廠，於2015年開始營運，是全台第一家以蜂蜜為主題，也是唯一通過評鑑的蜂蜜觀光工廠，提供的服務包含蜜蜂知識、DIY體驗、蜂蜜料理及銷售。 文化展示館內除了可以了解品牌故事、生產製程、蜜蜂的相關知識與蜂蜜料理的應用，最受歡迎的是在模擬情境體驗區裡體驗蜂蜜採…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/4343",
+      "image_url": "https://www.twtainan.net/content/images/attractions/40568/480x360_Filedata635845916245709700.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9528,6 +9929,7 @@
       "hours": "09:00-17:00，每月固定最後一週的星期二休館",
       "summary": "台鉅企業股份有限公司創立於1981年，其間於美加地區創立CITY COLOR品牌，並在全球超過60個國家以上販售。累積超過30年全球彩妝經驗後，於2015年建造全台第一座美妝主題觀光工廠。 TJCOS台鉅美妝觀光工廠占地近4千坪，包含可以親自以五感體驗彩妝的美妝博物館區，及規劃安…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/4344",
+      "image_url": "https://www.twtainan.net/content/images/attractions/72459/480x360_attractions-image-xwjhbdyb00kdrqu0vjmbfg.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9551,6 +9953,7 @@
       "hours": "▴週三至週日 09:00 - 17：00 ▴週一、週二休館、國定假日連休、春節期間另行公告",
       "summary": "家具，不僅是生活必需品，更是藝術與技術的結合，美雅家具一直以最細膩、最真誠的心去打造每一件家具，希望帶給人們更好的生活品質與感受。 2015年透過產官學三方面的合作，美雅家具成立了觀光工廠，藉由生產過程透明化以及詳盡的專業知識解說，期許讓大眾重新了解台灣傳統產業的珍貴與重要。同時…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/5513",
+      "image_url": "https://www.twtainan.net/content/images/attractions/72684/480x360_attractions-image-apseardz9kgrxcah7dtlrg.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9575,6 +9978,7 @@
       "hours": "．參觀時間：上午9:00~下午5:00(每週一公休)(逢連續假期不公休，以公告為主) ．導覽時間：受理預約導覽時間：週二至週日 10：30 ~ 15：30",
       "summary": "2002年賓寶食品進駐臺南佳里，成為連鎖烘焙食品企業的開端。隨之第二代的加入，為企業注入嶄新思維。兩代聯手創立彼緹娃品牌，以藝術蛋糕、中式囍餅、伴手禮為產業主題，打造出賓寶食品的創新格局。 2015年設立彼緹娃烘焙培訓學校，開啟培訓教育人才之途。一路走來，賓寶念茲在茲以深耕在地、…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/5514",
+      "image_url": "https://www.twtainan.net/content/images/attractions/72690/480x360_attractions-image-fx2ncml8secluar2znm5lw.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9597,6 +10001,7 @@
       "hours": "8:30-17:30",
       "summary": "原為建於1882年的安平稅務司公館，日治時期曾改為稅關俱樂部、台南史料館。終戰後曾作為安平區公所使用。後來因知名商界人士邱永漢捐贈其典藏給台南市政府，市府便於該建築成立「台南市立永漢民藝館」，現改為熱蘭遮博物館，內有「情境重現」、「固若金湯」、「官署故事」、「片鱗半爪」四個展示廳…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/5529",
+      "image_url": "https://www.twtainan.net/content/images/attractions/102180/480x360_attractions-image-jl3ifxz_b0wpp03bek7ila.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9620,6 +10025,7 @@
       "hours": "▴ 週二至週日：9:00~17:00 ▴ 休館時間：每週一 (遇國定假日、補假日、選舉日則照常開放)、農曆除夕、年初一 ▴ 必要之停止開放另行公告",
       "summary": "始自1995年的機緣，開挖出此地五千年的古文明。行政院國家科學委員會委託中研院及史前館進行調查、發掘，至今已發現58處以上遺址，埋存的史前文化最早距今約5,000年，最晚約300多年前，是目前臺灣遺址密度分布最高、文化層序最完整且挖掘面積最大的地區。為了保存、研究並展示因開發所進…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/5543",
+      "image_url": "https://www.twtainan.net/content/images/attractions/73795/480x360_attractions-image-umvu_a1ywuinbi2xlgt0ia.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9644,6 +10050,7 @@
       "hours": "依場館官網公告",
       "summary": "安平水景公園內的水景橋視野極佳，加上水景公園景觀開闊，漫步於橋上可駐足欣賞水景公園內湖港景緻，在橋的最高點還可以看到整個安平的景觀，以及著名的安平夕照，不論早晨與黃昏均可見安平無限的美景。從附近早期涵管孔洞遺跡，還可發現昔日此處水域通往運鹽古航道與安平港，證明安平歷史與航運文化密…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/5548",
+      "image_url": "https://www.twtainan.net/content/images/attractions/73449/480x360_attractions-image-ctdwwmnodey0slzaafeyvq.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9666,6 +10073,7 @@
       "hours": "※全天候開放，點燈時間：每日晚上18時起至22時止。",
       "summary": "與林默娘公園相依，連成安平港水岸綠帶，港濱歷史公園自東入口一路向西，搭建一條歷史的時光長廊，用石碑文字訴說府城故事。這裡充斥孩童與狗兒的嘻笑歡鬧，也圍繞閱讀歷史的文人靜默，夕陽西下的景色令人陶醉，從大魚的口中，眺望澄黃沉靜的水面。 大魚獻上的祝福 大魚的魚腹是平滑的白色曲線，進入…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/5625",
+      "image_url": "https://www.twtainan.net/content/images/attractions/73752/480x360_attractions-image-1zr_p8qtaustscis88r_nq.jpeg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9688,6 +10096,7 @@
       "hours": "依場館官網公告",
       "summary": "新營鐵道地景公園以台糖軌道故事做為活化發展主軸，將眾軌匯集新營火車站的特色景貌重新詮釋，透過鐵軌路徑的串接、延續及縫合，展開整個園區的空間序列，軌道間還留有各式轉轍器、載具及信號站，背後皆隱含其產業發展與場所變化的時空流動。 知名的新營糖廠五分車起點就設於緊鄰的新營鐵道文化園區，…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/5764",
+      "image_url": "https://www.twtainan.net/content/images/attractions/83598/480x360_attractions-image-l7npgobkyeywrd7re3xzha.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9712,6 +10121,7 @@
       "hours": "9:00~17:00 休館日:每週一(遇假日則順延)、農曆除夕、臨時公布停止辦公日",
       "summary": "位於臺南市四草大道北側與鹽水溪間的四草魚塭區，於105年1月13日正式啟用，除保留既有地景地貌外，並透過「高腳屋」的構造形式，避免大規模地景破壞，園區內設置連通水路，串聯各自獨立漁塭，並銜接至鄰近嘉南大圳水系，形成自然感潮水體，以活絡水質，提供浮游生物、魚、蝦、貝類等生物優質棲息…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/5812",
+      "image_url": "https://www.twtainan.net/content/images/attractions/75822/480x360_attractions-image-pb0i9oybk0srue1zloyvpg.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9736,6 +10146,7 @@
       "hours": "全年無休",
       "summary": "市民賴顯明配合政府獎勵造林，將十四公頃的芒果園改成森林，並免費開放民眾進入休閒，成為熱門私房景點，民眾暱稱「小陽明山」。 園區內環境優美、氣氛幽靜，四周的植物綠意盎然，其中又以「桃花心木」最為美麗，山頂還有兩棵代表性的百年老榕樹，榕樹枝葉向外伸展形成綠蔭，宛如大自然的懷抱，榕樹下…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/5813",
+      "image_url": "https://www.twtainan.net/content/images/attractions/92866/480x360_attractions-image-n5pzib2bouqalxrajlvhtg.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9760,6 +10171,7 @@
       "hours": "▴ 每日 9:30~17:30，16:30後停止售票。 ▴ 每週二休園",
       "summary": "孩童的歡鬧聲隨著水花飛濺此起彼落，這是一幅背景為翠綠大地的畫布，灑滿金燦陽光、盛滿五彩鮮花。走進這座花園深處，紅磚色的屋房現身，頂著灰黑色的斜瓦，敞開大門迎接來客，體會過世外的繽紛歡樂，再安靜地閱讀斑駁的水道歷史痕跡。 迎接賓客的大地藝術 以自然樂園的姿態迎接賓客是台南山上花園水…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/5816",
+      "image_url": "https://www.twtainan.net/content/images/attractions/80574/480x360_attractions-image-gok_drr2p0oarhiq5bfavg.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9784,6 +10196,7 @@
       "hours": "全年開放",
       "summary": "緊鄰台19甲線，樹種多達十餘類，有桃花心木、樟木、楓香、香思樹、竹子等，密林蓊鬱，步道依地勢起伏，公園裡還設了幾座涼亭，一個生態池和觀景台，感受不同的森林角度。其中一條步道可越過國道3，連接到可果美桃花心木林。",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/5993",
+      "image_url": "https://www.twtainan.net/content/images/attractions/78707/480x360_attractions-image-rx8d9g1coeybp5hsu-tapq.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9806,6 +10219,7 @@
       "hours": "▴文化展示與展售區 週一~週日：08:00-17:00",
       "summary": "本廠座落於台南六甲，為了發揚台南蘭花產業的驕傲，建立了這座結合休閒、寓教於樂的「蘭都觀光工廠」，用來體驗、探索、展售「蘭花」相關的文化知識與商品。 以「天然」為本、「純淨」為念，回歸現代人追求的自然本質。在公司與工廠一條龍的同心努力下，結合文化與生技，研發純淨無害的產品，生產兼具…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/5994",
+      "image_url": "https://www.twtainan.net/content/images/attractions/79550/480x360_attractions-image-ywmguvysfe-ngnxxwcmajg.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9828,6 +10242,7 @@
       "hours": "週一至週日 08:00至17:00 (最後入場 16:30) 週四休館",
       "summary": "萬國通路創意觀光工廠是全國最具國際特色的行李箱觀光工廠：浪漫歐洲設計建築、全台最長落羽松大道，漫步其中彷彿置身香榭大道，讓萬國陪伴您感受世界的美好，欣賞豐富的品牌故事及產業文化，一起探索行李箱的創意世界。",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/6005",
+      "image_url": "https://www.twtainan.net/content/images/attractions/90533/480x360_attractions-image-ywfx7_twqkug6wcfyeb2uq.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9852,6 +10267,7 @@
       "hours": "萬佛寺 8:00~17:00 小普陀禪修公園：週一 、週二為固定休園日，若遇連續假期或因故調整休園日，以網站公告為主， 或依網站可預約日期/時段為準 大殿禮佛無須預約，可於寺院開放",
       "summary": "轉貼休園公告： 因 01/21地震 ，小普陀禪修公園園區內有景觀巨石位移，為了安全因素，即日起休園，暫無預計再開放日期，待檢查園區無安全疑慮，再擇期開放。 但歡迎民眾來寺內大殿禮佛，春節期間到萬佛寺走春，大殿禮佛，受三寶佛庇佑，平安喜樂一整年。 最新訊息請洽廟方了解。 萬佛寺建於…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/6007",
+      "image_url": "https://www.twtainan.net/content/images/attractions/86460/480x360_attractions-image-homkuhnbckslrjzwygsn0w.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9875,6 +10291,7 @@
       "hours": "依場館官網公告",
       "summary": "為了讓大家增加對國產材的認識及體驗，農委會林務局於關子嶺風景區温泉旅遊動線上的木構造日式建築型塑「臺灣木材故事館」，透過五感體驗打造木育環境，促進國產材與人的連結；認識臺灣木材文化，打造趣味知性的木育森林，達國產材永續安全環保的核心價值。 以「木」、「器」、「具」為設計元素進行規…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/6055",
+      "image_url": "https://www.twtainan.net/content/images/attractions/94872/480x360_attractions-image-32iwughvtkiwzf85khwoya.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9897,6 +10314,7 @@
       "hours": "依場館官網公告",
       "summary": "港濱歷史特色遊戲場是一處以深海歷險趣為主題的公園，設有5~12歲各年齡層的遊樂設施、方便年長者散步的步道、遮陽處等，園區中共分四大主題區：大鯨魚土丘區、急流海溝區、珊瑚礁叢區及綠藻山洞區，依各區主題設置溜滑梯、盪鞦韆、彈跳床、雙軌滑溜索等好玩設施，夏季時段在噴霧區還會定時噴出水霧…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/6081",
+      "image_url": "https://www.twtainan.net/content/images/attractions/100136/480x360_attractions-image-amtkydhk5ecalden2zwlug.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9921,6 +10339,7 @@
       "hours": "依場館官網公告",
       "summary": "雅聞創立療癒元年，教導您簡易療癒身心靈的方法，進入園區後，佇立在門口兩旁的松果裝置，將引領您運用五感的眼、耳、鼻、舌、身，一起體驗宇宙智慧，您可以在園區中享受到豐富的絢麗色彩、悅耳的大自然樂曲、清新的草木花香、美味的脈輪料理、自由的肢體伸展；無論是漫步在完美對稱設計的法式香榭大道…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/6086",
+      "image_url": "https://www.twtainan.net/content/images/attractions/101998/480x360_attractions-image-78wswag6quo41od8qovqfq.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9943,6 +10362,7 @@
       "hours": "依場館官網公告",
       "summary": "悄然隱於竹溪寺旁的濃密森林，雖位處南區體育公園旁，卻人煙罕至，這座森林最早於17世紀便已記載於文獻史料及古地圖，其名為「哈赫拿爾森林」(Hagenaars Bosch)，意為「海牙人的森林」，亦曾是野鹿群棲的古獵場，即便周遭聚落城市隨著時代更迭變化，林中仍維持著巨樹參天的原始林相…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/6103",
+      "image_url": "https://www.twtainan.net/content/images/attractions/107912/480x360_attractions-image-o5xgswfsheij34tcjwiufw.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9967,6 +10387,7 @@
       "hours": "每週一、週二固定休館農曆除夕其餘特殊休假日，請見官網最新消息【營業時間】展覽空間：10:00-17:30咖啡暨禮品店：10:00-17:30（最後點餐及售票入場時間為17:00）",
       "summary": "文鼎留聲博物館以「留聲的時光隧道」為概念， 回推至二百多年前的時代，從音樂盒、留聲機、電子黑膠唱機、現代音訊， 結合科普知識與歷史的介紹，推廣留聲文化發展。 「聲音如何開始留存？曾經存於哪些形式？」， 期望透過生動多元的主題， 讓音訊檔案唾手可得的現代，共同體驗百年前人們第一次聽…",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/6114",
+      "image_url": "https://www.twtainan.net/content/images/attractions/112191/480x360_attractions-image-nsh0vxbfwekjnezgcohiqg.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -9989,6 +10410,7 @@
       "hours": "依場館官網公告",
       "summary": "林安森林步道位於東山區，入口設於南99線道5.2公里處的萬姓爺公廟對面，全長約3.5公里。步道路線坡度平緩，沿途保留原始林相與地勢，並設有木棧道及石階。登高後向東可眺望大凍山，向西可俯瞰白河、東山一帶平原，適合健行及親子踏青。",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/6132",
+      "image_url": "https://www.twtainan.net/content/images/attractions/113955/480x360_attractions-image-l2rgp_bqm0eww4pzwlmvwq.jpg",
       "source": "臺南旅遊網 Open Data"
     },
     {
@@ -10013,6 +10435,7 @@
       "hours": "依場館官網公告",
       "summary": "長短樹公園位於後壁區長短樹里，是居民休憩及認識聚落文化的公共空間。鄰近的頂長聚落以永安堂宋江陣為主題，於巷弄牆面繪製陣式、兵器與臉譜等圖像。頂長宋江陣保留白衣紅褲及陣員彩繪臉譜的傳統，是臺灣少數仍具「打面」特色的宋江陣，遊客可從公園與聚落彩繪認識地方藝陣文化。",
       "url": "https://www.twtainan.net/zh-tw/attractions/detail/6134",
+      "image_url": "https://www.twtainan.net/content/images/attractions/114005/480x360_attractions-image-hqgtwtedcu6swk7zevrcug.png",
       "source": "臺南旅遊網 Open Data"
     }
   ]

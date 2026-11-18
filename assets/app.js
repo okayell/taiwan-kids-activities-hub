@@ -284,8 +284,15 @@
       tags.push(`<span class="mini-tag">${esc(a)}歲</span>`);
     }
 
+    const coverHtml = item.image_url
+      ? `<div class="card-cover" data-open-id="${esc(item.id)}">
+           <img src="${esc(item.image_url)}" alt="${esc(item.title)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.card-cover')?.remove()" />
+         </div>`
+      : "";
+
     return `
       <article class="card" data-id="${esc(item.id)}">
+        ${coverHtml}
         <div class="card-head">
           <span class="cat-badge cat-${esc(item.category)}">${meta.icon} ${esc(meta.label)}</span>
           <button type="button" class="save-btn ${isSaved ? "saved" : ""}" data-save-id="${esc(item.id)}" aria-label="${isSaved ? "取消收藏" : "加入口袋名單"}" title="${isSaved ? "取消收藏" : "加入口袋名單"}">
@@ -364,8 +371,12 @@
         fillOpacity: 0.92,
       });
 
+      const popupImg = item.image_url
+        ? `<img src="${esc(item.image_url)}" alt="" referrerpolicy="no-referrer" onerror="this.remove()" style="width:100%;height:105px;object-fit:cover;border-radius:8px;margin-bottom:6px;display:block;" />`
+        : "";
       const popupHtml = `
-        <div style="min-width:190px;font-family:'Noto Sans TC',sans-serif;">
+        <div style="min-width:200px;max-width:230px;font-family:'Noto Sans TC',sans-serif;">
+          ${popupImg}
           <div style="font-size:12px;color:#666;margin-bottom:3px;">${meta.icon} ${esc(meta.label)} · ${esc(item.city)}${esc(item.district)}</div>
           <div style="font-weight:800;font-size:14px;margin-bottom:6px;">${esc(item.title)}</div>
           <div style="font-size:12px;color:#555;margin-bottom:8px;">${esc(item.hours || "")}</div>
@@ -405,7 +416,12 @@
     const isSaved = state.savedIds.has(item.id);
     const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.title + " " + (item.address || item.city))}`;
 
+    const modalCover = item.image_url
+      ? `<img class="modal-cover" src="${esc(item.image_url)}" alt="${esc(item.title)}" referrerpolicy="no-referrer" onerror="this.remove()" />`
+      : "";
+
     els.modalBody.innerHTML = `
+      ${modalCover}
       <span class="cat-badge cat-${esc(item.category)}">${meta.icon} ${esc(meta.label)}</span>
       <h2 id="modal-title" style="margin:10px 0 6px;font-size:1.35rem;">${esc(item.title)}</h2>
       <p style="margin:0;color:#555;">${esc(item.summary)}</p>
@@ -440,9 +456,13 @@
     els.savedList.innerHTML = savedItems
       .map((it) => {
         const meta = CATEGORY_META[it.category] || { icon: "✨", label: "" };
+        const thumb = it.image_url
+          ? `<img class="saved-thumb" src="${esc(it.image_url)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" />`
+          : "";
         return `
           <div class="saved-item">
-            <div>
+            ${thumb}
+            <div style="flex:1;min-width:0;">
               <h4 data-open-id="${esc(it.id)}">${meta.icon} ${esc(it.title)}</h4>
               <p>📍 ${esc(it.city)}${esc(it.district)} · ${esc(it.hours || "")}</p>
             </div>

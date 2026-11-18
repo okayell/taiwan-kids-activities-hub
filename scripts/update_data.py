@@ -3,6 +3,7 @@
 台灣 12 歲以下兒童活動與親子場館自動同步爬蟲
 - 零第三方套件依賴（純 Python 3 標準函式庫），可於本機與 GitHub Actions 直接執行
 - 平行抓取政府公開資料 API + 整合全台 22 縣市常設親子場館庫
+- 自動擷取真實活動海報與場館實景照片（API imageUrl / images + 官方頁面 og:image + 臺南景點圖庫），無真實照片時保持空字串不塞假圖
 - 具備 Keep-Previous-On-Failure 防呆機制：任一來源異常時自動保留上一版有效資料
 """
 
@@ -13,11 +14,11 @@ import datetime as dt
 import hashlib
 import html
 import json
-import os
 import re
 import ssl
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 from typing import Any
@@ -37,9 +38,16 @@ SSL_CTX.check_hostname = False
 SSL_CTX.verify_mode = ssl.CERT_NONE
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; TaiwanKidsActivitiesHub/1.0; +https://github.com/)",
-    "Accept": "application/json, text/plain, */*",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept": "application/json, text/html, text/plain, */*",
 }
+
+# 過濾網站通用預設分享圖／Logo（只保留真實活動海報或場館照片）
+BAD_IMAGE_RE = re.compile(
+    r"(social-share|fbsharelogo|default[-_]?share|default[-_]?img|no[-_]?image|"
+    r"logo\.svg|\.svg($|\?)|favicon|spacer\.gif|blank\.|cloud\.culture\.tw/frontsite)",
+    re.I,
+)
 
 # 縣市別名標準化
 CITY_ALIASES = {
@@ -121,7 +129,6 @@ def load_tw_districts() -> tuple[dict[str, list[str]], dict[str, list[float]]]:
 TW_DISTRICTS, TW_CITY_COORDS = load_tw_districts()
 ALL_CITIES = list(TW_DISTRICTS.keys())
 
-# 建立唯一鄉鎮區反查表（不含跨縣市重名如中正區、東區等）
 _dist_to_cities: dict[str, list[str]] = {}
 for _c, _ds in TW_DISTRICTS.items():
     for _d in _ds:
@@ -136,6 +143,89 @@ def strip_html(raw: str) -> str:
     s = re.sub(r"<[^>]+>", " ", s)
     s = re.sub(r"\s+", " ", s).strip()
     return s
+
+
+def clean_image_url(raw_url: str, base_url: str = "") -> str:
+    """清理並驗證圖片網址（修正文化部雙重前綴、編碼空白與中文字、排除預設假 Logo）。"""
+    if not raw_url:
+        return ""
+    u = html.unescape(str(raw_url)).strip()
+    if not u:
+        return ""
+    # 修正文化部 iCulture 常見的 https://cloud.culture.twhttps://... 雙重前綴
+    u = re.sub(r"^https?://cloud\.culture\.tw(?=https?://)", "", u, flags=re.I)
+    if base_url and not u.startswith(("http://", "https://", "//")):
+        u = urllib.parse.urljoin(base_url, u)
+    elif u.startswith("//"):
+        u = "https:" + u
+
+    # 修正 https://domain.com/domain.com/... 錯誤相對路徑
+    m_dup = re.match(r"^(https?://([^/]+))/\2(/.*)$", u, flags=re.I)
+    if m_dup:
+        u = m_dup.group(1) + m_dup.group(3)
+
+    if not u.startswith(("http://", "https://")):
+        return ""
+    if BAD_IMAGE_RE.search(u):
+        return ""
+
+    try:
+        parts = urllib.parse.urlsplit(u)
+        if not parts.netloc:
+            return ""
+        safe_path = urllib.parse.quote(urllib.parse.unquote(parts.path), safe="/:@!$&'()*+,;=-._~")
+        safe_query = urllib.parse.quote(urllib.parse.unquote(parts.query), safe="=&/:@!$'()*+,;-._~?")
+        return urllib.parse.urlunsplit((parts.scheme, parts.netloc, safe_path, safe_query, ""))
+    except Exception:
+        return ""
+
+
+def fetch_og_image(page_url: str, timeout: int = 6) -> str:
+    """從活動官方頁面／售票頁前 64KB HTML 擷取真實活動海報 og:image。"""
+    if not page_url or not page_url.startswith(("http://", "https://")):
+        return ""
+    if "cloud.culture.tw" in page_url and page_url.rstrip("/") == "https://cloud.culture.tw":
+        return ""
+    try:
+        req = urllib.request.Request(page_url, headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX) as resp:
+            ctype = (resp.headers.get("Content-Type") or "").lower()
+            if "image/" in ctype:
+                return clean_image_url(page_url)
+            chunk = resp.read(65536).decode("utf-8", errors="ignore")
+        for pat in (
+            r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+            r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+        ):
+            m = re.search(pat, chunk, re.I)
+            if m:
+                cleaned = clean_image_url(m.group(1), base_url=page_url)
+                if cleaned:
+                    return cleaned
+    except Exception:
+        pass
+    return ""
+
+
+def fetch_tainan_detail_image(detail_url: str, timeout: int = 6) -> str:
+    """從臺南旅遊網景點內頁擷取真實景點照片。"""
+    if not detail_url:
+        return ""
+    try:
+        req = urllib.request.Request(detail_url, headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX) as resp:
+            chunk = resp.read(98304).decode("utf-8", errors="ignore")
+        m = re.search(
+            r"https?://www\.twtainan\.net/content/images/attractions/[^\s\"'<>]+?\.(?:jpg|jpeg|png|webp)",
+            chunk,
+            re.I,
+        )
+        if m:
+            return clean_image_url(m.group(0))
+    except Exception:
+        pass
+    return ""
 
 
 def make_id(prefix: str, key: str) -> str:
@@ -186,9 +276,6 @@ def extract_city_district(text: str, default_city: str = "") -> tuple[str, str]:
 
     if not city:
         return "", ""
-    if not district:
-        # 找不到鄉鎮區時保留空字串（前端顯示為「全區／未標示」）
-        district = ""
     return city, district
 
 
@@ -261,10 +348,9 @@ def is_kids_relevant(title: str, desc: str, force_kids: bool = False) -> bool:
     return any(k in text for k in KIDS_KEYWORDS)
 
 
-def scrape_iculture() -> list[dict[str, Any]]:
-    """抓取文化部全國藝文活動 Open Data（涵蓋全台灣 22 縣市）。"""
+def scrape_iculture(prev_img_cache: dict[str, str]) -> list[dict[str, Any]]:
+    """抓取文化部全國藝文活動 Open Data（涵蓋全台灣 22 縣市），並補齊活動海報圖。"""
     today = dt.datetime.now(TZ_TW).date()
-    # (category_id, force_kids)
     cats = [
         ("4", True),    # 親子活動（全收）
         ("6", False),   # 展覽
@@ -344,11 +430,16 @@ def scrape_iculture() -> list[dict[str, Any]]:
                 cat = classify_event_category(title, desc, src_cat=cid)
                 is_free = (on_sales == "N") or infer_free(price_raw, desc)
                 price_text = price_raw or ("免費參加（詳見官網）" if is_free else "依主辦單位公告")
-                url = (row.get("sourceWebPromote") or row.get("webSales") or "").strip()
+                promo_url = (row.get("sourceWebPromote") or "").strip()
+                sales_url = (row.get("webSales") or "").strip()
+                url = promo_url or sales_url
                 if url and not url.startswith(("http://", "https://")):
                     url = "https://" + url
                 if not url:
                     url = "https://cloud.culture.tw/"
+
+                item_id = make_id("iculture", uid)
+                img_url = clean_image_url(row.get("imageUrl") or "") or prev_img_cache.get(item_id, "")
 
                 summary = desc[:140] + ("…" if len(desc) > 140 else "") if desc else f"{loc_name or city} 舉辦之親子藝文活動。"
                 hours_text = f"{start_d or '近期'} ～ {end_d or '依官網公告'}"
@@ -359,7 +450,7 @@ def scrape_iculture() -> list[dict[str, Any]]:
 
                 seen_uids.add(uid)
                 items.append({
-                    "id": make_id("iculture", uid),
+                    "id": item_id,
                     "title": title,
                     "kind": "event",
                     "category": cat,
@@ -379,12 +470,32 @@ def scrape_iculture() -> list[dict[str, Any]]:
                     "is_recurring_weekend": False,
                     "summary": summary,
                     "url": url,
+                    "image_url": img_url,
+                    "_alt_url": sales_url if sales_url != promo_url else "",
                     "source": "文化部全國藝文活動",
                 })
+
+    # 對尚未取得 image_url 的活動，平行向官方活動頁／售票頁擷取真實海報 og:image
+    missing = [it for it in items if not it["image_url"] and it["url"] != "https://cloud.culture.tw/"]
+    if missing:
+        def _resolve_og(it: dict[str, Any]) -> None:
+            img = fetch_og_image(it["url"], timeout=6)
+            if not img and it.get("_alt_url"):
+                alt = it["_alt_url"]
+                if not alt.startswith(("http://", "https://")):
+                    alt = "https://" + alt
+                img = fetch_og_image(alt, timeout=6)
+            it["image_url"] = img
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=18) as ex:
+            list(ex.map(_resolve_og, missing))
+
+    for it in items:
+        it.pop("_alt_url", None)
     return items
 
 
-def scrape_taipei_events() -> list[dict[str, Any]]:
+def scrape_taipei_events(prev_img_cache: dict[str, str]) -> list[dict[str, Any]]:
     """抓取臺北市觀光傳播局最新活動與節慶行事曆。"""
     today = dt.datetime.now(TZ_TW).date()
     urls = [
@@ -430,12 +541,22 @@ def scrape_taipei_events() -> list[dict[str, Any]]:
             except (ValueError, TypeError):
                 pass
 
+            item_id = make_id("tpe-evt", f"{row.get('id', '')}-{title}")
+            img_url = ""
+            for fobj in (row.get("files") or []):
+                if isinstance(fobj, dict) and str(fobj.get("ext", "")).lower() in (".jpg", ".jpeg", ".png", ".webp"):
+                    img_url = clean_image_url(fobj.get("src") or "")
+                    if img_url:
+                        break
+            if not img_url:
+                img_url = prev_img_cache.get(item_id, "") or fetch_og_image(row.get("url") or "", timeout=6)
+
             cat = classify_event_category(title, desc)
             ticket = strip_html(row.get("ticket") or "")
             is_free = infer_free(ticket, desc)
             seen.add(title)
             items.append({
-                "id": make_id("tpe-evt", f"{row.get('id', '')}-{title}"),
+                "id": item_id,
                 "title": title,
                 "kind": "event",
                 "category": cat,
@@ -455,13 +576,14 @@ def scrape_taipei_events() -> list[dict[str, Any]]:
                 "is_recurring_weekend": False,
                 "summary": (desc[:140] + ("…" if len(desc) > 140 else "")) if desc else "臺北市官方精選親子活動。",
                 "url": row.get("url") or "https://www.travel.taipei/",
+                "image_url": img_url,
                 "source": "臺北旅遊網 Open API",
             })
     return items
 
 
-def scrape_taipei_venues() -> list[dict[str, Any]]:
-    """從臺北旅遊網 Open API 抓取親子共遊、公園、博物館與兒童場館（抓取前 8 頁涵蓋主要點位）。"""
+def scrape_taipei_venues(prev_img_cache: dict[str, str]) -> list[dict[str, Any]]:
+    """從臺北旅遊網 Open API 抓取親子共遊、公園、博物館與兒童場館（含官方實景照片）。"""
     items: list[dict[str, Any]] = []
     pages = list(range(1, 9))
 
@@ -490,7 +612,6 @@ def scrape_taipei_venues() -> list[dict[str, Any]]:
                 if not is_family or any(bad in f"{name} {intro}" for bad in ADULT_EXCLUDE):
                     continue
 
-                # 決定常設場館分類
                 if any(k in name for k in ("樂園", "遊樂")):
                     cat = "amusement"
                 elif any(k in name for k in ("親子館", "育兒")):
@@ -513,10 +634,20 @@ def scrape_taipei_venues() -> list[dict[str, Any]]:
                 except (ValueError, TypeError):
                     pass
 
+                item_id = make_id("tpe-venue", str(row.get("id") or name))
+                img_url = ""
+                for im in (row.get("images") or []):
+                    if isinstance(im, dict) and im.get("src"):
+                        img_url = clean_image_url(im["src"])
+                        if img_url:
+                            break
+                if not img_url:
+                    img_url = prev_img_cache.get(item_id, "")
+
                 ticket = strip_html(row.get("ticket") or "")
                 is_free = (cat == "park") or infer_free(ticket, intro)
                 items.append({
-                    "id": make_id("tpe-venue", str(row.get("id") or name)),
+                    "id": item_id,
                     "title": name,
                     "kind": "venue",
                     "category": cat,
@@ -533,13 +664,14 @@ def scrape_taipei_venues() -> list[dict[str, Any]]:
                     "hours": strip_html(row.get("open_time") or "")[:90] or "依場館官網公告",
                     "summary": (intro[:140] + ("…" if len(intro) > 140 else "")) if intro else "臺北市推薦親子共遊景點。",
                     "url": row.get("official_site") or row.get("url") or "https://www.travel.taipei/",
+                    "image_url": img_url,
                     "source": "臺北旅遊網 Open API",
                 })
     return items
 
 
-def scrape_tainan_venues() -> list[dict[str, Any]]:
-    """從臺南市政府觀光旅遊局開放資料抓取親子場館、公園、博物館與觀光工廠。"""
+def scrape_tainan_venues(prev_img_cache: dict[str, str]) -> list[dict[str, Any]]:
+    """從臺南市政府觀光旅遊局開放資料抓取親子場館，並從景點頁補齊實景照片。"""
     url = "https://www.twtainan.net/data/attractions_zh-tw.json"
     rows = fetch_json(url, timeout=15)
     if not isinstance(rows, list):
@@ -577,9 +709,11 @@ def scrape_tainan_venues() -> list[dict[str, Any]]:
         except (ValueError, TypeError):
             pass
 
+        item_id = make_id("tnn-venue", str(row.get("id") or name))
+        detail_url = f"https://www.twtainan.net/zh-tw/attractions/detail/{row.get('id')}" if row.get("id") else "https://www.twtainan.net/"
         is_free = (cat == "park") or infer_free("", summary)
         items.append({
-            "id": make_id("tnn-venue", str(row.get("id") or name)),
+            "id": item_id,
             "title": name,
             "kind": "venue",
             "category": cat,
@@ -595,23 +729,38 @@ def scrape_tainan_venues() -> list[dict[str, Any]]:
             "price_text": "免費開放" if is_free else "依場館公告",
             "hours": strip_html(row.get("open_time") or "")[:90] or "依場館官網公告",
             "summary": (summary[:140] + ("…" if len(summary) > 140 else "")) if summary else "臺南市推薦親子場館。",
-            "url": f"https://www.twtainan.net/zh-tw/attractions/detail/{row.get('id')}" if row.get("id") else "https://www.twtainan.net/",
+            "url": detail_url,
+            "image_url": prev_img_cache.get(item_id, ""),
             "source": "臺南旅遊網 Open Data",
         })
+
+    missing = [it for it in items if not it["image_url"] and "/detail/" in it["url"]]
+    if missing:
+        def _resolve_tn_img(it: dict[str, Any]) -> None:
+            it["image_url"] = fetch_tainan_detail_image(it["url"], timeout=6)
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=16) as ex:
+            list(ex.map(_resolve_tn_img, missing))
+
     return items
 
 
-def load_previous_by_source() -> dict[str, list[dict[str, Any]]]:
+def load_previous_state() -> tuple[dict[str, list[dict[str, Any]]], dict[str, str]]:
     if not OUT_PATH.exists():
-        return {}
+        return {}, {}
     try:
         prev = json.loads(OUT_PATH.read_text(encoding="utf-8"))
         by_src: dict[str, list[dict[str, Any]]] = {}
+        img_cache: dict[str, str] = {}
         for item in prev.get("items", []):
             by_src.setdefault(item.get("source", "unknown"), []).append(item)
-        return by_src
+            if item.get("id") and item.get("image_url"):
+                cleaned = clean_image_url(item["image_url"])
+                if cleaned:
+                    img_cache[item["id"]] = cleaned
+        return by_src, img_cache
     except Exception:
-        return {}
+        return {}, {}
 
 
 def normalize_title_key(title: str, city: str) -> str:
@@ -622,7 +771,7 @@ def normalize_title_key(title: str, city: str) -> str:
 
 def main() -> int:
     now_tw = dt.datetime.now(TZ_TW)
-    prev_by_src = load_previous_by_source()
+    prev_by_src, prev_img_cache = load_previous_state()
 
     # 1. 讀取全台 22 縣市常設精選場館基準庫
     curated: list[dict[str, Any]] = json.loads(CURATED_PATH.read_text(encoding="utf-8"))
@@ -631,13 +780,14 @@ def main() -> int:
         item.setdefault("start_date", "")
         item.setdefault("end_date", "")
         item.setdefault("is_recurring_weekend", False)
+        item["image_url"] = clean_image_url(item.get("image_url") or "")
 
     # 2. 平行執行所有即時公開資料爬蟲
     sources = {
-        "文化部全國藝文活動": (scrape_iculture, 15),
-        "臺北旅遊網 Open API (活動)": (scrape_taipei_events, 1),
-        "臺北旅遊網 Open API (場館)": (scrape_taipei_venues, 10),
-        "臺南旅遊網 Open Data": (scrape_tainan_venues, 10),
+        "文化部全國藝文活動": (lambda: scrape_iculture(prev_img_cache), 15),
+        "臺北旅遊網 Open API (活動)": (lambda: scrape_taipei_events(prev_img_cache), 1),
+        "臺北旅遊網 Open API (場館)": (lambda: scrape_taipei_venues(prev_img_cache), 10),
+        "臺南旅遊網 Open Data": (lambda: scrape_tainan_venues(prev_img_cache), 10),
     }
 
     source_results: dict[str, list[dict[str, Any]]] = {}
@@ -684,9 +834,9 @@ def main() -> int:
                     "used": len(prev_items),
                 })
 
-    # 3. 合併去重（精選常設庫優先，其次為即時活動與即時場館）
+    # 3. 合併去重（若精選庫本身缺照片、而即時 API 同名點位有真實照片，自動把真實照片補進精選項目！）
+    merged_by_key: dict[str, dict[str, Any]] = {}
     merged: list[dict[str, Any]] = []
-    seen_keys: set[str] = set()
     seen_ids: set[str] = set()
 
     ordered_batches = [
@@ -704,26 +854,35 @@ def main() -> int:
             title = item.get("title", "")
             if not cid or not city or city not in TW_DISTRICTS or not title:
                 continue
+            item["image_url"] = clean_image_url(item.get("image_url") or "")
             key = normalize_title_key(title, city)
-            if cid in seen_ids or key in seen_keys:
+            if key in merged_by_key:
+                existing = merged_by_key[key]
+                if not existing.get("image_url") and item.get("image_url"):
+                    existing["image_url"] = item["image_url"]
+                continue
+            if cid in seen_ids:
                 continue
             seen_ids.add(cid)
-            seen_keys.add(key)
+            merged_by_key[key] = item
             merged.append(item)
 
-    # 統計資料
     cat_counts: dict[str, int] = {}
     city_counts: dict[str, int] = {}
     kind_counts = {"venue": 0, "event": 0}
+    with_image_count = 0
     for it in merged:
         cat_counts[it["category"]] = cat_counts.get(it["category"], 0) + 1
         city_counts[it["city"]] = city_counts.get(it["city"], 0) + 1
         kind_counts[it["kind"]] = kind_counts.get(it["kind"], 0) + 1
+        if it.get("image_url"):
+            with_image_count += 1
 
     payload = {
         "updated_at": now_tw.isoformat(timespec="seconds"),
         "updated_date": now_tw.strftime("%Y-%m-%d %H:%M (台灣時間)"),
         "total": len(merged),
+        "with_image_count": with_image_count,
         "kind_counts": kind_counts,
         "category_counts": cat_counts,
         "city_counts": city_counts,
@@ -739,6 +898,7 @@ def main() -> int:
         "updated_at": payload["updated_at"],
         "updated_date": payload["updated_date"],
         "total": payload["total"],
+        "with_image_count": with_image_count,
         "kind_counts": kind_counts,
         "category_counts": cat_counts,
         "cities_covered": len(city_counts),
@@ -748,7 +908,7 @@ def main() -> int:
 
     print(
         f"✅ Synced {len(merged)} items across {len(city_counts)}/22 cities "
-        f"(venues={kind_counts['venue']}, events={kind_counts['event']})."
+        f"(venues={kind_counts['venue']}, events={kind_counts['event']}, with_real_images={with_image_count})."
     )
     print(f"   Categories: {json.dumps(cat_counts, ensure_ascii=False)}")
     return 0

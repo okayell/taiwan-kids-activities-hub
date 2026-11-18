@@ -28,14 +28,30 @@ port = httpd.server_address[1]
 t = threading.Thread(target=httpd.serve_forever, daemon=True)
 t.start()
 try:
-    for path in ["/", "/assets/styles.css", "/assets/tw_districts.js", "/assets/app.js", "/data/activities.json"]:
+    for path in [
+        "/",
+        "/favicon.ico",
+        "/site.webmanifest",
+        "/assets/favicon.svg",
+        "/assets/favicon.png",
+        "/assets/apple-touch-icon.png",
+        "/assets/icon-192.png",
+        "/assets/icon-512.png",
+        "/assets/styles.css",
+        "/assets/tw_districts.js",
+        "/assets/app.js",
+        "/data/activities.json",
+    ]:
         with urllib.request.urlopen(f"http://127.0.0.1:{port}{path}", timeout=5) as r:
             assert r.status == 200, f"{path} status={r.status}"
             body = r.read()
             assert len(body) > 100, f"{path} body too small"
-            if path.endswith(".json"):
+            if path == "/data/activities.json":
                 d = json.loads(body.decode("utf-8"))
                 assert d["total"] >= 100
+            elif path == "/site.webmanifest":
+                m = json.loads(body.decode("utf-8"))
+                assert len(m.get("icons", [])) >= 2
     print(f"✅ HTTP 冒煙測試通過（port={port}，所有靜態與 JSON 資源皆 200 OK）")
 finally:
     httpd.shutdown()
