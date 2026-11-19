@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-11-19T07:55:38+08:00",
-  "updated_date": "2026-11-19 07:55 (台灣時間)",
-  "total": 1836,
-  "with_image_count": 1651,
+  "updated_at": "2026-11-19T09:46:12+08:00",
+  "updated_date": "2026-11-19 09:46 (台灣時間)",
+  "total": 1829,
+  "with_image_count": 1644,
   "kind_counts": {
-    "venue": 1668,
-    "event": 168
+    "venue": 1660,
+    "event": 169
   },
   "category_counts": {
-    "amusement": 176,
-    "kids_museum": 510,
+    "amusement": 173,
+    "kids_museum": 506,
     "parent_center": 150,
-    "park": 832,
+    "park": 831,
     "festival": 22,
-    "activity": 101,
     "course": 35,
+    "activity": 102,
     "market": 2,
     "contest": 8
   },
@@ -33,16 +33,16 @@
       "used": 70
     },
     {
-      "source": "交通部觀光署觀光雙年曆",
-      "status": "ok",
-      "fetched": 5,
-      "used": 5
-    },
-    {
       "source": "高雄市政府兒福中心",
       "status": "ok",
       "fetched": 27,
       "used": 27
+    },
+    {
+      "source": "基隆市政府兒少處",
+      "status": "ok",
+      "fetched": 14,
+      "used": 14
     },
     {
       "source": "臺北旅遊網 Open API (活動)",
@@ -51,10 +51,10 @@
       "used": 16
     },
     {
-      "source": "基隆市政府兒少處",
+      "source": "交通部觀光署觀光雙年曆",
       "status": "ok",
-      "fetched": 13,
-      "used": 13
+      "fetched": 5,
+      "used": 5
     },
     {
       "source": "文化部全國藝文活動",
@@ -65,8 +65,8 @@
     {
       "source": "全台親子景點公開彙整",
       "status": "ok",
-      "fetched": 1505,
-      "used": 1505
+      "fetched": 1499,
+      "used": 1499
     }
   ]
 }
