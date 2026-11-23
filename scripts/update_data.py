@@ -14,6 +14,7 @@ import datetime as dt
 import hashlib
 import html
 import json
+import math
 import re
 import ssl
 import sys
@@ -1413,21 +1414,227 @@ def load_previous_state() -> tuple[dict[str, list[dict[str, Any]]], dict[str, st
         return {}, {}, {}
 
 
+_DEDUP_GENERIC_PARENS = (
+    "特色遊戲場", "共融遊戲場", "兒童遊戲場", "免費", "整修", "不開放",
+    "聖誕及光影展", "光影展", "活動", "高低空", "滑步車", "小火車",
+    "兒童體驗室", "育兒資源中心", "親子館", "親子夢想館", "浪漫飄雪",
+)
+
+_DEDUP_GENERIC_NOUNS = {
+    "親子館", "托育資源中心", "兒童遊戲場", "特色遊戲場", "共融遊戲場",
+    "親子公園", "運動公園", "河濱公園", "兒童公園", "公園", "動物園",
+    "美術館", "博物館", "文化館", "兒童樂園",
+}
+
+_DEDUP_BRANCH_KEYWORDS = (
+    "本館", "南門", "古生物", "鐵道部", "植物園", "水樂園", "游泳池",
+    "河馬廚房", "廚房", "披薩", "夜未眠", "童樂趴", "史努比", "教育中心",
+    "咖啡", "餐廳", "飯店", "民宿", "露營", "小火車", "運轉所", "扣屋",
+    "二館", "三館", "分館",
+)
+
+
+def _haversine_approx_km(a: dict[str, Any], b: dict[str, Any]) -> float:
+    lat1, lng1 = a.get("lat") or 0.0, a.get("lng") or 0.0
+    lat2, lng2 = b.get("lat") or 0.0, b.get("lng") or 0.0
+    return math.hypot((lat1 - lat2) * 111.0, (lng1 - lng2) * 101.0)
+
+
+def _strip_city_admin(s: str, city: str = "") -> str:
+    s = s.replace("台", "臺").lower().strip()
+    if city:
+        c = city.replace("台", "臺").lower()
+        cs = c.replace("市", "").replace("縣", "")
+        for p in (c + "立", c, cs + "立", cs):
+            if p and s.startswith(p):
+                rem = s[len(p):]
+                # 避免把「桃園親子館」「新竹動物園」去成太泛用的「親子館」「動物園」
+                if len(rem) > 2 and rem not in _DEDUP_GENERIC_NOUNS:
+                    s = rem
+                    break
+    for p in ("國立", "市立", "縣立"):
+        if s.startswith(p):
+            rem = s[len(p):]
+            if len(rem) > 2 and rem not in _DEDUP_GENERIC_NOUNS:
+                s = rem
+                break
+    return s
+
+
+def _clean_dedup_token(s: str, city: str = "") -> str:
+    s = (s or "").replace("台", "臺").lower().strip()
+    s = re.sub(r"20\d{2}(?:\s*[-~～]\s*20\d{2})?年?", "", s)
+    s = re.sub(r"11[0-9]年(?:度)?", "", s)
+    s = re.sub(r"\d{1,2}/\d{1,2}\s*[-~～]\s*(?:20\d{2}/)?\d{1,2}/\d{1,2}", "", s)
+    cjk_len = len(re.findall(r"[\u4e00-\u9fff]", s))
+    if cjk_len >= 4:
+        s = re.sub(r"\s+[a-z0-9\-\s]{4,}$", "", s)
+        s = re.sub(r"[a-z]{2,}-[a-z]{2,}.*$", "", s)
+    s = re.sub(r"[\s\-－—_·‧・,，.。!！?？:：/／「」『』《》〈〉\"'~～&＆+＋*＊]+", "", s)
+    s = _strip_city_admin(s, city)
+    s = s.replace("主題遊樂園", "主題樂園")
+    s = s.replace("托育資源中心暨親子館", "親子館")
+    s = s.replace("公共托嬰及親子館", "親子館")
+    return s
+
+
+def _bigrams(s: str) -> set[str]:
+    return {s[i:i + 2] for i in range(len(s) - 1)} if len(s) >= 2 else set()
+
+
+def _dates_overlap(a: dict[str, Any], b: dict[str, Any]) -> bool:
+    sa, ea = a.get("start_date") or "", a.get("end_date") or ""
+    sb, eb = b.get("start_date") or "", b.get("end_date") or ""
+    if not (sa and ea and sb and eb):
+        return False
+    return not (ea < sb or eb < sa)
+
+
+def extract_dedup_features(item: dict[str, Any]) -> dict[str, Any]:
+    title = (item.get("title") or "").replace("台", "臺").strip()
+    city = (item.get("city") or "").replace("台", "臺")
+    district = (item.get("district") or "").replace("台", "臺")
+
+    t_no_paren = re.sub(r"[（(][^）)]*[）)]", " ", title)
+    paren_contents = re.findall(r"[（(]([^）)]+)[）)]", title)
+
+    # X@Y 形式（例：機器人披薩窯@鶯歌陶瓷博物館）以 @ 前為主體，避免吞掉附屬子景點
+    primary_raw = t_no_paren.split("@", 1)[0].strip() if "@" in t_no_paren else t_no_paren.strip()
+
+    raw_segs = re.split(r"[\-－—_～~＆&+＋「」『』：:]", primary_raw)
+    segs: set[str] = set()
+    for seg in raw_segs:
+        ct = _clean_dedup_token(seg, city)
+        if len(ct) >= 3:
+            segs.add(ct)
+            if district:
+                d_short = district.replace("區", "").replace("鄉", "").replace("鎮", "").replace("市", "").lower()
+                for dp in (district.lower(), d_short):
+                    if dp and ct.startswith(dp):
+                        rem = ct[len(dp):]
+                        if len(rem) > 2 and rem not in _DEDUP_GENERIC_NOUNS:
+                            segs.add(rem)
+            for suf in ("兒童遊戲場", "共融遊戲場", "特色遊戲場", "遊戲場"):
+                if ct.endswith(suf) and len(ct) > len(suf) + 2:
+                    segs.add(ct[:-len(suf)])
+
+    for pc in paren_contents:
+        if any(g in pc for g in _DEDUP_GENERIC_PARENS):
+            continue
+        for sub in re.split(r"[/／\-－—]", pc):
+            ct = _clean_dedup_token(sub, city)
+            if len(ct) >= 4:
+                segs.add(ct)
+
+    core = _clean_dedup_token(primary_raw, city)
+    core_nosuf = core
+    for suf in ("兒童遊戲場", "共融遊戲場", "特色遊戲場", "遊戲場"):
+        if core_nosuf.endswith(suf) and len(core_nosuf) > len(suf) + 2:
+            core_nosuf = core_nosuf[:-len(suf)]
+
+    branches = {bk for bk in _DEDUP_BRANCH_KEYWORDS if bk in title}
+    sequels = set(re.findall(r"(?:[ⅡⅢⅣⅤ]|(?<![a-z0-9])(?:ii|iii|iv)(?![a-z0-9]))", title.lower()))
+
+    return {
+        "core": core,
+        "core_nosuf": core_nosuf,
+        "segs": segs,
+        "branches": branches,
+        "sequels": sequels,
+    }
+
+
+def is_duplicate_item(
+    a: dict[str, Any],
+    fa: dict[str, Any],
+    b: dict[str, Any],
+    fb: dict[str, Any],
+) -> tuple[bool, str]:
+    """判斷兩筆資料是否為重複活動或重複場館，並回傳判定原因。"""
+    if a.get("city") != b.get("city") or a.get("kind") != b.get("kind"):
+        return False, ""
+
+    if fa["sequels"] != fb["sequels"]:
+        return False, ""
+
+    ba, bb = fa["branches"], fb["branches"]
+    if ba != bb and ((ba ^ bb) - {"本館", "分館"}):
+        return False, ""
+
+    ca, cb = fa["core"], fb["core"]
+    cna, cnb = fa["core_nosuf"], fb["core_nosuf"]
+    if not ca or not cb:
+        return False, ""
+
+    cross_src = a.get("source") != b.get("source")
+    kind = a.get("kind")
+
+    if kind == "event":
+        if not _dates_overlap(a, b):
+            return False, ""
+        if a.get("district") and b.get("district") and a.get("district") != b.get("district"):
+            if not (a.get("category") == "festival" and b.get("category") == "festival"):
+                return False, ""
+        if ca == cb or cna == cnb:
+            return True, "exact_core"
+        if cross_src:
+            shared_segs = {s for s in (fa["segs"] & fb["segs"]) if len(s) >= 5}
+            if shared_segs:
+                return True, f"shared_seg:{sorted(shared_segs)[0]}"
+            if (len(ca) >= 4 and ca in cb) or (len(cb) >= 4 and cb in ca):
+                return True, "cross_contain"
+            if min(len(ca), len(cb)) >= 5:
+                bga, bgb = _bigrams(ca), _bigrams(cb)
+                ov = len(bga & bgb) / max(1, min(len(bga), len(bgb)))
+                if ov >= 0.72:
+                    return True, f"cross_ov:{ov:.2f}"
+        return False, ""
+
+    # kind == "venue"
+    dist_km = _haversine_approx_km(a, b)
+    same_dist = bool(a.get("district") and b.get("district") and a.get("district") == b.get("district"))
+    if a.get("district") and b.get("district") and not same_dist and dist_km > 1.5:
+        return False, ""
+    if dist_km > 5.0 and a.get("exact_coords") and b.get("exact_coords"):
+        return False, ""
+
+    if ca == cb or cna == cnb:
+        return True, f"exact_core({dist_km:.2f}km)"
+
+    if cross_src:
+        shared_segs = {s for s in (fa["segs"] & fb["segs"]) if len(s) >= 4} - _DEDUP_GENERIC_NOUNS
+        if shared_segs:
+            return True, f"shared_seg:{sorted(shared_segs)[0]}({dist_km:.2f}km)"
+        if dist_km <= 3.0 and ((len(cna) >= 4 and cna in cnb) or (len(cnb) >= 4 and cnb in cna)):
+            return True, f"cross_contain({dist_km:.2f}km)"
+        if min(len(cna), len(cnb)) >= 5:
+            bga, bgb = _bigrams(cna), _bigrams(cnb)
+            ov = len(bga & bgb) / max(1, min(len(bga), len(bgb)))
+            if (dist_km <= 3.0 and ov >= 0.78) or (same_dist and dist_km <= 5.0 and ov >= 0.80):
+                return True, f"cross_ov:{ov:.2f}({dist_km:.2f}km)"
+
+    return False, ""
+
+
+def find_duplicate_pairs(items: list[dict[str, Any]]) -> list[tuple[str, dict[str, Any], dict[str, Any]]]:
+    """掃描清單中所有重複配對（供 tools/check_data.py 與測試共用）。"""
+    by_bucket: dict[tuple[str, str], list[tuple[dict[str, Any], dict[str, Any]]]] = {}
+    dups: list[tuple[str, dict[str, Any], dict[str, Any]]] = []
+    for it in items:
+        bucket_key = (it.get("city", ""), it.get("kind", ""))
+        ft = extract_dedup_features(it)
+        bucket = by_bucket.setdefault(bucket_key, [])
+        for prev_it, prev_ft in bucket:
+            ok, reason = is_duplicate_item(prev_it, prev_ft, it, ft)
+            if ok:
+                dups.append((reason, prev_it, it))
+                break
+        bucket.append((it, ft))
+    return dups
+
+
 def normalize_title_key(title: str, city: str) -> str:
-    t = (title or "").replace("台", "臺").strip()
-    # 移除年份前綴（如「2026新北歡樂耶誕城」與「新北歡樂耶誕城」合併為同一筆）
-    t = re.sub(r"^20\d{2}(?:\s*[-~～]\s*20\d{2})?\s*", "", t).strip()
-    # 移除括號附註（如「(基隆安樂親子館)」、「(特色遊戲場)」）以利跨來源同名場館自動合併補圖與座標
-    stripped = re.sub(r"[（(][^）)]*[）)]", "", t).strip()
-    if len(stripped) >= 3:
-        t = stripped
-    clean = re.sub(r"[\s\-－—（）()【】\[\]・‧·]", "", t).lower()
-    city_short = city.replace("市", "").replace("縣", "").lower()
-    for prefix in (city.lower(), city_short):
-        if prefix and clean.startswith(prefix) and len(clean) > len(prefix) + 1:
-            clean = clean[len(prefix):]
-            break
-    return f"{city}:{clean}"
+    return f"{city}:{_clean_dedup_token(re.sub(r'[（(][^）)]*[）)]', '', title or ''), city)}"
 
 
 def main() -> int:
@@ -1500,10 +1707,11 @@ def main() -> int:
                     "used": len(prev_items),
                 })
 
-    # 3. 合併去重（若精選庫本身缺照片、而即時 API 同名點位有真實照片，自動把真實照片補進精選項目！）
-    merged_by_key: dict[str, dict[str, Any]] = {}
+    # 3. 合併去重（跨來源精準比對 + 標題主段／括號別名／座標距離／日期重疊去重；缺圖或座標時自動互補）
+    merged_buckets: dict[tuple[str, str], list[tuple[dict[str, Any], dict[str, Any]]]] = {}
     merged: list[dict[str, Any]] = []
     seen_ids: set[str] = set()
+    dedup_merged_count = 0
 
     ordered_batches = [
         curated,
@@ -1529,9 +1737,21 @@ def main() -> int:
             if not enforce_three_month_event_window(item, today_tw):
                 continue
             item["image_url"] = clean_image_url(item.get("image_url") or "")
-            key = normalize_title_key(title, city)
-            if key in merged_by_key:
-                existing = merged_by_key[key]
+            if cid in seen_ids:
+                continue
+
+            ft = extract_dedup_features(item)
+            bucket_key = (city, item.get("kind", ""))
+            bucket = merged_buckets.setdefault(bucket_key, [])
+            existing: dict[str, Any] | None = None
+            for prev_item, prev_ft in bucket:
+                ok, _reason = is_duplicate_item(prev_item, prev_ft, item, ft)
+                if ok:
+                    existing = prev_item
+                    break
+
+            if existing is not None:
+                dedup_merged_count += 1
                 if not existing.get("image_url") and item.get("image_url"):
                     existing["image_url"] = item["image_url"]
                 if not existing.get("exact_coords") and item.get("exact_coords"):
@@ -1544,10 +1764,9 @@ def main() -> int:
                     existing["start_date"] = item["start_date"]
                     existing["end_date"] = item.get("end_date", "")
                 continue
-            if cid in seen_ids:
-                continue
+
             seen_ids.add(cid)
-            merged_by_key[key] = item
+            bucket.append((item, ft))
             merged.append(item)
 
     cat_counts: dict[str, int] = {}
@@ -1591,7 +1810,8 @@ def main() -> int:
 
     print(
         f"✅ Synced {len(merged)} items across {len(city_counts)}/22 cities "
-        f"(venues={kind_counts['venue']}, events={kind_counts['event']}, with_real_images={with_image_count})."
+        f"(venues={kind_counts['venue']}, events={kind_counts['event']}, "
+        f"with_real_images={with_image_count}, dedup_merged={dedup_merged_count})."
     )
     print(f"   Categories: {json.dumps(cat_counts, ensure_ascii=False)}")
     return 0

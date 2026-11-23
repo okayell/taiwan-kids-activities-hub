@@ -21,6 +21,10 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_PATH = ROOT / "data" / "activities.json"
 DISTRICTS_JS = ROOT / "assets" / "tw_districts.js"
 
+if str(ROOT / "scripts") not in sys.path:
+    sys.path.insert(0, str(ROOT / "scripts"))
+from update_data import find_duplicate_pairs  # noqa: E402
+
 REQUIRED_CATEGORIES = {
     "amusement",
     "kids_museum",
@@ -156,6 +160,14 @@ def validate_payload(payload: dict, tw_districts: dict[str, list[str]]) -> list[
     for out_of_season in ("大稻埕夏日節", "澎湖國際海上花火節", "臺灣國際熱氣球嘉年華"):
         if any(out_of_season in it.get("title", "") and (not it.get("start_date")) for it in items):
             errors.append(f"回歸失敗：出現無明確近期檔期之過季活動「{out_of_season}」")
+
+    # 回歸防護：跨來源與同來源不可有重複活動或重複場館（例如「新北歡樂耶誕城」與「2026新北歡樂耶誕城-...」）
+    dup_pairs = find_duplicate_pairs(items)
+    for reason, a, b in dup_pairs:
+        errors.append(
+            f"重複內容 [{a.get('kind')}/{reason}] ({a.get('city')}): "
+            f"{a.get('id')}「{a.get('title')}」 vs {b.get('id')}「{b.get('title')}」"
+        )
 
     return errors
 
