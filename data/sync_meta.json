@@ -1,37 +1,25 @@
 {
-  "updated_at": "2026-11-23T17:35:46+08:00",
-  "updated_date": "2026-11-23 17:35 (台灣時間)",
-  "total": 1817,
-  "with_image_count": 1648,
+  "updated_at": "2026-11-26T10:42:09+08:00",
+  "updated_date": "2026-11-26 10:42 (台灣時間)",
+  "total": 1776,
+  "with_image_count": 1607,
   "kind_counts": {
-    "venue": 1608,
-    "event": 209
+    "venue": 1614,
+    "event": 162
   },
   "category_counts": {
     "amusement": 167,
-    "kids_museum": 488,
-    "parent_center": 144,
-    "park": 809,
-    "festival": 23,
-    "course": 35,
-    "activity": 136,
-    "market": 7,
+    "kids_museum": 492,
+    "parent_center": 145,
+    "park": 810,
+    "festival": 21,
+    "course": 34,
+    "activity": 96,
+    "market": 3,
     "contest": 8
   },
   "cities_covered": 22,
   "sources": [
-    {
-      "source": "交通部觀光署觀光雙年曆",
-      "status": "ok",
-      "fetched": 6,
-      "used": 6
-    },
-    {
-      "source": "臺南旅遊網 Open Data",
-      "status": "ok",
-      "fetched": 70,
-      "used": 70
-    },
     {
       "source": "臺北旅遊網 Open API (場館)",
       "status": "ok",
@@ -45,28 +33,40 @@
       "used": 16
     },
     {
+      "source": "臺南旅遊網 Open Data",
+      "status": "ok",
+      "fetched": 70,
+      "used": 70
+    },
+    {
       "source": "基隆市政府兒少處",
       "status": "ok",
       "fetched": 14,
       "used": 14
     },
     {
-      "source": "高雄市政府兒福中心",
-      "status": "ok",
-      "fetched": 27,
-      "used": 27
-    },
-    {
       "source": "文化部全國藝文活動",
       "status": "ok",
-      "fetched": 188,
-      "used": 188
+      "fetched": 136,
+      "used": 136
+    },
+    {
+      "source": "高雄市政府兒福中心",
+      "status": "error_fallback",
+      "error": "The read operation timed out",
+      "used": 26
+    },
+    {
+      "source": "交通部觀光署觀光雙年曆",
+      "status": "ok",
+      "fetched": 6,
+      "used": 6
     },
     {
       "source": "全台親子景點公開彙整",
       "status": "ok",
-      "fetched": 1495,
-      "used": 1495
+      "fetched": 1501,
+      "used": 1501
     }
   ]
 }
